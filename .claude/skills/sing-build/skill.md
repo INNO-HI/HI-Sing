@@ -18,7 +18,8 @@ sing 서비스의 전체 빌드 프로세스를 에이전트 팀으로 조율한
 | product-designer | 서비스 기획, UX 설계 | general-purpose | — |
 | fullstack-dev | 웹앱 개발 | general-purpose | sing-webapp |
 | ai-engineer | AI 파이프라인 | general-purpose | lyria-voice-clone, song-generation |
-| campaign-writer | 마케팅/펀딩 | general-purpose | tumblbuk-campaign |
+| campaign-writer | 콘텐츠 제작 | general-purpose | tumblbuk-campaign |
+| growth-strategist | 마케팅 전략 | general-purpose | growth-strategy |
 
 ## 워크플로우
 
