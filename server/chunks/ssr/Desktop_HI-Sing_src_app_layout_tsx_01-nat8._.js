@@ -1,0 +1,3 @@
+module.exports=[59711,a=>{"use strict";var b=a.i(62499);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"ko",children:(0,b.jsx)("body",{children:a})})},"metadata",0,{title:"HI-Sing — 노래로 전하는 우리 가족 이야기",description:"마음을 직접 전하기 쑥스럽다면, HI-Sing으로 먼저 전해보세요.",icons:{icon:"/favicon.svg"}}])},64723,a=>{a.n(a.i(59711))}];
+
+//# sourceMappingURL=Desktop_HI-Sing_src_app_layout_tsx_01-nat8._.js.map

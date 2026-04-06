@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[68389,["/_next/static/chunks/0_hi-omq.283-.js"],"ViewportBoundary"]
+3:I[68389,["/_next/static/chunks/0_hi-omq.283-.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[49738,["/_next/static/chunks/0_hi-omq.283-.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"HI-Sing — 노래로 전하는 우리 가족 이야기"}],["$","meta","1",{"name":"description","content":"마음을 직접 전하기 쑥스럽다면, HI-Sing으로 먼저 전해보세요."}],["$","link","2",{"rel":"icon","href":"/favicon.svg"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"56rxik3O9Ih3l7dpyKqa-"}

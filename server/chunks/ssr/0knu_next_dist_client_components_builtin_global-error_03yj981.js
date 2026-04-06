@@ -1,0 +1,3 @@
+module.exports=[24132,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(92037);a.n(d("[project]/Desktop/HI-Sing/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},52406,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(92037);a.n(d("[project]/Desktop/HI-Sing/node_modules/next/dist/client/components/builtin/global-error.js"))},6453,a=>{"use strict";a.i(24132);var b=a.i(52406);a.n(b)},12515,a=>{a.n(a.i(6453))}];
+
+//# sourceMappingURL=0knu_next_dist_client_components_builtin_global-error_03yj981.js.map

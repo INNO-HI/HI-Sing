@@ -1,0 +1,7 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/payment/approve/route": "/api/payment/approve",
+  "/api/payment/webhook/route": "/api/payment/webhook",
+  "/page": "/"
+}
