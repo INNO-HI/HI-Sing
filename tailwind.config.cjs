@@ -1,39 +1,37 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        coral: {
-          50: '#FFF5F2',
-          100: '#FFE8E0',
-          200: '#FFD0C2',
-          300: '#FFB09A',
-          400: '#E8836B',
-          500: '#D4644B',
-          600: '#B84A33',
+        primary: {
+          50: '#FFF8F4',
+          100: '#FFEDE5',
+          200: '#FFD9CC',
+          300: '#F4BFA7',
+          400: '#F59E8B',
+          500: '#E88773',
+          600: '#D4705A',
         },
-        ivory: {
-          50: '#FFFDFB',
-          100: '#FFFBF7',
-          200: '#FFF7F0',
-          300: '#FFF0E3',
+        neutral: {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#EEEEEE',
+          300: '#E0E0E0',
+          400: '#BDBDBD',
         },
         ink: {
-          DEFAULT: '#383838',
-          light: '#4B4E56',
-          muted: '#777A86',
-          faint: '#B0B8C1',
-        },
-        blue: {
-          brand: '#448CFF',
+          DEFAULT: '#2C2C2C',
+          light: '#444444',
+          muted: '#6B7280',
+          faint: '#AAAAAA',
         },
       },
       fontFamily: {
-        sans: ['"Pretendard Variable"', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+        sans: ['"A2G"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
       },
       maxWidth: {
-        container: '1360px',
+        container: '1080px',
       },
     },
   },

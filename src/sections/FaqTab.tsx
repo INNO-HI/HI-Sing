@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: '여러 사람 목소리가 섞여 있어도 되나요?',
-    a: '네. AI가 화자를 구분하여 원하는 목소리만 골라서 사용합니다.',
+    a: '네. 여러 목소리가 섞여 있어도 원하는 분의 목소리만 골라서 사용합니다.',
   },
   {
     q: '본인 목소리로도 만들 수 있나요?',
@@ -47,12 +47,12 @@ function AccordionItem({ q, a, index }: { q: string; a: string; index: number })
 
   return (
     <FadeIn delay={index * 0.04}>
-      <div className="border-b border-coral-100/40 last:border-b-0">
+      <div className="border-b border-neutral-200 last:border-b-0">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="w-full flex items-center justify-between py-5 sm:py-6 text-left gap-4 group"
         >
-          <span className="text-[15px] sm:text-base font-semibold text-ink group-hover:text-coral-400 transition-colors">
+          <span className="text-[15px] sm:text-base font-semibold text-ink group-hover:text-primary-400 transition-colors">
             {q}
           </span>
           <ChevronDown
@@ -81,24 +81,36 @@ function AccordionItem({ q, a, index }: { q: string; a: string; index: number })
   )
 }
 
-export function FaqTab() {
+import type { TabId } from '@/types'
+
+export function FaqTab({ onNavigate }: { onNavigate?: (tab: TabId) => void }) {
   return (
     <div className="pt-24 lg:pt-28">
       <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-container mx-auto px-5 sm:px-8 lg:px-14">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="text-center mb-14">
-              <p className="text-coral-400 font-semibold text-sm mb-3">FAQ</p>
+              <p className="text-primary-400 font-semibold text-sm mb-3">FAQ</p>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink">
                 자주 묻는 질문
               </h1>
             </div>
           </FadeIn>
 
-          <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-coral-100/30 px-6 sm:px-8">
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200 px-6 sm:px-8 shadow-sm">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} q={faq.q} a={faq.a} index={i} />
             ))}
+          </div>
+
+          {/* CTA */}
+          <div className="max-w-2xl mx-auto mt-12 text-center">
+            <FadeIn>
+              <p className="text-ink-muted text-sm mb-4">더 궁금한 점이 있으시면 010-4056-1754로 연락주세요</p>
+              <button onClick={() => onNavigate?.('pricing')} className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer">
+                29,000원부터 시작하기
+              </button>
+            </FadeIn>
           </div>
         </div>
       </section>
