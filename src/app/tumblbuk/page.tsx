@@ -66,7 +66,7 @@ export default function TumblbukPreview() {
 
       {/* 사진: 가족이 함께 핸드폰 보며 웃는 모습 */}
       <div className="max-w-[480px] mx-auto px-5 sm:px-8">
-        <img src="/images/album-1.png" alt="" className="w-full rounded-2xl" />
+        <img src="/images/album-1.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       </div>
 
       {/* ── 공감 ── */}
@@ -83,7 +83,7 @@ export default function TumblbukPreview() {
 
       {/* 사진: 가족 식사 자리 */}
       <div className="max-w-[480px] mx-auto px-5 sm:px-8">
-        <img src="/images/album-2.png" alt="" className="w-full rounded-2xl" />
+        <img src="/images/album-2.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       </div>
 
       <section className="px-5 sm:px-8 py-12">
@@ -209,7 +209,7 @@ export default function TumblbukPreview() {
 
       {/* 사진: 가족 사진 */}
       <div className="max-w-[480px] mx-auto px-5 sm:px-8 py-6">
-        <img src="/images/cta-family-new.png" alt="" className="w-full rounded-2xl" />
+        <img src="/images/cta-family-new.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       </div>
 
       {/* ── 가격 ── */}
