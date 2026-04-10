@@ -317,11 +317,11 @@ export default function TumblbukPreview() {
       </section>
 
       {/* ── 클로징 ── */}
-      <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: 'linear-gradient(180deg, #3D2B26 0%, #2C1E1A 100%)' }}>
+      <section className="px-5 sm:px-8 py-16 sm:py-20 bg-gradient-to-b from-primary-50 to-white">
         <div className="max-w-[480px] mx-auto text-center">
-          <p className="text-[#F5D5C8] text-xl sm:text-2xl font-medium leading-relaxed mb-4">이번 부모님 생신에는</p>
-          <p className="text-white text-2xl sm:text-3xl font-semibold mb-8">노래 한 곡 어떠세요?</p>
-          <p className="text-[#D4A999] text-sm">얼리버드 한정 100명 · 29,000원부터</p>
+          <p className="text-ink-muted text-xl sm:text-2xl font-medium leading-relaxed mb-4">이번 부모님 생신에는</p>
+          <p className="text-ink text-2xl sm:text-3xl font-semibold mb-8">노래 한 곡 어떠세요?</p>
+          <p className="text-primary-400 text-sm">얼리버드 한정 100명 · 29,000원부터</p>
         </div>
       </section>
     </div>
