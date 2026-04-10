@@ -106,7 +106,7 @@ export function FaqTab({ onNavigate }: { onNavigate?: (tab: TabId) => void }) {
           {/* CTA */}
           <div className="max-w-2xl mx-auto mt-12 text-center">
             <FadeIn>
-              <p className="text-ink-muted text-sm mb-4">더 궁금한 점이 있으시면 010-4056-1754로 연락주세요</p>
+              <p className="text-ink-muted text-sm mb-4">더 궁금한 점이 있으시면 <a href="http://pf.kakao.com/_vxbvdX" target="_blank" rel="noopener noreferrer" className="text-primary-400 font-semibold hover:underline">카카오톡 채널</a>로 문의주세요</p>
               <button onClick={() => onNavigate?.('pricing')} className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer">
                 29,000원부터 시작하기
               </button>

@@ -21,14 +21,14 @@ export function Footer() {
 
         {/* 링크 */}
         <div className="flex items-center gap-5 text-sm">
-          <a href="#" className="text-neutral-400 hover:text-white transition-colors">이용약관</a>
-          <a href="#" className="text-neutral-400 hover:text-white transition-colors">개인정보처리방침</a>
+          <a href="/terms" className="text-neutral-400 hover:text-white transition-colors">서비스이용약관</a>
+          <a href="/privacy" className="text-neutral-400 hover:text-white transition-colors">개인정보처리방침</a>
         </div>
 
         {/* 사업자 정보 + 카피라이트 */}
         <div className="flex items-center justify-between">
           <p className="text-xs text-neutral-500 leading-relaxed">
-            주식회사 이노하이(INNO-HI) | 대표자 김민수, 한민우 | 서울특별시 중구 퇴계로36길 2, B257 | 010-4056-1754
+            주식회사 이노하이(INNO-HI) | 대표자 김민수, 한민우 | 서울특별시 중구 퇴계로36길 2, B257
           </p>
           <p className="text-xs text-neutral-600 flex-shrink-0 ml-4">
             &copy; {new Date().getFullYear()} 하이싱(HI-Sing) by INNO-HI. All rights reserved.

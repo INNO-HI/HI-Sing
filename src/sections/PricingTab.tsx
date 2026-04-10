@@ -1,35 +1,73 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift } from 'lucide-react'
+import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift, FileAudio, Headphones, Share2, MessageSquare, Image as ImageIcon, PenLine, Mic, FileCheck, Package } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { trackViewItem, trackPaymentAttempt, trackBeginCheckout, trackFormProgress, trackFileUpload, trackViewItemList } from '@/lib/analytics'
 
-const NICEPAY_CLIENT_KEY = 'R2_1eef6128dbcc45c68f3c9d37998df42f'
+const NICEPAY_CLIENT_KEY = process.env.NEXT_PUBLIC_NICEPAY_CLIENT_KEY || ''
 
 const rewards = [
   {
     icon: Tag, tier: '얼리버드', price: '29,000', priceNum: 29000,
     badge: '한정 100명', badgeColor: 'bg-primary-400 text-white', highlight: true,
-    features: ['오리지널 1곡', '고음질 음원 (mp3/wav)', '카카오톡 공유 링크', '1회 무료 수정'],
+    features: [
+      { icon: Music, text: '오리지널 1곡' },
+      { icon: Headphones, text: '고음질 음원 (mp3/wav)' },
+      { icon: Share2, text: '카카오톡 공유 링크' },
+      { icon: FileCheck, text: '1회 무료 수정' },
+    ],
     desc: '가장 먼저 응원해주시는 분들을 위한 감사 리워드. 정가 대비 26% 할인.',
-    process: ['음성 파일 + 이야기 접수', '작사/작곡 (3~5일)', '보컬 합성 + 믹싱', '완성곡 전달 (카카오톡 링크)', '수정 요청 시 1회 무료 수정'],
+    process: [
+      { title: '주문 정보 접수', desc: '음성 파일, 이야기, 받는 분 정보를 확인합니다.', time: '즉시' },
+      { title: '가사 작성', desc: '전하고 싶은 마음과 추억을 바탕으로 가사를 씁니다.', time: '1일' },
+      { title: '멜로디 작곡', desc: '가사와 분위기에 어울리는 멜로디를 만듭니다.', time: '1~2일' },
+      { title: '보컬 합성 & 믹싱', desc: '가족 목소리로 노래를 부르게 하고 음향을 다듬습니다.', time: '1일' },
+      { title: '완성곡 전달', desc: '카카오톡 링크로 완성된 노래를 보내드립니다.', time: '3~5일 이내' },
+      { title: '1회 무료 수정', desc: '원하시는 방향으로 수정해드립니다.', time: '요청 시' },
+    ],
     delivery: '3~5일',
   },
   {
     icon: Music, tier: '기본', price: '39,000', priceNum: 39000,
     badge: null, badgeColor: '', highlight: false,
-    features: ['오리지널 1곡', '고음질 음원 (mp3/wav)', '카카오톡 공유 링크', '1회 무료 수정'],
-    desc: '마음을 전하는 데 이 정도면 충분합니다.',
-    process: ['음성 파일 + 이야기 접수', '작사/작곡 (3~5일)', '보컬 합성 + 믹싱', '완성곡 전달 (카카오톡 링크)', '수정 요청 시 1회 무료 수정'],
+    features: [
+      { icon: Music, text: '오리지널 1곡' },
+      { icon: Headphones, text: '고음질 음원 (mp3/wav)' },
+      { icon: Share2, text: '카카오톡 공유 링크' },
+      { icon: FileCheck, text: '1회 무료 수정' },
+    ],
+    desc: '필요한 건 다 담았습니다.\n가장 많이 선택하는 리워드.',
+    process: [
+      { title: '주문 정보 접수', desc: '음성 파일, 이야기, 받는 분 정보를 확인합니다.', time: '즉시' },
+      { title: '가사 작성', desc: '전하고 싶은 마음과 추억을 바탕으로 가사를 씁니다.', time: '1일' },
+      { title: '멜로디 작곡', desc: '가사와 분위기에 어울리는 멜로디를 만듭니다.', time: '1~2일' },
+      { title: '보컬 합성 & 믹싱', desc: '가족 목소리로 노래를 부르게 하고 음향을 다듬습니다.', time: '1일' },
+      { title: '완성곡 전달', desc: '카카오톡 링크로 완성된 노래를 보내드립니다.', time: '3~5일 이내' },
+      { title: '1회 무료 수정', desc: '원하시는 방향으로 수정해드립니다.', time: '요청 시' },
+    ],
     delivery: '3~5일',
   },
   {
     icon: Star, tier: '프리미엄', price: '69,000', priceNum: 69000,
     badge: '인기', badgeColor: 'bg-primary-400 text-white', highlight: false,
-    features: ['오리지널 1곡', '고음질 음원 (mp3/wav)', '가사 카드 이미지 (감성 디자인)', '카카오톡 공유 링크', '1회 무료 수정'],
-    desc: '디지털에 감성을 더했습니다.',
-    process: ['음성 파일 + 이야기 접수', '작사/작곡 (3~5일)', '보컬 합성 + 믹싱', '가사 카드 이미지 제작', '수정 요청 시 1회 무료 수정'],
+    features: [
+      { icon: Music, text: '오리지널 1곡' },
+      { icon: Headphones, text: '고음질 음원 (mp3/wav)' },
+      { icon: ImageIcon, text: '가사 카드 이미지 (감성 디자인)' },
+      { icon: Share2, text: '카카오톡 공유 링크' },
+      { icon: FileCheck, text: '1회 무료 수정' },
+    ],
+    desc: '노래에 손편지 같은 가사 카드를 더했습니다.',
+    process: [
+      { title: '주문 정보 접수', desc: '음성 파일, 이야기, 받는 분 정보를 확인합니다.', time: '즉시' },
+      { title: '가사 작성', desc: '전하고 싶은 마음과 추억을 바탕으로 가사를 씁니다.', time: '1일' },
+      { title: '멜로디 작곡', desc: '가사와 분위기에 어울리는 멜로디를 만듭니다.', time: '1~2일' },
+      { title: '보컬 합성 & 믹싱', desc: '가족 목소리로 노래를 부르게 하고 음향을 다듬습니다.', time: '1일' },
+      { title: '가사 카드 제작', desc: '손편지 느낌의 감성 가사 카드를 디자인합니다.', time: '1일' },
+      { title: '완성곡 전달', desc: '카카오톡 링크로 노래와 가사 카드를 함께 보내드립니다.', time: '3~5일 이내' },
+      { title: '1회 무료 수정', desc: '원하시는 방향으로 수정해드립니다.', time: '요청 시' },
+    ],
     delivery: '3~5일',
   },
 ]
@@ -52,13 +90,13 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
           <div className="lg:col-span-3 space-y-6">
             {/* 헤더 — 큰 비주얼 */}
             <FadeIn>
-              <div className={`bg-gradient-to-br ${reward.highlight ? 'from-primary-400 to-primary-500' : 'from-neutral-800 to-neutral-900'} rounded-2xl p-8 sm:p-10 text-white`}>
+              <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-2xl p-8 sm:p-10 text-white">
                 <div className="flex items-center gap-3 mb-4">
                   <reward.icon className="w-6 h-6 text-white/70" />
                   {reward.badge && <span className="text-xs font-bold bg-white/20 rounded-full px-3 py-0.5">{reward.badge}</span>}
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-black mb-2">{reward.tier}</h1>
-                <p className="text-white/70 text-[15px] leading-relaxed max-w-md">{reward.desc}</p>
+                <p className="text-white/70 text-[15px] leading-relaxed max-w-md whitespace-pre-line">{reward.desc}</p>
                 <div className="mt-6 flex items-end gap-2">
                   <span className="text-4xl font-black">{reward.price}</span>
                   <span className="text-white/60 text-base mb-1">원</span>
@@ -96,12 +134,14 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
             {/* 구성 상품 */}
             <FadeIn delay={0.08}>
               <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
-                <h3 className="text-lg font-bold text-ink mb-6">구성 상품</h3>
+                <h3 className="text-lg font-bold text-ink-light mb-6">구성 상품</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {reward.features.map((f, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-neutral-50 rounded-xl p-4">
-                      <Check className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-ink">{f}</span>
+                    <div key={i} className="flex items-center gap-3 bg-neutral-50 rounded-xl p-4">
+                      <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center flex-shrink-0">
+                        <f.icon className="w-5 h-5 text-primary-400" />
+                      </div>
+                      <span className="text-sm text-ink-light font-medium">{f.text}</span>
                     </div>
                   ))}
                 </div>
@@ -111,18 +151,22 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
             {/* 제작 과정 */}
             <FadeIn delay={0.1}>
               <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
-                <h3 className="text-lg font-bold text-ink mb-2">제작 진행 과정</h3>
-                <p className="text-sm text-ink-muted mb-6">결제 후 아래 순서대로 진행됩니다</p>
+                <h3 className="text-lg font-bold text-ink-light mb-2">제작 진행 과정</h3>
+                <p className="text-sm text-ink-muted mb-6">결제 완료 후 아래 순서대로 진행되며, 각 단계마다 소요 시간이 다릅니다.</p>
                 <div className="relative">
-                  <div className="absolute left-4 top-4 bottom-4 w-px bg-neutral-200" />
-                  <div className="space-y-5">
+                  <div className="absolute left-[18px] top-4 bottom-4 w-px bg-neutral-200" />
+                  <div className="space-y-6">
                     {reward.process.map((step, i) => (
                       <div key={i} className="flex items-start gap-5 relative">
-                        <div className="w-8 h-8 rounded-full bg-primary-400 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 z-10">
+                        <div className="w-9 h-9 rounded-full bg-primary-400 text-white text-sm font-bold flex items-center justify-center flex-shrink-0 z-10 shadow-md shadow-primary-200/40">
                           {i + 1}
                         </div>
-                        <div className="pt-1">
-                          <p className="text-sm text-ink font-medium">{step}</p>
+                        <div className="flex-1 pt-1">
+                          <div className="flex items-center gap-3 mb-1">
+                            <h4 className="text-sm font-bold text-ink-light">{step.title}</h4>
+                            <span className="text-[11px] font-medium text-primary-400 bg-primary-50 rounded-full px-2 py-0.5">{step.time}</span>
+                          </div>
+                          <p className="text-xs text-ink-muted leading-relaxed">{step.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -299,35 +343,6 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                   <p className="text-[11px] text-ink-faint text-center mt-3">나이스페이를 통해 안전하게 결제됩니다</p>
                 </div>
 
-                {/* 준비물 */}
-                <div className="bg-white rounded-2xl border border-neutral-200 p-6">
-                  <h4 className="text-sm font-bold text-ink mb-4">준비물 체크리스트</h4>
-                  <div className="space-y-3">
-                    {[
-                      { item: '음성 파일', desc: '30초 이상 · mp3, wav, m4a 지원', required: true },
-                      { item: '전하고 싶은 이야기', desc: '구체적인 추억이나 에피소드', required: true },
-                      { item: '받는 분 정보', desc: '이름, 관계, 행사 종류', required: true },
-                      { item: '원하는 분위기', desc: '따뜻한, 밝은, 잔잔한 등', required: false },
-                      { item: '참고할 노래', desc: '비슷한 스타일의 노래가 있다면', required: false },
-                      ...(needsAddress ? [{ item: '배송지 주소', desc: 'USB 실물 배송용', required: true }] : []),
-                      ...(needsPhotos ? [{ item: '가족 사진 5~10장', desc: '뮤직비디오 제작용 · 결제 후 이메일 안내', required: true }] : []),
-                    ].map((c, i) => (
-                      <div key={i} className="flex items-start gap-2.5">
-                        <div className={`w-4 h-4 rounded border flex-shrink-0 mt-0.5 flex items-center justify-center ${c.required ? 'border-primary-400 bg-primary-50' : 'border-neutral-300'}`}>
-                          {c.required && <Check className="w-2.5 h-2.5 text-primary-400" />}
-                        </div>
-                        <div>
-                          <p className="text-xs text-ink-light font-medium">{c.item} {c.required && <span className="text-primary-400">*</span>}</p>
-                          <p className="text-[11px] text-ink-faint">{c.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-neutral-100">
-                    <p className="text-[11px] text-ink-faint">* 필수 항목 · 나머지는 선택사항입니다</p>
-                  </div>
-                </div>
-
                 {/* 환불 정책 */}
                 <div className="bg-white rounded-2xl border border-neutral-200 p-6">
                   <h4 className="text-sm font-bold text-ink mb-4">환불 정책</h4>
@@ -348,15 +363,18 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     ))}
                   </div>
                   <div className="mt-4 pt-3 border-t border-neutral-100">
-                    <p className="text-[11px] text-ink-faint">환불 요청: 010-4056-1754 또는 board@innohi.ai.kr</p>
+                    <p className="text-[11px] text-ink-faint">환불 요청: <a href="http://pf.kakao.com/_vxbvdX" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">카카오톡 채널</a> 또는 contact@innohi.ai.kr</p>
                   </div>
                 </div>
 
                 {/* 문의 */}
-                <div className="bg-neutral-100 rounded-2xl p-5 text-center">
-                  <p className="text-xs text-ink-muted">궁금한 점이 있으신가요?</p>
-                  <p className="text-sm font-bold text-ink mt-1">010-4056-1754</p>
-                </div>
+                <a href="http://pf.kakao.com/_vxbvdX" target="_blank" rel="noopener noreferrer" className="block bg-[#FEE500] hover:bg-[#FDD835] rounded-2xl p-5 text-center transition-colors">
+                  <p className="text-xs text-[#3C1E1E]/70">궁금한 점이 있으신가요?</p>
+                  <p className="text-sm font-bold text-[#3C1E1E] mt-1 flex items-center justify-center gap-1.5">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.9 1.92 5.45 4.8 6.87-.21.68-.76 2.42-.87 2.8-.14.47.17.47.36.34.15-.1 2.39-1.63 3.36-2.3.77.11 1.55.17 2.35.17 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+                    카카오톡 문의하기
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -655,7 +673,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     </div>
                     <div>
                       <p className="font-bold text-ink text-sm">{reward.tier}</p>
-                      <p className="text-xs text-ink-muted">{reward.features[0]}</p>
+                      <p className="text-xs text-ink-muted">{reward.features[0].text}</p>
                     </div>
                   </div>
 
@@ -663,7 +681,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     {reward.features.map((f, i) => (
                       <div key={i} className="flex items-center gap-2 text-xs text-ink-light">
                         <Check className="w-3.5 h-3.5 text-primary-400 flex-shrink-0" />
-                        <span>{f}</span>
+                        <span>{f.text}</span>
                       </div>
                     ))}
                   </div>
@@ -743,7 +761,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
                   <ul className="space-y-2.5 mb-5 flex-1">
                     {r.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-ink-light">
-                        <Check className="w-4 h-4 text-primary-400 mt-0.5 flex-shrink-0" /><span>{f}</span>
+                        <Check className="w-4 h-4 text-primary-400 mt-0.5 flex-shrink-0" /><span>{f.text}</span>
                       </li>
                     ))}
                   </ul>

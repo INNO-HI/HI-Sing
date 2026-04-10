@@ -54,7 +54,7 @@ export default function PaymentSuccess() {
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 text-left mb-8">
           <p className="text-xs text-ink-muted leading-relaxed">
             진행 상황은 입력하신 연락처로 안내드립니다.<br />
-            수정 요청이나 문의사항은 <strong>010-4056-1754</strong>로 연락주세요.
+            수정 요청이나 문의사항은 <a href="http://pf.kakao.com/_vxbvdX" target="_blank" rel="noopener noreferrer" className="text-primary-400 font-semibold hover:underline">카카오톡 채널</a>로 연락주세요.
           </p>
         </div>
 

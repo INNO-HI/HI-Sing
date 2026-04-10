@@ -137,14 +137,14 @@ function HeroWaveform() {
 
 /* ── 핸드폰 목업 + 앨범 슬라이드 인터랙션 ──────── */
 const albums = [
-  { title: '식탁 위의 온기', sub: '팔순 잔치 · 3:24', img: '/images/album-1.png', time: '1:08', to: '아버지 팔순', story: '가족 앞에서 노래를 듣는 순간' },
-  { title: '우리의 계절', sub: '결혼기념일 · 4:02', img: '/images/album-2.png', time: '2:15', to: '부모님 결혼기념일', story: '조용히 감동이 번지는 순간' },
-  { title: '첫 번째 노래', sub: '돌잔치 · 3:15', img: '/images/album-3.png', time: '1:40', to: '아기 첫 생일', story: '기록되는 순간의 감정' },
-  { title: '엄마의 자장가', sub: '자장가 · 3:48', img: '/images/album-4.png', time: '0:52', to: '우리 아기에게', story: '가장 개인적인 감정' },
-  { title: '졸업 축가', sub: '졸업식 · 3:36', img: '/images/album-5.png', time: '1:52', to: '고등학교 졸업', story: '마지막 순간의 감정' },
-  { title: '다녀올게요', sub: '입대 전 · 3:52', img: '/images/album-6.png', time: '2:08', to: '군 입대 전', story: '말 대신 남기는 감정' },
-  { title: '고생했어', sub: '취업 축하 · 3:08', img: '/images/album-7.png', time: '1:20', to: '취업 합격', story: '고생했다는 감정' },
-  { title: '평생 함께', sub: '프로포즈 · 4:11', img: '/images/album-8.png', time: '1:35', to: '프로포즈', story: '평생 기억될 순간' },
+  { title: '어머니 팔순잔치', sub: '팔순 잔치 · 3:24', img: '/images/album-1.png', time: '1:08', to: '식탁 위의 온기', story: '' },
+  { title: '부모님 결혼기념일', sub: '결혼기념일 · 4:02', img: '/images/album-2.png', time: '2:15', to: '우리의 계절', story: '' },
+  { title: '아기 첫 생일', sub: '돌잔치 · 3:15', img: '/images/album-3.png', time: '1:40', to: '첫 번째 노래', story: '' },
+  { title: '우리 아기에게', sub: '자장가 · 3:48', img: '/images/album-4.png', time: '0:52', to: '엄마의 자장가', story: '' },
+  { title: '고등학교 졸업', sub: '졸업식 · 3:36', img: '/images/album-5.png', time: '1:52', to: '졸업 축가', story: '' },
+  { title: '군 입대 전', sub: '입대 전 · 3:52', img: '/images/album-6.png', time: '2:08', to: '다녀올게요', story: '' },
+  { title: '취업 합격', sub: '취업 축하 · 3:08', img: '/images/album-7.png', time: '1:20', to: '고생했어', story: '' },
+  { title: '프로포즈', sub: '프로포즈 · 4:11', img: '/images/album-8.png', time: '1:35', to: '평생 함께', story: '' },
 ]
 
 function PhoneMockup() {
@@ -210,12 +210,11 @@ function PhoneMockup() {
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
-                    <img src={a.img} alt={a.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.25) saturate(0.85) brightness(1.02) contrast(0.95) hue-rotate(-5deg)' }} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <p className="text-white font-bold text-sm leading-tight">{a.title}</p>
                       <p className="text-white/70 text-xs mt-1">{a.to}</p>
-                      <p className="text-white/50 text-[11px] mt-1 leading-snug">{a.story}</p>
                     </div>
                   </div>
                 ))}
@@ -407,8 +406,8 @@ function ReviewGrid() {
 
 /* ── 메인 컴포넌트 ─────────────────────────────── */
 export function HomeTab(_props: HomeTabProps) {
-  const step2To = useTypewriter('엄마 (칠순 생신)', 80, 800)
-  const step2Text = useTypewriter('매일 새벽 도시락 싸주셨던 감사한 마음을 전하고 싶어요', 50, 2200)
+  const step2To = useTypewriter('엄마 (칠순 생신)', 150, 1200)
+  const step2Text = useTypewriter('매일 새벽 도시락 싸주셨던 감사한 마음을 전하고 싶어요', 100, 4000)
 
   return (
     <>
@@ -447,14 +446,14 @@ export function HomeTab(_props: HomeTabProps) {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
-              <p className="text-primary-300 text-sm font-medium mb-4">혹시, 이런 고민하신 적 있으신가요?</p>
-              <h2 className="text-2xl sm:text-3xl font-bold" style={{ lineHeight: 1.3 }}>
+              <p className="text-primary-300 text-sm font-medium mb-6">혹시, 이런 고민하신 적 있으신가요?</p>
+              <h2 className="text-2xl sm:text-3xl font-bold" style={{ lineHeight: 1.5 }}>
                 마음은 가득한데,<br />전하기가 참 어렵습니다
               </h2>
             </div>
           </FadeIn>
 
-          <div className="mt-12 max-w-xl mx-auto space-y-6">
+          <div className="mt-20 max-w-xl mx-auto space-y-8">
             {[
               { text: '부모님 생신인데 올해도 상품권밖에 생각이 안 나요', align: 'left' },
               { text: '마음을 전하고 싶은데 방법을 모르겠어요', align: 'right' },
@@ -464,8 +463,8 @@ export function HomeTab(_props: HomeTabProps) {
               <FadeIn key={i} delay={i * 0.15}>
                 <div className={`flex ${b.align === 'right' ? 'justify-end' : 'justify-start'}`}>
                   <div className="relative max-w-[85%]">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/15">
-                      <p className="text-white text-[15px]">{b.text}</p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 border border-white/15">
+                      <p className="text-white text-[15px] leading-relaxed">{b.text}</p>
                     </div>
                     <div className={`absolute -bottom-2 ${b.align === 'left' ? 'left-5' : 'right-5'}`}>
                       <svg width="14" height="8" viewBox="0 0 14 8" className={b.align === 'right' ? 'scale-x-[-1]' : ''}>
@@ -479,11 +478,11 @@ export function HomeTab(_props: HomeTabProps) {
           </div>
 
           <FadeIn delay={0.7}>
-            <div className="mt-12 text-center">
-              <p className="text-neutral-400 text-[15px] leading-relaxed">
-                마음이 없는 게 아닙니다. 어떻게 전해야 할지 몰랐을 뿐이죠.
+            <div className="mt-20 text-center">
+              <p className="text-neutral-400 text-[15px] leading-[1.8]">
+                마음이 없는 게 아닙니다.<br />어떻게 전해야 할지 몰랐을 뿐이죠.
               </p>
-              <p className="mt-4 text-primary-300 font-semibold text-lg">
+              <p className="mt-6 text-primary-300 font-semibold text-lg">
                 그래서 하이싱을 만들었습니다.
               </p>
             </div>
@@ -540,7 +539,7 @@ export function HomeTab(_props: HomeTabProps) {
                     <div><p className="text-[11px] text-ink-muted mb-1">누구에게</p><div className="bg-neutral-50 rounded px-3 py-2 text-sm text-ink min-h-[2.25rem]">{step2To}{step2To.length < 9 && <span className="animate-pulse text-primary-400">|</span>}</div></div>
                     <div>
                       <p className="text-[11px] text-ink-muted mb-1">전하고 싶은 마음</p>
-                      <div className="bg-neutral-50 rounded px-3 py-2 text-sm text-ink leading-relaxed min-h-[3rem]">
+                      <div className="bg-neutral-50 rounded px-3 py-2 text-sm text-ink leading-relaxed h-[4.5rem] overflow-hidden">
                         {step2Text}<span className="animate-pulse text-primary-400">|</span>
                       </div>
                     </div>
@@ -573,7 +572,7 @@ export function HomeTab(_props: HomeTabProps) {
                   <strong className="text-ink">3~5일(영업일 기준)</strong> 이내에<br />
                   완성된 노래를 보내드립니다.<br /><br />
                   카카오톡 링크로 바로 선물할 수 있고,<br />
-                  프리미엄 리워드는 USB 실물 배송도 가능합니다.
+                  프리미엄 리워드는 가사 카드 이미지도 함께 제공됩니다.
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
@@ -634,9 +633,9 @@ export function HomeTab(_props: HomeTabProps) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
               { img: `/images/special-voice.png`, title: '30초 음성이면 충분', desc: '전화 녹음, 영상 속 목소리,\n일상 대화 뭐든 괜찮습니다.\n30초 이상이면 충분해요.' },
-              { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고,\n가족 목소리를 보컬로 얹어드립니다.' },
+              { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를 보컬로 얹어드립니다.' },
               { img: `/images/special-compose.png`, title: '프리미엄 작사/작곡', desc: '단순 변환이 아닙니다.\n마음에 어울리는 가사를 쓰고,\n그에 맞는 멜로디를 작곡합니다.' },
-              { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면\n완성된 노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
+              { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면 완성된 노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-6 sm:p-8 h-full hover:-translate-y-1 transition-all duration-300 text-center">
@@ -662,14 +661,13 @@ export function HomeTab(_props: HomeTabProps) {
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
-            <div className="max-w-lg">
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-relaxed mb-6">
-                이번 부모님 생신에는<br />"건강하세요" 대신,<br />노래 한 곡 어떠세요?
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 whitespace-nowrap" style={{ lineHeight: 1.6 }}>
+                이번 부모님 생신에는 "건강하세요" 대신,<br />노래 한 곡 어떠세요?
               </h2>
               <button onClick={() => _props.onNavigate('pricing')} className="px-8 py-4 text-base font-semibold text-white bg-primary-400 rounded-lg hover:bg-primary-500 transition-colors cursor-pointer">
                 {CTA_LABEL}
               </button>
-              <p className="text-ink-faint text-xs mt-3">29,000원부터 · 1회 무료 수정 포함</p>
             </div>
           </FadeIn>
         </div>
