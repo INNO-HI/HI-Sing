@@ -31,7 +31,7 @@ export default function TermsPage() {
                   <li>&quot;이용자&quot;란 본 약관에 동의하고 서비스를 이용하는 개인을 말합니다. 회사는 만 19세 이상의 성년만을 직접 이용자로 받으며, 미성년자의 이용은 제6조에 따릅니다.</li>
                   <li>&quot;음성 데이터&quot;란 이용자가 서비스 이용 목적으로 업로드하는 본인 또는 제3자의 음성이 녹음된 파일을 말합니다.</li>
                   <li>&quot;음성 주체&quot;란 음성 데이터에 녹음된 목소리의 당사자를 말합니다.</li>
-                  <li>&quot;완성곡&quot;이란 회사가 이용자의 요청·자료를 기반으로 AI 기술을 활용하여 제작한 맞춤형 음원(오리지널곡 또는 커버곡)을 말합니다.</li>
+                  <li>&quot;완성곡&quot;이란 회사가 이용자의 요청·자료를 기반으로 AI 기술을 활용하여 제작한 맞춤형 음원을 말합니다.</li>
                   <li>&quot;리워드&quot;란 회사가 제공하는 서비스 상품 패키지(얼리버드, 기본, 프리미엄 등)를 말합니다.</li>
                   <li>&quot;AI 생성물&quot;이란 AI 모델이 가사, 멜로디, 보컬 합성 등의 과정을 거쳐 산출한 결과물을 말합니다.</li>
                 </ol>
@@ -104,7 +104,7 @@ export default function TermsPage() {
               <section className="mb-6">
                 <h3 className="text-base font-bold text-ink-light mb-3">제8조 (서비스의 내용)</h3>
                 <ol className="list-decimal pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
-                  <li>이용자가 제공한 음성 데이터와 이야기를 기반으로 한 맞춤형 오리지널곡 또는 커버곡 제작</li>
+                  <li>이용자가 제공한 음성 데이터와 이야기를 기반으로 한 맞춤형 노래 제작</li>
                   <li>AI 기반 작사·작곡, 보컬 합성 및 믹싱·마스터링</li>
                   <li>완성곡의 디지털 파일 전달(mp3, wav 등) 및 카카오톡 공유 링크 제공</li>
                   <li>가사 카드 이미지 등 부가 콘텐츠(프리미엄 리워드에 한함)</li>
@@ -143,15 +143,6 @@ export default function TermsPage() {
                 </ol>
               </section>
 
-              <section className="mb-6">
-                <h3 className="text-base font-bold text-ink-light mb-3">제10조 (커버곡 제작에 관한 특칙)</h3>
-                <ol className="list-decimal pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
-                  <li>이용자는 기존 음악 저작물(이하 &quot;원곡&quot;)의 커버곡 제작을 요청할 수 있으나, 회사는 저작권, 저작인접권, 실연자권 등 관련 권리에 대한 이용허락을 별도로 보장하지 않습니다.</li>
-                  <li>커버곡의 이용은 이용자 개인의 사적 이용(「저작권법」 제30조) 범위로 제한되며, 이용자는 커버곡을 방송·전송·복제·배포·공연 등 공중(公衆)에 제공하는 행위를 할 수 없습니다.</li>
-                  <li>원곡의 저작권 침해로 인해 발생하는 모든 법적 책임은 이용자가 부담하며, 회사는 이에 관여하거나 책임지지 아니합니다.</li>
-                  <li>회사는 저작권법상 문제가 우려되는 곡(미확보 저작권, 해외곡 등)의 제작을 거부할 수 있습니다.</li>
-                </ol>
-              </section>
 
               <section className="mb-6">
                 <h3 className="text-base font-bold text-ink-light mb-3">제11조 (서비스 이용 시간 및 중단)</h3>
@@ -175,15 +166,15 @@ export default function TermsPage() {
                 </ol>
                 <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted space-y-2 mt-3">
                   <div className="flex justify-between border-b border-neutral-200 pb-2">
-                    <span><strong className="text-ink-light">얼리버드</strong> — 오리지널/커버 1곡, mp3 음원, 1회 무료 수정</span>
+                    <span><strong className="text-ink-light">얼리버드</strong> — 맞춤 노래 1곡, mp3 음원, 1회 무료 수정</span>
                     <strong className="text-ink-light whitespace-nowrap ml-3">29,000원</strong>
                   </div>
                   <div className="flex justify-between border-b border-neutral-200 pb-2">
-                    <span><strong className="text-ink-light">기본</strong> — 오리지널/커버 1곡, mp3+wav, 가족 2인 믹스, 1회 무료 수정</span>
+                    <span><strong className="text-ink-light">기본</strong> — 맞춤 노래 1곡, mp3+wav, 2회 무료 수정</span>
                     <strong className="text-ink-light whitespace-nowrap ml-3">49,000원</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span><strong className="text-ink-light">프리미엄</strong> — 오리지널/커버 1곡, mp3+wav, 가족 3인 믹스, 감성 가사 카드, 2회 무료 수정</span>
+                    <span><strong className="text-ink-light">프리미엄</strong> — 맞춤 노래 1곡, mp3+wav, 감성 가사 카드, 3회 무료 수정</span>
                     <strong className="text-ink-light whitespace-nowrap ml-3">79,000원</strong>
                   </div>
                 </div>
@@ -337,7 +328,7 @@ export default function TermsPage() {
                   <li>회사는 천재지변, 전쟁, 정전, 네트워크 장애, 클라우드 서비스 제공 업체의 장애 등 불가항력 사유로 인한 서비스 제공의 지연 또는 중단에 대해 책임지지 아니합니다.</li>
                   <li>회사는 이용자의 귀책사유(부정확한 정보 제공, 저품질 음성 파일, 주관적 기대의 불일치 등)로 인한 결과물의 품질 저하에 대해 책임지지 아니합니다.</li>
                   <li>회사는 이용자 간 또는 이용자와 제3자 간에 서비스를 매개로 발생한 분쟁에 대하여 개입할 의무가 없으며, 이로 인한 손해를 배상할 책임이 없습니다.</li>
-                  <li>회사는 제9조(음성 동의 의무) 및 제10조(커버곡)의 위반으로 인해 이용자 또는 제3자에게 발생한 모든 손해에 대해 책임지지 아니합니다.</li>
+                  <li>회사는 제9조(음성 동의 의무)의 위반으로 인해 이용자 또는 제3자에게 발생한 모든 손해에 대해 책임지지 아니합니다.</li>
                   <li>회사가 고의 또는 중과실이 없는 한, 회사의 손해배상 책임은 해당 이용자가 해당 거래에서 지급한 금액을 한도로 합니다.</li>
                   <li>회사는 무료로 제공되는 서비스와 관련하여 이용자에게 발생한 손해에 대해 책임지지 아니합니다. 단, 회사의 고의 또는 중대한 과실로 인한 경우에는 그러하지 아니합니다.</li>
                 </ol>
@@ -346,7 +337,7 @@ export default function TermsPage() {
               <section className="mb-6">
                 <h3 className="text-base font-bold text-ink-light mb-3">제22조 (이용자의 면책 의무)</h3>
                 <p className="text-sm text-ink-muted leading-relaxed">
-                  이용자가 본 약관, 특히 제9조(음성 동의) 및 제10조(커버곡)를 위반하여 제3자로부터 회사에게 제기된 청구·소송·조사 등과 관련하여,
+                  이용자가 본 약관, 특히 제9조(음성 동의)를 위반하여 제3자로부터 회사에게 제기된 청구·소송·조사 등과 관련하여,
                   이용자는 회사 및 그 임직원을 방어하고 해당 청구로 인해 회사가 지출한 소송비용·변호사비용·배상금 등 일체의 손해를 보상해야 합니다.
                 </p>
               </section>

@@ -15,8 +15,7 @@ export default function TumblbukPreview() {
             <span className="text-primary-400">노래</span>로 전하는<br />우리 가족 이야기
           </h1>
           <p className="text-ink-muted text-sm sm:text-base mt-6 max-w-lg mx-auto leading-relaxed">
-            가족의 목소리로 세상에 하나뿐인 노래를 만들어드립니다.<br />
-            오리지널 작사·작곡부터 좋아하는 노래 커버까지.
+            가족 목소리로 세상에 하나뿐인 맞춤 노래를 만들어드립니다.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 bg-white border border-primary-100 rounded-full pl-1.5 pr-4 py-1.5 shadow-sm">
             <span className="bg-primary-400 text-white text-[11px] font-bold rounded-full px-2.5 py-1">얼리버드</span>
@@ -68,7 +67,7 @@ export default function TumblbukPreview() {
           <div className="space-y-8">
             {[
               { step: 1, title: '목소리를 보내주세요', desc: '가족의 목소리가 담긴 파일을 업로드합니다. 일상 대화, 전화 녹음, 영상 속 목소리 — 뭐든 괜찮습니다. 30초 이상이면 충분합니다.', tip: '여러 사람 목소리가 섞여 있어도 AI가 화자를 구분해서 원하는 목소리만 골라냅니다.' },
-              { step: 2, title: '이야기를 알려주세요', desc: '누구에게, 어떤 마음을 전하고 싶은지 적어주세요. "엄마 생신에 감사한 마음을 전하고 싶어요", "아빠의 18번을 아빠 목소리로 듣고 싶어요" 같이 간단하게.' },
+              { step: 2, title: '이야기를 알려주세요', desc: '누구에게, 어떤 마음을 전하고 싶은지 적어주세요. "엄마 생신에 감사한 마음을 전하고 싶어요" 같이 간단하게.' },
               { step: 3, title: '노래가 완성됩니다', desc: '영업일 기준 3~5일 이내에 완성된 노래를 보내드립니다. 카카오톡 링크로 가족에게 바로 선물하실 수 있습니다.' },
             ].map(s => (
               <div key={s.step} className="flex gap-5">
@@ -82,31 +81,6 @@ export default function TumblbukPreview() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      ),
-    },
-    // 카드 4: 오리지널 vs 커버
-    {
-      bg: 'bg-neutral-50',
-      content: (
-        <div className="py-16 sm:py-24 max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink-light text-center mb-10">두 가지 노래를 만들 수 있습니다</h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div className="bg-white rounded-2xl border-2 border-primary-300 p-6 sm:p-8">
-              <p className="text-xs font-bold text-primary-500 mb-3">오리지널 노래</p>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                세상에 없던 새로운 노래. 전하고 싶은 이야기를 가사로, 가족 목소리를 보컬로.
-                우리 가족만을 위해 작사·작곡된 단 하나의 노래.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
-              <p className="text-xs font-bold text-ink-muted mb-3">18번 커버</p>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                엄마가 좋아하는 노래, 아빠의 18번 노래. 그 노래를 가족의 목소리로 다시 부릅니다.
-                익숙한 멜로디에 사랑하는 사람의 목소리가 얹어지는 순간.
-              </p>
-            </div>
           </div>
         </div>
       ),
@@ -148,9 +122,9 @@ export default function TumblbukPreview() {
           <p className="text-ink-muted text-sm text-center mb-10">모든 리워드에 무료 수정이 포함되어 있습니다</p>
           <div className="space-y-4">
             {[
-              { tier: '얼리버드', price: '29,000원', badge: '한정 100명', highlight: true, features: ['오리지널 또는 커버 1곡', '고음질 mp3 음원', '카카오톡 공유 링크', '1회 무료 수정'] },
-              { tier: '기본', price: '49,000원', badge: '가장 많이 선택', highlight: false, features: ['오리지널 또는 커버 1곡', '무손실 음원 (mp3 + wav)', '가족 최대 2인 목소리 믹스', '카카오톡 공유 링크', '1회 무료 수정'] },
-              { tier: '프리미엄', price: '79,000원', badge: '프리미엄', highlight: false, features: ['오리지널 또는 커버 1곡', '무손실 음원 (mp3 + wav)', '가족 최대 3인 목소리 믹스', '감성 가사 카드 이미지 (인쇄용)', '카카오톡 공유 링크', '2회 무료 수정'] },
+              { tier: '얼리버드', price: '29,000원', badge: '한정 100명', highlight: true, features: ['맞춤 노래 1곡', '고음질 mp3 음원', '카카오톡 공유 링크', '1회 무료 수정'] },
+              { tier: '기본', price: '49,000원', badge: '가장 많이 선택', highlight: false, features: ['맞춤 노래 1곡', '무손실 음원 (mp3 + wav)', '카카오톡 공유 링크', '2회 무료 수정'] },
+              { tier: '프리미엄', price: '79,000원', badge: '프리미엄', highlight: false, features: ['맞춤 노래 1곡', '무손실 음원 (mp3 + wav)', '감성 가사 카드 이미지 (인쇄용)', '카카오톡 공유 링크', '3회 무료 수정'] },
             ].map(r => (
               <div key={r.tier} className={`bg-white rounded-2xl p-6 sm:p-8 border ${r.highlight ? 'border-primary-400 ring-1 ring-primary-200 shadow-lg' : 'border-neutral-200'}`}>
                 <div className="flex items-center justify-between mb-3">

@@ -12,7 +12,7 @@ const rewards = [
     icon: Tag, tier: '얼리버드', price: '29,000', priceNum: 29000,
     badge: '한정 100명', badgeColor: 'bg-primary-400 text-white', highlight: true,
     features: [
-      { icon: Music, text: '오리지널 또는 커버 1곡' },
+      { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '고음질 mp3 음원' },
       { icon: Share2, text: '카카오톡 공유 링크' },
       { icon: FileCheck, text: '1회 무료 수정' },
@@ -32,45 +32,43 @@ const rewards = [
     icon: Music, tier: '기본', price: '49,000', priceNum: 49000,
     badge: '가장 많이 선택', badgeColor: 'bg-neutral-800 text-white', highlight: false,
     features: [
-      { icon: Music, text: '오리지널 또는 커버 1곡' },
+      { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '무손실 음원 (mp3 + wav)' },
       { icon: Share2, text: '카카오톡 공유 링크' },
-      { icon: FileCheck, text: '1회 무료 수정' },
-      { icon: Music, text: '가족 최대 2인 목소리 믹스' },
+      { icon: FileCheck, text: '2회 무료 수정' },
     ],
-    desc: '무손실 wav 음원 + 최대 2인의 가족 목소리를 함께 담을 수 있는 표준 리워드.',
+    desc: '무손실 wav 음원 + 2회 수정으로\n더 완성도 높은 결과물을 원하시는 분께.',
     process: [
       { title: '주문 정보 접수', desc: '음성 파일, 이야기, 받는 분 정보를 확인합니다.', time: '즉시' },
       { title: '가사 작성', desc: '전하고 싶은 마음과 추억을 바탕으로 가사를 씁니다.', time: '1일' },
       { title: '멜로디 작곡', desc: '가사와 분위기에 어울리는 멜로디를 만듭니다.', time: '1~2일' },
-      { title: '다중 보컬 합성', desc: '가족 최대 2명의 목소리를 각각 합성하여 함께 부르도록 믹싱합니다.', time: '1~2일' },
-      { title: '완성곡 전달', desc: '카카오톡 링크로 mp3 + wav 두 가지 포맷을 전달드립니다.', time: '4~6일 이내' },
-      { title: '1회 무료 수정', desc: '원하시는 방향으로 수정해드립니다.', time: '요청 시' },
+      { title: '보컬 합성 & 믹싱', desc: '가족 목소리로 노래를 부르게 하고 음향을 다듬습니다.', time: '1일' },
+      { title: '완성곡 전달', desc: '카카오톡 링크로 mp3 + wav 음원을 전달드립니다.', time: '3~5일 이내' },
+      { title: '2회 무료 수정', desc: '원하시는 방향으로 2회까지 수정해드립니다.', time: '요청 시' },
     ],
-    delivery: '4~6일',
+    delivery: '3~5일',
   },
   {
     icon: Star, tier: '프리미엄', price: '79,000', priceNum: 79000,
     badge: '프리미엄', badgeColor: 'bg-primary-500 text-white', highlight: false,
     features: [
-      { icon: Music, text: '오리지널 또는 커버 1곡' },
+      { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '무손실 음원 (mp3 + wav)' },
-      { icon: Music, text: '가족 최대 3인 목소리 믹스' },
       { icon: ImageIcon, text: '감성 가사 카드 이미지 (JPG · 인쇄용)' },
       { icon: Share2, text: '카카오톡 공유 링크' },
-      { icon: FileCheck, text: '2회 무료 수정' },
+      { icon: FileCheck, text: '3회 무료 수정' },
     ],
-    desc: '최대 3인의 가족 목소리 + 인쇄 가능한 감성 가사 카드.\n이번 선물을 &quot;액자에 걸어두고 싶을 만큼&quot; 특별하게.',
+    desc: '인쇄 가능한 감성 가사 카드 + 3회 수정.\n이번 선물을 액자에 걸어두고 싶을 만큼 특별하게.',
     process: [
       { title: '주문 정보 접수', desc: '음성 파일, 이야기, 받는 분 정보를 확인합니다.', time: '즉시' },
       { title: '가사 작성', desc: '전하고 싶은 마음과 추억을 바탕으로 가사를 씁니다.', time: '1일' },
       { title: '멜로디 작곡', desc: '가사와 분위기에 어울리는 멜로디를 만듭니다.', time: '1~2일' },
-      { title: '다중 보컬 합성', desc: '가족 최대 3명의 목소리를 각각 합성하여 함께 부르도록 믹싱합니다.', time: '2일' },
+      { title: '보컬 합성 & 믹싱', desc: '가족 목소리로 노래를 부르게 하고 음향을 다듬습니다.', time: '1일' },
       { title: '가사 카드 제작', desc: '손편지 느낌의 감성 가사 카드를 인쇄용 고해상도로 디자인합니다.', time: '1일' },
-      { title: '완성곡 전달', desc: '카카오톡 링크로 mp3 + wav + 가사 카드 JPG를 함께 전달드립니다.', time: '5~7일 이내' },
-      { title: '2회 무료 수정', desc: '가사, 멜로디, 분위기 등을 2회까지 수정해드립니다.', time: '요청 시' },
+      { title: '완성곡 전달', desc: '카카오톡 링크로 mp3 + wav + 가사 카드 JPG를 함께 전달드립니다.', time: '3~5일 이내' },
+      { title: '3회 무료 수정', desc: '가사, 멜로디, 분위기 등을 3회까지 수정해드립니다.', time: '요청 시' },
     ],
-    delivery: '5~7일',
+    delivery: '3~5일',
   },
 ]
 
@@ -293,7 +291,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                         { q: '여러 사람 목소리가 섞여 있어도 되나요?', a: '네. 여러 목소리가 섞여 있어도 원하는 분의 목소리만 골라서 사용합니다.' },
                         { q: '마음에 안 들면 수정할 수 있나요?', a: '모든 리워드에 1회 무료 수정이 포함되어 있습니다. 가사, 멜로디, 분위기 등 수정 요청이 가능합니다.' },
                         { q: '선물 날짜에 맞출 수 있나요?', a: `${reward.tier} 리워드 기준 ${reward.delivery} 이내 완성됩니다. 급한 경우 사전에 말씀해주시면 최대한 맞춰드립니다.` },
-                        { q: '커버곡은 어떤 노래든 가능한가요?', a: '대부분의 한국 가요와 팝송이 가능합니다. 저작권 사유로 어려운 곡은 사전에 안내드립니다.' },
+                        { q: '어떤 장르의 노래가 가능한가요?', a: '발라드, 트로트, 팝, 어쿠스틱, R&B, 동요/자장가 등 대부분의 장르가 가능합니다. 주문 시 원하시는 장르를 선택해주세요.' },
                         { q: '음성 데이터는 안전한가요?', a: '업로드한 음성은 노래 제작 목적으로만 사용되며, 완료 후 30일 뒤 서버에서 삭제됩니다.' },
                       ].map((faq, i) => (
                         <div key={i} className="border-b border-neutral-100 last:border-0 pb-4 last:pb-0">
@@ -311,7 +309,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     <ul className="space-y-1.5 text-xs text-ink-muted leading-relaxed">
                       <li>· 음성 파일 품질에 따라 결과물 품질이 달라질 수 있습니다</li>
                       <li>· 30초 미만의 음성은 보컬 합성이 어려울 수 있습니다</li>
-                      <li>· 커버곡의 경우 저작권법상 사적 이용 범위로 제한됩니다</li>
+                      <li>· 완성곡은 사적 이용 범위로 제공됩니다 (상업적 이용 시 별도 동의 필요)</li>
                       <li>· 제작 시작 후에는 환불 정책에 따라 부분 환불이 진행됩니다</li>
                       <li>· 음성 데이터는 제작 완료 후 30일이 지나면 자동 삭제됩니다</li>
                     </ul>
@@ -452,8 +450,6 @@ type OrderFormState = {
   genre: string
   genreCustom: string
   mood: string
-  songType: 'original' | 'cover'
-  coverSong: string
   extra: string
 }
 
@@ -463,8 +459,7 @@ const EMPTY_FORM: OrderFormState = {
   voiceGender: '', voiceAge: '',
   memory: '', unsaid: '', episode: '', story: '',
   genre: '', genreCustom: '', mood: '',
-  songType: 'original',
-  coverSong: '', extra: '',
+  extra: '',
 }
 
 const FORM_STORAGE_KEY = 'hising-order-form-v1'

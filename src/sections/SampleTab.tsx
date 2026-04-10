@@ -8,7 +8,6 @@ import type { TabId } from '@/types'
 
 interface Sample {
   title: string
-  type: '오리지널' | '커버'
   duration: string
   to: string
   from: string
@@ -26,7 +25,7 @@ interface Sample {
 const samples: Sample[] = [
   {
     title: '식탁 위의 온기',
-    type: '오리지널',
+
     duration: '3:24',
     to: '어머니 팔순',
     from: '40대 아들',
@@ -47,7 +46,7 @@ const samples: Sample[] = [
   },
   {
     title: '바쁘다는 핑계',
-    type: '오리지널',
+
     duration: '4:02',
     to: '아버지 생신',
     from: '30대 딸',
@@ -68,7 +67,7 @@ const samples: Sample[] = [
   },
   {
     title: '수화기 너머의 핑계',
-    type: '오리지널',
+
     duration: '3:48',
     to: '부모님 결혼기념일',
     from: '40대 아들',
@@ -123,7 +122,7 @@ function SampleStoryCard({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boo
           {/* 곡 정보 오버레이 */}
           <div className="absolute bottom-0 left-0 right-0 p-5">
             <span className="inline-block text-[10px] font-medium bg-white/20 backdrop-blur-sm text-white rounded-full px-2.5 py-0.5 mb-2">
-              {s.type} · {s.duration}
+              {s.duration}
             </span>
             <p className="font-bold text-white text-lg leading-tight">{s.title}</p>
             <p className="text-white/70 text-xs mt-1">{s.to} · {s.from}</p>
@@ -303,7 +302,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                   </div>
                   <div className="flex-1 text-left min-w-0">
                     <p className="text-sm font-bold text-ink-light truncate">식탁 위의 온기</p>
-                    <p className="text-[11px] text-ink-muted">{playingIdx === 0 ? '재생 중…' : '오리지널 · 3:24'}</p>
+                    <p className="text-[11px] text-ink-muted">{playingIdx === 0 ? '재생 중…' : '맞춤 노래 · 3:24'}</p>
                   </div>
                 </button>
                 <p className="text-[11px] text-ink-faint mt-2 flex items-center gap-1">
@@ -371,97 +370,6 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
               />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 오리지널 vs 커버 안내 */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <div className="text-center mb-10">
-              <p className="text-primary-400 font-semibold text-sm mb-3">두 가지 방식</p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">오리지널 vs 커버</h2>
-              <p className="text-ink-muted text-sm mt-3">마음과 상황에 맞춰 두 가지 방식 중 선택하실 수 있습니다</p>
-            </div>
-          </FadeIn>
-          <div className="grid md:grid-cols-2 gap-5">
-            {/* 오리지널 */}
-            <FadeIn delay={0.05}>
-              <div className="rounded-2xl border-2 border-primary-300 bg-gradient-to-br from-primary-50/60 to-white p-6 sm:p-8 h-full">
-                <div className="inline-flex items-center gap-2 bg-primary-400 text-white text-xs font-bold rounded-full px-3 py-1 mb-4">
-                  가장 많이 선택
-                </div>
-                <h3 className="text-xl font-bold text-ink-light mb-2">오리지널</h3>
-                <p className="text-sm text-ink-muted mb-5 leading-relaxed">
-                  세상에 단 하나뿐인 새 노래. 가족의 이야기를 바탕으로 가사와 멜로디를 새로 만들고,
-                  가족 목소리를 보컬로 얹어드립니다.
-                </p>
-                <ul className="space-y-2.5 text-sm text-ink-light">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 flex-shrink-0" />
-                    <span><strong>저작권 걱정 없음</strong> — 이용자의 사적 이용권 보장</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 flex-shrink-0" />
-                    <span><strong>이야기 맞춤 가사</strong> — 전하고 싶은 마음을 직접 담음</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 flex-shrink-0" />
-                    <span><strong>유일무이한 선물</strong> — 세상 어디에도 없는 한 곡</span>
-                  </li>
-                </ul>
-                <div className="mt-5 pt-5 border-t border-primary-100">
-                  <p className="text-xs text-ink-faint">이런 분께 추천</p>
-                  <p className="text-xs text-ink-muted mt-1">• 부모님 칠순/팔순 같은 큰 행사<br />• 결혼기념일, 환갑 선물<br />• 특별한 기념일에 유일한 선물을 원하시는 분</p>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* 커버 */}
-            <FadeIn delay={0.1}>
-              <div className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 h-full">
-                <div className="inline-flex items-center gap-2 bg-neutral-100 text-ink text-xs font-bold rounded-full px-3 py-1 mb-4">
-                  추억 재해석
-                </div>
-                <h3 className="text-xl font-bold text-ink-light mb-2">커버</h3>
-                <p className="text-sm text-ink-muted mb-5 leading-relaxed">
-                  부모님이 즐겨 부르시던 추억의 곡, 결혼식 축가, 18번 노래 등 기존 노래를 가족 목소리로
-                  다시 부른 것처럼 만들어드립니다.
-                </p>
-                <ul className="space-y-2.5 text-sm text-ink-light">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0" />
-                    <span><strong>추억 소환</strong> — 그 시절 그 노래를 새롭게</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0" />
-                    <span><strong>익숙한 멜로디</strong> — 부모님이 아시는 곡이라 몰입도 ↑</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 flex-shrink-0" />
-                    <span><strong className="text-amber-700">사적 이용만 가능</strong> — 저작권 제약으로 개인 감상용</span>
-                  </li>
-                </ul>
-                <div className="mt-5 pt-5 border-t border-neutral-100">
-                  <p className="text-xs text-ink-faint">이런 분께 추천</p>
-                  <p className="text-xs text-ink-muted mt-1">• 부모님이 좋아하시던 18번 곡이 있는 경우<br />• 결혼식 축가 곡을 선물하고 싶은 경우<br />• 추억의 시절을 함께 되살리고 싶은 경우</p>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-
-          {/* 커버곡 저작권 안내 */}
-          <FadeIn delay={0.15}>
-            <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-4 max-w-3xl mx-auto">
-              <div className="flex items-start gap-2.5">
-                <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-amber-900 leading-relaxed">
-                  <strong>커버곡 저작권 안내</strong> — 원곡 저작권은 원저작권자에게 있으므로, 완성된 커버곡은 저작권법 제30조에 따른 사적 이용(본인 및 가까운 가족·지인의 개인 감상) 범위에서만 사용하실 수 있습니다.
-                  유튜브/SNS/방송 등 공중 전달은 별도의 원곡 이용허락이 필요합니다. 저작권 확보가 어려운 일부 곡은 제작이 제한될 수 있습니다.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
