@@ -3,20 +3,20 @@
 import { useState, useRef, useEffect } from 'react'
 import { Check, Play, Pause } from 'lucide-react'
 
-/* ── 파형 애니메이션 ── */
+/* ── 정적 파형 ── */
 function Waveform({ color = 'bg-primary-300', bars = 30 }: { color?: string; bars?: number }) {
   return (
     <div className="flex items-end gap-[2px] h-10 w-full">
-      {Array.from({ length: bars }, (_, i) => (
-        <div
-          key={i}
-          className={`flex-1 rounded-full ${color}`}
-          style={{
-            animation: `waveform ${0.6 + Math.random() * 0.8}s ease-in-out ${(Math.sin(i * 0.7) * 0.5 + 0.5) * 0.8}s infinite alternate`,
-            height: `${15 + Math.random() * 20}%`,
-          }}
-        />
-      ))}
+      {Array.from({ length: bars }, (_, i) => {
+        const h = 20 + Math.sin(i * 0.5) * 25 + Math.cos(i * 0.9) * 12 + 15
+        return (
+          <div
+            key={i}
+            className={`flex-1 rounded-full ${color}`}
+            style={{ height: `${Math.max(10, Math.min(85, h))}%` }}
+          />
+        )
+      })}
     </div>
   )
 }
