@@ -17,7 +17,7 @@ export default function TumblbukPreview() {
       <section className="bg-gradient-to-b from-primary-50 via-white to-white">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28 text-center">
           <p className="text-primary-500 font-semibold text-sm mb-5 tracking-wider">HI-Sing</p>
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-ink-light leading-[1.35] tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-ink-light leading-[1.35] tracking-tight">
             30년 치 감사를<br />
             <span className="text-primary-400">3분짜리 노래 한 곡</span>에<br />
             담을 수 있다면
@@ -28,7 +28,7 @@ export default function TumblbukPreview() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <div className="inline-flex items-center gap-2 bg-white border border-primary-200 rounded-full pl-2 pr-5 py-2 shadow-sm">
-              <span className="bg-primary-400 text-white text-[10px] font-extrabold rounded-full px-2.5 py-1">얼리버드</span>
+              <span className="bg-primary-400 text-white text-[10px] font-semibold rounded-full px-2.5 py-1">얼리버드</span>
               <span className="text-sm font-bold text-ink">29,000원</span>
               <span className="text-xs text-ink-faint line-through ml-1">49,000원</span>
             </div>
@@ -59,7 +59,7 @@ export default function TumblbukPreview() {
       <section className="bg-gradient-to-b from-primary-400 to-primary-500">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 py-16 sm:py-20 text-center text-white">
           <p className="text-white/70 text-sm mb-4">그래서 만들었습니다</p>
-          <h2 className="text-2xl sm:text-3xl font-black leading-snug">
+          <h2 className="text-2xl sm:text-3xl font-bold leading-snug">
             목소리 파일 하나와<br />마음 한 줄이면<br />노래가 됩니다
           </h2>
           <p className="text-white/80 text-sm mt-6 max-w-sm mx-auto leading-relaxed">
@@ -173,7 +173,7 @@ export default function TumblbukPreview() {
 
           <div className="space-y-10">
             <div className="flex gap-5">
-              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">1</div>
+              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-bold flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">1</div>
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-ink-light mb-1">목소리를 보내주세요</h3>
                 <p className="text-sm text-ink-muted leading-relaxed">
@@ -183,7 +183,7 @@ export default function TumblbukPreview() {
               </div>
             </div>
             <div className="flex gap-5">
-              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">2</div>
+              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-bold flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">2</div>
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-ink-light mb-1">마음을 적어주세요</h3>
                 <p className="text-sm text-ink-muted leading-relaxed">
@@ -193,7 +193,7 @@ export default function TumblbukPreview() {
               </div>
             </div>
             <div className="flex gap-5">
-              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">3</div>
+              <div className="w-12 h-12 rounded-2xl bg-primary-400 text-white text-lg font-bold flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary-200/40">3</div>
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-ink-light mb-1">노래가 완성됩니다</h3>
                 <p className="text-sm text-ink-muted leading-relaxed">
@@ -215,7 +215,7 @@ export default function TumblbukPreview() {
           </h2>
           <div className="bg-gradient-to-br from-primary-50 to-white border-2 border-primary-300 rounded-3xl p-8 sm:p-12 max-w-sm mx-auto shadow-lg shadow-primary-100/50">
             <p className="text-ink-muted text-sm mb-2">하이싱은</p>
-            <p className="text-5xl sm:text-6xl font-black text-ink-light">29,000<span className="text-xl font-bold text-ink-muted">원</span></p>
+            <p className="text-5xl sm:text-6xl font-bold text-ink-light">29,000<span className="text-xl font-bold text-ink-muted">원</span></p>
             <p className="text-primary-500 text-sm font-semibold mt-3">부터. 3~5일이면 됩니다.</p>
             <div className="mt-6 w-full h-px bg-primary-100" />
             <p className="text-xs text-ink-faint mt-4">커피 5잔 값으로 평생 남는 선물</p>
@@ -256,12 +256,12 @@ export default function TumblbukPreview() {
           <div className="space-y-5">
             {/* 얼리버드 */}
             <div className="relative bg-gradient-to-br from-primary-50 to-white rounded-2xl p-6 sm:p-8 border-2 border-primary-400 shadow-lg shadow-primary-100/50">
-              <div className="absolute -top-3 left-6 bg-primary-400 text-white text-[11px] font-extrabold rounded-full px-4 py-1">
+              <div className="absolute -top-3 left-6 bg-primary-400 text-white text-[11px] font-semibold rounded-full px-4 py-1">
                 얼리버드 · 한정 100명
               </div>
               <div className="flex items-end justify-between mt-2 mb-5">
                 <div>
-                  <p className="text-2xl sm:text-3xl font-black text-ink-light">29,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
+                  <p className="text-2xl sm:text-3xl font-bold text-ink-light">29,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
                   <p className="text-xs text-ink-faint line-through">정가 49,000원</p>
                 </div>
                 <span className="text-xs font-bold text-primary-500 bg-primary-100 rounded-full px-3 py-1">40% 할인</span>
@@ -281,7 +281,7 @@ export default function TumblbukPreview() {
               <div className="flex items-end justify-between mb-5">
                 <div>
                   <p className="text-xs text-ink-faint mb-1">기본</p>
-                  <p className="text-2xl font-black text-ink-light">49,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
+                  <p className="text-2xl font-bold text-ink-light">49,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -299,7 +299,7 @@ export default function TumblbukPreview() {
               <div className="flex items-end justify-between mb-5">
                 <div>
                   <p className="text-xs text-ink-faint mb-1">프리미엄</p>
-                  <p className="text-2xl font-black text-ink-light">79,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
+                  <p className="text-2xl font-bold text-ink-light">79,000<span className="text-sm font-normal text-ink-muted ml-1">원</span></p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -349,7 +349,7 @@ export default function TumblbukPreview() {
       {/* ━━━ 11. 클로징 CTA ━━━ */}
       <section className="bg-ink">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28 text-center">
-          <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-snug">
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
             이번 부모님 생신에는<br />
             &ldquo;건강하세요&rdquo; 대신,<br />
             <span className="text-primary-300">노래 한 곡</span> 어떠세요?
