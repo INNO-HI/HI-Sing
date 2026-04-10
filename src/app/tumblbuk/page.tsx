@@ -29,7 +29,7 @@ export default function TumblbukPreview() {
             가족 목소리로 만드는 세상에 하나뿐인 맞춤 노래
           </p>
 
-          <img src="/images/tumblbuk/01-main.jpg" alt="하이싱 — 노래로 전하는 우리 가족 이야기" className="mt-12 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
+          <img src="/images/tumblbuk/01-main.jpg" alt="하이싱 — 노래로 전하는 우리 가족 이야기" className="mt-12 rounded-2xl w-full w-full rounded-2xl shadow-sm" />
         </div>
       </section>
 
@@ -48,7 +48,7 @@ export default function TumblbukPreview() {
             </p>
           </div>
 
-          <img src="/images/tumblbuk/02-empathy.jpg" alt="마음은 가득한데 전하기가 참 어렵습니다" className="mt-12 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
+          <img src="/images/tumblbuk/02-empathy.jpg" alt="마음은 가득한데 전하기가 참 어렵습니다" className="mt-12 rounded-2xl w-full w-full rounded-2xl shadow-sm" />
 
           <div className="text-center mt-14">
             <p className="text-ink-muted text-sm mb-3">마음이 없는 게 아닙니다.</p>
@@ -77,7 +77,7 @@ export default function TumblbukPreview() {
             가사와 멜로디를 만들고, 가족 목소리를 보컬로 얹어 노래를 완성해드립니다.
           </p>
 
-          <img src="/images/tumblbuk/03-process.jpg" alt="3단계 프로세스" className="rounded-2xl w-full max-w-md mx-auto shadow-sm" />
+          <img src="/images/tumblbuk/03-process.jpg" alt="3단계 프로세스" className="rounded-2xl w-full w-full rounded-2xl shadow-sm" />
         </div>
       </section>
 
@@ -123,6 +123,28 @@ export default function TumblbukPreview() {
         </div>
       </section>
 
+      {/* ── 하이싱의 특별함 ── */}
+      <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: 'linear-gradient(180deg, #FDF8F5 0%, #FFF1EB 50%, #FDF8F5 100%)' }}>
+        <div className="max-w-[680px] mx-auto">
+          <p className="text-ink text-lg font-medium text-center mb-10">하이싱의 특별함</p>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { img: '/images/special-voice.png', title: '30초 음성이면 충분' },
+              { img: '/images/special-nomusic.png', title: '작곡 몰라도 OK' },
+              { img: '/images/special-compose.png', title: '프리미엄 작사/작곡' },
+              { img: '/images/special-fast.png', title: '3~5일이면 완성' },
+            ].map(item => (
+              <div key={item.title} className="bg-white rounded-xl p-4 text-center border border-primary-100/40">
+                <div className="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border border-primary-50">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                </div>
+                <p className="text-ink text-sm font-medium">{item.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 실제 사례 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: '#FFF9F6' }}>
         <div className="max-w-[680px] mx-auto">
@@ -150,7 +172,7 @@ export default function TumblbukPreview() {
             <p className="text-ink-faint text-xs mt-4">— 40대 아들, 어머니 팔순 선물</p>
           </div>
 
-          <img src="/images/tumblbuk/04-result.jpg" alt="실제 완성된 노래 — 식탁 위의 온기" className="rounded-2xl w-full max-w-md mx-auto shadow-sm mb-6" />
+          <img src="/images/tumblbuk/04-result.jpg" alt="실제 완성된 노래 — 식탁 위의 온기" className="rounded-2xl w-full w-full rounded-2xl shadow-sm mb-6" />
 
           {/* 사례 2 */}
           <div className="bg-white rounded-2xl p-6 sm:p-8 mb-6 border border-amber-100/60">
@@ -171,6 +193,15 @@ export default function TumblbukPreview() {
               저녁 먹을 때 눈이 빨개져 계시더라고요. 아빠 눈물, 태어나서 처음 봤습니다.
             </p>
             <p className="text-ink-faint text-xs mt-4">— 30대 딸, 아버지 생신 선물</p>
+          </div>
+
+          {/* 앨범아트 모음 */}
+          <div className="grid grid-cols-4 gap-2 mb-6">
+            {[1,2,3,7].map(n => (
+              <div key={n} className="aspect-square rounded-xl overflow-hidden">
+                <img src={`/images/album-${n}.png`} alt="" className="w-full h-full object-cover" />
+              </div>
+            ))}
           </div>
 
           {/* 사례 3 */}
@@ -219,7 +250,7 @@ export default function TumblbukPreview() {
           </p>
           <p className="text-ink-muted text-sm mt-3">부터. 3~5일이면 됩니다.</p>
 
-          <img src="/images/tumblbuk/05-price.jpg" alt="전문가 50~100만원 vs 하이싱 29,000원" className="mt-10 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
+          <img src="/images/tumblbuk/05-price.jpg" alt="전문가 50~100만원 vs 하이싱 29,000원" className="mt-10 rounded-2xl w-full w-full rounded-2xl shadow-sm" />
         </div>
       </section>
 
@@ -348,8 +379,15 @@ export default function TumblbukPreview() {
         <div className="max-w-[680px] mx-auto text-center">
           <p className="text-ink font-medium mb-2">만드는 사람들</p>
           <p className="text-ink-muted text-sm mb-1">주식회사 이노하이(INNO-HI)</p>
-          <p className="text-ink-muted text-xs">&ldquo;기술은 뒤에 있고, 사람의 마음이 앞에 서는 서비스&rdquo;</p>
+          <p className="text-ink-muted text-xs"></p>
           <p className="text-ink-faint text-xs mt-4">김민수 · 한민우 | contact@innohi.ai.kr | hisolution.site</p>
+        </div>
+      </section>
+
+      {/* ── 가족 이미지 ── */}
+      <section className="px-5 sm:px-8 py-8">
+        <div className="max-w-[680px] mx-auto">
+          <img src="/images/cta-family-new.png" alt="가족" className="w-full rounded-2xl shadow-sm" />
         </div>
       </section>
 
@@ -361,9 +399,11 @@ export default function TumblbukPreview() {
         }}
       >
         <div className="max-w-[680px] mx-auto text-center">
-          <p className="text-[#F5D5C8] text-lg sm:text-xl font-medium leading-relaxed mb-6">
+          <p className="text-[#F5D5C8] text-xl sm:text-2xl font-medium leading-relaxed mb-4">
             이번 부모님 생신에는<br />
-            &ldquo;건강하세요&rdquo; 대신,<br />
+            &ldquo;건강하세요&rdquo; 대신,
+          </p>
+          <p className="text-white text-2xl sm:text-3xl font-semibold mb-8">
             노래 한 곡 어떠세요?
           </p>
           <p className="text-[#D4A999] text-sm">얼리버드 한정 100명 · 29,000원부터</p>
