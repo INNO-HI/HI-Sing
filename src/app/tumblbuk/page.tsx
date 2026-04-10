@@ -106,7 +106,10 @@ export default function TumblbukPreview() {
               &ldquo;감사합니다&rdquo; 한마디를<br />제대로 전해본 게 언제인지 기억나시나요?
             </p>
           </div>
-          <p className="text-ink text-center mt-14 text-base sm:text-lg font-medium">
+          {/* 가족 사진 */}
+          <img src="/images/cta-family-new.png" alt="" className="mt-12 w-full rounded-2xl" />
+
+          <p className="text-ink text-center mt-10 text-base sm:text-lg font-medium">
             말로 하긴 쑥스럽고, 편지는 부담스럽고.<br />
             그래서 노래로 전하면 어떨까 생각했습니다.
           </p>
@@ -125,10 +128,7 @@ export default function TumblbukPreview() {
           <div className="space-y-5">
             {[
               { num: '1', title: '목소리 파일 보내기', desc: '전화 녹음, 영상 속 목소리, 일상 대화. 30초면 됩니다.', detail: (
-                <div className="mt-3 border-2 border-dashed border-neutral-200 rounded-lg p-4 text-center">
-                  <p className="text-ink-muted text-xs">mp3, wav, m4a</p>
-                  <p className="text-ink-faint text-[10px] mt-0.5">파일을 업로드하세요</p>
-                </div>
+                <img src="/images/special-voice.png" alt="" className="mt-3 w-full rounded-lg" />
               )},
               { num: '2', title: '전하고 싶은 이야기 적기', desc: '누구에게, 어떤 마음인지. 한두 줄이면 충분합니다.', detail: (
                 <div className="mt-3 space-y-2">
@@ -182,6 +182,15 @@ export default function TumblbukPreview() {
               팔순잔치에서 틀어드렸는데 어머니가 숟가락을 놓으셨대요. 온 가족이 울었다고 합니다.
             </p>
             <p className="text-ink-faint text-xs mt-3">40대 아들, 어머니 팔순</p>
+          </div>
+
+          {/* 앨범아트 */}
+          <div className="grid grid-cols-3 gap-2 mb-5">
+            {[1, 2, 7].map(n => (
+              <div key={n} className="aspect-square rounded-xl overflow-hidden">
+                <img src={`/images/album-${n}.png`} alt="" className="w-full h-full object-cover" />
+              </div>
+            ))}
           </div>
 
           {/* 사례 2 */}
@@ -313,6 +322,13 @@ export default function TumblbukPreview() {
           <p className="text-ink font-medium mb-2">만드는 사람들</p>
           <p className="text-ink-muted text-sm">주식회사 이노하이(INNO-HI)</p>
           <p className="text-ink-faint text-xs mt-3">김민수 · 한민우 | contact@innohi.ai.kr | hisolution.site</p>
+        </div>
+      </section>
+
+      {/* 가족 사진 */}
+      <section className="px-5 sm:px-8 py-6">
+        <div className="max-w-[480px] mx-auto">
+          <img src="/images/cta-family.png" alt="" className="w-full rounded-2xl" />
         </div>
       </section>
 
