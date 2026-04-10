@@ -141,12 +141,3 @@ export function trackOutboundClick(url: string, label: string) {
     outbound: true,
   })
 }
-
-// ─── 전화 문의 클릭 ─────────────────────────────
-export function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    lead_type: 'phone_call',
-    value: 0,
-    currency: 'KRW',
-  })
-}

@@ -1,17 +1,16 @@
+'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import { Check } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
-import { trackCTAClick, trackSectionView } from '@/lib/analytics'
+import { trackCTAClick, trackSamplePlay } from '@/lib/analytics'
 import type { TabId } from '@/types'
 
 interface HomeTabProps {
   onNavigate: (tab: TabId) => void
 }
 
-const TUMBLBUG_URL = 'https://tumblbug.com'
-const isFundingMode = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('from') === 'funding'
-const CTA_URL = isFundingMode ? TUMBLBUG_URL : TUMBLBUG_URL
-const CTA_LABEL = isFundingMode ? '텀블벅에서 펀딩하기' : '바로 구매하기'
+const CTA_LABEL = '29,000원부터 시작하기'
 
 /* ── 타이핑 애니메이션 훅 ──────────────────────── */
 function useTypewriter(text: string, speed = 60, startDelay = 0) {
@@ -304,15 +303,21 @@ function DragFileAnimation() {
 }
 
 /* ── 후기 데이터 + 슬라이더 ────────────────────── */
-const reviewSamples = [
-  { title: '식탁 위의 온기', type: '오리지널', to: '엄마 칠순 선물', from: '40대 아들', quote: '"칠순잔치에서 틀어드렸는데 온 가족이 울었어요."', duration: '3:24', color: 'from-primary-400 to-sky-500', audio: `/audio/식탁_위의_온기.mp3` },
-  { title: '바쁘다는 핑계', type: '오리지널', to: '아빠 팔순 선물', from: '30대 딸', quote: '"아빠가 차에서 반복 재생하신대요."', duration: '4:02', color: 'from-amber-400 to-orange-500', audio: `/audio/바쁘다는_핑계.mp3` },
-  { title: '수화기 너머의 핑계', type: '오리지널', to: '부모님 결혼기념일', from: '40대 아들', quote: '"부모님이 전화하실 때마다 이 노래 생각나신대요."', duration: '3:48', color: 'from-rose-400 to-pink-500', audio: `/audio/수화기_너머의_핑계.mp3` },
-  { title: '엄마의 자장가', type: '커버', to: '어머니 생신', from: '30대 아들', quote: '"어머니가 핸드폰에 저장해두고 반복해서 들으세요."', duration: '3:15', color: 'from-emerald-400 to-teal-500', audio: '' },
-  { title: '고마운 사람', type: '오리지널', to: '아빠 생신', from: '40대 딸', quote: '"아빠가 차에서 반복 재생하신대요."', duration: '3:52', color: 'from-violet-400 to-purple-500', audio: '' },
-  { title: '그때 그 노래', type: '커버', to: '결혼기념일', from: '30대 아들', quote: '"부모님 결혼식 때 나왔던 노래를 제가 불렀어요."', duration: '4:11', color: 'from-cyan-400 to-blue-500', audio: '' },
-  { title: '당신이 있어서', type: '오리지널', to: '남편 환갑', from: '50대 아내', quote: '"남편이 눈물을 참으려고 웃고 있더라고요."', duration: '3:36', color: 'from-pink-400 to-rose-500', audio: '' },
-  { title: '봄날의 편지', type: '오리지널', to: '엄마 생신', from: '40대 아들', quote: '"엄마가 이걸 어떻게 만든 거냐고 계속 물어보세요."', duration: '3:08', color: 'from-teal-400 to-emerald-500', audio: '' },
+interface ReviewSample {
+  title: string
+  type: '오리지널' | '커버'
+  to: string
+  from: string
+  quote: string
+  duration: string
+  color: string
+  audio: string
+}
+
+const reviewSamples: ReviewSample[] = [
+  { title: '식탁 위의 온기', type: '오리지널', to: '엄마 칠순 선물', from: '40대 아들', quote: '"칠순잔치에서 틀어드렸는데 온 가족이 울었어요."', duration: '3:24', color: 'from-primary-400 to-sky-500', audio: '/audio/식탁_위의_온기.mp3' },
+  { title: '바쁘다는 핑계', type: '오리지널', to: '아빠 팔순 선물', from: '30대 딸', quote: '"아빠가 차에서 반복 재생하신대요."', duration: '4:02', color: 'from-amber-400 to-orange-500', audio: '/audio/바쁘다는_핑계.mp3' },
+  { title: '수화기 너머의 핑계', type: '오리지널', to: '부모님 결혼기념일', from: '40대 아들', quote: '"부모님이 전화하실 때마다 이 노래 생각나신대요."', duration: '3:48', color: 'from-rose-400 to-pink-500', audio: '/audio/수화기_너머의_핑계.mp3' },
 ]
 
 function LpDisc({ color, size = 'sm' }: { color: string; size?: 'sm' | 'lg' }) {
@@ -334,13 +339,18 @@ function LpDisc({ color, size = 'sm' }: { color: string; size?: 'sm' | 'lg' }) {
   )
 }
 
-function ReviewCard({ s }: { s: typeof reviewSamples[0] }) {
+function ReviewCard({ s }: { s: ReviewSample }) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
 
   const togglePlay = () => {
     if (!audioRef.current || !s.audio) return
-    if (playing) { audioRef.current.pause() } else { audioRef.current.play().catch(() => {}) }
+    if (playing) {
+      audioRef.current.pause()
+    } else {
+      audioRef.current.play().catch(() => {})
+      trackSamplePlay(s.title)
+    }
     setPlaying(!playing)
   }
 
@@ -405,9 +415,19 @@ function ReviewGrid() {
 }
 
 /* ── 메인 컴포넌트 ─────────────────────────────── */
-export function HomeTab(_props: HomeTabProps) {
+export function HomeTab({ onNavigate }: HomeTabProps) {
   const step2To = useTypewriter('엄마 (칠순 생신)', 150, 1200)
   const step2Text = useTypewriter('매일 새벽 도시락 싸주셨던 감사한 마음을 전하고 싶어요', 100, 4000)
+
+  const handleHeroCTA = () => {
+    trackCTAClick('hero', CTA_LABEL)
+    onNavigate('pricing')
+  }
+
+  const handleBottomCTA = () => {
+    trackCTAClick('bottom_cta', CTA_LABEL)
+    onNavigate('pricing')
+  }
 
   return (
     <>
@@ -423,12 +443,32 @@ export function HomeTab(_props: HomeTabProps) {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
               </h1>
-              <div className="mt-8">
+
+              {/* 가격 배지 */}
+              <div className="mt-6 inline-flex items-center gap-2 bg-white border border-primary-100 rounded-full pl-1.5 pr-4 py-1.5 shadow-sm">
+                <span className="inline-flex items-center gap-1 bg-primary-400 text-white text-[11px] font-bold rounded-full px-2.5 py-1">얼리버드</span>
+                <span className="text-sm text-ink-light">
+                  <strong className="text-ink">29,000원</strong>
+                  <span className="text-ink-faint">부터</span>
+                  <span className="text-xs text-primary-500 font-semibold ml-2">·  3~5일 완성</span>
+                </span>
+              </div>
+
+              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button
-                  onClick={() => _props.onNavigate('pricing')}
-                  className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
+                  onClick={handleHeroCTA}
+                  className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer shadow-md shadow-primary-200/40"
                 >
                   {CTA_LABEL}
+                </button>
+                <button
+                  onClick={() => {
+                    trackCTAClick('hero_sample', '샘플 들어보기')
+                    onNavigate('sample')
+                  }}
+                  className="px-6 py-3.5 text-[15px] font-semibold text-ink-light bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:bg-primary-50/40 transition-colors cursor-pointer"
+                >
+                  샘플 들어보기
                 </button>
               </div>
             </div>
@@ -651,7 +691,10 @@ export function HomeTab(_props: HomeTabProps) {
         </div>
       </section>
 
-      {/* ═══ 6. CTA ════════════════════════════════════ */}
+      {/* ═══ 7. 고객 후기 ═══════════════════════════════ */}
+      <ReviewGrid />
+
+      {/* ═══ 8. CTA ════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-neutral-50">
         {/* 배경: 왼쪽 메인색 그라데이션 + 오른쪽 사진 */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-50 to-transparent" />
@@ -662,10 +705,12 @@ export function HomeTab(_props: HomeTabProps) {
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 whitespace-nowrap" style={{ lineHeight: 1.6 }}>
-                이번 부모님 생신에는 "건강하세요" 대신,<br />노래 한 곡 어떠세요?
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink-light mb-6" style={{ lineHeight: 1.5 }}>
+                이번 부모님 생신에는 &ldquo;건강하세요&rdquo; 대신,
+                <br className="hidden sm:inline" />
+                <span className="sm:hidden"> </span>노래 한 곡 어떠세요?
               </h2>
-              <button onClick={() => _props.onNavigate('pricing')} className="px-8 py-4 text-base font-semibold text-white bg-primary-400 rounded-lg hover:bg-primary-500 transition-colors cursor-pointer">
+              <button onClick={handleBottomCTA} className="px-8 py-4 text-base font-semibold text-white bg-primary-400 rounded-lg hover:bg-primary-500 transition-colors cursor-pointer">
                 {CTA_LABEL}
               </button>
             </div>

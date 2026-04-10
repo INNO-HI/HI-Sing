@@ -1,12 +1,18 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Navigation } from '@/sections/Navigation'
 import { Footer } from '@/sections/Footer'
 import type { TabId } from '@/types'
+import { trackPageView } from '@/lib/analytics'
 
 export default function TermsLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
+
+  useEffect(() => {
+    trackPageView('terms')
+  }, [])
 
   const handleTabChange = (tab: TabId) => {
     router.push(`/?tab=${tab}`)

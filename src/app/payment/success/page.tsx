@@ -3,15 +3,22 @@
 import { useEffect } from 'react'
 import { Check, Home } from 'lucide-react'
 import Link from 'next/link'
-import { trackPurchase } from '@/lib/analytics'
+import { trackPurchase, trackOutboundClick, trackPageView } from '@/lib/analytics'
 
 export default function PaymentSuccess() {
   useEffect(() => {
+    trackPageView('payment_success')
     const params = new URLSearchParams(window.location.search)
     const tier = params.get('tier') || ''
     const price = Number(params.get('price') || '0')
     const orderId = params.get('orderId') || ''
     if (orderId) trackPurchase(tier, price, orderId)
+    // 주문 성공 시 임시 저장된 폼 값 삭제
+    try {
+      localStorage.removeItem('hising-order-form-v1')
+    } catch {
+      // 접근 불가 환경에서는 무시
+    }
   }, [])
 
   return (
@@ -54,7 +61,17 @@ export default function PaymentSuccess() {
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 text-left mb-8">
           <p className="text-xs text-ink-muted leading-relaxed">
             진행 상황은 입력하신 연락처로 안내드립니다.<br />
-            수정 요청이나 문의사항은 <a href="http://pf.kakao.com/_vxbvdX" target="_blank" rel="noopener noreferrer" className="text-primary-400 font-semibold hover:underline">카카오톡 채널</a>로 연락주세요.
+            수정 요청이나 문의사항은{' '}
+            <a
+              href="http://pf.kakao.com/_vxbvdX"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackOutboundClick('http://pf.kakao.com/_vxbvdX', 'payment_success_kakao')}
+              className="text-primary-400 font-semibold hover:underline"
+            >
+              카카오톡 채널
+            </a>
+            로 연락주세요.
           </p>
         </div>
 

@@ -124,11 +124,31 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-lg font-bold text-ink-light mb-3">제9조 (개인정보 보호책임자)</h2>
-              <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
-                <p><strong className="text-ink-light">책임자:</strong> 김민수</p>
-                <p><strong className="text-ink-light">이메일:</strong> contact@innohi.ai.kr</p>
-                <p><strong className="text-ink-light">소속:</strong> 주식회사 이노하이(INNO-HI)</p>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이
+                개인정보 보호책임자 및 담당자를 지정하고 있습니다.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
+                  <p className="text-xs font-semibold text-primary-500 mb-2">개인정보 보호책임자</p>
+                  <p><strong className="text-ink-light">성명:</strong> 김민수</p>
+                  <p><strong className="text-ink-light">직책:</strong> 대표이사</p>
+                  <p><strong className="text-ink-light">이메일:</strong> contact@innohi.ai.kr</p>
+                  <p><strong className="text-ink-light">소속:</strong> 주식회사 이노하이(INNO-HI)</p>
+                </div>
+                <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
+                  <p className="text-xs font-semibold text-primary-500 mb-2">개인정보 보호 담당자</p>
+                  <p><strong className="text-ink-light">성명:</strong> 한민우</p>
+                  <p><strong className="text-ink-light">직책:</strong> 대표이사</p>
+                  <p><strong className="text-ink-light">이메일:</strong> contact@innohi.ai.kr</p>
+                  <p><strong className="text-ink-light">소속:</strong> 주식회사 이노하이(INNO-HI)</p>
+                </div>
               </div>
+              <p className="text-xs text-ink-faint leading-relaxed mt-3">
+                이용자는 회사의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에
+                관한 사항을 위 책임자 및 담당자에게 문의하실 수 있습니다. 회사는 이용자의 문의에 대해 지체 없이
+                답변 및 처리해드릴 것입니다.
+              </p>
             </section>
 
             <section>

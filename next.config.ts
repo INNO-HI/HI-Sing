@@ -13,15 +13,15 @@ const securityHeaders = [
   { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
   // 권한 정책
   { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-  // CSP — GA, 나이스페이, 카카오 허용
+  // CSP — GA, 나이스페이, Pretendard 폰트 허용
   {
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googletagmanager.com *.google-analytics.com *.nicepay.co.kr pay.nicepay.co.kr",
-      "style-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline' cdn.jsdelivr.net",
       "img-src 'self' data: blob: *.google-analytics.com *.googletagmanager.com",
-      "font-src 'self' data:",
+      "font-src 'self' data: cdn.jsdelivr.net",
       "connect-src 'self' *.google-analytics.com *.googletagmanager.com *.nicepay.co.kr api.nicepay.co.kr",
       "frame-src 'self' *.nicepay.co.kr pay.nicepay.co.kr",
       "object-src 'none'",
@@ -34,6 +34,7 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // X-Powered-By 헤더 제거
+  generateBuildId: () => null, // Next 기본값 명시 (일부 환경에서 env 주입으로 누락되는 케이스 대응)
   headers: async () => [
     {
       source: '/:path*',

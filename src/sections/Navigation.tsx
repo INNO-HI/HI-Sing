@@ -1,6 +1,9 @@
+'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import type { TabId } from '@/types'
+import { trackCTAClick } from '@/lib/analytics'
 
 interface NavigationProps {
   activeTab: TabId
@@ -86,7 +89,10 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                 </button>
               ))}
               <button
-                onClick={() => handleTabClick('pricing')}
+                onClick={() => {
+                  trackCTAClick('nav', '주문하기')
+                  handleTabClick('pricing')
+                }}
                 className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors"
               >
                 주문하기
