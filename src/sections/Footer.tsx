@@ -1,6 +1,34 @@
 export function Footer() {
   return (
     <footer className="bg-ink">
+      {/* 텀블벅 펀딩 배너 */}
+      <div className="bg-gradient-to-r from-[#1A1A2E] to-[#16213E] border-b border-white/5">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 py-5 sm:py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#FF4D00] flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm sm:text-base">텀블벅에서 펀딩 진행 중</p>
+                <p className="text-neutral-400 text-xs sm:text-sm">얼리버드 한정 100명 · 29,000원부터</p>
+              </div>
+            </div>
+            <a
+              href="https://tumblbug.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#FF4D00] hover:bg-[#E64500] text-white text-sm font-bold rounded-full transition-colors flex-shrink-0"
+            >
+              텀블벅에서 펀딩하기
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 py-8 sm:py-10 space-y-5">
         {/* 문의 + 로고 */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

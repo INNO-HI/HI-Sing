@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { Check } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
-import { trackCTAClick, trackSamplePlay } from '@/lib/analytics'
+import { trackCTAClick } from '@/lib/analytics'
 import type { TabId } from '@/types'
 
 interface HomeTabProps {
   onNavigate: (tab: TabId) => void
 }
 
-const CTA_LABEL = '29,000원부터 시작하기'
+const CTA_LABEL = '바로 구매하기'
 
 /* ── 타이핑 애니메이션 훅 ──────────────────────── */
 function useTypewriter(text: string, speed = 60, startDelay = 0) {
@@ -302,118 +302,6 @@ function DragFileAnimation() {
   )
 }
 
-/* ── 후기 데이터 + 슬라이더 ────────────────────── */
-interface ReviewSample {
-  title: string
-  type: '오리지널' | '커버'
-  to: string
-  from: string
-  quote: string
-  duration: string
-  color: string
-  audio: string
-}
-
-const reviewSamples: ReviewSample[] = [
-  { title: '식탁 위의 온기', type: '오리지널', to: '엄마 칠순 선물', from: '40대 아들', quote: '"칠순잔치에서 틀어드렸는데 온 가족이 울었어요."', duration: '3:24', color: 'from-primary-400 to-sky-500', audio: '/audio/식탁_위의_온기.mp3' },
-  { title: '바쁘다는 핑계', type: '오리지널', to: '아빠 팔순 선물', from: '30대 딸', quote: '"아빠가 차에서 반복 재생하신대요."', duration: '4:02', color: 'from-amber-400 to-orange-500', audio: '/audio/바쁘다는_핑계.mp3' },
-  { title: '수화기 너머의 핑계', type: '오리지널', to: '부모님 결혼기념일', from: '40대 아들', quote: '"부모님이 전화하실 때마다 이 노래 생각나신대요."', duration: '3:48', color: 'from-rose-400 to-pink-500', audio: '/audio/수화기_너머의_핑계.mp3' },
-]
-
-function LpDisc({ color, size = 'sm' }: { color: string; size?: 'sm' | 'lg' }) {
-  const dims = size === 'lg' ? 'w-40 h-40' : 'w-24 h-24'
-  const innerOuter = size === 'lg' ? 'inset-[12px]' : 'inset-[8px]'
-  const innerMid = size === 'lg' ? 'inset-[24px]' : 'inset-[16px]'
-  const innerCore = size === 'lg' ? 'inset-[36px]' : 'inset-[24px]'
-  const dot = size === 'lg' ? 'w-3 h-3' : 'w-2 h-2'
-  return (
-    <div className={`relative ${dims} mx-auto`}>
-      <div className={`${dims} rounded-full border-[5px] border-neutral-800 shadow-lg`} style={{ background: 'conic-gradient(from 0deg, #1a1a1a 0%, #333 25%, #1a1a1a 50%, #333 75%, #1a1a1a 100%)' }}>
-        <div className={`absolute ${innerOuter} rounded-full border border-neutral-600/30`} />
-        <div className={`absolute ${innerMid} rounded-full border border-neutral-600/20`} />
-        <div className={`absolute ${innerCore} rounded-full bg-gradient-to-br ${color} flex items-center justify-center`}>
-          <div className={`${dot} rounded-full bg-white/80`} />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function ReviewCard({ s }: { s: ReviewSample }) {
-  const audioRef = useRef<HTMLAudioElement>(null)
-  const [playing, setPlaying] = useState(false)
-
-  const togglePlay = () => {
-    if (!audioRef.current || !s.audio) return
-    if (playing) {
-      audioRef.current.pause()
-    } else {
-      audioRef.current.play().catch(() => {})
-      trackSamplePlay(s.title)
-    }
-    setPlaying(!playing)
-  }
-
-  useEffect(() => {
-    const a = audioRef.current
-    if (!a) return
-    const end = () => setPlaying(false)
-    a.addEventListener('ended', end)
-    return () => a.removeEventListener('ended', end)
-  }, [])
-
-  return (
-    <div className="rounded-2xl border border-neutral-200 overflow-hidden bg-white shadow-sm h-full flex flex-col">
-      {s.audio && <audio ref={audioRef} src={s.audio} preload="none" />}
-      <div className="px-5 pt-5 pb-3">
-        <div className="flex items-center justify-between">
-          <p className="font-semibold text-ink-light text-[15px] truncate">{s.title}</p>
-          <span className="text-xs font-medium text-primary-400 bg-primary-50 rounded-full px-2.5 py-0.5 flex-shrink-0 ml-2">{s.type}</span>
-        </div>
-        <p className="text-xs text-ink-faint mt-1">{s.duration}</p>
-      </div>
-      <div className="py-4 px-5 flex justify-center relative cursor-pointer" onClick={togglePlay}>
-        <LpDisc color={s.color} size="sm" />
-        <div className={`absolute inset-0 flex items-center justify-center transition-opacity ${playing ? 'opacity-100' : 'opacity-0 hover:opacity-100'}`}>
-          <div className="w-10 h-10 rounded-full bg-white/90 shadow flex items-center justify-center">
-            {playing
-              ? <svg className="w-4 h-4 text-primary-400" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-              : <svg className="w-4 h-4 text-primary-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            }
-          </div>
-        </div>
-      </div>
-      <div className="px-5 pb-5 pt-3 border-t border-neutral-100 mt-auto">
-        <p className="text-sm font-semibold text-ink-light">{s.to}</p>
-        <p className="text-xs text-ink-muted mt-0.5">{s.from}</p>
-        <p className="text-[13px] text-ink-muted leading-relaxed mt-2 line-clamp-2">{s.quote}</p>
-      </div>
-    </div>
-  )
-}
-
-function ReviewGrid() {
-  return (
-    <section className="py-24 sm:py-32 bg-neutral-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
-        <FadeIn>
-          <div className="text-center mb-14">
-            <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">고객 후기</h2>
-            <p className="text-ink-muted text-sm mt-3">실제 고객분들이 남겨주신 소중한 후기입니다</p>
-          </div>
-        </FadeIn>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          {reviewSamples.slice(0, 4).map((s, i) => (
-            <FadeIn key={i} delay={i * 0.06}>
-              <ReviewCard s={s} />
-            </FadeIn>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 /* ── 메인 컴포넌트 ─────────────────────────────── */
 export function HomeTab({ onNavigate }: HomeTabProps) {
   const step2To = useTypewriter('엄마 (칠순 생신)', 150, 1200)
@@ -444,31 +332,12 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
               </h1>
 
-              {/* 가격 배지 */}
-              <div className="mt-6 inline-flex items-center gap-2 bg-white border border-primary-100 rounded-full pl-1.5 pr-4 py-1.5 shadow-sm">
-                <span className="inline-flex items-center gap-1 bg-primary-400 text-white text-[11px] font-bold rounded-full px-2.5 py-1">얼리버드</span>
-                <span className="text-sm text-ink-light">
-                  <strong className="text-ink">29,000원</strong>
-                  <span className="text-ink-faint">부터</span>
-                  <span className="text-xs text-primary-500 font-semibold ml-2">·  3~5일 완성</span>
-                </span>
-              </div>
-
-              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <div className="mt-8">
                 <button
                   onClick={handleHeroCTA}
-                  className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer shadow-md shadow-primary-200/40"
+                  className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
                 >
                   {CTA_LABEL}
-                </button>
-                <button
-                  onClick={() => {
-                    trackCTAClick('hero_sample', '샘플 들어보기')
-                    onNavigate('sample')
-                  }}
-                  className="px-6 py-3.5 text-[15px] font-semibold text-ink-light bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:bg-primary-50/40 transition-colors cursor-pointer"
-                >
-                  샘플 들어보기
                 </button>
               </div>
             </div>
@@ -691,10 +560,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         </div>
       </section>
 
-      {/* ═══ 7. 고객 후기 ═══════════════════════════════ */}
-      <ReviewGrid />
-
-      {/* ═══ 8. CTA ════════════════════════════════════ */}
+      {/* ═══ 7. CTA ════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-neutral-50">
         {/* 배경: 왼쪽 메인색 그라데이션 + 오른쪽 사진 */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-50 to-transparent" />
