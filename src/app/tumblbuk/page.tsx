@@ -29,10 +29,7 @@ export default function TumblbukPreview() {
             가족 목소리로 만드는 세상에 하나뿐인 맞춤 노래
           </p>
 
-          {/* [IMG] 히어로 이미지 자리 */}
-          <div className="mt-12 bg-white/60 rounded-2xl h-64 sm:h-80 flex items-center justify-center border border-primary-100">
-            <p className="text-ink-faint text-sm">[히어로 이미지]</p>
-          </div>
+          <img src="/images/tumblbuk/01-main.jpg" alt="하이싱 — 노래로 전하는 우리 가족 이야기" className="mt-12 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
         </div>
       </section>
 
@@ -50,6 +47,8 @@ export default function TumblbukPreview() {
               편지는 손이 안 가고<br />영상은 카메라 앞에서 할 말이 사라지고<br />결국 또 &ldquo;건강하세요&rdquo;
             </p>
           </div>
+
+          <img src="/images/tumblbuk/02-empathy.jpg" alt="마음은 가득한데 전하기가 참 어렵습니다" className="mt-12 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
 
           <div className="text-center mt-14">
             <p className="text-ink-muted text-sm mb-3">마음이 없는 게 아닙니다.</p>
@@ -78,10 +77,7 @@ export default function TumblbukPreview() {
             가사와 멜로디를 만들고, 가족 목소리를 보컬로 얹어 노래를 완성해드립니다.
           </p>
 
-          {/* [IMG] 서비스 흐름도 이미지 자리 */}
-          <div className="bg-white/60 rounded-2xl h-48 sm:h-64 flex items-center justify-center border border-primary-100">
-            <p className="text-ink-faint text-sm">[서비스 흐름도 이미지]</p>
-          </div>
+          <img src="/images/tumblbuk/03-process.jpg" alt="3단계 프로세스" className="rounded-2xl w-full max-w-md mx-auto shadow-sm" />
         </div>
       </section>
 
@@ -154,10 +150,7 @@ export default function TumblbukPreview() {
             <p className="text-ink-faint text-xs mt-4">— 40대 아들, 어머니 팔순 선물</p>
           </div>
 
-          {/* [IMG] 앨범아트 이미지 자리 */}
-          <div className="bg-white/60 rounded-2xl h-48 flex items-center justify-center border border-primary-100 mb-6">
-            <p className="text-ink-faint text-sm">[앨범아트 이미지]</p>
-          </div>
+          <img src="/images/tumblbuk/04-result.jpg" alt="실제 완성된 노래 — 식탁 위의 온기" className="rounded-2xl w-full max-w-md mx-auto shadow-sm mb-6" />
 
           {/* 사례 2 */}
           <div className="bg-white rounded-2xl p-6 sm:p-8 mb-6 border border-amber-100/60">
@@ -225,6 +218,8 @@ export default function TumblbukPreview() {
             29,000<span className="text-lg font-medium">원</span>
           </p>
           <p className="text-ink-muted text-sm mt-3">부터. 3~5일이면 됩니다.</p>
+
+          <img src="/images/tumblbuk/05-price.jpg" alt="전문가 50~100만원 vs 하이싱 29,000원" className="mt-10 rounded-2xl w-full max-w-md mx-auto shadow-sm" />
         </div>
       </section>
 
