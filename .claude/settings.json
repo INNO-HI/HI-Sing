@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 /tmp/capture_bookbyai.py)"
+    ],
+    "additionalDirectories": [
+      "/Users/flareon078/Desktop/HI-Sing/.claude/skills"
+    ]
+  }
+}
