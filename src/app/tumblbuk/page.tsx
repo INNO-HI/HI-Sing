@@ -52,7 +52,7 @@ export default function TumblbukPreview() {
       </div>
 
       {/* ── 히어로 ── */}
-      <section className="px-5 sm:px-8 pt-16 pb-12 text-center" style={{ background: 'linear-gradient(180deg, #FFF5F0 0%, #FDF8F5 100%)' }}>
+      <section className="px-5 sm:px-8 pt-16 pb-14 text-center" style={{ background: 'linear-gradient(180deg, #FFF5F0 0%, #FDF8F5 100%)' }}>
         <div className="max-w-[480px] mx-auto">
           <p className="text-primary-400 text-sm font-medium tracking-widest mb-8">HI-Sing</p>
           <h1 className="text-2xl sm:text-[28px] font-semibold text-ink leading-snug mb-5">
@@ -64,11 +64,6 @@ export default function TumblbukPreview() {
         </div>
       </section>
 
-      {/* 사진: 가족이 함께 핸드폰 보며 웃는 모습 */}
-      <div className="max-w-[480px] mx-auto px-5 sm:px-8">
-        <img src="/images/album-1.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
-      </div>
-
       {/* ── 공감 ── */}
       <section className="px-5 sm:px-8 py-14">
         <div className="max-w-[480px] mx-auto space-y-6 text-center">
@@ -78,19 +73,11 @@ export default function TumblbukPreview() {
           <p className="text-ink text-base leading-relaxed">
             &ldquo;감사합니다&rdquo; 한마디를<br />제대로 전해본 게 언제인지 기억나시나요?
           </p>
+          <p className="text-ink text-center text-base font-medium pt-4">
+            말로 하긴 쑥스럽고, 편지는 부담스럽고.<br />
+            그래서 노래로 전하면 어떨까 생각했습니다.
+          </p>
         </div>
-      </section>
-
-      {/* 사진: 가족 식사 자리 */}
-      <div className="max-w-[480px] mx-auto px-5 sm:px-8">
-        <img src="/images/album-2.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
-      </div>
-
-      <section className="px-5 sm:px-8 py-12">
-        <p className="max-w-[480px] mx-auto text-ink text-center text-base font-medium">
-          말로 하긴 쑥스럽고, 편지는 부담스럽고.<br />
-          그래서 노래로 전하면 어떨까 생각했습니다.
-        </p>
       </section>
 
       {/* ── 이렇게 만들어집니다 ── */}
@@ -100,7 +87,6 @@ export default function TumblbukPreview() {
           <p className="text-ink-muted text-sm text-center mb-10">
             목소리 파일을 보내주시면, 가사를 쓰고 멜로디를 만들고<br />그 목소리를 보컬로 얹어 노래를 완성합니다.
           </p>
-
           <div className="space-y-4">
             <div className="bg-white rounded-xl p-5 border border-primary-100/60">
               <div className="flex items-start gap-4">
@@ -143,8 +129,9 @@ export default function TumblbukPreview() {
         <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-12">실제로 만들어진 노래</p>
 
-          {/* 사례 1 */}
+          {/* 사례 1 + 사진 */}
           <div className="mb-10">
+            <img src="/images/album-1.png" alt="" className="w-full rounded-xl mb-5" />
             <p className="text-ink text-sm leading-[1.9] mb-4">
               새벽 다섯 시, 어머니는 30년을 같은 시간에 일어나 도시락을 싸셨습니다.
               반찬 투정을 부리던 날도, 도시락이 창피하다며 떼쓰던 날도
@@ -163,11 +150,9 @@ export default function TumblbukPreview() {
             </p>
           </div>
 
-          {/* 사진: 거실에서 가족이 함께 */}
-          <img src="/images/album-7.png" alt="" className="w-full rounded-2xl mb-10" />
-
-          {/* 사례 2 */}
+          {/* 사례 2 + 사진 */}
           <div className="mb-10">
+            <img src="/images/album-7.png" alt="" className="w-full rounded-xl mb-5" />
             <p className="text-ink text-sm leading-[1.9] mb-4">
               서울에서 10년. 전화를 걸면 &ldquo;괜찮다, 오지 마라&rdquo; 하시던 아버지.
               어머니가 말씀해주셨습니다.
@@ -206,11 +191,6 @@ export default function TumblbukPreview() {
           </div>
         </div>
       </section>
-
-      {/* 사진: 가족 사진 */}
-      <div className="max-w-[480px] mx-auto px-5 sm:px-8 py-6">
-        <img src="/images/cta-family-new.png" alt="" className="w-full rounded-2xl opacity-80" style={{ mask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
-      </div>
 
       {/* ── 가격 ── */}
       <section className="px-5 sm:px-8 py-14">
