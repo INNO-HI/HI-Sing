@@ -68,7 +68,7 @@ export default function TumblbukPreview() {
 
       {/* ── 히어로 ── */}
       <section className="px-5 sm:px-8 pt-16 pb-20 sm:pt-20 sm:pb-24 text-center" style={{ background: 'linear-gradient(180deg, #FFF5F0 0%, #FDF8F5 100%)' }}>
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-primary-400 text-sm font-medium tracking-widest mb-8">HI-Sing</p>
           <h1 className="text-2xl sm:text-[32px] font-semibold text-ink leading-snug mb-6">
             가족 목소리로 만드는<br />맞춤 노래 선물
@@ -78,7 +78,7 @@ export default function TumblbukPreview() {
           </p>
 
           {/* 플레이어 UI */}
-          <div className="bg-white rounded-2xl border border-primary-100 p-6 sm:p-8 max-w-sm mx-auto shadow-sm">
+          <div className="bg-white rounded-2xl border border-primary-100 p-6 sm:p-8 mx-auto shadow-sm">
             <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-xl p-5 text-white mb-4">
               <p className="font-medium text-sm">식탁 위의 온기</p>
               <p className="text-white/60 text-xs mt-0.5">맞춤 노래 · 3:24</p>
@@ -97,7 +97,7 @@ export default function TumblbukPreview() {
 
       {/* ── 공감 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20">
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <div className="space-y-8 text-center">
             <p className="text-ink text-base sm:text-lg leading-relaxed">
               부모님 생신마다<br />비슷한 선물 드리면서 아쉬웠던 적 있으신가요?
@@ -115,7 +115,7 @@ export default function TumblbukPreview() {
 
       {/* ── 이렇게 만들어집니다 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: 'linear-gradient(180deg, #FDF8F5 0%, #FFF1EB 50%, #FDF8F5 100%)' }}>
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-4">이렇게 만들어집니다</p>
           <p className="text-ink-muted text-sm text-center mb-12">
             목소리 파일을 보내주시면, 가사를 쓰고 멜로디를 만들고<br className="hidden sm:inline" />
@@ -161,7 +161,7 @@ export default function TumblbukPreview() {
 
       {/* ── 실제 사례 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: '#FFF9F6' }}>
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-14">실제로 만들어진 노래</p>
 
           {/* 사례 1 */}
@@ -228,7 +228,7 @@ export default function TumblbukPreview() {
 
       {/* ── 가격 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20">
-        <div className="max-w-[680px] mx-auto text-center">
+        <div className="max-w-[480px] mx-auto text-center">
           <p className="text-ink-muted text-sm mb-6">전문가에게 맞춤 노래를 의뢰하면 50~100만원, 2~4주.</p>
           <p className="text-primary-500 text-sm font-medium mb-2">하이싱은</p>
           <p className="text-ink text-4xl sm:text-5xl font-semibold">29,000<span className="text-lg font-normal text-ink-muted">원</span></p>
@@ -238,7 +238,7 @@ export default function TumblbukPreview() {
 
       {/* ── 이런 분들이 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: 'linear-gradient(180deg, #FDF8F5 0%, #FFF3EE 50%, #FDF8F5 100%)' }}>
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-10">이런 분들이 주문하셨습니다</p>
           <div className="space-y-3">
             {[
@@ -258,7 +258,7 @@ export default function TumblbukPreview() {
 
       {/* ── 리워드 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20">
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-12">리워드</p>
           <div className="space-y-4">
             <div className="relative bg-white rounded-2xl p-6 sm:p-8 border-2 border-primary-400 overflow-hidden">
@@ -290,7 +290,7 @@ export default function TumblbukPreview() {
 
       {/* ── 걱정되시는 부분 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: '#FFF9F6' }}>
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[480px] mx-auto">
           <p className="text-ink text-lg font-medium text-center mb-10">걱정되시는 부분</p>
           <div className="space-y-4">
             {[
@@ -309,7 +309,7 @@ export default function TumblbukPreview() {
 
       {/* ── 팀 ── */}
       <section className="px-5 sm:px-8 py-14 sm:py-16">
-        <div className="max-w-[680px] mx-auto text-center">
+        <div className="max-w-[480px] mx-auto text-center">
           <p className="text-ink font-medium mb-2">만드는 사람들</p>
           <p className="text-ink-muted text-sm">주식회사 이노하이(INNO-HI)</p>
           <p className="text-ink-faint text-xs mt-3">김민수 · 한민우 | contact@innohi.ai.kr | hisolution.site</p>
@@ -318,7 +318,7 @@ export default function TumblbukPreview() {
 
       {/* ── 클로징 ── */}
       <section className="px-5 sm:px-8 py-16 sm:py-20" style={{ background: 'linear-gradient(180deg, #3D2B26 0%, #2C1E1A 100%)' }}>
-        <div className="max-w-[680px] mx-auto text-center">
+        <div className="max-w-[480px] mx-auto text-center">
           <p className="text-[#F5D5C8] text-xl sm:text-2xl font-medium leading-relaxed mb-4">이번 부모님 생신에는</p>
           <p className="text-white text-2xl sm:text-3xl font-semibold mb-8">노래 한 곡 어떠세요?</p>
           <p className="text-[#D4A999] text-sm">얼리버드 한정 100명 · 29,000원부터</p>
