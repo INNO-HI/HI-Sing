@@ -58,9 +58,25 @@ export default function TumblbukPreview() {
           <h1 className="text-2xl sm:text-[28px] font-semibold text-ink leading-snug mb-5">
             가족 목소리로 만드는<br />맞춤 노래 선물
           </h1>
-          <p className="text-ink-muted text-sm">
+          <p className="text-ink-muted text-sm mb-8">
             목소리 파일 하나면, 그 목소리로 노래를 만들어드립니다
           </p>
+
+          {/* 히어로 미니 플레이어 */}
+          <div className="bg-white rounded-2xl border border-primary-100 p-5 text-left">
+            <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-xl p-4 text-white mb-3">
+              <p className="text-xs font-medium">식탁 위의 온기</p>
+              <p className="text-white/50 text-[10px] mt-0.5">실제 완성된 노래 · 3:24</p>
+              <div className="mt-2"><Waveform color="bg-white/60" /></div>
+            </div>
+            <MiniPlayer src="/audio/식탁_위의_온기.mp3" title="지금 바로 들어보세요" sub="식탁 위의 온기 · 3:24" />
+          </div>
+
+          <div className="mt-6 inline-flex items-center gap-2 bg-white border border-primary-200 rounded-full pl-2 pr-5 py-2 shadow-sm">
+            <span className="bg-primary-400 text-white text-[10px] font-semibold rounded-full px-2.5 py-1">얼리버드</span>
+            <span className="text-sm font-semibold text-ink">29,000원</span>
+            <span className="text-xs text-ink-faint">· 한정 100명</span>
+          </div>
         </div>
       </section>
 
@@ -199,6 +215,17 @@ export default function TumblbukPreview() {
           <p className="text-primary-500 text-sm font-medium mb-2">하이싱은</p>
           <p className="text-ink text-4xl font-semibold">29,000<span className="text-lg font-normal text-ink-muted">원</span></p>
           <p className="text-ink-muted text-sm mt-2">3~5일이면 됩니다.</p>
+        </div>
+      </section>
+
+      {/* ── 중간 CTA ── */}
+      <section className="px-5 sm:px-8 py-10">
+        <div className="max-w-[480px] mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-primary-400 text-white rounded-full px-6 py-3 text-sm font-medium shadow-md shadow-primary-200/40">
+            <span>얼리버드 29,000원으로 시작하기</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          </div>
+          <p className="text-ink-faint text-xs mt-3">한정 100명 · 3~5일 완성 · 마음에 안 들면 무료 수정</p>
         </div>
       </section>
 
