@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { Check, Play, Pause } from 'lucide-react'
+import { Check, Play, Pause, Shield, RefreshCw, Lock, ArrowRight } from 'lucide-react'
 
 function Waveform({ color = 'bg-primary-300', bars = 24 }: { color?: string; bars?: number }) {
   return (
@@ -44,23 +44,52 @@ function MiniPlayer({ src, title, sub }: { src: string; title: string; sub: stri
   )
 }
 
+function CTAButton({ label = '얼리버드 29,000원으로 시작하기', size = 'md' }: { label?: string; size?: 'md' | 'lg' }) {
+  const sizeClass = size === 'lg' ? 'px-8 py-4 text-base' : 'px-6 py-3 text-sm'
+  return (
+    <a
+      href="/?tab=pricing"
+      className={`inline-flex items-center gap-2 bg-primary-400 hover:bg-primary-500 text-white rounded-full font-medium shadow-md shadow-primary-200/40 transition-colors ${sizeClass}`}
+    >
+      {label}
+      <ArrowRight className="w-4 h-4" />
+    </a>
+  )
+}
+
 export default function TumblbukPreview() {
   return (
-    <div className="min-h-screen bg-[#FDF8F5]">
+    <div className="min-h-screen bg-[#FDF8F5] pb-24">
       <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 text-center sticky top-0 z-50">
         <p className="text-xs text-amber-900">텀블벅 캠페인 미리보기 · 외부 비공개</p>
       </div>
 
       {/* ── 히어로 ── */}
-      <section className="px-5 sm:px-8 pt-16 pb-14 text-center" style={{ background: 'linear-gradient(180deg, #FFF5F0 0%, #FDF8F5 100%)' }}>
+      <section className="px-5 sm:px-8 pt-14 pb-12 text-center" style={{ background: 'linear-gradient(180deg, #FFF5F0 0%, #FDF8F5 100%)' }}>
         <div className="max-w-[480px] mx-auto">
-          <p className="text-primary-400 text-sm font-medium tracking-widest mb-8">HI-Sing</p>
+          <p className="text-primary-400 text-sm font-medium tracking-widest mb-7">HI-Sing</p>
           <h1 className="text-2xl sm:text-[28px] font-semibold text-ink leading-snug mb-5">
             가족 목소리로 만드는<br />맞춤 노래 선물
           </h1>
-          <p className="text-ink-muted text-sm mb-8">
+          <p className="text-ink-muted text-sm mb-6">
             목소리 파일 하나면, 그 목소리로 노래를 만들어드립니다
           </p>
+
+          {/* 핵심 수치 3개 */}
+          <div className="grid grid-cols-3 gap-2 mb-8 max-w-xs mx-auto">
+            <div className="bg-white/70 rounded-lg py-3">
+              <p className="text-primary-500 font-semibold text-sm">29,000원</p>
+              <p className="text-ink-faint text-[10px] mt-0.5">얼리버드</p>
+            </div>
+            <div className="bg-white/70 rounded-lg py-3">
+              <p className="text-primary-500 font-semibold text-sm">3~5일</p>
+              <p className="text-ink-faint text-[10px] mt-0.5">완성</p>
+            </div>
+            <div className="bg-white/70 rounded-lg py-3">
+              <p className="text-primary-500 font-semibold text-sm">30초</p>
+              <p className="text-ink-faint text-[10px] mt-0.5">음성이면 OK</p>
+            </div>
+          </div>
 
           {/* 히어로 미니 플레이어 */}
           <div className="bg-white rounded-2xl border border-primary-100 p-5 text-left">
@@ -72,10 +101,29 @@ export default function TumblbukPreview() {
             <MiniPlayer src="/audio/식탁_위의_온기.mp3" title="지금 바로 들어보세요" sub="식탁 위의 온기 · 3:24" />
           </div>
 
-          <div className="mt-6 inline-flex items-center gap-2 bg-white border border-primary-200 rounded-full pl-2 pr-5 py-2 shadow-sm">
-            <span className="bg-primary-400 text-white text-[10px] font-semibold rounded-full px-2.5 py-1">얼리버드</span>
-            <span className="text-sm font-semibold text-ink">29,000원</span>
-            <span className="text-xs text-ink-faint">· 한정 100명</span>
+          <div className="mt-7">
+            <CTAButton size="md" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── 신뢰 뱃지 ── */}
+      <section className="px-5 sm:px-8 py-6 bg-white border-y border-primary-100/60">
+        <div className="max-w-[480px] mx-auto grid grid-cols-3 gap-3 text-center">
+          <div className="flex flex-col items-center gap-1.5">
+            <Shield className="w-5 h-5 text-primary-400" />
+            <p className="text-ink text-xs font-medium">100% 환불</p>
+            <p className="text-ink-faint text-[10px]">제작 시작 전</p>
+          </div>
+          <div className="flex flex-col items-center gap-1.5">
+            <RefreshCw className="w-5 h-5 text-primary-400" />
+            <p className="text-ink text-xs font-medium">무료 수정</p>
+            <p className="text-ink-faint text-[10px]">리워드별 1~3회</p>
+          </div>
+          <div className="flex flex-col items-center gap-1.5">
+            <Lock className="w-5 h-5 text-primary-400" />
+            <p className="text-ink text-xs font-medium">음성 보호</p>
+            <p className="text-ink-faint text-[10px]">30일 후 삭제</p>
           </div>
         </div>
       </section>
@@ -143,7 +191,8 @@ export default function TumblbukPreview() {
       {/* ── 실제 사례 ── */}
       <section className="px-5 sm:px-8 py-14" style={{ background: '#FFF9F6' }}>
         <div className="max-w-[480px] mx-auto">
-          <p className="text-ink text-lg font-medium text-center mb-12">실제로 만들어진 노래</p>
+          <p className="text-ink text-lg font-medium text-center mb-2">실제로 만들어진 노래</p>
+          <p className="text-ink-muted text-sm text-center mb-12">재생 버튼을 눌러 직접 들어보세요</p>
 
           {/* 사례 1 + 사진 */}
           <div className="mb-10">
@@ -210,22 +259,30 @@ export default function TumblbukPreview() {
 
       {/* ── 가격 ── */}
       <section className="px-5 sm:px-8 py-14">
-        <div className="max-w-[480px] mx-auto text-center">
-          <p className="text-ink-muted text-sm mb-6">전문가에게 맞춤 노래를 의뢰하면 50~100만원, 2~4주.</p>
-          <p className="text-primary-500 text-sm font-medium mb-2">하이싱은</p>
-          <p className="text-ink text-4xl font-semibold">29,000<span className="text-lg font-normal text-ink-muted">원</span></p>
-          <p className="text-ink-muted text-sm mt-2">3~5일이면 됩니다.</p>
+        <div className="max-w-[480px] mx-auto">
+          <p className="text-ink text-lg font-medium text-center mb-8">왜 합리적인 가격인지</p>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-neutral-100 rounded-xl p-5 text-center">
+              <p className="text-ink-faint text-xs mb-2">전문가 의뢰</p>
+              <p className="text-ink-faint text-2xl font-semibold line-through">50~100만</p>
+              <p className="text-ink-faint text-xs mt-2">2~4주 이상</p>
+            </div>
+            <div className="bg-primary-400 rounded-xl p-5 text-center text-white shadow-md shadow-primary-200/40">
+              <p className="text-white/80 text-xs mb-2">하이싱</p>
+              <p className="text-white text-2xl font-semibold">29,000원</p>
+              <p className="text-white/80 text-xs mt-2">3~5일</p>
+            </div>
+          </div>
+          <p className="text-ink-muted text-xs text-center mt-5">작사·작곡·보컬 합성·믹싱 모두 포함</p>
         </div>
       </section>
 
       {/* ── 중간 CTA ── */}
       <section className="px-5 sm:px-8 py-10">
         <div className="max-w-[480px] mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-primary-400 text-white rounded-full px-6 py-3 text-sm font-medium shadow-md shadow-primary-200/40">
-            <span>얼리버드 29,000원으로 시작하기</span>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-          </div>
-          <p className="text-ink-faint text-xs mt-3">한정 100명 · 3~5일 완성 · 마음에 안 들면 무료 수정</p>
+          <CTAButton size="lg" />
+          <p className="text-ink-faint text-xs mt-3">한정 100명 · 마음에 안 들면 무료 수정</p>
         </div>
       </section>
 
@@ -252,7 +309,8 @@ export default function TumblbukPreview() {
       {/* ── 리워드 ── */}
       <section className="px-5 sm:px-8 py-14">
         <div className="max-w-[480px] mx-auto">
-          <p className="text-ink text-lg font-medium text-center mb-10">리워드</p>
+          <p className="text-ink text-lg font-medium text-center mb-2">리워드</p>
+          <p className="text-ink-muted text-sm text-center mb-10">마음에 드는 리워드를 골라주세요</p>
           <div className="space-y-4">
             <div className="relative bg-white rounded-2xl p-6 border-2 border-primary-400 overflow-hidden">
               <span className="absolute top-0 right-0 bg-primary-400 text-white text-xs font-medium px-3 py-1 rounded-bl-xl">한정 100명</span>
@@ -314,9 +372,27 @@ export default function TumblbukPreview() {
         <div className="max-w-[480px] mx-auto text-center">
           <p className="text-ink-muted text-lg font-medium leading-relaxed mb-3">이번 부모님 생신에는</p>
           <p className="text-ink text-2xl font-semibold mb-6">노래 한 곡 어떠세요?</p>
-          <p className="text-primary-400 text-sm">얼리버드 한정 100명 · 29,000원부터</p>
+          <CTAButton size="lg" />
+          <p className="text-primary-400 text-xs mt-4">얼리버드 한정 100명 · 29,000원부터</p>
         </div>
       </section>
+
+      {/* ── 하단 고정 CTA (모바일/데스크톱 공통) ── */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-primary-100 px-5 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <div className="max-w-[480px] mx-auto flex items-center justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-xs text-ink-faint">얼리버드</p>
+            <p className="text-base font-semibold text-ink leading-tight">29,000원<span className="text-xs text-ink-faint font-normal ml-1">· 한정 100명</span></p>
+          </div>
+          <a
+            href="/?tab=pricing"
+            className="inline-flex items-center gap-1.5 bg-primary-400 hover:bg-primary-500 text-white rounded-full font-medium px-5 py-2.5 text-sm shadow-md shadow-primary-200/40 transition-colors flex-shrink-0"
+          >
+            후원하기
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

@@ -452,10 +452,6 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                         {step2Text}<span className="animate-pulse text-primary-400">|</span>
                       </div>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="bg-primary-400 text-white text-xs rounded px-3 py-1.5 font-medium">오리지널</div>
-                      <div className="bg-neutral-100 text-ink-muted text-xs rounded px-3 py-1.5">커버</div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -488,7 +484,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 <div className="bg-white rounded-xl border border-neutral-200 p-5">
                   <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg p-5 text-white mb-3">
                     <p className="font-bold">새벽의 도시락</p>
-                    <p className="text-white/60 text-xs mt-0.5">오리지널 · 3분 24초</p>
+                    <p className="text-white/60 text-xs mt-0.5">맞춤 노래 · 3분 24초</p>
                     <div className="mt-3"><AnimatedWaveform /></div>
                   </div>
                   <div className="flex gap-2">
