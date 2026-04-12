@@ -179,8 +179,10 @@ function PhoneMockup() {
 
   return (
     <div className="relative mt-14 overflow-visible group/phone" style={{ height: '480px' }} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 메인색 원형 그라데이션 */}
-      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none z-[5]" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.7) 0%, rgba(245,158,139,0.4) 30%, rgba(245,158,139,0.15) 55%, transparent 75%)' }} />
+      {/* 메인색 원형 그라데이션 — 3겹 블러로 더 자연스럽게 */}
+      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
+      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
+      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,200,180,0.4) 0%, transparent 70%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
@@ -239,15 +241,17 @@ function AnimatedWaveform() {
   return (
     <div className="flex items-end gap-[1.5px] h-10 w-full">
       {Array.from({ length: 40 }, (_, i) => {
-        const baseDelay = (Math.sin(i * 0.7) * 0.5 + 0.5) * 0.8
-        const duration = 0.6 + Math.random() * 0.8
+        const baseDelay = (Math.sin(i * 0.7) * 0.5 + 0.5) * 0.6
+        const duration = 0.7 + (Math.sin(i * 1.3) * 0.5 + 0.5) * 0.6
+        const initialHeight = 30 + Math.sin(i * 0.9) * 25 + Math.cos(i * 1.5) * 10
         return (
           <div
             key={i}
             className="flex-1 rounded-full bg-white/80"
             style={{
               animation: `waveform ${duration}s ease-in-out ${baseDelay}s infinite alternate`,
-              height: `${15 + Math.random() * 20}%`,
+              animationFillMode: 'both',
+              height: `${Math.max(20, Math.min(70, initialHeight))}%`,
             }}
           />
         )
