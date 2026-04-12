@@ -177,41 +177,42 @@ function PhoneMockup() {
   const realIdx = idx % albums.length
   const album = albums[realIdx]
 
+  const cardSize = 180
+  const cardGap = 70
   return (
-    <div className="relative mt-14 overflow-visible group/phone" style={{ height: '480px' }} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 메인색 원형 그라데이션 — 3겹 블러로 더 자연스럽게 */}
-      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
-      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
-      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,200,180,0.4) 0%, transparent 70%)' }} />
+    <div className="relative mt-8 sm:mt-14 overflow-visible group/phone h-[400px] sm:h-[480px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      {/* 메인색 원형 그라데이션 — 반응형 */}
+      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
+      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
+      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,200,180,0.4) 0%, transparent 70%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[270px] sm:w-[290px] rounded-t-[38px] bg-white border border-neutral-200 border-b-0 p-3 shadow-2xl">
-          <div className="w-20 h-5 rounded-full bg-neutral-900 mx-auto mb-2" />
-          <div className="rounded-t-[26px] bg-neutral-50 px-5 pt-4 pb-5">
+        <div className="w-[240px] sm:w-[290px] rounded-t-[34px] sm:rounded-t-[38px] bg-white border border-neutral-200 border-b-0 p-2.5 sm:p-3 shadow-2xl">
+          <div className="w-16 sm:w-20 h-4 sm:h-5 rounded-full bg-neutral-900 mx-auto mb-2" />
+          <div className="rounded-t-[22px] sm:rounded-t-[26px] bg-neutral-50 px-4 sm:px-5 pt-3 sm:pt-4 pb-4 sm:pb-5">
             <div className="flex items-center justify-between mb-3">
               <p className="text-[10px] text-ink-faint">9:41</p>
               <div className="w-4 h-2 rounded-sm border border-ink-faint/40" />
             </div>
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
-            {/* 앨범 슬라이드 — 핸드폰 위를 스쳐 지나감 */}
-            <div className="relative mx-auto mb-4" style={{ width: 220, height: 220, overflow: 'visible' }}>
+            <div className="relative mx-auto mb-3 sm:mb-4 w-[180px] sm:w-[220px] h-[180px] sm:h-[220px]" style={{ overflow: 'visible' }}>
               <div
                 className={`absolute top-0 flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{
                   left: 0,
-                  gap: 100,
-                  transform: `translateX(${-idx * (220 + 100)}px)`,
+                  gap: `${cardGap}px`,
+                  transform: `translateX(${-idx * (cardSize + cardGap)}px)`,
                 }}
               >
                 {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
                   <div
                     key={i}
-                    className={`flex-shrink-0 w-[220px] h-[220px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
+                    className={`flex-shrink-0 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
-                    <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.25) saturate(0.85) brightness(1.02) contrast(0.95) hue-rotate(-5deg)' }} />
+                    <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.15) saturate(1) brightness(1.12) contrast(0.98) hue-rotate(-3deg)' }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <p className="text-white font-bold text-sm leading-tight">{a.title}</p>
@@ -238,70 +239,99 @@ function PhoneMockup() {
 }
 
 function AnimatedWaveform() {
+  // 실제 음악 재생처럼 — 중앙 바가 더 크게, 가장자리는 작게, 각자 다른 리듬
+  const BARS = 32
   return (
-    <div className="flex items-end gap-[1.5px] h-10 w-full">
-      {Array.from({ length: 40 }, (_, i) => {
-        const baseDelay = (Math.sin(i * 0.7) * 0.5 + 0.5) * 0.6
-        const duration = 0.7 + (Math.sin(i * 1.3) * 0.5 + 0.5) * 0.6
-        const initialHeight = 30 + Math.sin(i * 0.9) * 25 + Math.cos(i * 1.5) * 10
+    <div className="flex items-end gap-[2px] h-10 w-full">
+      {Array.from({ length: BARS }, (_, i) => {
+        const center = BARS / 2
+        const distFromCenter = Math.abs(i - center) / center   // 0 (중앙) ~ 1 (가장자리)
+        const envelope = 1 - distFromCenter * 0.55            // 중앙 강조
+        const minH = 18 + (Math.sin(i * 0.9) * 0.5 + 0.5) * 10 * envelope
+        const maxH = minH + 35 * envelope + Math.cos(i * 1.4) * 10 * envelope
+        const duration = 0.55 + (Math.sin(i * 2.1) * 0.5 + 0.5) * 0.7
+        const delay = (Math.sin(i * 1.3) * 0.5 + 0.5) * duration
         return (
           <div
             key={i}
-            className="flex-1 rounded-full bg-white/80"
+            className="flex-1 rounded-full bg-white/85"
             style={{
-              animation: `waveform ${duration}s ease-in-out ${baseDelay}s infinite alternate`,
+              animation: `waveformBar-${i % 4} ${duration}s ease-in-out ${delay}s infinite alternate`,
               animationFillMode: 'both',
-              height: `${Math.max(20, Math.min(70, initialHeight))}%`,
+              ['--wf-min' as string]: `${Math.max(10, Math.min(40, minH))}%`,
+              ['--wf-max' as string]: `${Math.max(30, Math.min(95, maxH))}%`,
+              height: `${Math.max(10, Math.min(95, (minH + maxH) / 2))}%`,
             }}
           />
         )
       })}
+      <style jsx>{`
+        @keyframes waveformBar-0 { 0% { height: var(--wf-min); } 100% { height: var(--wf-max); } }
+        @keyframes waveformBar-1 { 0% { height: var(--wf-max); } 50% { height: var(--wf-min); } 100% { height: var(--wf-max); } }
+        @keyframes waveformBar-2 { 0% { height: var(--wf-min); } 40% { height: var(--wf-max); } 60% { height: var(--wf-min); } 100% { height: var(--wf-max); } }
+        @keyframes waveformBar-3 { 0% { height: var(--wf-max); } 100% { height: var(--wf-min); } }
+      `}</style>
     </div>
   )
 }
 
-/* ── 파일 드래그 애니메이션 컴포넌트 ──────────── */
+/* ── 파일 드래그 애니메이션 — 파일이 서서히 생겨나 업로드 영역으로 들어감 ── */
 function DragFileAnimation() {
-  const [show, setShow] = useState(false)
-  const [dropped, setDropped] = useState(false)
+  // phase: 0 = 비어있음, 1 = 파일 생겨남(페이드 인), 2 = 드래그(내려감), 3 = 업로드 완료
+  const [phase, setPhase] = useState(0)
 
   useEffect(() => {
     const loop = () => {
-      setShow(false)
-      setDropped(false)
-      const t1 = setTimeout(() => setShow(true), 400)
-      const t2 = setTimeout(() => setDropped(true), 1600)
-      const t3 = setTimeout(loop, 3500)
-      return [t1, t2, t3]
+      setPhase(0)
+      const t1 = setTimeout(() => setPhase(1), 800)   // 파일 나타남
+      const t2 = setTimeout(() => setPhase(2), 2000)  // 드래그 시작
+      const t3 = setTimeout(() => setPhase(3), 2700)  // 업로드 완료
+      const t4 = setTimeout(loop, 4800)
+      return [t1, t2, t3, t4]
     }
     const timers = loop()
     return () => timers.forEach(clearTimeout)
   }, [])
 
+  const dropActive = phase === 2
+  const uploaded = phase === 3
+
   return (
-    <div className="relative">
-      <div className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors duration-300 ${
-        show && !dropped ? 'border-primary-400 bg-primary-50/30' : 'border-neutral-300'
+    <div className="relative h-[140px]">
+      {/* 업로드 영역 */}
+      <div className={`absolute inset-0 border-2 border-dashed rounded-lg p-6 text-center transition-all duration-500 ${
+        uploaded ? 'border-primary-400 bg-primary-50/60' : dropActive ? 'border-primary-400 bg-primary-50/30' : 'border-neutral-300'
       }`}>
-        <p className="text-ink-muted text-sm">mp3, wav, m4a</p>
-        <p className="text-ink-faint text-xs mt-1">클릭하거나 파일을 드래그하세요</p>
+        {uploaded ? (
+          <div className="flex items-center justify-center gap-2 h-full">
+            <div className="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center"><Check className="w-3 h-3 text-white" /></div>
+            <span className="text-sm text-ink font-medium">음성파일.wav</span>
+            <span className="text-[10px] text-ink-faint">2.4MB</span>
+          </div>
+        ) : (
+          <>
+            <p className="text-ink-muted text-sm">mp3, wav, m4a</p>
+            <p className="text-ink-faint text-xs mt-1">클릭하거나 파일을 드래그하세요</p>
+          </>
+        )}
       </div>
-      {/* 파일이 위에서 내려오며 드래그되는 효과 */}
-      <div
-        className="absolute -right-2 transition-all duration-700 ease-out"
-        style={{
-          top: show ? (dropped ? '50%' : '-8px') : '-40px',
-          opacity: show ? 1 : 0,
-          transform: dropped ? 'translateY(-50%) scale(0.95)' : 'scale(1)',
-        }}
-      >
-        <div className={`bg-primary-50 border rounded-lg px-3 py-2 shadow-md flex items-center gap-2 transition-all duration-300 ${
-          dropped ? 'border-primary-400 shadow-primary-200/40' : 'border-primary-200'
-        }`}>
-          <div className="w-4 h-4 rounded bg-primary-400 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>
-          <span className="text-xs text-ink font-medium">음성파일.wav</span>
+
+      {/* 날아오는 파일 카드 — phase 1, 2에만 보임 */}
+      {!uploaded && (
+        <div
+          className="absolute right-2 transition-all duration-700 ease-out pointer-events-none"
+          style={{
+            top: phase === 0 ? '-8px' : phase === 1 ? '-8px' : '50%',
+            opacity: phase === 0 ? 0 : 1,
+            transform: phase === 0 ? 'translateY(-10px) scale(0.9)' : phase === 2 ? 'translateY(-50%) scale(0.95)' : 'translateY(0) scale(1)',
+          }}
+        >
+          <div className="bg-white border border-primary-300 rounded-lg px-3 py-2 shadow-lg shadow-primary-200/40 flex items-center gap-2">
+            <div className="w-4 h-4 rounded bg-primary-400 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>
+            <span className="text-xs text-ink font-medium">음성파일.wav</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
@@ -375,14 +405,13 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             ].map((b, i) => (
               <FadeIn key={i} delay={i * 0.15}>
                 <div className={`flex ${b.align === 'right' ? 'justify-end' : 'justify-start'}`}>
-                  <div className="relative max-w-[85%]">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 border border-white/15">
+                  <div className={`flex items-end gap-1.5 max-w-[85%] ${b.align === 'right' ? 'flex-row-reverse' : 'flex-row'}`}>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl rounded-bl-md px-5 py-4 border border-white/15" style={b.align === 'right' ? { borderRadius: '1rem 1rem 0.25rem 1rem' } : { borderRadius: '1rem 1rem 1rem 0.25rem' }}>
                       <p className="text-white text-[15px] leading-relaxed">{b.text}</p>
                     </div>
-                    <div className={`absolute -bottom-2 ${b.align === 'left' ? 'left-5' : 'right-5'}`}>
-                      <svg width="14" height="8" viewBox="0 0 14 8" className={b.align === 'right' ? 'scale-x-[-1]' : ''}>
-                        <path d="M0 0 L7 8 L14 0 Z" fill="rgba(255,255,255,0.1)" />
-                      </svg>
+                    <div className="flex flex-col gap-0.5 mb-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
+                      <div className="w-1 h-1 rounded-full bg-white/10" />
                     </div>
                   </div>
                 </div>
@@ -487,8 +516,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
                 <div className="bg-white rounded-xl border border-neutral-200 p-5">
                   <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg p-5 text-white mb-3">
-                    <p className="font-bold">새벽의 도시락</p>
-                    <p className="text-white/60 text-xs mt-0.5">맞춤 노래 · 3분 24초</p>
+                    <p className="font-bold">세아의 첫 생일</p>
+                    <p className="text-white/60 text-xs mt-0.5">돌잔치 · 3:24</p>
                     <div className="mt-3"><AnimatedWaveform /></div>
                   </div>
                   <div className="flex gap-2">

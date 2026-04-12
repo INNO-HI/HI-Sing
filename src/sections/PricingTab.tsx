@@ -856,7 +856,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-light">
                 마음의 크기에 맞는<br />리워드를 골라주세요
               </h1>
-              <p className="text-ink-muted text-sm mt-4">전문가에게 맡기면 50~100만원, 하이싱은 <strong className="text-primary-400">커피 5잔 값</strong>이면 됩니다</p>
+              <p className="text-ink-muted text-sm mt-4">전문가 의뢰 50~100만원이 부담스럽다면, 하이싱은 <strong className="text-primary-400">29,000원부터</strong> 시작할 수 있습니다</p>
             </div>
           </FadeIn>
 
