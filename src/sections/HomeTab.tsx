@@ -366,7 +366,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-end">
           <FadeIn>
-            <div className="text-center mb-4 sm:mb-6">
+            <div className="text-center mb-16 sm:mb-24">
               <p className="text-ink-muted text-base sm:text-lg mb-5">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
