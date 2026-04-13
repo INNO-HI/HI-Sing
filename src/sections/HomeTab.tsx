@@ -599,14 +599,15 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
       {/* ═══ 7. CTA ════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-neutral-50">
-        {/* 배경 사진 전체 + 왼쪽 메인색 20% 필터 */}
-        <div className="absolute inset-0 hidden sm:block">
-          <img src={`/images/cta-family-new.png`} alt="" className="w-full h-full object-cover object-right" />
-          {/* 필터: 왼쪽 메인색 20% → 오른쪽 투명 */}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(245,88,62,0.2) 0%, rgba(255,255,255,0) 100%)' }} />
-          {/* 좌측 가독성용 페이드 */}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, #F8F8F8 0%, rgba(248,248,248,0.7) 30%, rgba(248,248,248,0) 60%)' }} />
+        {/* 배경: 사진 오른쪽 + 3-stop 그라데이션 필터 */}
+        <div className="absolute right-0 top-0 bottom-0 w-full sm:w-3/5 hidden sm:block">
+          <img src={`/images/cta-family-new.png`} alt="" className="w-full h-full object-cover" />
+          {/* 필터: primary 20% → 주황 → 흰 투명 */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(245,88,62,0.2) 0%, rgba(245,88,62,0.35) 45%, rgba(255,255,255,0) 100%)' }} />
         </div>
+        {/* 좌측 뉴트럴 영역 텍스트 가독성 */}
+        <div className="absolute left-0 top-0 bottom-0 w-2/5 bg-neutral-50 hidden sm:block" />
+        <div className="absolute inset-0 sm:hidden bg-neutral-50" />
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div>
