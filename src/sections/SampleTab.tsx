@@ -198,6 +198,8 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
     return () => audio.removeEventListener('ended', onEnd)
   }, [playingIdx])
 
+  const BEFORE_SRC = '/audio/before-sample.mp3'
+
   const handleToggle = (idx: number) => {
     const audio = audioRef.current
     if (!audio) return
@@ -205,10 +207,17 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
       audio.pause()
       setPlayingIdx(null)
     } else {
-      audio.src = samples[idx].src
-      audio.play()
-      setPlayingIdx(idx)
-      trackSamplePlay(samples[idx].title)
+      if (idx === -1) {
+        audio.src = BEFORE_SRC
+        audio.play().catch(() => {})
+        setPlayingIdx(-1)
+        trackSamplePlay('before-original')
+      } else {
+        audio.src = samples[idx].src
+        audio.play().catch(() => {})
+        setPlayingIdx(idx)
+        trackSamplePlay(samples[idx].title)
+      }
     }
   }
 
@@ -236,7 +245,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn delay={0.15}>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {/* Before — 개인정보 보호 안내 */}
+              {/* Before — 원본 음성 재생 */}
               <div className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 flex flex-col">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center">
@@ -244,7 +253,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                   </div>
                   <div>
                     <p className="font-semibold text-ink-light text-sm">Before</p>
-                    <p className="text-xs text-ink-muted">원본 음성 샘플</p>
+                    <p className="text-xs text-ink-muted">원본 음성 · 실제 샘플</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-[2px] h-12 w-full opacity-60">
@@ -256,6 +265,21 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                     />
                   ))}
                 </div>
+                <button
+                  onClick={() => handleToggle(-1)}
+                  className="mt-4 flex items-center gap-3 bg-neutral-50 rounded-xl px-4 py-3 hover:bg-neutral-100 transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-ink-light flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                    {playingIdx === -1
+                      ? <Pause className="w-4 h-4 text-white" fill="currentColor" />
+                      : <Play className="w-4 h-4 text-white ml-0.5" fill="currentColor" />
+                    }
+                  </div>
+                  <div className="flex-1 text-left min-w-0">
+                    <p className="text-sm font-bold text-ink-light truncate">어머니 목소리</p>
+                    <p className="text-[11px] text-ink-muted">{playingIdx === -1 ? '재생 중…' : '원본 녹음 · 0:30'}</p>
+                  </div>
+                </button>
               </div>
 
               {/* After — 실제 재생 가능 */}
