@@ -187,7 +187,7 @@ function PhoneMockup() {
       <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,200,180,0.4) 0%, transparent 70%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-10 sm:bottom-16 left-1/2 -translate-x-1/2 z-10">
         <div className="w-[320px] sm:w-[380px] rounded-t-[38px] sm:rounded-t-[44px] bg-white border border-neutral-200 border-b-0 p-3 sm:p-3.5 shadow-2xl">
           <div className="w-20 sm:w-24 h-5 sm:h-6 rounded-full bg-neutral-500 mx-auto mb-2.5" />
           <div className="rounded-t-[26px] sm:rounded-t-[30px] bg-neutral-50 px-5 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
