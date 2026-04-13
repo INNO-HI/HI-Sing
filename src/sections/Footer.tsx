@@ -15,11 +15,15 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <svg className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-              <rect x="2" y="2" width="28" height="28" rx="7" fill="#F0F0F0"/>
-              <rect x="5" y="5" width="22" height="22" rx="4.5" fill="#FFFFFF"/>
-              <path d="M14 9 L14 18 A3.5 3.5 0 0 1 10.5 21.5 L10.5 14 A5 5 0 0 1 15.5 9 L14 9 Z" fill="#F5583E"/>
-              <circle cx="21" cy="13" r="2.3" fill="#FDBDB5"/>
-              <circle cx="21" cy="19" r="2.3" fill="#FDBDB5"/>
+              <defs>
+                <linearGradient id="footerNoteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#F88371"/>
+                  <stop offset="100%" stopColor="#E54428"/>
+                </linearGradient>
+              </defs>
+              <path d="M14 5 L14 19 A5 5 0 0 1 9 24 A5 5 0 0 1 9 14 A5 5 0 0 1 14 14 L14 5 Z" fill="url(#footerNoteGrad)"/>
+              <circle cx="22" cy="11" r="2.6" fill="#FDBDB5"/>
+              <circle cx="23" cy="20" r="3" fill="#F5583E" opacity="0.65"/>
             </svg>
             <span className="text-sm sm:text-base font-bold text-white">
               하이싱 <span className="text-[10px] sm:text-xs text-neutral-500 ml-1">HI-Sing</span>

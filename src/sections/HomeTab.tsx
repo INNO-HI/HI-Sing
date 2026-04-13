@@ -181,11 +181,11 @@ function PhoneMockup() {
   const cardGap = 70
   return (
     <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[440px] sm:h-[560px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 좌우 흰색 비네트 — 가운데(핸드폰)만 투명, 양쪽으로 갈수록 흰색 */}
+      {/* 좌우 흰색 비네트 — 뷰포트 전체 폭, 가운데(핸드폰)만 투명 */}
       <div
-        className="absolute inset-0 pointer-events-none z-20"
+        className="absolute top-0 bottom-0 pointer-events-none z-20 left-1/2 -translate-x-1/2 w-screen"
         style={{
-          background: 'linear-gradient(to right, #ffffff 0%, #ffffff 12%, rgba(255,255,255,0) 38%, rgba(255,255,255,0) 62%, #ffffff 88%, #ffffff 100%)',
+          background: 'linear-gradient(to right, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 58%, #ffffff 75%, #ffffff 100%)',
         }}
       />
       {/* 메인색 원형 그라데이션 — 반응형 */}
@@ -220,10 +220,10 @@ function PhoneMockup() {
                     } cursor-pointer`}
                   >
                     <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.15) saturate(1) brightness(1.12) contrast(0.98) hue-rotate(-3deg)' }} />
-                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(245,88,62,0.9) 0%, rgba(245,88,62,0.4) 40%, rgba(245,88,62,0.1) 100%)' }} />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white font-bold text-sm leading-tight">{a.title}</p>
-                      <p className="text-white/70 text-xs mt-1">{a.to}</p>
+                    {/* 프로스티드 글래스 바 — 하단만 */}
+                    <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-white/25 border-t border-white/20 px-4 py-2.5">
+                      <p className="text-white font-bold text-sm leading-tight drop-shadow">{a.title}</p>
+                      <p className="text-white/90 text-xs mt-0.5 drop-shadow">{a.to}</p>
                     </div>
                   </div>
                 ))}
@@ -412,13 +412,15 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             ].map((b, i) => (
               <FadeIn key={i} delay={i * 0.15}>
                 <div className={`flex ${b.align === 'right' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`flex items-end gap-1.5 max-w-[85%] ${b.align === 'right' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl rounded-bl-md px-5 py-4 border border-white/15" style={b.align === 'right' ? { borderRadius: '1rem 1rem 0.25rem 1rem' } : { borderRadius: '1rem 1rem 1rem 0.25rem' }}>
+                  <div className="relative max-w-[85%]">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 border border-white/15">
                       <p className="text-white text-[15px] leading-relaxed">{b.text}</p>
                     </div>
-                    <div className="flex flex-col gap-0.5 mb-1">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
-                      <div className="w-1 h-1 rounded-full bg-white/10" />
+                    {/* 말풍선 꼬리 */}
+                    <div className={`absolute -bottom-2 ${b.align === 'left' ? 'left-6' : 'right-6'}`}>
+                      <svg width="16" height="10" viewBox="0 0 16 10" className={b.align === 'right' ? 'scale-x-[-1]' : ''}>
+                        <path d="M0 0 L8 10 L16 0 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+                      </svg>
                     </div>
                   </div>
                 </div>
