@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- 왼쪽 음표머리 (사람 1 얼굴) -->
-  <circle cx="10" cy="23" r="3.5" fill="#F59E8B"/>
-  <!-- 오른쪽 음표머리 (사람 2 얼굴) -->
-  <circle cx="22" cy="23" r="3.5" fill="#F59E8B"/>
-  <!-- 왼쪽 스템 (사람 1 몸) -->
-  <rect x="12.5" y="8" width="1.6" height="15" fill="#F59E8B"/>
-  <!-- 오른쪽 스템 (사람 2 몸) -->
-  <rect x="20" y="8" width="1.6" height="15" fill="#F59E8B"/>
-  <!-- 연결 빔 (두 사람이 손잡은 모습 / 음표 빔) -->
-  <path d="M12.5 7 Q17 4 21.6 7 L21.6 10 Q17 7 12.5 10 Z" fill="#F59E8B"/>
+  <!-- 외곽 라운드 프레임 (연한 회색) -->
+  <rect x="2" y="2" width="28" height="28" rx="7" fill="#F0F0F0"/>
+  <!-- 내부 흰 영역 -->
+  <rect x="5" y="5" width="22" height="22" rx="4.5" fill="#FFFFFF"/>
+  <!-- 왼쪽: J형 음표 (진한 코랄) -->
+  <path d="M14 9 L14 18 A3.5 3.5 0 0 1 10.5 21.5 L10.5 14 A5 5 0 0 1 15.5 9 L14 9 Z" fill="#F5583E"/>
+  <!-- 오른쪽 위: 연한 살구 원 -->
+  <circle cx="21" cy="13" r="2.3" fill="#FDBDB5"/>
+  <!-- 오른쪽 아래: 연한 살구 원 -->
+  <circle cx="21" cy="19" r="2.3" fill="#FDBDB5"/>
 </svg>

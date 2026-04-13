@@ -180,10 +180,14 @@ function PhoneMockup() {
   const cardSize = 200
   const cardGap = 70
   return (
-    <div className="relative mt-8 sm:mt-14 overflow-visible group/phone h-[400px] sm:h-[480px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 좌우 흰색 비네트 — 앨범이 양쪽 끝에서 서서히 사라지게 */}
-      <div className="absolute left-0 top-0 bottom-0 w-[20%] sm:w-[25%] pointer-events-none z-20" style={{ background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0) 100%)' }} />
-      <div className="absolute right-0 top-0 bottom-0 w-[20%] sm:w-[25%] pointer-events-none z-20" style={{ background: 'linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0) 100%)' }} />
+    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[440px] sm:h-[560px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      {/* 좌우 흰색 비네트 — 가운데(핸드폰)만 투명, 양쪽으로 갈수록 흰색 */}
+      <div
+        className="absolute inset-0 pointer-events-none z-20"
+        style={{
+          background: 'linear-gradient(to right, #ffffff 0%, #ffffff 12%, rgba(255,255,255,0) 38%, rgba(255,255,255,0) 62%, #ffffff 88%, #ffffff 100%)',
+        }}
+      />
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
@@ -216,7 +220,7 @@ function PhoneMockup() {
                     } cursor-pointer`}
                   >
                     <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.15) saturate(1) brightness(1.12) contrast(0.98) hue-rotate(-3deg)' }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(245,88,62,0.9) 0%, rgba(245,88,62,0.4) 40%, rgba(245,88,62,0.1) 100%)' }} />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <p className="text-white font-bold text-sm leading-tight">{a.title}</p>
                       <p className="text-white/70 text-xs mt-1">{a.to}</p>
