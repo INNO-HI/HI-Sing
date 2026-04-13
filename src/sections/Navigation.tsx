@@ -60,13 +60,13 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
             >
               <svg className="h-9 w-auto flex-shrink-0" viewBox="0 0 48 32" fill="none">
                 <g fill="#F5583E">
-                  <rect x="2" y="13" width="2.5" height="6" rx="1.25"/>
-                  <rect x="7" y="7" width="3" height="18" rx="1.5"/>
-                  <rect x="12.5" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="6" y="13" width="2.5" height="6" rx="1.25"/>
+                  <rect x="9.5" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="13.5" y="7" width="3" height="18" rx="1.5"/>
                   <path d="M24 7 Q24 16 31 16 Q24 16 24 25 Q24 16 17 16 Q24 16 24 7 Z"/>
-                  <rect x="32.5" y="7" width="3" height="18" rx="1.5"/>
-                  <rect x="38" y="7" width="3" height="18" rx="1.5"/>
-                  <rect x="43.5" y="13" width="2.5" height="6" rx="1.25"/>
+                  <rect x="31.5" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="35.5" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="39.5" y="13" width="2.5" height="6" rx="1.25"/>
                 </g>
               </svg>
               <span className={`flex flex-col items-start leading-tight transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
