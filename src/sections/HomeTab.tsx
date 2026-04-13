@@ -177,8 +177,8 @@ function PhoneMockup() {
   const realIdx = idx % albums.length
   const album = albums[realIdx]
 
-  const cardSize = 280
-  const cardGap = 100
+  const cardSize = 250
+  const cardGap = 90
   return (
     <div className="relative w-full h-full min-h-[520px] overflow-visible group/phone" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {/* 메인색 원형 그라데이션 — 폰 뒤에 위치 */}
@@ -187,7 +187,7 @@ function PhoneMockup() {
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[320px] sm:w-[380px] rounded-t-[38px] sm:rounded-t-[44px] bg-white border border-neutral-200 border-b-0 p-3 sm:p-3.5 shadow-2xl">
+        <div className="w-[290px] sm:w-[340px] rounded-t-[36px] sm:rounded-t-[40px] bg-white border border-neutral-200 border-b-0 p-3 sm:p-3.5 shadow-2xl">
           <div className="w-20 sm:w-24 h-5 sm:h-6 rounded-full bg-neutral-500 mx-auto mb-2.5" />
           <div className="rounded-t-[26px] sm:rounded-t-[30px] bg-neutral-50 px-5 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
             <div className="flex items-center justify-between mb-4">
@@ -195,7 +195,7 @@ function PhoneMockup() {
               <div className="w-5 h-2.5 rounded-sm border border-ink-faint/40" />
             </div>
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
-            <div className="relative mx-auto mb-5 w-[280px] h-[280px]" style={{ overflow: 'visible' }}>
+            <div className="relative mx-auto mb-5 w-[250px] h-[250px]" style={{ overflow: 'visible' }}>
               <div
                 className={`absolute top-0 flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{
@@ -207,7 +207,7 @@ function PhoneMockup() {
                 {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
                   <div
                     key={i}
-                    className={`flex-shrink-0 w-[280px] h-[280px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
+                    className={`flex-shrink-0 w-[250px] h-[250px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
