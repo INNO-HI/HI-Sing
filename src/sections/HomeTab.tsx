@@ -599,21 +599,15 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
       {/* ═══ 7. CTA ════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-neutral-50">
-        {/* 배경 사진: 오른쪽에 투명도 적용, 왼쪽으로 갈수록 페이드 */}
-        <div className="absolute inset-0 hidden sm:block">
-          <img
-            src={`/images/cta-family-new.png`}
-            alt=""
-            className="w-full h-full object-cover object-right"
-            style={{
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.8) 70%, black 100%)',
-              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.8) 70%, black 100%)',
-              opacity: 0.7,
-            }}
-          />
-          {/* 필터: primary 20% → 주황 → 흰 투명 */}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(245,88,62,0.2) 0%, rgba(245,88,62,0.25) 50%, rgba(255,255,255,0) 100%)' }} />
-        </div>
+        {/* 배경 사진: 전체 매우 희미하게 블렌드 */}
+        <img
+          src={`/images/cta-family-new.png`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none hidden sm:block"
+          style={{ opacity: 0.2 }}
+        />
+        {/* primary 20% → 투명 필터 */}
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(245,88,62,0.2) 0%, rgba(245,88,62,0.1) 50%, rgba(255,255,255,0) 100%)' }} />
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div>
