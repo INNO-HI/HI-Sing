@@ -177,10 +177,10 @@ function PhoneMockup() {
   const realIdx = idx % albums.length
   const album = albums[realIdx]
 
-  const cardSize = 200
-  const cardGap = 70
+  const cardSize = 240
+  const cardGap = 80
   return (
-    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[440px] sm:h-[560px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[500px] sm:h-[620px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
@@ -188,7 +188,7 @@ function PhoneMockup() {
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[240px] sm:w-[290px] rounded-t-[34px] sm:rounded-t-[38px] bg-white border border-neutral-200 border-b-0 p-2.5 sm:p-3 shadow-2xl">
+        <div className="w-[280px] sm:w-[330px] rounded-t-[34px] sm:rounded-t-[38px] bg-white border border-neutral-200 border-b-0 p-2.5 sm:p-3 shadow-2xl">
           <div className="w-16 sm:w-20 h-4 sm:h-5 rounded-full bg-neutral-900 mx-auto mb-2" />
           <div className="rounded-t-[22px] sm:rounded-t-[26px] bg-neutral-50 px-4 sm:px-5 pt-3 sm:pt-4 pb-4 sm:pb-5">
             <div className="flex items-center justify-between mb-3">
@@ -196,7 +196,7 @@ function PhoneMockup() {
               <div className="w-4 h-2 rounded-sm border border-ink-faint/40" />
             </div>
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
-            <div className="relative mx-auto mb-4 w-[200px] h-[200px]" style={{ overflow: 'visible' }}>
+            <div className="relative mx-auto mb-4 w-[240px] h-[240px]" style={{ overflow: 'visible' }}>
               <div
                 className={`absolute top-0 flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{
@@ -208,7 +208,7 @@ function PhoneMockup() {
                 {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
                   <div
                     key={i}
-                    className={`flex-shrink-0 w-[200px] h-[200px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
+                    className={`flex-shrink-0 w-[240px] h-[240px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
@@ -357,23 +357,23 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         {/* 배경 장식 */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary-100/30 blur-3xl pointer-events-none" />
 
-        {/* 히어로 전체 좌우 비네트 — 양쪽 끝만 얇게 흰색 페이드 */}
+        {/* 히어로 전체 좌우 비네트 */}
         <div
           className="absolute inset-0 pointer-events-none z-30"
           style={{
-            background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 88%, #ffffff 100%)',
+            background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.85) 90%, #ffffff 100%)',
           }}
         />
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="text-center mb-12 mt-8 sm:mt-16">
-              <p className="text-ink-muted text-base sm:text-lg mb-4">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
+              <p className="text-ink-muted text-base sm:text-lg mb-7">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
               </h1>
 
-              <div className="mt-10">
+              <div className="mt-14">
                 <button
                   onClick={handleHeroCTA}
                   className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
@@ -607,16 +607,18 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, #F8F8F8 0%, #F8F8F8 25%, rgba(248,248,248,0.75) 50%, rgba(248,248,248,0.2) 80%, rgba(248,248,248,0) 100%)',
+              background: 'linear-gradient(to right, #F8F8F8 0%, #F8F8F8 30%, rgba(248,248,248,0.9) 55%, rgba(248,248,248,0.55) 80%, rgba(248,248,248,0.35) 100%)',
             }}
           />
           {/* 하단 그라데이션 — 섹션 위/아래 배경색과 매끄럽게 연결 */}
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, #F8F8F8 0%, rgba(248,248,248,0) 20%, rgba(248,248,248,0) 80%, #F8F8F8 100%)',
+              background: 'linear-gradient(to bottom, #F8F8F8 0%, rgba(248,248,248,0.25) 25%, rgba(248,248,248,0.25) 75%, #F8F8F8 100%)',
             }}
           />
+          {/* 전체 반투명 필터 — 사진 톤 살짝 낮춤 */}
+          <div className="absolute inset-0 bg-neutral-50/35" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>

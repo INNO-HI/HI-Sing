@@ -59,16 +59,14 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
               className="flex items-center gap-2 group"
             >
               <svg className="w-9 h-9 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-                <rect x="2" y="2" width="28" height="28" rx="7" fill="#F0F0F0"/>
-                <rect x="5" y="5" width="22" height="22" rx="4.5" fill="#FFFFFF"/>
                 <g transform="rotate(90 16 16)">
                   <path d="M14 9 L14 18 A3.5 3.5 0 0 1 10.5 21.5 L10.5 14 A5 5 0 0 1 15.5 9 L14 9 Z" fill="#F5583E"/>
                   <circle cx="21" cy="13" r="2.3" fill="#FDBDB5"/>
                   <circle cx="21" cy="19" r="2.3" fill="#FDBDB5"/>
                 </g>
               </svg>
-              <span className={`text-xl sm:text-2xl font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
-                하이싱 <span className="text-sm text-ink-faint ml-1">HI-Sing</span>
+              <span className={`text-2xl sm:text-3xl font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
+                하이싱 <span className="text-base text-ink-faint ml-1">HI-Sing</span>
               </span>
             </button>
 
@@ -77,7 +75,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                 <button
                   key={item.id}
                   onClick={() => handleTabClick(item.id)}
-                  className={`relative px-1 py-1 text-base font-medium transition-all ${
+                  className={`relative px-1 py-1 text-lg font-medium transition-all ${
                     activeTab === item.id
                       ? isScrolled || !isTransparent ? 'text-ink' : 'text-white'
                       : isScrolled || !isTransparent

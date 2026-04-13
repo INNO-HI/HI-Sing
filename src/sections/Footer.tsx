@@ -15,8 +15,6 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <svg className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-              <rect x="2" y="2" width="28" height="28" rx="7" fill="#F0F0F0"/>
-              <rect x="5" y="5" width="22" height="22" rx="4.5" fill="#FFFFFF"/>
               <g transform="rotate(90 16 16)">
                 <path d="M14 9 L14 18 A3.5 3.5 0 0 1 10.5 21.5 L10.5 14 A5 5 0 0 1 15.5 9 L14 9 Z" fill="#F5583E"/>
                 <circle cx="21" cy="13" r="2.3" fill="#FDBDB5"/>

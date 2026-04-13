@@ -875,7 +875,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
             {rewards.map((r, i) => (
               <FadeIn key={r.tier} delay={i * 0.08}>
-                <div className={`relative rounded-2xl border bg-white p-6 sm:p-7 h-full flex flex-col shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 ${r.highlight ? 'border-primary-400 shadow-lg shadow-primary-100/50 ring-1 ring-primary-200' : 'border-neutral-200 hover:border-primary-200'}`}>
+                <div className={`relative rounded-2xl border border-neutral-200 bg-white p-6 sm:p-7 h-full flex flex-col transition-all duration-300 hover:-translate-y-1 ${r.highlight ? 'shadow-lg shadow-primary-100/50' : 'shadow-sm hover:shadow-md hover:border-primary-200'}`}>
                   {r.badge && <span className={`absolute -top-3 left-6 px-3 py-1 text-xs font-bold rounded-full ${r.badgeColor}`}>{r.badge}</span>}
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center"><r.icon className="w-5 h-5 text-primary-400" /></div>
