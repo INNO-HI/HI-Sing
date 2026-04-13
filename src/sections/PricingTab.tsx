@@ -894,7 +894,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
                     ))}
                   </ul>
                   <p className="text-ink-muted text-[13px] leading-relaxed mb-5">{r.desc}</p>
-                  <button onClick={() => onSelect(i)} className={`flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors ${r.highlight ? 'bg-primary-400 text-white hover:bg-primary-500' : 'bg-neutral-100 text-ink hover:bg-neutral-200'}`}>
+                  <button onClick={() => onSelect(i)} className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors bg-neutral-100 text-ink hover:bg-neutral-200">
                     자세히 보기<ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

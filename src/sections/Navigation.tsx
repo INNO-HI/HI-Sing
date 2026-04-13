@@ -63,7 +63,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                   <rect x="2" y="13" width="2.5" height="6" rx="1.25"/>
                   <rect x="7" y="7" width="3" height="18" rx="1.5"/>
                   <rect x="12.5" y="7" width="3" height="18" rx="1.5"/>
-                  <path d="M24 7 L25.5 14.5 L31 16 L25.5 17.5 L24 25 L22.5 17.5 L17 16 L22.5 14.5 Z"/>
+                  <path d="M24 7 Q24 16 31 16 Q24 16 24 25 Q24 16 17 16 Q24 16 24 7 Z"/>
                   <rect x="32.5" y="7" width="3" height="18" rx="1.5"/>
                   <rect x="38" y="7" width="3" height="18" rx="1.5"/>
                   <rect x="43.5" y="13" width="2.5" height="6" rx="1.25"/>
