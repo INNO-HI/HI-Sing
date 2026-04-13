@@ -228,14 +228,6 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
       {/* Before / After */}
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">
-                같은 목소리인데, 노래가 되면 이렇게 다릅니다
-              </h2>
-              <p className="text-ink-muted text-sm mt-3">하단 &apos;After&apos; 카드의 재생 버튼을 눌러 완성곡을 직접 들어보세요</p>
-            </div>
-          </FadeIn>
           <FadeIn delay={0.15}>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {/* Before — 개인정보 보호 안내 */}
@@ -320,8 +312,8 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
         <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="text-center mb-10">
-              <p className="text-primary-400 font-semibold text-sm mb-3">실제 제작 사례</p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">이런 이야기가 노래가 되었어요</h2>
+              <p className="text-primary-400 font-semibold text-sm mb-3">Real Stories</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">누군가에겐 평생 기억될 순간이었습니다</h2>
               <p className="text-ink-muted text-sm mt-3">카드 아래 버튼으로 다른 사연도 들어보세요</p>
             </div>
           </FadeIn>
