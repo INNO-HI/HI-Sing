@@ -352,9 +352,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
   return (
     <>
       {/* ═══ 1. Hero ═══════════════════════════════════ */}
-      <section className="relative h-screen flex flex-col bg-gradient-to-b from-primary-50/30 via-neutral-50 to-white pt-20 pb-0 overflow-hidden">
-        {/* 배경 장식 — 상단 primary glow (은은하게) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-primary-100/40 blur-3xl pointer-events-none" />
+      <section className="relative h-screen flex flex-col bg-gradient-to-b from-white via-neutral-50 to-primary-50/40 pt-20 pb-0 overflow-hidden">
+        {/* 배경 장식 — 하단 primary glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[900px] h-[700px] rounded-full bg-primary-100/50 blur-3xl pointer-events-none" />
 
         {/* 히어로 전체 좌우 비네트 */}
         <div
