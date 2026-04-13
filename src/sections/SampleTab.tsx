@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { Play, Pause, Volume2, Shield, Info } from 'lucide-react'
+import { Play, Pause, Volume2, Shield, Info, ChevronDown } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { trackSamplePlay, trackCTAClick } from '@/lib/analytics'
 import type { TabId } from '@/types'
@@ -103,72 +103,78 @@ function LpDisc({ color }: { color: string }) {
 }
 
 function SampleStoryCard({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boolean; onToggle: () => void }) {
+  const [expanded, setExpanded] = useState(false)
   return (
     <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="grid md:grid-cols-5 gap-0">
         {/* 왼쪽: 사진 + 재생 */}
-        <div className="md:col-span-2 relative aspect-square md:aspect-auto cursor-pointer overflow-hidden min-h-[260px]" onClick={onToggle}>
+        <div className="md:col-span-2 relative aspect-square md:aspect-auto cursor-pointer overflow-hidden min-h-[300px]" onClick={onToggle}>
           <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.25) saturate(0.85) brightness(1.02) contrast(0.95) hue-rotate(-5deg)' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
-          {/* 재생 버튼 */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/95 shadow-lg flex items-center justify-center transition-all ${isPlaying ? 'scale-110' : 'scale-100 hover:scale-110'}`}>
+            <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 shadow-xl flex items-center justify-center transition-all ${isPlaying ? 'scale-110' : 'scale-100 hover:scale-110'}`}>
               {isPlaying
-                ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 text-primary-400" fill="currentColor" />
-                : <Play className="w-5 h-5 sm:w-6 sm:h-6 text-primary-400 ml-0.5" fill="currentColor" />
+                ? <Pause className="w-6 h-6 sm:w-7 sm:h-7 text-primary-400" fill="currentColor" />
+                : <Play className="w-6 h-6 sm:w-7 sm:h-7 text-primary-400 ml-1" fill="currentColor" />
               }
             </div>
           </div>
-          {/* 곡 정보 오버레이 */}
           <div className="absolute bottom-0 left-0 right-0 p-5">
             <span className="inline-block text-[10px] font-medium bg-white/20 backdrop-blur-sm text-white rounded-full px-2.5 py-0.5 mb-2">
               {s.duration}
             </span>
-            <p className="font-bold text-white text-lg leading-tight">{s.title}</p>
-            <p className="text-white/70 text-xs mt-1">{s.to} · {s.from}</p>
+            <p className="font-bold text-white text-xl leading-tight">{s.title}</p>
+            <p className="text-white/80 text-xs mt-1.5">{s.to} · {s.from}</p>
           </div>
         </div>
 
-        {/* 오른쪽: 스토리 */}
-        <div className="md:col-span-3 p-6 sm:p-8 flex flex-col gap-5">
-          {/* 태그 */}
-          <div className="flex flex-wrap gap-1.5">
-            {s.tags.map(t => (
-              <span key={t} className="text-[11px] font-medium text-primary-500 bg-primary-50 rounded-full px-2.5 py-0.5">
-                #{t}
-              </span>
-            ))}
+        {/* 오른쪽: 임팩트 인용구 중심 */}
+        <div className="md:col-span-3 p-7 sm:p-10 flex flex-col">
+          {/* 핵심: 받은 날의 반응 인용구 — 대형 */}
+          <div className="flex-1 flex flex-col justify-center">
+            <div className="text-primary-300 text-4xl font-serif leading-none mb-3 select-none">“</div>
+            <p className="text-ink text-base sm:text-lg leading-relaxed font-medium">
+              {s.reaction.replace(/^"|"$/g, '')}
+            </p>
+            <p className="text-ink-muted text-xs mt-4">— {s.from}, {s.to}을(를) 위한 노래</p>
           </div>
 
-          {/* 배경 */}
-          <div>
-            <p className="text-[11px] font-semibold text-ink-faint tracking-wider uppercase mb-1.5">Background</p>
-            <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.background}</p>
-          </div>
+          {/* 확장 토글 */}
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-6 flex items-center justify-between w-full px-4 py-3 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors text-sm text-ink-light font-medium"
+          >
+            <span>{expanded ? '접기' : '이 노래가 만들어진 이야기'}</span>
+            <ChevronDown className={`w-4 h-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+          </button>
 
-          {/* 계기 */}
-          <div>
-            <p className="text-[11px] font-semibold text-ink-faint tracking-wider uppercase mb-1.5">주문 계기</p>
-            <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.trigger}</p>
-          </div>
-
-          {/* 가사 한 구절 */}
-          <div className="bg-gradient-to-br from-primary-50/60 to-white border-l-2 border-primary-300 rounded-r-lg px-4 py-3">
-            <p className="text-[10px] font-semibold text-primary-500 tracking-wider uppercase mb-1">Lyrics</p>
-            <p className="text-[13px] sm:text-sm text-ink leading-relaxed whitespace-pre-line italic">{s.lyricsExcerpt}</p>
-          </div>
-
-          {/* 반응 */}
-          <div>
-            <p className="text-[11px] font-semibold text-ink-faint tracking-wider uppercase mb-1.5">받은 날의 반응</p>
-            <p className="text-[13px] sm:text-sm text-ink-muted leading-relaxed">{s.reaction}</p>
-          </div>
-
-          {/* 지금은 */}
-          <div className="mt-auto pt-4 border-t border-neutral-100">
-            <p className="text-[11px] font-semibold text-primary-400 tracking-wider uppercase mb-1.5">그 후…</p>
-            <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.afterStory}</p>
-          </div>
+          {expanded && (
+            <div className="mt-5 space-y-5 pt-5 border-t border-neutral-100">
+              <div>
+                <p className="text-[10px] font-semibold text-ink-faint tracking-wider uppercase mb-1.5">시작</p>
+                <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.background}</p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold text-ink-faint tracking-wider uppercase mb-1.5">주문 계기</p>
+                <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.trigger}</p>
+              </div>
+              <div className="bg-primary-50/60 border-l-2 border-primary-300 rounded-r-lg px-4 py-3">
+                <p className="text-[10px] font-semibold text-primary-500 tracking-wider uppercase mb-1">가사 한 구절</p>
+                <p className="text-[13px] sm:text-sm text-ink leading-relaxed italic whitespace-pre-line">{s.lyricsExcerpt}</p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold text-primary-400 tracking-wider uppercase mb-1.5">그 후…</p>
+                <p className="text-[13px] sm:text-sm text-ink-light leading-relaxed">{s.afterStory}</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {s.tags.map(t => (
+                  <span key={t} className="text-[11px] font-medium text-primary-500 bg-primary-50 rounded-full px-2.5 py-0.5">
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -249,13 +255,6 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                       style={{ height: `${15 + (Math.sin(i * 1.3) * 0.5 + 0.5) * 55}%` }}
                     />
                   ))}
-                </div>
-                <div className="mt-4 flex items-start gap-2 bg-neutral-50 rounded-xl p-3 flex-1">
-                  <Shield className="w-4 h-4 text-ink-muted flex-shrink-0 mt-0.5" />
-                  <p className="text-xs text-ink-muted leading-relaxed">
-                    실제 고객이 업로드하신 원본 음성은 <strong className="text-ink-light">개인정보 보호</strong>를 위해 공개하지 않습니다.
-                    전화 녹음, 영상 속 목소리, 일상 대화 등 흔히 있는 30초 이상의 녹음이면 충분합니다.
-                  </p>
                 </div>
               </div>
 

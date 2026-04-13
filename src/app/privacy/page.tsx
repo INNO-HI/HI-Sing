@@ -7,160 +7,460 @@ export default function PrivacyPage() {
     <div className="pt-32 pb-20 bg-white">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-14">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-ink-light mb-2">개인정보 처리방침</h1>
-          <p className="text-sm text-ink-faint mb-10">최종 업데이트: 2026년 4월 9일</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-ink-light mb-2">이노하이 개인정보 처리방침</h1>
 
           <div className="space-y-8 text-ink-light">
             <section>
               <p className="text-sm leading-relaxed text-ink-muted">
-                주식회사 이노하이(INNO-HI, 이하 &quot;회사&quot;)는 이용자의 개인정보를 중요시하며,
-                「개인정보 보호법」 및 관련 법령을 준수하고 있습니다. 본 방침은 회사가 제공하는
-                하이싱(HI-Sing) 서비스(이하 &quot;서비스&quot;)의 개인정보 처리에 관한 사항을 안내합니다.
+                주식회사 이노하이(이하 &quot;회사&quot;)는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보의 처리와 보호에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
               </p>
+              <p className="text-sm leading-relaxed text-ink-muted mt-3">본 방침은 2026년 4월 3일부터 시행됩니다.</p>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제1조 (수집하는 개인정보 항목)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed mb-2">회사는 다음의 개인정보를 수집합니다.</p>
-              <div className="text-sm text-ink-muted leading-relaxed space-y-2 pl-4">
-                <p><strong>1. 필수 항목</strong></p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>주문자 정보: 이름, 연락처, 이메일</li>
-                  <li>주문 정보: 받는 분 정보, 선물 사연, 음성 파일</li>
-                  <li>결제 정보: 결제 수단, 결제 내역 (나이스페이먼츠를 통해 처리)</li>
-                </ul>
-                <p className="mt-3"><strong>2. 자동 수집 항목</strong></p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>접속 IP, 접속 일시, 쿠키, 브라우저 정보</li>
-                  <li>Google Analytics를 통한 서비스 이용 통계</li>
-                </ul>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제1조 (개인정보의 처리 목적)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+              </p>
+              <div className="text-sm text-ink-muted leading-relaxed space-y-3">
+                <div>
+                  <p className="font-semibold text-ink-light">서비스 가입 및 이용자 관리</p>
+                  <p>서비스 가입 의사 확인, 서비스 제공에 따른 본인 식별·인증, 이용자 자격 유지·관리, 서비스 부정이용 방지, 각종 고지·통지, 만 14세 미만 아동의 개인정보 처리 시 법정대리인의 동의 여부 확인</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-ink-light">재화 또는 서비스 제공</p>
+                  <ul className="list-disc pl-5 space-y-1 mt-1">
+                    <li>AI 기반 고령자 돌봄 서비스: 음성 인식(STT) 기반 대화 서비스, 음성 분석을 통한 건강 상태 모니터링, 위험 상황 감지 및 보호자 알림, 맞춤형 복지 정보 제공, 보호인 앱을 통한 방문 돌봄 과정에서의 음성 데이터 수집·처리, 돌봄 기록 작성 및 관리, 대상자 상태 보고</li>
+                    <li>보호자·가족 연계 서비스: 이용자(고령자)의 상태 정보 전달, 긴급 상황 알림, 돌봄 리포트 제공</li>
+                    <li>기관 대시보드 서비스: 복지관, 행정동 복지센터 등 연계 기관 담당자의 대시보드 계정 관리, 돌봄 대상자 현황 조회 및 관리, 통계 리포트 제공</li>
+                    <li>위치 기반 서비스: 이용자 안전 확인, 긴급 상황 시 위치 파악, 지역 맞춤 복지 정보 제공</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-ink-light">서비스 개선 및 연구 개발</p>
+                  <p>서비스 이용 통계 분석, AI 모델 성능 개선, 신규 서비스 개발</p>
+                </div>
               </div>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제2조 (개인정보의 수집 및 이용 목적)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed mb-2">수집한 개인정보는 다음 목적으로 이용됩니다.</p>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제2조 (처리하는 개인정보의 항목)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 「개인정보 보호법」에 따라 서비스 제공을 위해 필요 최소한의 범위에서 개인정보를 수집·이용합니다.
+              </p>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">1. 정보주체의 동의를 받지 않고 처리하는 개인정보 항목</p>
+              <p className="text-sm text-ink-muted mb-3">회사는 다음의 개인정보 항목을 정보주체의 동의 없이 처리하고 있습니다.</p>
+              <div className="overflow-x-auto -mx-2 mb-5">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">법적 근거</th>
+                      <th className="border border-neutral-200 p-2 text-left">구분</th>
+                      <th className="border border-neutral-200 p-2 text-left">수집 목적</th>
+                      <th className="border border-neutral-200 p-2 text-left">수집 항목</th>
+                      <th className="border border-neutral-200 p-2 text-left">보유 및 이용 기간</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr>
+                      <td className="border border-neutral-200 p-2">개인정보 보호법 제15조 제1항 제4호 (계약의 이행)</td>
+                      <td className="border border-neutral-200 p-2">고령자 돌봄 서비스 이용자 등록</td>
+                      <td className="border border-neutral-200 p-2">서비스 제공에 따른 본인 식별·인증, 이용자 관리</td>
+                      <td className="border border-neutral-200 p-2">이름, 생년월일, 성별, 연락처(전화번호), 주소, 보호자 연락처</td>
+                      <td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">개인정보 보호법 제15조 제1항 제4호 (계약의 이행)</td>
+                      <td className="border border-neutral-200 p-2">보호자·가족 등록</td>
+                      <td className="border border-neutral-200 p-2">보호자 연계 서비스 제공, 긴급 상황 알림</td>
+                      <td className="border border-neutral-200 p-2">이름, 연락처(휴대전화번호), 이용자와의 관계</td>
+                      <td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">개인정보 보호법 제15조 제1항 제4호 (계약의 이행)</td>
+                      <td className="border border-neutral-200 p-2">기관 담당자 계정 관리</td>
+                      <td className="border border-neutral-200 p-2">웹 대시보드 이용에 따른 본인 식별·인증, 기관 서비스 제공</td>
+                      <td className="border border-neutral-200 p-2">이름, 소속 기관명, 직위, 업무용 연락처(전화번호), 업무용 이메일, 아이디, 비밀번호</td>
+                      <td className="border border-neutral-200 p-2">계정 해지 시까지</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">개인정보 보호법 제15조 제1항 제4호 (계약의 이행)</td>
+                      <td className="border border-neutral-200 p-2">보호인 계정 관리</td>
+                      <td className="border border-neutral-200 p-2">앱 서비스 이용에 따른 본인 식별·인증, 돌봄 업무 수행 지원</td>
+                      <td className="border border-neutral-200 p-2">이름, 소속 기관명, 연락처(휴대전화번호), 아이디, 비밀번호</td>
+                      <td className="border border-neutral-200 p-2">계정 해지 시까지</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">개인정보 보호법 제15조 제1항 제4호 (계약의 이행)</td>
+                      <td className="border border-neutral-200 p-2">서비스 이용 과정에서 자동 생성·수집</td>
+                      <td className="border border-neutral-200 p-2">앱·웹 안정성 확보, 오류 분석, 서비스 품질 개선</td>
+                      <td className="border border-neutral-200 p-2">서비스 이용 기록, 접속 로그, 기기 정보(OS 종류·버전, 기기 모델명, 앱 버전), IP 주소</td>
+                      <td className="border border-neutral-200 p-2">3년</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">2. 정보주체의 동의를 받아 처리하는 개인정보 항목</p>
+              <p className="text-sm text-ink-muted mb-3">
+                회사는 다음의 개인정보 항목을 「개인정보 보호법」 제15조 제1항 제1호 및 제22조 제1항 제7호에 따라 정보주체의 동의를 받아 처리하고 있습니다.
+              </p>
+              <div className="overflow-x-auto -mx-2 mb-5">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">수집 목적</th>
+                      <th className="border border-neutral-200 p-2 text-left">수집 항목</th>
+                      <th className="border border-neutral-200 p-2 text-left">보유 및 이용 기간</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr>
+                      <td className="border border-neutral-200 p-2">AI 음성 인식 기반 돌봄 서비스 제공 및 건강 상태 모니터링 (직접 수집)</td>
+                      <td className="border border-neutral-200 p-2">음성 데이터(통화 녹음, STT 변환 텍스트)</td>
+                      <td className="border border-neutral-200 p-2">수집일로부터 1년</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">보호인 방문 돌봄 시 음성 기반 상태 확인 및 기록 (보호인 앱을 통한 수집)</td>
+                      <td className="border border-neutral-200 p-2">음성 데이터(대면 대화 녹음, STT 변환 텍스트)</td>
+                      <td className="border border-neutral-200 p-2">수집일로부터 1년</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">건강 상태 파악 및 맞춤형 돌봄 서비스 제공</td>
+                      <td className="border border-neutral-200 p-2">건강 상태 정보(기저질환, 복용 약물 등), 의료 관련 정보</td>
+                      <td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">이용자 안전 확인 및 긴급 상황 시 위치 파악</td>
+                      <td className="border border-neutral-200 p-2">위치정보(GPS)</td>
+                      <td className="border border-neutral-200 p-2">수집 후 즉시 처리, 최대 24시간 보관</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">3. 민감정보의 처리</p>
+              <p className="text-sm text-ink-muted mb-2">
+                회사는 서비스 제공을 위해 아래의 민감정보를 수집·이용하며, 「개인정보 보호법」 제23조에 따라 별도의 동의를 받아 처리합니다.
+              </p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mb-4">
+                <li>음성 데이터: 음성 인식 및 분석을 통한 돌봄 서비스 제공 목적 (앱 자동 수집 및 보호인 앱을 통한 수집 포함)</li>
+                <li>건강·의료 정보: 기저질환, 복용 약물 정보 등 건강 상태 파악 및 모니터링 목적</li>
+              </ul>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">4. 개인정보 수집 방법</p>
               <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
-                <li>서비스 제공 (노래 제작, 완성곡 전달)</li>
-                <li>주문 접수 및 결제 처리</li>
-                <li>고객 문의 응대</li>
-                <li>서비스 개선을 위한 통계 분석</li>
-                <li>법령상 의무 이행</li>
+                <li>앱 서비스 가입 및 이용 신청</li>
+                <li>웹 대시보드 기관 계정 등록</li>
+                <li>서비스 이용 과정에서 자동 생성·수집(음성, 위치, 로그 등)</li>
+                <li>보호인 앱을 통한 방문 돌봄 과정에서의 수집(음성 데이터, 돌봄 기록)</li>
+                <li>보호자·가족의 직접 제공</li>
+                <li>지자체·공공기관을 통한 연계 제공</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제3조 (개인정보의 보유 및 이용 기간)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                회사는 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후 해당 정보를 지체 없이 파기합니다.
-                단, 다음의 정보는 아래의 기간 동안 보관합니다.
+              <h2 className="text-lg font-bold text-ink-light mb-3">제3조 (개인정보의 처리 및 보유 기간)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 법령에 따른 개인정보 보유·이용 기간 또는 정보주체로부터 개인정보를 수집 시 동의받은 개인정보 보유·이용 기간 내에서 개인정보를 처리·보유합니다.
               </p>
-              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mt-2">
-                <li>음성 파일: 노래 제작 완료 후 30일 (이후 서버에서 완전 삭제)</li>
-                <li>계약 또는 청약철회 기록: 5년 (전자상거래법)</li>
-                <li>대금 결제 및 재화 공급 기록: 5년 (전자상거래법)</li>
-                <li>소비자 불만 또는 분쟁 처리 기록: 3년 (전자상거래법)</li>
-              </ul>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">1. 회사 내부 방침에 의한 보유 기간</p>
+              <div className="overflow-x-auto -mx-2 mb-5">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">보유 정보</th>
+                      <th className="border border-neutral-200 p-2 text-left">보유 기간</th>
+                      <th className="border border-neutral-200 p-2 text-left">사유</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">서비스 이용자(고령자) 정보</td><td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td><td className="border border-neutral-200 p-2">돌봄 서비스 제공 및 안전 관리</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">보호자·가족 정보</td><td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td><td className="border border-neutral-200 p-2">보호자 연계 서비스 제공</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">기관 담당자 정보</td><td className="border border-neutral-200 p-2">계정 해지 시까지</td><td className="border border-neutral-200 p-2">기관 대시보드 서비스 제공</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">보호인 정보</td><td className="border border-neutral-200 p-2">계정 해지 시까지</td><td className="border border-neutral-200 p-2">보호인 앱 서비스 제공</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">음성 데이터</td><td className="border border-neutral-200 p-2">수집일로부터 1년</td><td className="border border-neutral-200 p-2">AI 서비스 제공 및 품질 개선</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">건강·의료 정보</td><td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td><td className="border border-neutral-200 p-2">건강 상태 모니터링</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">위치정보</td><td className="border border-neutral-200 p-2">수집 후 즉시 처리, 최대 24시간 보관</td><td className="border border-neutral-200 p-2">긴급 상황 대응</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">서비스 이용 기록·로그</td><td className="border border-neutral-200 p-2">3년</td><td className="border border-neutral-200 p-2">서비스 개선 및 분쟁 대응</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">2. 관련 법령에 따른 보유 기간</p>
+              <div className="overflow-x-auto -mx-2">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">관련 법령</th>
+                      <th className="border border-neutral-200 p-2 text-left">보유 정보</th>
+                      <th className="border border-neutral-200 p-2 text-left">보유 기간</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">전자상거래법 제6조</td><td className="border border-neutral-200 p-2">계약 또는 청약철회 등에 관한 기록</td><td className="border border-neutral-200 p-2">5년</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">전자상거래법 제6조</td><td className="border border-neutral-200 p-2">대금결제 및 재화 등의 공급에 관한 기록</td><td className="border border-neutral-200 p-2">5년</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">전자상거래법 제6조</td><td className="border border-neutral-200 p-2">소비자의 불만 또는 분쟁처리에 관한 기록</td><td className="border border-neutral-200 p-2">3년</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">통신비밀보호법 제15조의2</td><td className="border border-neutral-200 p-2">접속에 관한 기록(로그 기록, 접속지 추적 자료)</td><td className="border border-neutral-200 p-2">3개월</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             <section>
               <h2 className="text-lg font-bold text-ink-light mb-3">제4조 (개인정보의 제3자 제공)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                회사는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 단, 다음의 경우는 예외로 합니다.
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 정보주체의 개인정보를 제1조에서 명시한 목적 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공하고, 그 이외에는 정보주체의 개인정보를 제3자에게 제공하지 않습니다.
               </p>
-              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mt-2">
-                <li>이용자가 사전에 동의한 경우</li>
-                <li>법령의 규정에 의거하거나 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+              <p className="text-sm text-ink-muted leading-relaxed mb-2">다만, 다음의 경우에는 개인정보를 제3자에게 제공할 수 있습니다.</p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mb-3">
+                <li>정보주체가 사전에 제3자 제공에 동의한 경우</li>
+                <li>법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+                <li>정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전 동의를 받을 수 없는 경우로서 명백히 정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우</li>
+                <li>공중위생 등 공공의 안전과 안녕을 위하여 긴급히 필요한 경우</li>
               </ul>
+              <p className="text-xs text-ink-muted leading-relaxed mb-1">
+                ※ 연계 기관(복지관, 행정동 복지센터 등)의 담당자 및 보호인은 회사의 서비스 이용 계약에 따라 대시보드 또는 앱을 통해 돌봄 대상자의 정보에 접근하며, 이는 서비스 제공을 위한 업무 수행 범위 내의 처리에 해당합니다.
+              </p>
+              <p className="text-xs text-ink-muted leading-relaxed">
+                ※ 향후 제3자 제공이 필요한 경우, 제공받는 자·제공 목적·제공 항목·보유 기간 등을 명시하고, 정보주체의 별도 동의를 받겠습니다.
+              </p>
             </section>
 
             <section>
               <h2 className="text-lg font-bold text-ink-light mb-3">제5조 (개인정보 처리의 위탁)</h2>
               <p className="text-sm text-ink-muted leading-relaxed mb-2">
-                회사는 원활한 서비스 제공을 위해 다음과 같이 개인정보 처리를 위탁하고 있습니다.
+                회사는 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.
               </p>
-              <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
-                <div className="grid grid-cols-2 gap-3">
-                  <div><strong className="text-ink-light">수탁업체</strong></div>
-                  <div><strong className="text-ink-light">위탁 업무</strong></div>
-                  <div>(주)나이스페이먼츠</div>
-                  <div>결제 처리</div>
-                  <div>Vercel Inc.</div>
-                  <div>웹 호스팅</div>
-                  <div>Google LLC</div>
-                  <div>서비스 이용 통계 (Google Analytics)</div>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제6조 (이용자의 권리)</h2>
               <p className="text-sm text-ink-muted leading-relaxed">
-                이용자는 언제든지 자신의 개인정보를 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다.
-                권리 행사는 이메일(contact@innohi.ai.kr)로 연락주시면 지체 없이 조치하겠습니다.
+                향후 위탁이 필요한 경우, 「개인정보 보호법」 제26조에 따라 위탁받는 자(수탁자), 위탁하는 업무의 내용 등을 본 개인정보 처리방침을 통하여 공개하겠습니다.
               </p>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제7조 (개인정보의 안전성 확보 조치)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                회사는 개인정보의 안전성 확보를 위해 다음의 조치를 취하고 있습니다.
+              <h2 className="text-lg font-bold text-ink-light mb-3">제6조 (만 14세 미만 아동의 개인정보 처리에 관한 사항)</h2>
+              <ol className="list-decimal pl-5 text-sm text-ink-muted leading-relaxed space-y-2">
+                <li>회사는 만 14세 미만 아동의 개인정보를 처리하기 위하여 동의가 필요한 경우에는 해당 아동의 법정대리인으로부터 동의를 받습니다.</li>
+                <li>
+                  회사는 만 14세 미만 아동의 개인정보 처리에 관하여 법정대리인의 동의를 받을 때에는 아동에게 법정대리인의 성명, 연락처와 같이 최소한의 정보를 요구할 수 있으며, 다음 중 하나의 방법으로 법정대리인의 동의 여부를 확인합니다.
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>동의 내용을 게재한 앱 화면에 법정대리인이 동의 여부를 표시하도록 하고, 그 동의 표시를 확인하였음을 법정대리인의 휴대전화 문자메시지로 알리는 방법</li>
+                    <li>그 밖에 법정대리인의 동의를 확인할 수 있는 합리적인 방법</li>
+                  </ul>
+                </li>
+                <li>만 14세 미만 아동에 관한 개인정보의 열람, 정정·삭제, 처리정지 등의 요구는 법정대리인이 직접 하여야 합니다.</li>
+              </ol>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제7조 (정보주체와 법정대리인의 권리·의무 및 행사 방법)</h2>
+              <ol className="list-decimal pl-5 text-sm text-ink-muted leading-relaxed space-y-2">
+                <li>
+                  정보주체는 회사에 대해 언제든지 다음의 개인정보 보호 관련 권리를 행사할 수 있습니다.
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>개인정보 열람 요구</li>
+                    <li>오류 등이 있을 경우 정정 요구</li>
+                    <li>삭제 요구</li>
+                    <li>처리정지 요구</li>
+                    <li>개인정보 수집·이용·제공에 대한 동의 철회 요구</li>
+                    <li>자동화된 결정에 대한 거부 또는 설명 요구</li>
+                  </ul>
+                </li>
+                <li>위 권리 행사는 「개인정보 보호법」 시행령 제41조 제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, 회사는 이에 대해 지체 없이 조치하겠습니다.</li>
+                <li>권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수도 있습니다. 이 경우 &quot;개인정보 처리 방법에 관한 고시&quot; 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</li>
+                <li>정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</li>
+                <li>정보주체가 개인정보 열람 및 처리정지를 요구할 권리는 「개인정보 보호법」 제35조 제4항 및 제37조 제2항에 의하여 제한될 수 있습니다. 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 해당 개인정보의 삭제를 요구할 수 없습니다.</li>
+                <li>자동화된 결정이 이루어진다는 사실에 대해 정보주체의 동의를 받았거나, 계약 등을 통해 미리 알린 경우, 법률에 명확히 규정이 있는 경우에는 자동화된 결정에 대한 거부는 인정되지 않으며, 설명 및 검토 요구만 가능합니다. 또한 자동화된 결정에 대한 거부·설명 요구는 다른 사람의 생명·신체·재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 등 정당한 사유가 있는 경우에는 거절될 수 있습니다.</li>
+                <li><strong>고령자 특별 안내:</strong> 서비스 이용자(고령자) 본인이 직접 권리를 행사하기 어려운 경우, 등록된 보호자·가족이 대리하여 권리를 행사할 수 있습니다. 이 경우 위 제3항의 위임장을 제출하셔야 합니다.</li>
+                <li>회사는 권리 행사를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</li>
+              </ol>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제8조 (개인정보의 파기 절차 및 방법)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 개인정보 보유 기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다.
               </p>
-              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mt-2">
-                <li>개인정보 암호화 저장 및 전송 (HTTPS/TLS)</li>
-                <li>개인정보 접근 권한 관리</li>
-                <li>해킹 등에 대비한 보안 프로그램 적용</li>
-                <li>개인정보 처리 직원 최소화 및 교육</li>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                정보주체로부터 동의받은 개인정보 보유 기간이 경과하거나 처리 목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관 장소를 달리하여 보존합니다. 다른 법령에 따라 보존하는 개인정보의 항목과 보존 근거는 &quot;제3조(개인정보의 처리 및 보유 기간)&quot;에서 확인하실 수 있습니다.
+              </p>
+              <p className="font-semibold text-ink-light text-sm mb-2">1. 파기 절차</p>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 파기 사유가 발생한 개인정보를 선정하고, 회사의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.
+              </p>
+              <p className="font-semibold text-ink-light text-sm mb-2">2. 파기 방법</p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
+                <li>전자적 파일 형태: 기록을 재생할 수 없도록 복구 불가능한 기술적 방법을 사용하여 안전하게 삭제</li>
+                <li>종이에 기록·저장된 개인정보: 분쇄기로 분쇄하거나 소각하여 파기</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제8조 (쿠키 운영)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                회사는 이용자에게 개인화된 서비스를 제공하기 위해 쿠키를 사용합니다. 이용자는 브라우저 설정을 통해
-                쿠키 저장을 거부할 수 있으나, 이 경우 일부 서비스 이용에 제한이 있을 수 있습니다.
+              <h2 className="text-lg font-bold text-ink-light mb-3">제9조 (개인정보의 안전성 확보 조치)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-2">
+                회사는 「개인정보 보호법」 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적·관리적·물리적 조치를 하고 있습니다.
               </p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
+                <li>관리적 조치: 내부 관리 계획 수립·시행, 개인정보 취급 직원의 최소화 및 정기 교육 실시</li>
+                <li>기술적 조치: 개인정보 처리 시스템에 대한 접근 권한 관리, 접근 통제 시스템 설치, 개인정보의 암호화, 보안 프로그램 설치 및 주기적 갱신·점검</li>
+                <li>물리적 조치: 전산실, 자료 보관실 등에 대한 접근 통제</li>
+                <li>개인정보의 보관: 회사는 이용자의 개인정보를 국내 소재 자체 로컬 서버에 암호화하여 저장·보관하며, 외부 클라우드 서비스로의 이전 없이 직접 관리합니다.</li>
+              </ul>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제9조 (개인정보 보호책임자)</h2>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제10조 (개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</h2>
               <p className="text-sm text-ink-muted leading-relaxed mb-3">
-                회사는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이
-                개인정보 보호책임자 및 담당자를 지정하고 있습니다.
+                회사는 웹사이트(기관용 대시보드 포함) 및 모바일 앱을 통해 서비스를 제공하며, 각 환경에서 다음과 같은 자동 수집 기술을 사용합니다.
               </p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
-                  <p className="text-xs font-semibold text-primary-500 mb-2">개인정보 보호책임자</p>
-                  <p><strong className="text-ink-light">성명:</strong> 김민수</p>
-                  <p><strong className="text-ink-light">직책:</strong> 대표이사</p>
-                  <p><strong className="text-ink-light">이메일:</strong> contact@innohi.ai.kr</p>
-                  <p><strong className="text-ink-light">소속:</strong> 주식회사 이노하이(INNO-HI)</p>
-                </div>
-                <div className="bg-neutral-50 rounded-xl p-4 text-sm text-ink-muted">
-                  <p className="text-xs font-semibold text-primary-500 mb-2">개인정보 보호 담당자</p>
-                  <p><strong className="text-ink-light">성명:</strong> 한민우</p>
-                  <p><strong className="text-ink-light">직책:</strong> 대표이사</p>
-                  <p><strong className="text-ink-light">이메일:</strong> contact@innohi.ai.kr</p>
-                  <p><strong className="text-ink-light">소속:</strong> 주식회사 이노하이(INNO-HI)</p>
-                </div>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">1. 웹사이트·기관용 대시보드 — 쿠키(Cookie)</p>
+              <p className="text-sm text-ink-muted leading-relaxed mb-2">
+                회사는 이용자에게 맞춤형 서비스를 제공하기 위해 이용 정보를 저장하고 수시로 불러오는 쿠키를 사용합니다. 쿠키는 웹사이트 운영에 이용되는 서버(http)가 정보주체의 브라우저에 보내는 소량의 정보이며 정보주체의 PC 또는 모바일에 저장됩니다.
+              </p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mb-3">
+                <li>사용 목적: 이용자의 접속 빈도·방문 시간 등을 분석하여 맞춤형 서비스 제공, 기관 담당자 로그인 상태 유지</li>
+                <li>설치·운영 및 거부: 정보주체는 웹 브라우저 옵션 설정을 통해 쿠키 허용, 차단 등의 설정을 할 수 있습니다. 다만, 쿠키 저장을 거부할 경우 로그인이 필요한 일부 서비스 이용에 어려움이 발생할 수 있습니다.</li>
+              </ul>
+              <p className="font-semibold text-ink-light text-sm mb-2">웹 브라우저에서 쿠키 허용/차단 방법</p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mb-5">
+                <li>Chrome: 웹 브라우저 설정 &gt; 개인정보 보호 및 보안 &gt; 인터넷 사용 기록 삭제</li>
+                <li>Edge: 웹 브라우저 설정 &gt; 쿠키 및 사이트 권한 &gt; 쿠키 및 사이트 데이터 관리 및 삭제</li>
+                <li>Safari: 모바일 기기 설정 &gt; Safari &gt; 고급 &gt; 모든 쿠키 차단</li>
+                <li>삼성 인터넷: 모바일 브라우저 설정 &gt; 인터넷 사용 기록 &gt; 인터넷 사용 기록 삭제</li>
+              </ul>
+
+              <p className="font-semibold text-ink-light text-sm mb-2">2. 모바일 앱 — 자동 수집 기술</p>
+              <div className="overflow-x-auto -mx-2 mb-3">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">수집 기술</th>
+                      <th className="border border-neutral-200 p-2 text-left">수집 항목</th>
+                      <th className="border border-neutral-200 p-2 text-left">사용 목적</th>
+                      <th className="border border-neutral-200 p-2 text-left">거부 방법</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">광고식별자 (Android ADID / iOS IDFA)</td><td className="border border-neutral-200 p-2">기기 광고식별자</td><td className="border border-neutral-200 p-2">맞춤형 서비스 제공, 서비스 개선 분석</td><td className="border border-neutral-200 p-2">아래 &quot;모바일 단말기의 광고식별자 차단 방법&quot; 참조</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">푸시 알림 토큰</td><td className="border border-neutral-200 p-2">기기 푸시 토큰</td><td className="border border-neutral-200 p-2">긴급 알림, 돌봄 상태 알림, 서비스 공지 발송</td><td className="border border-neutral-200 p-2">기기 설정에서 앱 알림 수신 거부</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">기기 정보 수집</td><td className="border border-neutral-200 p-2">OS 종류·버전, 기기 모델명, 앱 버전</td><td className="border border-neutral-200 p-2">앱 안정성 확보 및 오류 분석</td><td className="border border-neutral-200 p-2">—</td></tr>
+                  </tbody>
+                </table>
               </div>
-              <p className="text-xs text-ink-faint leading-relaxed mt-3">
-                이용자는 회사의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에
-                관한 사항을 위 책임자 및 담당자에게 문의하실 수 있습니다. 회사는 이용자의 문의에 대해 지체 없이
-                답변 및 처리해드릴 것입니다.
+              <p className="font-semibold text-ink-light text-sm mb-2">모바일 단말기의 광고식별자 차단/허용 방법</p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1 mb-3">
+                <li>Android: 설정 &gt; 보안 및 개인정보 보호 &gt; 개인정보 보호 &gt; 기타 개인정보 설정 &gt; 광고 &gt; 광고 ID 재설정 또는 광고 ID 삭제</li>
+                <li>iOS: 설정 &gt; 개인정보 보호 및 보안 &gt; 추적 &gt; 앱 추적 허용 해제</li>
+              </ul>
+              <p className="text-xs text-ink-muted leading-relaxed">※ 모바일 OS 버전에 따라 메뉴 및 방법이 다소 상이할 수 있습니다.</p>
+              <p className="text-xs text-ink-muted leading-relaxed">※ 자동 수집 기술의 거부 시 일부 서비스(푸시 알림, 맞춤형 추천 등)의 이용이 제한될 수 있습니다.</p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제11조 (민감정보의 공개 가능성 및 비공개를 선택하는 방법)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 보호자·가족 연계 서비스 및 기관 대시보드 서비스를 제공하는 과정에서 다음과 같이 민감정보가 공개될 수 있습니다.
+              </p>
+              <div className="overflow-x-auto -mx-2">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">서비스 명</th>
+                      <th className="border border-neutral-200 p-2 text-left">민감정보</th>
+                      <th className="border border-neutral-200 p-2 text-left">공개 가능성</th>
+                      <th className="border border-neutral-200 p-2 text-left">비공개 선택 방법</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">보호자 앱 돌봄 리포트</td><td className="border border-neutral-200 p-2">건강 상태 정보(기저질환, 복용 약물 등)</td><td className="border border-neutral-200 p-2">등록된 보호자·가족에게 돌봄 리포트를 통해 이용자(고령자)의 건강 관련 정보가 공유될 수 있음</td><td className="border border-neutral-200 p-2">앱 설정 &gt; 정보 공유 관리에서 건강정보 공유 항목별 공개/비공개 설정 가능</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">기관 대시보드 돌봄 현황</td><td className="border border-neutral-200 p-2">건강 상태 정보, 음성 분석 결과</td><td className="border border-neutral-200 p-2">연계 기관 담당자 및 보호인에게 대시보드를 통해 돌봄 대상자의 건강 관련 정보가 공유될 수 있음</td><td className="border border-neutral-200 p-2">서비스 이용 동의 시 기관 공유 범위 설정 가능, 이후 앱 설정 또는 고객센터를 통해 변경 가능</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">음성 기반 건강 모니터링 알림</td><td className="border border-neutral-200 p-2">음성 분석을 통해 유추된 건강 이상 징후</td><td className="border border-neutral-200 p-2">건강 이상 감지 시 보호자 및 담당 기관에 알림이 전송되며, 이 과정에서 건강 관련 민감정보가 포함될 수 있음</td><td className="border border-neutral-200 p-2">앱 설정 &gt; 알림 관리에서 건강 알림 수신 범위 설정 가능</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제12조 (위치정보의 처리)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-2">
+                회사는 「위치정보의 보호 및 이용 등에 관한 법률」에 따라 위치정보를 다음과 같이 처리합니다.
+              </p>
+              <ul className="list-disc pl-5 text-sm text-ink-muted leading-relaxed space-y-1">
+                <li>위치정보 수집 목적: 고령자 안전 확인, 긴급 상황 시 위치 파악 및 보호자 알림, 지역 기반 복지 서비스 연계</li>
+                <li>위치정보 보유 기간: 위치정보는 해당 서비스 제공에 필요한 시간 동안만 일시적으로 이용되며, 긴급 상황 대응을 위해 최대 24시간 보관 후 파기됩니다.</li>
+                <li>위치정보 이용·제공 내역: 이용자는 회사에 위치정보 이용·제공 사실에 대한 확인 자료의 열람을 요구할 수 있으며, 회사는 지체 없이 이에 응합니다.</li>
+                <li>동의 철회: 이용자는 언제든지 위치정보 수집·이용·제공에 대한 동의를 철회할 수 있습니다.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제13조 (개인정보 보호책임자)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만 처리 및 피해 구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+              </p>
+              <div className="bg-neutral-50 rounded-lg p-4 text-sm text-ink-muted space-y-1 mb-3">
+                <p className="font-semibold text-ink-light">개인정보 보호책임자</p>
+                <p>성명: 한민우</p>
+                <p>직위: 대표이사</p>
+                <p>연락처: 010-4056-1754</p>
+                <p>이메일: board@innohi.ai.kr</p>
+              </div>
+              <p className="text-sm text-ink-muted leading-relaxed">
+                정보주체는 회사의 서비스를 이용하면서 발생한 모든 개인정보 보호 관련 문의, 불만 처리, 피해 구제 등에 관한 사항을 개인정보 보호책임자에게 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체 없이 답변 및 처리해드리겠습니다.
               </p>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-ink-light mb-3">제10조 (고지의 의무)</h2>
-              <p className="text-sm text-ink-muted leading-relaxed">
-                본 개인정보 처리방침의 내용 변경이 있는 경우, 회사는 변경 사항의 시행 7일 전부터 웹사이트
-                공지사항을 통해 고지할 것입니다.
+              <h2 className="text-lg font-bold text-ink-light mb-3">제14조 (권익침해 구제 방법)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁 해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보 침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.
               </p>
+              <div className="overflow-x-auto -mx-2">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">기관</th>
+                      <th className="border border-neutral-200 p-2 text-left">연락처</th>
+                      <th className="border border-neutral-200 p-2 text-left">홈페이지</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">개인정보분쟁조정위원회</td><td className="border border-neutral-200 p-2">(국번없이) 1833-6972</td><td className="border border-neutral-200 p-2">www.kopico.go.kr</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">개인정보침해신고센터</td><td className="border border-neutral-200 p-2">(국번없이) 118</td><td className="border border-neutral-200 p-2">privacy.kisa.or.kr</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">대검찰청</td><td className="border border-neutral-200 p-2">(국번없이) 1301</td><td className="border border-neutral-200 p-2">www.spo.go.kr</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">경찰청</td><td className="border border-neutral-200 p-2">(국번없이) 182</td><td className="border border-neutral-200 p-2">ecrm.cyber.go.kr</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section className="pt-6 border-t border-neutral-200">
-              <p className="text-xs text-ink-faint">본 방침은 2026년 4월 9일부터 시행됩니다.</p>
+            <section>
+              <h2 className="text-lg font-bold text-ink-light mb-3">제15조 (개인정보 처리방침의 변경)</h2>
+              <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                이 개인정보 처리방침은 2026년 4월 3일부터 적용됩니다.
+              </p>
+              <p className="font-semibold text-ink-light text-sm mb-2">변경 내용 (2026년 4월 3일 시행)</p>
+              <div className="overflow-x-auto -mx-2 mb-4">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">변경 항목</th>
+                      <th className="border border-neutral-200 p-2 text-left">변경 전</th>
+                      <th className="border border-neutral-200 p-2 text-left">변경 후</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">제5조 (처리 위탁)</td><td className="border border-neutral-200 p-2">수탁자·위탁 업무 미확정 ([추후 지정])</td><td className="border border-neutral-200 p-2">현재 위탁 없음을 명확히 기재</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제9조 (안전성 확보 조치)</td><td className="border border-neutral-200 p-2">데이터 보관 방법 미기재</td><td className="border border-neutral-200 p-2">국내 소재 자체 로컬 서버 암호화 저장 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제10조 (자동 수집 장치)</td><td className="border border-neutral-200 p-2">Firebase Analytics, FCM 등 기재</td><td className="border border-neutral-200 p-2">실제 미사용 항목 제거</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="font-semibold text-ink-light text-sm mb-1">이전 개인정보 처리방침</p>
+              <p className="text-sm text-ink-muted leading-relaxed">2026년 3월 4일 ~ 2026년 4월 2일</p>
             </section>
           </div>
         </div>
