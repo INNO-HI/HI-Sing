@@ -69,8 +69,11 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                   <rect x="43.5" y="13" width="2.5" height="6" rx="1.25"/>
                 </g>
               </svg>
-              <span className={`text-lg sm:text-xl font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
-                하이싱 <span className="text-xs text-ink-faint ml-1">HI-Sing</span>
+              <span className={`flex items-baseline gap-2 transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
+                <span className="text-lg sm:text-xl font-bold">
+                  하이싱 <span className="text-xs text-ink-faint ml-0.5">HI-Sing</span>
+                </span>
+                <span className="hidden lg:inline text-xs text-ink-muted font-normal">목소리로 만드는 노래 선물</span>
               </span>
             </button>
 
@@ -79,28 +82,28 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                 <button
                   key={item.id}
                   onClick={() => handleTabClick(item.id)}
-                  className={`relative px-1 py-1 text-lg font-medium transition-all ${
+                  className={`relative px-1 py-1 text-lg transition-all ${
                     activeTab === item.id
-                      ? isScrolled || !isTransparent ? 'text-ink' : 'text-white'
+                      ? isScrolled || !isTransparent ? 'text-primary-500 font-bold' : 'text-white font-bold'
                       : isScrolled || !isTransparent
-                        ? 'text-ink-muted hover:text-ink'
-                        : 'text-white/60 hover:text-white'
+                        ? 'text-ink-muted font-medium hover:text-ink'
+                        : 'text-white/60 font-medium hover:text-white'
                   }`}
                 >
                   {item.label}
                   {activeTab === item.id && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-400 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-primary-400 rounded-full" />
                   )}
                 </button>
               ))}
               <button
                 onClick={() => {
-                  trackCTAClick('nav', '주문하기')
+                  trackCTAClick('nav', '노래 선물하기')
                   handleTabClick('pricing')
                 }}
-                className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors"
+                className="ml-4 px-5 py-2.5 text-sm font-bold text-white bg-primary-400 rounded-full shadow-md shadow-primary-200/60 hover:bg-primary-500 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
               >
-                주문하기
+                노래 선물하기
               </button>
             </nav>
 
