@@ -53,10 +53,10 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14">
-          <div className="flex items-center justify-between h-16 lg:h-[72px]">
+          <div className="flex items-center justify-between h-16 lg:h-[76px]">
             <button
               onClick={() => handleTabClick('home')}
-              className="flex items-center gap-2 group"
+              className="flex items-center gap-2.5 group"
             >
               <svg className="h-9 w-auto flex-shrink-0" viewBox="0 0 48 32" fill="none">
                 <g fill="#F5583E">
@@ -69,22 +69,22 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                   <rect x="43.5" y="13" width="2.5" height="6" rx="1.25"/>
                 </g>
               </svg>
-              <span className={`flex items-baseline gap-2 transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
+              <span className={`flex flex-col items-start leading-tight transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
                 <span className="text-lg sm:text-xl font-bold">
-                  하이싱 <span className="text-xs text-ink-faint ml-0.5">HI-Sing</span>
+                  하이싱 <span className="text-[11px] sm:text-xs text-ink-faint ml-0.5 font-normal tracking-wide">HI-Sing</span>
                 </span>
-                <span className="hidden lg:inline text-xs text-ink-muted font-normal">목소리로 만드는 노래 선물</span>
+                <span className="hidden sm:inline text-[11px] text-ink-muted font-normal mt-0.5">목소리로 만드는 노래 선물</span>
               </span>
             </button>
 
-            <nav className="hidden lg:flex items-center gap-6 ml-auto">
+            <nav className="hidden lg:flex items-center gap-7 ml-auto">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleTabClick(item.id)}
-                  className={`relative px-1 py-1 text-lg transition-all ${
+                  className={`relative px-1 py-1 text-[15px] transition-all ${
                     activeTab === item.id
-                      ? isScrolled || !isTransparent ? 'text-primary-500 font-bold' : 'text-white font-bold'
+                      ? isScrolled || !isTransparent ? 'text-ink font-bold' : 'text-white font-bold'
                       : isScrolled || !isTransparent
                         ? 'text-ink-muted font-medium hover:text-ink'
                         : 'text-white/60 font-medium hover:text-white'
@@ -92,7 +92,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                 >
                   {item.label}
                   {activeTab === item.id && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-primary-400 rounded-full" />
+                    <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-primary-400 rounded-full" />
                   )}
                 </button>
               ))}
@@ -101,7 +101,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                   trackCTAClick('nav', '노래 선물하기')
                   handleTabClick('pricing')
                 }}
-                className="ml-4 px-5 py-2.5 text-sm font-bold text-white bg-primary-400 rounded-full shadow-md shadow-primary-200/60 hover:bg-primary-500 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
+                className="ml-5 px-5 py-2.5 text-sm font-bold text-white bg-primary-400 rounded-full shadow-md shadow-primary-200/60 hover:bg-primary-500 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
               >
                 노래 선물하기
               </button>
