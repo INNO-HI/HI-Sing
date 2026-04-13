@@ -177,10 +177,10 @@ function PhoneMockup() {
   const realIdx = idx % albums.length
   const album = albums[realIdx]
 
-  const cardSize = 240
-  const cardGap = 80
+  const cardSize = 280
+  const cardGap = 100
   return (
-    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[500px] sm:h-[620px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[600px] sm:h-[740px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
@@ -188,15 +188,15 @@ function PhoneMockup() {
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[280px] sm:w-[330px] rounded-t-[34px] sm:rounded-t-[38px] bg-white border border-neutral-200 border-b-0 p-2.5 sm:p-3 shadow-2xl">
-          <div className="w-16 sm:w-20 h-4 sm:h-5 rounded-full bg-neutral-900 mx-auto mb-2" />
-          <div className="rounded-t-[22px] sm:rounded-t-[26px] bg-neutral-50 px-4 sm:px-5 pt-3 sm:pt-4 pb-4 sm:pb-5">
-            <div className="flex items-center justify-between mb-3">
-              <p className="text-[10px] text-ink-faint">9:41</p>
-              <div className="w-4 h-2 rounded-sm border border-ink-faint/40" />
+        <div className="w-[320px] sm:w-[380px] rounded-t-[38px] sm:rounded-t-[44px] bg-white border border-neutral-200 border-b-0 p-3 sm:p-3.5 shadow-2xl">
+          <div className="w-20 sm:w-24 h-5 sm:h-6 rounded-full bg-neutral-900 mx-auto mb-2.5" />
+          <div className="rounded-t-[26px] sm:rounded-t-[30px] bg-neutral-50 px-5 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-xs text-ink-faint">9:41</p>
+              <div className="w-5 h-2.5 rounded-sm border border-ink-faint/40" />
             </div>
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
-            <div className="relative mx-auto mb-4 w-[240px] h-[240px]" style={{ overflow: 'visible' }}>
+            <div className="relative mx-auto mb-5 w-[280px] h-[280px]" style={{ overflow: 'visible' }}>
               <div
                 className={`absolute top-0 flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{
@@ -208,28 +208,28 @@ function PhoneMockup() {
                 {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
                   <div
                     key={i}
-                    className={`flex-shrink-0 w-[240px] h-[240px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
+                    className={`flex-shrink-0 w-[280px] h-[280px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
                     <img src={a.img} alt={a.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.15) saturate(1) brightness(1.12) contrast(0.98) hue-rotate(-3deg)' }} />
                     {/* 프로스티드 글래스 바 — 하단만 */}
-                    <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-white/25 border-t border-white/20 px-4 py-2.5">
-                      <p className="text-white font-bold text-sm leading-tight drop-shadow">{a.title}</p>
-                      <p className="text-white/90 text-xs mt-0.5 drop-shadow">{a.to}</p>
+                    <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-white/25 border-t border-white/20 px-5 py-3">
+                      <p className="text-white font-bold text-base leading-tight drop-shadow">{a.title}</p>
+                      <p className="text-white/90 text-sm mt-0.5 drop-shadow">{a.to}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <p className="font-bold text-ink-light text-center text-sm transition-all duration-500">{album.title}</p>
-            <p className="text-ink-muted text-center text-[11px] mt-0.5">{album.sub}</p>
-            <div className="flex items-center justify-center gap-7 mt-4">
-              <svg className="w-4 h-4 text-ink-faint" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" /></svg>
-              <div className="w-11 h-11 rounded-full flex items-center justify-center shadow-md bg-primary-400">
-                <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            <p className="font-bold text-ink-light text-center text-base transition-all duration-500">{album.title}</p>
+            <p className="text-ink-muted text-center text-sm mt-1">{album.sub}</p>
+            <div className="flex items-center justify-center gap-8 mt-5">
+              <svg className="w-5 h-5 text-ink-faint" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" /></svg>
+              <div className="w-14 h-14 rounded-full flex items-center justify-center shadow-md bg-primary-400">
+                <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
               </div>
-              <svg className="w-4 h-4 text-ink-faint" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" /></svg>
+              <svg className="w-5 h-5 text-ink-faint" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" /></svg>
             </div>
           </div>
         </div>
@@ -607,18 +607,16 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, #F8F8F8 0%, #F8F8F8 30%, rgba(248,248,248,0.9) 55%, rgba(248,248,248,0.55) 80%, rgba(248,248,248,0.35) 100%)',
+              background: 'linear-gradient(to right, #F8F8F8 0%, #F8F8F8 25%, rgba(248,248,248,0.75) 50%, rgba(248,248,248,0.2) 80%, rgba(248,248,248,0) 100%)',
             }}
           />
           {/* 하단 그라데이션 — 섹션 위/아래 배경색과 매끄럽게 연결 */}
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, #F8F8F8 0%, rgba(248,248,248,0.25) 25%, rgba(248,248,248,0.25) 75%, #F8F8F8 100%)',
+              background: 'linear-gradient(to bottom, #F8F8F8 0%, rgba(248,248,248,0) 20%, rgba(248,248,248,0) 80%, #F8F8F8 100%)',
             }}
           />
-          {/* 전체 반투명 필터 — 사진 톤 살짝 낮춤 */}
-          <div className="absolute inset-0 bg-neutral-50/35" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>

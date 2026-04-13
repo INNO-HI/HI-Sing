@@ -58,15 +58,19 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
               onClick={() => handleTabClick('home')}
               className="flex items-center gap-2 group"
             >
-              <svg className="w-9 h-9 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-                <g transform="rotate(90 16 16)">
-                  <path d="M14 9 L14 18 A3.5 3.5 0 0 1 10.5 21.5 L10.5 14 A5 5 0 0 1 15.5 9 L14 9 Z" fill="#F5583E"/>
-                  <circle cx="21" cy="13" r="2.3" fill="#FDBDB5"/>
-                  <circle cx="21" cy="19" r="2.3" fill="#FDBDB5"/>
+              <svg className="h-9 w-auto flex-shrink-0" viewBox="0 0 48 32" fill="none">
+                <g fill="#F5583E">
+                  <rect x="2" y="13" width="2.5" height="6" rx="1.25"/>
+                  <rect x="7" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="12.5" y="7" width="3" height="18" rx="1.5"/>
+                  <path d="M24 7 L25.5 14.5 L31 16 L25.5 17.5 L24 25 L22.5 17.5 L17 16 L22.5 14.5 Z"/>
+                  <rect x="32.5" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="38" y="7" width="3" height="18" rx="1.5"/>
+                  <rect x="43.5" y="13" width="2.5" height="6" rx="1.25"/>
                 </g>
               </svg>
-              <span className={`text-2xl sm:text-3xl font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
-                하이싱 <span className="text-base text-ink-faint ml-1">HI-Sing</span>
+              <span className={`text-lg sm:text-xl font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
+                하이싱 <span className="text-xs text-ink-faint ml-1">HI-Sing</span>
               </span>
             </button>
 
