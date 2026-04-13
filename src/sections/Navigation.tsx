@@ -58,7 +58,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
               onClick={() => handleTabClick('home')}
               className="flex items-center gap-2.5 group"
             >
-              <img src="/favicon.svg" alt="하이싱" className="h-9 w-auto flex-shrink-0" />
+              <img src="/favicon.svg" alt="하이싱" className="h-6 sm:h-7 w-auto flex-shrink-0" />
               <span className={`flex items-baseline gap-2.5 transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
                 <span className="text-lg sm:text-xl font-bold">하이싱</span>
                 <span className="hidden sm:inline text-[11px] text-ink-muted font-normal">목소리로 만드는 노래 선물</span>
