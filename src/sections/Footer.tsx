@@ -15,8 +15,13 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <svg className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-              <path d="M16 28s-1.5-1-3.5-2.8C7 20.5 4 17 4 13a6 6 0 0 1 6-6c2.2 0 4.2 1.2 6 3.2C17.8 8.2 19.8 7 22 7a6 6 0 0 1 6 6c0 4-3 7.5-8.5 12.2C17.5 27 16 28 16 28z" stroke="currentColor" strokeWidth="1.8" className="text-primary-400" />
-              <path d="M9 16h2l1.5-3 2 6 2-4 1.5 3 1.5-5 2 6 1-2H23" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-400" />
+              <path d="M6 16 L16 8 L26 16 L26 26 L6 26 Z" fill="white" stroke="#F59E8B" strokeWidth="1.5" strokeLinejoin="round" />
+              <path d="M4 17 L16 7 L28 17 L25 17 L16 10 L7 17 Z" fill="#F59E8B" />
+              <rect x="20" y="9.5" width="2.5" height="4" fill="#F59E8B" />
+              <circle cx="21" cy="5.5" r="1.3" fill="#F59E8B" />
+              <path d="M22.3 5.5 L22.3 2.5" stroke="#F59E8B" strokeWidth="0.8" strokeLinecap="round" />
+              <circle cx="25" cy="4" r="1" fill="#F59E8B" opacity="0.7" />
+              <path d="M26 4 L26 2" stroke="#F59E8B" strokeWidth="0.7" strokeLinecap="round" opacity="0.7" />
             </svg>
             <span className="text-sm sm:text-base font-bold text-white">
               하이싱 <span className="text-[10px] sm:text-xs text-neutral-500 ml-1">HI-Sing</span>

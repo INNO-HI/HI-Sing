@@ -59,10 +59,17 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
               className="flex items-center gap-2 group"
             >
               <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-                {/* 하트 외곽선 */}
-                <path d="M16 28s-1.5-1-3.5-2.8C7 20.5 4 17 4 13a6 6 0 0 1 6-6c2.2 0 4.2 1.2 6 3.2C17.8 8.2 19.8 7 22 7a6 6 0 0 1 6 6c0 4-3 7.5-8.5 12.2C17.5 27 16 28 16 28z" stroke="currentColor" strokeWidth="1.8" className={`transition-colors ${isScrolled || !isTransparent ? 'text-primary-400' : 'text-white'}`} />
-                {/* 하트 안의 파형 */}
-                <path d="M9 16h2l1.5-3 2 6 2-4 1.5 3 1.5-5 2 6 1-2H23" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-400" />
+                {/* 집 벽 */}
+                <path d="M6 16 L16 8 L26 16 L26 26 L6 26 Z" fill="white" className={`${isScrolled || !isTransparent ? '' : 'opacity-90'}`} stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                {/* 지붕 */}
+                <path d="M4 17 L16 7 L28 17 L25 17 L16 10 L7 17 Z" className="text-primary-400" fill="currentColor" />
+                {/* 굴뚝 */}
+                <rect x="20" y="9.5" width="2.5" height="4" className="text-primary-400" fill="currentColor" />
+                {/* 음표 */}
+                <circle cx="21" cy="5.5" r="1.3" className="text-primary-400" fill="currentColor" />
+                <path d="M22.3 5.5 L22.3 2.5" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" className="text-primary-400" />
+                <circle cx="25" cy="4" r="1" className="text-primary-400 opacity-70" fill="currentColor" />
+                <path d="M26 4 L26 2" stroke="currentColor" strokeWidth="0.7" strokeLinecap="round" className="text-primary-400 opacity-70" />
               </svg>
               <span className={`text-lg font-bold transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
                 하이싱 <span className="text-xs text-ink-faint ml-1">HI-Sing</span>
