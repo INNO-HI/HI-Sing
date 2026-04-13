@@ -70,9 +70,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
                 </g>
               </svg>
               <span className={`flex flex-col items-start leading-tight transition-colors ${isScrolled || !isTransparent ? 'text-ink' : 'text-white'}`}>
-                <span className="text-lg sm:text-xl font-bold">
-                  하이싱 <span className="text-[11px] sm:text-xs text-ink-faint ml-0.5 font-normal tracking-wide">HI-Sing</span>
-                </span>
+                <span className="text-lg sm:text-xl font-bold">하이싱</span>
                 <span className="hidden sm:inline text-[11px] text-ink-muted font-normal mt-0.5">목소리로 만드는 노래 선물</span>
               </span>
             </button>

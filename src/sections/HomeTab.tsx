@@ -181,10 +181,10 @@ function PhoneMockup() {
   const cardGap = 100
   return (
     <div className="relative w-full h-full min-h-[520px] overflow-visible group/phone" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 메인색 원형 그라데이션 — 반응형 */}
-      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
-      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
-      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(255,200,180,0.4) 0%, transparent 70%)' }} />
+      {/* 메인색 원형 그라데이션 — 더 강렬하게 */}
+      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[820px] sm:h-[820px] rounded-full pointer-events-none z-[5] blur-3xl" style={{ background: 'radial-gradient(circle, rgba(245,88,62,0.45) 0%, rgba(245,88,62,0.28) 30%, rgba(253,189,181,0.18) 55%, transparent 75%)' }} />
+      <div className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] sm:w-[560px] sm:h-[560px] rounded-full pointer-events-none z-[5] blur-2xl" style={{ background: 'radial-gradient(circle, rgba(245,88,62,0.55) 0%, rgba(250,140,125,0.35) 40%, transparent 75%)' }} />
+      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(253,189,181,0.6) 0%, rgba(255,241,237,0.3) 50%, transparent 75%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
@@ -353,9 +353,11 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
   return (
     <>
       {/* ═══ 1. Hero ═══════════════════════════════════ */}
-      <section className="relative h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-white pt-20 pb-0 overflow-hidden">
-        {/* 배경 장식 */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary-100/30 blur-3xl pointer-events-none" />
+      <section className="relative h-screen flex flex-col bg-gradient-to-b from-primary-50/50 via-neutral-50 to-white pt-20 pb-0 overflow-hidden">
+        {/* 배경 장식 — 상단 primary glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-primary-200/25 blur-3xl pointer-events-none" />
+        {/* 미세한 메인색 오버레이 필터 */}
+        <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(245,88,62,0.06) 0%, transparent 60%)' }} />
 
         {/* 히어로 전체 좌우 비네트 */}
         <div
@@ -365,9 +367,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-end">
           <FadeIn>
-            <div className="text-center mt-4 sm:mt-6">
+            <div className="text-center mb-4 sm:mb-6">
               <p className="text-ink-muted text-base sm:text-lg mb-5">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
@@ -384,8 +386,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 하단: 핸드폰 목업 — 남은 공간 채움, 하단 정렬 */}
-          <FadeIn delay={0.15} className="flex-1 min-h-0 flex items-end justify-center">
+          {/* 하단: 핸드폰 목업 — 바로 밑에 붙음 */}
+          <FadeIn delay={0.15} className="flex justify-center">
             <PhoneMockup />
           </FadeIn>
         </div>
