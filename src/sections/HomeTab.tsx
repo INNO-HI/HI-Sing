@@ -177,7 +177,7 @@ function PhoneMockup() {
   const realIdx = idx % albums.length
   const album = albums[realIdx]
 
-  const cardSize = 180
+  const cardSize = 200
   const cardGap = 70
   return (
     <div className="relative mt-8 sm:mt-14 overflow-visible group/phone h-[400px] sm:h-[480px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
@@ -196,7 +196,7 @@ function PhoneMockup() {
               <div className="w-4 h-2 rounded-sm border border-ink-faint/40" />
             </div>
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
-            <div className="relative mx-auto mb-3 sm:mb-4 w-[180px] sm:w-[220px] h-[180px] sm:h-[220px]" style={{ overflow: 'visible' }}>
+            <div className="relative mx-auto mb-4 w-[200px] h-[200px]" style={{ overflow: 'visible' }}>
               <div
                 className={`absolute top-0 flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{
@@ -208,7 +208,7 @@ function PhoneMockup() {
                 {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
                   <div
                     key={i}
-                    className={`flex-shrink-0 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
+                    className={`flex-shrink-0 w-[200px] h-[200px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
                   >
@@ -571,9 +571,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
               { img: `/images/special-voice.png`, title: '30초 음성이면 충분', desc: '전화 녹음, 영상 속 목소리,\n일상 대화 뭐든 괜찮습니다.\n30초 이상이면 충분해요.' },
-              { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를 보컬로 얹어드립니다.' },
+              { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를\n보컬로 얹어드립니다.' },
               { img: `/images/special-compose.png`, title: '프리미엄 작사/작곡', desc: '단순 변환이 아닙니다.\n마음에 어울리는 가사를 쓰고,\n그에 맞는 멜로디를 작곡합니다.' },
-              { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면 완성된 노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
+              { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면 완성된\n노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-6 sm:p-8 h-full hover:-translate-y-1 transition-all duration-300 text-center">
