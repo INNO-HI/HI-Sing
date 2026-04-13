@@ -181,6 +181,125 @@ function SampleStoryCard({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boo
   )
 }
 
+function FeaturedSampleStory({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boolean; onToggle: () => void }) {
+  return (
+    <>
+      {/* Hero — 대형 사진 + 기본 정보 */}
+      <section className="relative bg-ink text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.2) saturate(0.85) brightness(0.8)' }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black" />
+        </div>
+        <div className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 lg:px-14 py-24 sm:py-32 text-center">
+          <FadeIn>
+            <p className="text-primary-300 font-semibold text-xs tracking-[0.2em] uppercase mb-4">Real Story — Chapter 1</p>
+            <h2 className="text-3xl sm:text-5xl font-bold leading-tight mb-4">{s.title}</h2>
+            <p className="text-white/70 text-sm sm:text-base mb-8">{s.to} · {s.from}의 이야기</p>
+            <button
+              onClick={onToggle}
+              className="inline-flex items-center gap-3 bg-white text-ink-light rounded-full pl-2 pr-6 py-2 hover:scale-105 transition-transform shadow-2xl"
+            >
+              <span className="w-12 h-12 rounded-full bg-primary-400 flex items-center justify-center">
+                {isPlaying
+                  ? <Pause className="w-5 h-5 text-white" fill="currentColor" />
+                  : <Play className="w-5 h-5 text-white ml-0.5" fill="currentColor" />
+                }
+              </span>
+              <span className="font-bold">{isPlaying ? '재생 중…' : '완성곡 듣기'}</span>
+              <span className="text-xs text-ink-muted">{s.duration}</span>
+            </button>
+            <div className="mt-6 flex justify-center flex-wrap gap-1.5">
+              {s.tags.map(t => (
+                <span key={t} className="text-[11px] text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-2.5 py-0.5">
+                  #{t}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Chapter 2 — 시작 */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 2 · 시작</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">모든 이야기의 출발점</h3>
+            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.background}</p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Chapter 3 — 주문 계기 */}
+      <section className="py-20 sm:py-28 bg-neutral-50">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 3 · 결심</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">노래를 만들기로 한 날</h3>
+            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.trigger}</p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Chapter 4 — 가사 + 재생 */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-primary-50 via-white to-white">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 4 · 노래</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-8 leading-tight">완성된 한 곡</h3>
+            <div className="bg-white border-l-4 border-primary-400 rounded-r-xl px-6 py-6 sm:py-8 shadow-sm mb-6">
+              <p className="text-primary-400 font-semibold text-[10px] tracking-widest uppercase mb-3">Lyrics</p>
+              <p className="text-ink-light text-base sm:text-lg leading-loose italic whitespace-pre-line">
+                {s.lyricsExcerpt}
+              </p>
+            </div>
+            <button
+              onClick={onToggle}
+              className="w-full flex items-center gap-4 bg-ink text-white rounded-2xl px-5 py-4 hover:bg-ink-light transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary-400 flex items-center justify-center flex-shrink-0">
+                {isPlaying
+                  ? <Pause className="w-5 h-5 text-white" fill="currentColor" />
+                  : <Play className="w-5 h-5 text-white ml-0.5" fill="currentColor" />
+                }
+              </div>
+              <div className="flex-1 text-left">
+                <p className="font-bold">{s.title}</p>
+                <p className="text-xs text-white/60">{isPlaying ? '재생 중…' : '노래 듣기'} · {s.duration}</p>
+              </div>
+            </button>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Chapter 5 — 받은 날 (대형 인용구) */}
+      <section className="py-24 sm:py-32 bg-ink text-white">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-14 text-center">
+          <FadeIn>
+            <p className="text-primary-300 font-semibold text-xs tracking-[0.2em] uppercase mb-4">Chapter 5 · 받은 날</p>
+            <div className="text-primary-300 text-6xl sm:text-7xl font-serif leading-none mb-6 select-none">&ldquo;</div>
+            <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
+              {s.reaction.replace(/^"|"$/g, '')}
+            </p>
+            <p className="text-white/60 text-sm mt-8">— {s.from}</p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Chapter 6 — 그 후 */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 6 · 그 후</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">이 노래가 지금도 하는 일</h3>
+            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.afterStory}</p>
+          </FadeIn>
+        </div>
+      </section>
+    </>
+  )
+}
+
 interface SampleTabProps {
   onNavigate?: (tab: TabId) => void
 }
@@ -330,61 +449,54 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
         </div>
       </section>
 
-      {/* 샘플 스토리 슬라이더 */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-neutral-50">
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14">
+      {/* 대표 샘플 — 랜딩 스타일 몰입형 스토리 */}
+      <FeaturedSampleStory
+        s={samples[0]}
+        isPlaying={playingIdx === 0}
+        onToggle={() => handleToggle(0)}
+      />
+
+      {/* 다른 사례 — 미니 리스트 */}
+      <section className="py-16 sm:py-20 bg-neutral-50">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
-            <div className="text-center mb-10">
-              <p className="text-primary-400 font-semibold text-sm mb-3">Real Stories</p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">누군가에겐 평생 기억될 순간이었습니다</h2>
-              <p className="text-ink-muted text-sm mt-3">카드 아래 버튼으로 다른 사연도 들어보세요</p>
+            <div className="text-center mb-8">
+              <p className="text-primary-400 font-semibold text-sm mb-2">More Stories</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-ink-light">다른 사연도 들어보세요</h3>
             </div>
           </FadeIn>
-
-          {/* 탭 버튼 */}
-          <FadeIn delay={0.05}>
-            <div className="flex justify-center gap-2 sm:gap-3 mb-8 flex-wrap">
-              {samples.map((s, i) => (
-                <button
-                  key={s.title}
-                  onClick={() => setActiveIdx(i)}
-                  className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-                    activeIdx === i
-                      ? 'bg-primary-400 text-white shadow-md shadow-primary-200/50'
-                      : 'bg-white text-ink-muted border border-neutral-200 hover:border-primary-200'
-                  }`}
-                >
-                  {s.to}
-                </button>
-              ))}
+          <FadeIn delay={0.1}>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {samples.slice(1).map((s, i) => {
+                const realIdx = i + 1
+                const playing = playingIdx === realIdx
+                return (
+                  <button
+                    key={s.title}
+                    onClick={() => handleToggle(realIdx)}
+                    className="group bg-white rounded-2xl border border-neutral-200 p-4 sm:p-5 flex items-center gap-4 hover:border-primary-200 hover:shadow-md transition-all text-left"
+                  >
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0">
+                      <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.2) saturate(0.9) brightness(1.02)' }} />
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className={`w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center transition-transform ${playing ? 'scale-110' : 'group-hover:scale-110'}`}>
+                          {playing
+                            ? <Pause className="w-4 h-4 text-primary-400" fill="currentColor" />
+                            : <Play className="w-4 h-4 text-primary-400 ml-0.5" fill="currentColor" />
+                          }
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-ink-faint mb-1">{s.to} · {s.from}</p>
+                      <p className="font-bold text-ink-light text-base truncate">{s.title}</p>
+                      <p className="text-xs text-ink-muted mt-1">{playing ? '재생 중…' : `${s.duration}`}</p>
+                    </div>
+                  </button>
+                )
+              })}
             </div>
           </FadeIn>
-
-          {/* 슬라이드 카드 */}
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${activeIdx * 100}%)` }}
-            >
-              {samples.map((s, i) => (
-                <div key={s.title} className="w-full flex-shrink-0 px-1">
-                  <SampleStoryCard s={s} isPlaying={playingIdx === i} onToggle={() => handleToggle(i)} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 인디케이터 */}
-          <div className="flex justify-center gap-2 mt-8">
-            {samples.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveIdx(i)}
-                className={`h-2 rounded-full transition-all ${activeIdx === i ? 'w-8 bg-primary-400' : 'w-2 bg-neutral-300'}`}
-                aria-label={`샘플 ${i + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </section>
 
