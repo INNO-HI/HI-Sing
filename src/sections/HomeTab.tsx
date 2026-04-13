@@ -181,6 +181,9 @@ function PhoneMockup() {
   const cardGap = 70
   return (
     <div className="relative mt-8 sm:mt-14 overflow-visible group/phone h-[400px] sm:h-[480px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      {/* 좌우 흰색 비네트 — 앨범이 양쪽 끝에서 서서히 사라지게 */}
+      <div className="absolute left-0 top-0 bottom-0 w-[20%] sm:w-[25%] pointer-events-none z-20" style={{ background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0) 100%)' }} />
+      <div className="absolute right-0 top-0 bottom-0 w-[20%] sm:w-[25%] pointer-events-none z-20" style={{ background: 'linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0) 100%)' }} />
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
