@@ -19,7 +19,7 @@ export function Footer() {
                 <rect x="6" y="13" width="2.5" height="6" rx="1.25"/>
                 <rect x="9.5" y="7" width="3" height="18" rx="1.5"/>
                 <rect x="13.5" y="7" width="3" height="18" rx="1.5"/>
-                <path d="M24 7 Q24 16 31 16 Q24 16 24 25 Q24 16 17 16 Q24 16 24 7 Z"/>
+                <path d="M24 7 Q25.5 14.5 31 16 Q25.5 17.5 24 25 Q22.5 17.5 17 16 Q22.5 14.5 24 7 Z"/>
                 <rect x="31.5" y="7" width="3" height="18" rx="1.5"/>
                 <rect x="35.5" y="7" width="3" height="18" rx="1.5"/>
                 <rect x="39.5" y="13" width="2.5" height="6" rx="1.25"/>

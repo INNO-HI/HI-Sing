@@ -180,7 +180,7 @@ function PhoneMockup() {
   const cardSize = 280
   const cardGap = 100
   return (
-    <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[600px] sm:h-[740px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className="relative w-full h-full min-h-[520px] overflow-visible group/phone" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
@@ -353,7 +353,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
   return (
     <>
       {/* ═══ 1. Hero ═══════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-center bg-gradient-to-b from-neutral-50 to-white pt-20 pb-0 overflow-hidden">
+      <section className="relative h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-white pt-20 pb-0 overflow-hidden">
         {/* 배경 장식 */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary-100/30 blur-3xl pointer-events-none" />
 
@@ -365,15 +365,15 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0">
           <FadeIn>
-            <div className="text-center mb-12 mt-8 sm:mt-16">
-              <p className="text-ink-muted text-base sm:text-lg mb-7">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
+            <div className="text-center mt-4 sm:mt-6">
+              <p className="text-ink-muted text-base sm:text-lg mb-5">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
               </h1>
 
-              <div className="mt-14">
+              <div className="mt-8">
                 <button
                   onClick={handleHeroCTA}
                   className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
@@ -384,8 +384,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 하단: 핸드폰 목업 — 하단 짤림 + 앨범 슬라이드 */}
-          <FadeIn delay={0.15}>
+          {/* 하단: 핸드폰 목업 — 남은 공간 채움, 하단 정렬 */}
+          <FadeIn delay={0.15} className="flex-1 min-h-0 flex items-end justify-center">
             <PhoneMockup />
           </FadeIn>
         </div>
