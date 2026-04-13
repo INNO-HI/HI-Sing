@@ -367,13 +367,13 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
-            <div className="text-center mb-12">
-              <p className="text-ink-muted text-base sm:text-lg mb-3">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
+            <div className="text-center mb-12 mt-8 sm:mt-16">
+              <p className="text-ink-muted text-base sm:text-lg mb-4">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
               </h1>
 
-              <div className="mt-8">
+              <div className="mt-10">
                 <button
                   onClick={handleHeroCTA}
                   className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
