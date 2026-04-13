@@ -600,11 +600,23 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
       {/* ═══ 7. CTA ════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-neutral-50">
-        {/* 배경: 왼쪽 메인색 그라데이션 + 오른쪽 사진 */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-50 to-transparent" />
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden sm:block">
-          <img src={`/images/cta-family-new.png`} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-50 via-neutral-50/50 to-transparent" />
+        {/* 배경 사진 — 전체에 깔고, 위에서 왼쪽→오른쪽으로 자연스럽게 페이드 */}
+        <div className="absolute inset-0 hidden sm:block">
+          <img src={`/images/cta-family-new.png`} alt="" className="w-full h-full object-cover object-right" />
+          {/* 좌측 완전 불투명 → 중앙 살짝 → 우측 투명 (사진 드러남) */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, #F8F8F8 0%, #F8F8F8 25%, rgba(248,248,248,0.75) 50%, rgba(248,248,248,0.2) 80%, rgba(248,248,248,0) 100%)',
+            }}
+          />
+          {/* 하단 그라데이션 — 섹션 위/아래 배경색과 매끄럽게 연결 */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, #F8F8F8 0%, rgba(248,248,248,0) 20%, rgba(248,248,248,0) 80%, #F8F8F8 100%)',
+            }}
+          />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
