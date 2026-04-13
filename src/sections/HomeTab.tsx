@@ -181,13 +181,6 @@ function PhoneMockup() {
   const cardGap = 70
   return (
     <div className="relative mt-12 sm:mt-20 overflow-visible group/phone h-[440px] sm:h-[560px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 좌우 흰색 비네트 — 뷰포트 전체 폭, 가운데(핸드폰)만 투명 */}
-      <div
-        className="absolute top-0 bottom-0 pointer-events-none z-20 left-1/2 -translate-x-1/2 w-screen"
-        style={{
-          background: 'linear-gradient(to right, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 58%, #ffffff 75%, #ffffff 100%)',
-        }}
-      />
       {/* 메인색 원형 그라데이션 — 반응형 */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] rounded-full pointer-events-none z-[5] blur-3xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.55) 0%, rgba(245,158,139,0.25) 35%, transparent 70%)' }} />
       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none z-[5] blur-2xl opacity-80" style={{ background: 'radial-gradient(circle, rgba(245,158,139,0.5) 0%, rgba(255,216,200,0.3) 40%, transparent 75%)' }} />
@@ -245,15 +238,14 @@ function PhoneMockup() {
   )
 }
 
-function AnimatedWaveform() {
-  // 실제 음악 재생처럼 — 중앙 바가 더 크게, 가장자리는 작게, 각자 다른 리듬
+function AnimatedWaveform({ primary = false }: { primary?: boolean } = {}) {
   const BARS = 32
   return (
     <div className="flex items-end gap-[2px] h-10 w-full">
       {Array.from({ length: BARS }, (_, i) => {
         const center = BARS / 2
-        const distFromCenter = Math.abs(i - center) / center   // 0 (중앙) ~ 1 (가장자리)
-        const envelope = 1 - distFromCenter * 0.55            // 중앙 강조
+        const distFromCenter = Math.abs(i - center) / center
+        const envelope = 1 - distFromCenter * 0.55
         const minH = 18 + (Math.sin(i * 0.9) * 0.5 + 0.5) * 10 * envelope
         const maxH = minH + 35 * envelope + Math.cos(i * 1.4) * 10 * envelope
         const duration = 0.55 + (Math.sin(i * 2.1) * 0.5 + 0.5) * 0.7
@@ -261,7 +253,7 @@ function AnimatedWaveform() {
         return (
           <div
             key={i}
-            className="flex-1 rounded-full bg-white/85"
+            className={`flex-1 rounded-full ${primary ? 'bg-primary-400' : 'bg-white/85'}`}
             style={{
               animation: `waveformBar-${i % 4} ${duration}s ease-in-out ${delay}s infinite alternate`,
               animationFillMode: 'both',
@@ -365,6 +357,14 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         {/* 배경 장식 */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary-100/30 blur-3xl pointer-events-none" />
 
+        {/* 히어로 전체 좌우 비네트 — 양쪽 끝만 얇게 흰색 페이드 */}
+        <div
+          className="absolute inset-0 pointer-events-none z-30"
+          style={{
+            background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 88%, #ffffff 100%)',
+          }}
+        />
+
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="text-center mb-12 mt-8 sm:mt-16">
@@ -413,13 +413,13 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <FadeIn key={i} delay={i * 0.15}>
                 <div className={`flex ${b.align === 'right' ? 'justify-end' : 'justify-start'}`}>
                   <div className="relative max-w-[85%]">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 border border-white/15">
-                      <p className="text-white text-[15px] leading-relaxed">{b.text}</p>
+                    <div className={`rounded-2xl px-6 py-5 shadow-lg ${b.align === 'right' ? 'bg-primary-400 text-white' : 'bg-white text-ink-light'}`}>
+                      <p className="text-[15px] leading-relaxed">{b.text}</p>
                     </div>
                     {/* 말풍선 꼬리 */}
                     <div className={`absolute -bottom-2 ${b.align === 'left' ? 'left-6' : 'right-6'}`}>
                       <svg width="16" height="10" viewBox="0 0 16 10" className={b.align === 'right' ? 'scale-x-[-1]' : ''}>
-                        <path d="M0 0 L8 10 L16 0 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+                        <path d="M0 0 L8 10 L16 0 Z" fill={b.align === 'right' ? '#F5583E' : '#ffffff'} />
                       </svg>
                     </div>
                   </div>
@@ -455,7 +455,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
           {/* STEP 1 */}
           <FadeIn delay={0.1}>
-            <div className="grid md:grid-cols-2 gap-10 items-center mb-24">
+            <div className="grid md:grid-cols-2 gap-10 items-center mb-40">
               <div>
                 <span className="text-primary-400 text-sm font-bold">STEP 1</span>
                 <h3 className="text-xl sm:text-2xl font-bold text-ink-light mt-2 mb-4">사랑하는 사람의<br />목소리를 보내주세요.</h3>
@@ -482,7 +482,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
           {/* STEP 2 */}
           <FadeIn delay={0.15}>
-            <div className="grid md:grid-cols-2 gap-10 items-center mb-24">
+            <div className="grid md:grid-cols-2 gap-10 items-center mb-40">
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 md:order-1 order-2 shadow-lg shadow-neutral-200/30">
                 <div className="bg-white rounded-xl border border-neutral-200 p-5">
                   <p className="text-sm font-medium text-ink mb-3">이야기 입력</p>
@@ -516,18 +516,18 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 <span className="text-primary-400 text-sm font-bold">STEP 3</span>
                 <h3 className="text-xl sm:text-2xl font-bold text-ink-light mt-2 mb-4">노래로 도착합니다.</h3>
                 <p className="text-ink-muted text-base leading-relaxed">
-                  <strong className="text-ink">3~5일(영업일 기준)</strong> 이내에<br />
-                  완성된 노래를 보내드립니다.<br /><br />
-                  카카오톡 링크로 바로 선물할 수 있고,<br />
-                  프리미엄 리워드는 가사 카드 이미지도 함께 제공됩니다.
+                  작성해주신 이야기와<br />
+                  가족의 목소리를 바탕으로<br />
+                  세상에 하나뿐인 노래를 만듭니다.<br /><br />
+                  <strong className="text-primary-400">이야기에 맞는 가사와 멜로디가 만들어집니다.</strong>
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
                 <div className="bg-white rounded-xl border border-neutral-200 p-5">
-                  <div className="bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg p-5 text-white mb-3">
-                    <p className="font-bold">세아의 첫 생일</p>
-                    <p className="text-white/60 text-xs mt-0.5">돌잔치 · 3:24</p>
-                    <div className="mt-3"><AnimatedWaveform /></div>
+                  <div className="bg-primary-50 border border-primary-100 rounded-lg p-5 mb-3">
+                    <p className="font-bold text-ink-light">세아의 첫 생일</p>
+                    <p className="text-ink-muted text-xs mt-0.5">돌잔치 · 3:24</p>
+                    <div className="mt-3"><AnimatedWaveform primary /></div>
                   </div>
                   <div className="flex gap-2">
                     <div className="flex-1 bg-neutral-200 text-ink-muted text-xs rounded-lg py-2.5 text-center font-medium">카카오톡 공유</div>
