@@ -183,120 +183,109 @@ function SampleStoryCard({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boo
 
 function FeaturedSampleStory({ s, isPlaying, onToggle }: { s: Sample; isPlaying: boolean; onToggle: () => void }) {
   return (
-    <>
-      {/* Hero — 대형 사진 + 기본 정보 */}
-      <section className="relative bg-ink text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.2) saturate(0.85) brightness(0.8)' }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black" />
-        </div>
-        <div className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 lg:px-14 py-24 sm:py-32 text-center">
-          <FadeIn>
-            <p className="text-primary-300 font-semibold text-xs tracking-[0.2em] uppercase mb-4">Real Story — Chapter 1</p>
-            <h2 className="text-3xl sm:text-5xl font-bold leading-tight mb-4">{s.title}</h2>
-            <p className="text-white/70 text-sm sm:text-base mb-8">{s.to} · {s.from}의 이야기</p>
-            <button
-              onClick={onToggle}
-              className="inline-flex items-center gap-3 bg-white text-ink-light rounded-full pl-2 pr-6 py-2 hover:scale-105 transition-transform shadow-2xl"
-            >
-              <span className="w-12 h-12 rounded-full bg-primary-400 flex items-center justify-center">
-                {isPlaying
-                  ? <Pause className="w-5 h-5 text-white" fill="currentColor" />
-                  : <Play className="w-5 h-5 text-white ml-0.5" fill="currentColor" />
-                }
-              </span>
-              <span className="font-bold">{isPlaying ? '재생 중…' : '완성곡 듣기'}</span>
-              <span className="text-xs text-ink-muted">{s.duration}</span>
-            </button>
-            <div className="mt-6 flex justify-center flex-wrap gap-1.5">
-              {s.tags.map(t => (
-                <span key={t} className="text-[11px] text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-2.5 py-0.5">
-                  #{t}
-                </span>
-              ))}
+    <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-neutral-50">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14">
+        {/* 히어로 — 사진 + 재생 + 기본 정보 */}
+        <FadeIn>
+          <div className="rounded-3xl overflow-hidden bg-white border border-neutral-200 shadow-sm mb-12">
+            <div className="grid md:grid-cols-5">
+              <div className="md:col-span-2 relative aspect-square md:aspect-auto min-h-[320px]">
+                <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.2) saturate(0.88) brightness(1)' }} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <button
+                  onClick={onToggle}
+                  className="absolute inset-0 flex items-center justify-center group"
+                  aria-label="재생"
+                >
+                  <span className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white shadow-xl flex items-center justify-center transition-transform ${isPlaying ? 'scale-110' : 'group-hover:scale-110'}`}>
+                    {isPlaying
+                      ? <Pause className="w-6 h-6 sm:w-7 sm:h-7 text-primary-400" fill="currentColor" />
+                      : <Play className="w-6 h-6 sm:w-7 sm:h-7 text-primary-400 ml-1" fill="currentColor" />
+                    }
+                  </span>
+                </button>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="inline-block text-[10px] font-medium bg-white/20 backdrop-blur-sm text-white rounded-full px-2.5 py-0.5 mb-2">{s.duration}</span>
+                  <p className="font-bold text-white text-xl leading-tight">{s.title}</p>
+                  <p className="text-white/80 text-xs mt-1">{s.to} · {s.from}</p>
+                </div>
+              </div>
+              <div className="md:col-span-3 p-7 sm:p-10 flex flex-col justify-center">
+                <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">대표 사연</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight mb-5">
+                  한 곡으로 바뀐 어느 팔순 저녁
+                </h2>
+                <p className="text-ink-light text-sm sm:text-base leading-relaxed mb-6">
+                  {s.background}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {s.tags.map(t => (
+                    <span key={t} className="text-[11px] font-medium text-primary-500 bg-primary-50 rounded-full px-2.5 py-0.5">
+                      #{t}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </FadeIn>
-        </div>
-      </section>
+          </div>
+        </FadeIn>
 
-      {/* Chapter 2 — 시작 */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 2 · 시작</p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">모든 이야기의 출발점</h3>
-            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.background}</p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Chapter 3 — 주문 계기 */}
-      <section className="py-20 sm:py-28 bg-neutral-50">
-        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 3 · 결심</p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">노래를 만들기로 한 날</h3>
-            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.trigger}</p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Chapter 4 — 가사 + 재생 */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-primary-50 via-white to-white">
-        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 4 · 노래</p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-8 leading-tight">완성된 한 곡</h3>
-            <div className="bg-white border-l-4 border-primary-400 rounded-r-xl px-6 py-6 sm:py-8 shadow-sm mb-6">
-              <p className="text-primary-400 font-semibold text-[10px] tracking-widest uppercase mb-3">Lyrics</p>
-              <p className="text-ink-light text-base sm:text-lg leading-loose italic whitespace-pre-line">
+        {/* 3블록 — 이 노래가 전하는 것 / 어떻게 만들어지는지 / 받았을 때의 반응 */}
+        <FadeIn delay={0.1}>
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
+            {/* Block 1: 이 노래가 전하는 것 */}
+            <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
+                <Volume2 className="w-5 h-5 text-primary-400" />
+              </div>
+              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">이 노래가 전하는 것</p>
+              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">&ldquo;엄마의 30년을 노래로&rdquo;</h4>
+              <p className="text-[13px] text-ink-muted leading-relaxed whitespace-pre-line italic mb-4 flex-1">
                 {s.lyricsExcerpt}
               </p>
+              <button
+                onClick={onToggle}
+                className="flex items-center gap-2 text-sm font-semibold text-primary-500 hover:text-primary-600 transition-colors"
+              >
+                {isPlaying ? <Pause className="w-4 h-4" fill="currentColor" /> : <Play className="w-4 h-4" fill="currentColor" />}
+                {isPlaying ? '재생 중' : '노래 듣기'} · {s.duration}
+              </button>
             </div>
-            <button
-              onClick={onToggle}
-              className="w-full flex items-center gap-4 bg-ink text-white rounded-2xl px-5 py-4 hover:bg-ink-light transition-colors"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary-400 flex items-center justify-center flex-shrink-0">
-                {isPlaying
-                  ? <Pause className="w-5 h-5 text-white" fill="currentColor" />
-                  : <Play className="w-5 h-5 text-white ml-0.5" fill="currentColor" />
-                }
-              </div>
-              <div className="flex-1 text-left">
-                <p className="font-bold">{s.title}</p>
-                <p className="text-xs text-white/60">{isPlaying ? '재생 중…' : '노래 듣기'} · {s.duration}</p>
-              </div>
-            </button>
-          </FadeIn>
-        </div>
-      </section>
 
-      {/* Chapter 5 — 받은 날 (대형 인용구) */}
-      <section className="py-24 sm:py-32 bg-ink text-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-14 text-center">
-          <FadeIn>
-            <p className="text-primary-300 font-semibold text-xs tracking-[0.2em] uppercase mb-4">Chapter 5 · 받은 날</p>
-            <div className="text-primary-300 text-6xl sm:text-7xl font-serif leading-none mb-6 select-none">&ldquo;</div>
-            <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
-              {s.reaction.replace(/^"|"$/g, '')}
-            </p>
-            <p className="text-white/60 text-sm mt-8">— {s.from}</p>
-          </FadeIn>
-        </div>
-      </section>
+            {/* Block 2: 어떻게 만들어지는지 */}
+            <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
+                <Info className="w-5 h-5 text-primary-400" />
+              </div>
+              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">어떻게 만들어졌는지</p>
+              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">결심에서 완성까지</h4>
+              <p className="text-[13px] text-ink-muted leading-relaxed flex-1">
+                {s.trigger}
+              </p>
+              <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center gap-2 text-xs text-ink-faint">
+                <Shield className="w-3.5 h-3.5" />
+                <span>가족 목소리 30초 + 사연 한 편이면 시작됩니다</span>
+              </div>
+            </div>
 
-      {/* Chapter 6 — 그 후 */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-2xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">Chapter 6 · 그 후</p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-ink-light mb-6 leading-tight">이 노래가 지금도 하는 일</h3>
-            <p className="text-ink-light text-base sm:text-lg leading-relaxed">{s.afterStory}</p>
-          </FadeIn>
-        </div>
-      </section>
-    </>
+            {/* Block 3: 받았을 때의 반응 */}
+            <div className="bg-primary-50 rounded-2xl border border-primary-100 p-6 sm:p-7 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </div>
+              <p className="text-primary-500 font-semibold text-xs tracking-wider uppercase mb-2">받았을 때의 반응</p>
+              <div className="text-primary-300 text-3xl font-serif leading-none mb-2 select-none">&ldquo;</div>
+              <p className="text-ink text-[14px] sm:text-[15px] leading-relaxed font-medium flex-1">
+                {s.reaction.replace(/^"|"$/g, '')}
+              </p>
+              <p className="text-xs text-ink-muted mt-4 pt-4 border-t border-primary-100">
+                {s.afterStory}
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
   )
 }
 
