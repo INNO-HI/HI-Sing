@@ -189,11 +189,7 @@ function PhoneMockup() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         <div className="w-[290px] sm:w-[340px] rounded-t-[36px] sm:rounded-t-[40px] bg-white border border-neutral-200 border-b-0 p-3 sm:p-3.5 shadow-2xl">
           <div className="w-20 sm:w-24 h-5 sm:h-6 rounded-full bg-neutral-500 mx-auto mb-2.5" />
-          <div className="rounded-t-[26px] sm:rounded-t-[30px] bg-neutral-50 px-5 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-xs text-ink-faint">9:41</p>
-              <div className="w-5 h-2.5 rounded-sm border border-ink-faint/40" />
-            </div>
+          <div className="rounded-t-[26px] sm:rounded-t-[30px] bg-neutral-50 px-5 sm:px-6 pt-6 sm:pt-8 pb-5 sm:pb-6">
             {/* 앨범아트 — 가로 슬라이드 (핸드폰 위를 스쳐 지나감) */}
             <div className="relative mx-auto mb-5 w-[250px] h-[250px]" style={{ overflow: 'visible' }}>
               <div
