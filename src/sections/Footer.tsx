@@ -14,17 +14,7 @@ export function Footer() {
             </a>
           </p>
           <div className="flex items-center gap-2">
-            <svg className="h-7 sm:h-8 w-auto flex-shrink-0" viewBox="0 0 48 32" fill="none">
-              <g fill="#F5583E">
-                <rect x="6" y="13" width="2.5" height="6" rx="1.25"/>
-                <rect x="9.5" y="7" width="3" height="18" rx="1.5"/>
-                <rect x="13.5" y="7" width="3" height="18" rx="1.5"/>
-                <path d="M24 7 Q25.5 14.5 31 16 Q25.5 17.5 24 25 Q22.5 17.5 17 16 Q22.5 14.5 24 7 Z"/>
-                <rect x="31.5" y="7" width="3" height="18" rx="1.5"/>
-                <rect x="35.5" y="7" width="3" height="18" rx="1.5"/>
-                <rect x="39.5" y="13" width="2.5" height="6" rx="1.25"/>
-              </g>
-            </svg>
+            <img src="/favicon.svg" alt="하이싱" className="h-7 sm:h-8 w-auto flex-shrink-0" />
             <span className="text-sm sm:text-base font-bold text-white">
               하이싱 <span className="text-[10px] sm:text-xs text-neutral-500 ml-1">HI-Sing</span>
             </span>

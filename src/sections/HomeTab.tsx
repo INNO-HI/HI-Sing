@@ -181,9 +181,9 @@ function PhoneMockup() {
   const cardGap = 100
   return (
     <div className="relative w-full h-full min-h-[520px] overflow-visible group/phone" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 메인색 원형 그라데이션 — 은은하게 */}
-      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] sm:w-[700px] sm:h-[700px] rounded-full pointer-events-none z-[5] blur-3xl opacity-60" style={{ background: 'radial-gradient(circle, rgba(253,189,181,0.35) 0%, rgba(254,219,214,0.18) 45%, transparent 70%)' }} />
-      <div className="absolute top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] rounded-full pointer-events-none z-[5] blur-2xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(254,219,214,0.4) 0%, rgba(255,241,237,0.2) 50%, transparent 75%)' }} />
+      {/* 메인색 원형 그라데이션 — 폰 뒤에 위치 */}
+      <div className="absolute bottom-[40%] left-1/2 -translate-x-1/2 w-[450px] h-[450px] sm:w-[700px] sm:h-[700px] rounded-full pointer-events-none z-[5] blur-3xl opacity-55" style={{ background: 'radial-gradient(circle, rgba(253,189,181,0.4) 0%, rgba(254,219,214,0.2) 45%, transparent 70%)' }} />
+      <div className="absolute bottom-[30%] left-1/2 -translate-x-1/2 w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] rounded-full pointer-events-none z-[5] blur-2xl opacity-65" style={{ background: 'radial-gradient(circle, rgba(254,219,214,0.45) 0%, rgba(255,241,237,0.2) 50%, transparent 75%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
@@ -364,9 +364,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-end">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-between">
           <FadeIn>
-            <div className="text-center mb-16 sm:mb-24">
+            <div className="text-center mt-4 sm:mt-8">
               <p className="text-ink-muted text-base sm:text-lg mb-5">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
                 <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
