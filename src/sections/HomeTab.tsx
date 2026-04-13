@@ -181,10 +181,9 @@ function PhoneMockup() {
   const cardGap = 100
   return (
     <div className="relative w-full h-full min-h-[520px] overflow-visible group/phone" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {/* 메인색 원형 그라데이션 — 더 강렬하게 */}
-      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[820px] sm:h-[820px] rounded-full pointer-events-none z-[5] blur-3xl" style={{ background: 'radial-gradient(circle, rgba(245,88,62,0.45) 0%, rgba(245,88,62,0.28) 30%, rgba(253,189,181,0.18) 55%, transparent 75%)' }} />
-      <div className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] sm:w-[560px] sm:h-[560px] rounded-full pointer-events-none z-[5] blur-2xl" style={{ background: 'radial-gradient(circle, rgba(245,88,62,0.55) 0%, rgba(250,140,125,0.35) 40%, transparent 75%)' }} />
-      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] rounded-full pointer-events-none z-[5] blur-xl" style={{ background: 'radial-gradient(circle, rgba(253,189,181,0.6) 0%, rgba(255,241,237,0.3) 50%, transparent 75%)' }} />
+      {/* 메인색 원형 그라데이션 — 은은하게 */}
+      <div className="absolute top-[62%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] sm:w-[700px] sm:h-[700px] rounded-full pointer-events-none z-[5] blur-3xl opacity-60" style={{ background: 'radial-gradient(circle, rgba(253,189,181,0.35) 0%, rgba(254,219,214,0.18) 45%, transparent 70%)' }} />
+      <div className="absolute top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] rounded-full pointer-events-none z-[5] blur-2xl opacity-70" style={{ background: 'radial-gradient(circle, rgba(254,219,214,0.4) 0%, rgba(255,241,237,0.2) 50%, transparent 75%)' }} />
 
       {/* 핸드폰 목업 — 가운데 하단 */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
@@ -353,11 +352,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
   return (
     <>
       {/* ═══ 1. Hero ═══════════════════════════════════ */}
-      <section className="relative h-screen flex flex-col bg-gradient-to-b from-primary-50/50 via-neutral-50 to-white pt-20 pb-0 overflow-hidden">
-        {/* 배경 장식 — 상단 primary glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-primary-200/25 blur-3xl pointer-events-none" />
-        {/* 미세한 메인색 오버레이 필터 */}
-        <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(245,88,62,0.06) 0%, transparent 60%)' }} />
+      <section className="relative h-screen flex flex-col bg-gradient-to-b from-primary-50/30 via-neutral-50 to-white pt-20 pb-0 overflow-hidden">
+        {/* 배경 장식 — 상단 primary glow (은은하게) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-primary-100/40 blur-3xl pointer-events-none" />
 
         {/* 히어로 전체 좌우 비네트 */}
         <div
