@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_9" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF1ED"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_9)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">TIMELINE</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="50" font-weight="900" letter-spacing="-2" text-anchor="middle">어버이날까지 남은 일정</text>
+
+<g transform="translate(120, 600)">
+  <line x1="0" y1="0" x2="1000" y2="0" stroke="#FDBDB5" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="0" x2="250" y2="0" stroke="#F5583E" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(0, 0)">
+    <circle cx="0" cy="0" r="18" fill="#F5583E"/>
+    <text x="0" y="-52" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">4/14</text>
+    <text x="0" y="-28" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="16">월</text>
+    <text x="0" y="60" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">펀딩 시작</text>
+    <text x="0" y="86" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">얼리버드 오픈</text>
+  </g>
+  <g transform="translate(250, 0)">
+    <circle cx="0" cy="0" r="28" fill="#F5583E"/>
+    <circle cx="0" cy="0" r="10" fill="#FFF"/>
+    <text x="0" y="-62" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="900" letter-spacing="4">NOW</text>
+    <text x="0" y="-36" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">진행 중</text>
+    <text x="0" y="68" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">19,900원</text>
+    <text x="0" y="94" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">100명 한정</text>
+  </g>
+  <g transform="translate(500, 0)">
+    <circle cx="0" cy="0" r="18" fill="#FFF" stroke="#FDBDB5" stroke-width="4"/>
+    <text x="0" y="-52" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">4/24</text>
+    <text x="0" y="-28" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="16">금</text>
+    <text x="0" y="60" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">주문 마감</text>
+    <text x="0" y="86" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">배송 보장선</text>
+  </g>
+  <g transform="translate(750, 0)">
+    <circle cx="0" cy="0" r="18" fill="#FFF" stroke="#FDBDB5" stroke-width="4"/>
+    <text x="0" y="-52" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">5/1~5/7</text>
+    <text x="0" y="60" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">제작·배송</text>
+    <text x="0" y="86" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">순차 완성</text>
+  </g>
+  <g transform="translate(1000, 0)">
+    <circle cx="0" cy="0" r="28" fill="#F5583E"/>
+    <path d="M 0 -10 C -6 -16, -16 -10, -16 0 C -16 10, 0 20, 0 20 C 0 20, 16 10, 16 0 C 16 -10, 6 -16, 0 -10 Z" fill="#FFF"/>
+    <text x="0" y="-62" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">5/8</text>
+    <text x="0" y="-36" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">어버이날</text>
+    <text x="0" y="68" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">노래 선물</text>
+  </g>
+</g>
+
+<g transform="translate(620, 1100)" text-anchor="middle">
+  <rect x="-340" y="0" width="680" height="110" rx="55" fill="#F5583E"/>
+  <text x="0" y="48" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="600">지금 펀딩하면</text>
+  <text x="0" y="86" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="28" font-weight="900">어버이날 아침, 노래가 도착합니다</text>
+</g>
+
+</svg>

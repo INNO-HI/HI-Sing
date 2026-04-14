@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 200" fill="none">
+  <defs>
+    <linearGradient id="heart2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FA8C7D"/>
+      <stop offset="100%" stop-color="#F5583E"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEDBD6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FEDBD6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background warm glow -->
+  <circle cx="100" cy="100" r="100" fill="url(#warmGlow)"/>
+
+  <!-- Sunburst rays behind heart (warmth) -->
+  <g transform="translate(100, 100)" stroke="#F5583E" stroke-width="2.5" stroke-linecap="round" opacity="0.35">
+    <line x1="-92" y1="0" x2="-78" y2="0"/>
+    <line x1="92" y1="0" x2="78" y2="0"/>
+    <line x1="-65" y1="-65" x2="-55" y2="-55"/>
+    <line x1="65" y1="-65" x2="55" y2="-55"/>
+    <line x1="-65" y1="65" x2="-55" y2="55"/>
+    <line x1="65" y1="65" x2="55" y2="55"/>
+    <line x1="0" y1="-92" x2="0" y2="-78"/>
+  </g>
+
+  <!-- === HEART ENVELOPE === -->
+  <g transform="translate(25, 25)">
+    <path d="M 75 142
+             C 35 108, 0 82, 0 48
+             C 0 22, 22 2, 45 7
+             C 58 10, 68 22, 75 34
+             C 82 22, 92 10, 105 7
+             C 128 2, 150 22, 150 48
+             C 150 82, 115 108, 75 142 Z"
+          fill="url(#heart2)"/>
+
+    <!-- Inner highlight -->
+    <path d="M 15 38 Q 20 18 38 14" stroke="#FFF" stroke-width="3" stroke-linecap="round" opacity="0.3" fill="none"/>
+
+    <!-- === FAMILY — 노래하는 가족 === -->
+    <!-- Grandpa (왼쪽 - 안경) -->
+    <g transform="translate(40, 55)">
+      <!-- Body (raised arm to embrace) -->
+      <path d="M -12 24 Q -14 44 -8 52 L 12 52 Q 18 44 13 24 Q 10 10 0 10 Q -9 10 -12 24 Z" fill="#FFFFFF"/>
+      <!-- Head -->
+      <circle cx="0" cy="0" r="11" fill="#FFFFFF"/>
+      <!-- Glasses -->
+      <circle cx="-3.5" cy="-1" r="2.5" stroke="#F5583E" stroke-width="1" fill="none"/>
+      <circle cx="3.5" cy="-1" r="2.5" stroke="#F5583E" stroke-width="1" fill="none"/>
+      <line x1="-1" y1="-1" x2="1" y2="-1" stroke="#F5583E" stroke-width="1"/>
+      <!-- Open smile (singing mouth) -->
+      <ellipse cx="0" cy="5" rx="3" ry="2.5" fill="#F5583E"/>
+      <!-- Hair (gray hint) -->
+      <path d="M -9 -8 Q 0 -14 9 -8 Q 7 -11 0 -10 Q -7 -11 -9 -8 Z" fill="#FEDBD6"/>
+      <!-- Raised arm (hugging child) -->
+      <path d="M 10 18 Q 20 12 26 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Grandma (오른쪽 - 머리 묶음) -->
+    <g transform="translate(110, 55)">
+      <path d="M -12 24 Q -14 44 -10 52 L 10 52 Q 14 44 12 24 Q 10 10 0 10 Q -10 10 -12 24 Z" fill="#FFFFFF"/>
+      <circle cx="0" cy="0" r="11" fill="#FFFFFF"/>
+      <!-- Hair bun -->
+      <circle cx="0" cy="-11" r="5" fill="#FFFFFF"/>
+      <path d="M -9 -8 Q 0 -12 9 -8" stroke="#FDBDB5" stroke-width="1.5" fill="none" opacity="0.8"/>
+      <!-- Happy eyes (closed, crescent) -->
+      <path d="M -4 -1 Q -2 -3 0 -1" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M 0 -1 Q 2 -3 4 -1" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <!-- Open smile -->
+      <ellipse cx="0" cy="5" rx="3" ry="2.5" fill="#F5583E"/>
+      <!-- Cheek blush -->
+      <circle cx="-7" cy="3" r="1.5" fill="#F5583E" opacity="0.5"/>
+      <circle cx="7" cy="3" r="1.5" fill="#F5583E" opacity="0.5"/>
+      <!-- Raised arm -->
+      <path d="M -10 18 Q -20 12 -26 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Child (가운데 앞, 작게, 안김) -->
+    <g transform="translate(75, 78)">
+      <path d="M -8 16 Q -10 28 -6 34 L 6 34 Q 10 28 8 16 Q 6 8 0 7 Q -6 8 -8 16 Z" fill="#FFFFFF"/>
+      <circle cx="0" cy="0" r="8.5" fill="#FFFFFF"/>
+      <!-- Small eyes -->
+      <circle cx="-2.5" cy="-1" r="1" fill="#F5583E"/>
+      <circle cx="2.5" cy="-1" r="1" fill="#F5583E"/>
+      <!-- Wide open smile -->
+      <path d="M -3 4 Q 0 7 3 4" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <!-- Hair tuft -->
+      <path d="M -3 -8 Q 0 -12 3 -9" stroke="#FDBDB5" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- === Music notes radiating out === -->
+  <g>
+    <!-- Top left, large -->
+    <g transform="translate(35, 15)" fill="#F5583E">
+      <circle cx="0" cy="12" r="5"/>
+      <rect x="4" y="-10" width="2" height="22" rx="1"/>
+      <path d="M 4 -10 Q 16 -8 16 -2 Q 10 -6 4 -5 Z"/>
+    </g>
+    <!-- Top right medium -->
+    <g transform="translate(165, 5) rotate(12)" fill="#FA8C7D">
+      <circle cx="0" cy="10" r="4"/>
+      <rect x="3" y="-6" width="1.6" height="16" rx="0.8"/>
+      <path d="M 3 -6 Q 11 -4 11 1 Q 7 -2 3 -1 Z"/>
+    </g>
+    <!-- Mid left small -->
+    <g transform="translate(10, 80)" fill="#FDBDB5">
+      <circle cx="0" cy="8" r="3"/>
+      <rect x="2.5" y="-4" width="1.3" height="12" rx="0.65"/>
+    </g>
+    <!-- Mid right small -->
+    <g transform="translate(185, 110) rotate(-10)" fill="#F5583E">
+      <circle cx="0" cy="10" r="3.5"/>
+      <rect x="3" y="-5" width="1.5" height="15" rx="0.75"/>
+    </g>
+    <!-- Sparkle -->
+    <g transform="translate(190, 50)" fill="#F5583E" opacity="0.7">
+      <path d="M 6 0 L 7 5 L 12 6 L 7 7 L 6 12 L 5 7 L 0 6 L 5 5 Z"/>
+    </g>
+    <g transform="translate(15, 155)" fill="#FDBDB5">
+      <path d="M 4 0 L 5 3 L 8 4 L 5 5 L 4 8 L 3 5 L 0 4 L 3 3 Z"/>
+    </g>
+  </g>
+
+  <!-- === WORDMARK === -->
+  <g transform="translate(225, 92)">
+    <text x="0" y="0" font-family="'Pretendard','A2G','Noto Sans KR',sans-serif" font-size="60" font-weight="900" fill="#2C2C2C" letter-spacing="-3">하이싱</text>
+    <text x="2" y="32" font-family="'Pretendard','Noto Sans KR',sans-serif" font-size="16" font-weight="600" fill="#6B7280" letter-spacing="0.5">가족의 목소리로 만드는 노래 선물</text>
+    <!-- Accent mark -->
+    <g transform="translate(188, -48)">
+      <path d="M 0 5 C -3 0, -10 0, -10 7 C -10 14, 0 20, 0 20 C 0 20, 10 14, 10 7 C 10 0, 3 0, 0 5 Z" fill="#F5583E"/>
+    </g>
+  </g>
+</svg>

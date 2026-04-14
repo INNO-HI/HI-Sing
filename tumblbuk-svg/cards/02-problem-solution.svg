@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF1ED"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_2)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">FROM PROBLEM TO GIFT</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="54" font-weight="900" letter-spacing="-2" text-anchor="middle">이 고민, 올해도 하고 계신가요?</text>
+
+<g transform="translate(100, 340)">
+  <g>
+    <rect x="0" y="0" width="340" height="280" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+    <text x="40" y="100" font-size="58">😕</text>
+    <text x="40" y="160" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">작년이랑 똑같네</text>
+    <text x="40" y="200" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">홍삼·용돈·건강식품,</text>
+    <text x="40" y="226" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">매년 돌려쓰는 그 선물</text>
+  </g>
+  <g transform="translate(360, 0)">
+    <rect x="0" y="0" width="340" height="280" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+    <text x="40" y="100" font-size="58">😔</text>
+    <text x="40" y="160" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">말로는 쑥스러워</text>
+    <text x="40" y="200" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">“사랑합니다” 한마디가</text>
+    <text x="40" y="226" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">왜 그리 어려울까</text>
+  </g>
+  <g transform="translate(720, 0)">
+    <rect x="0" y="0" width="340" height="280" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+    <text x="40" y="100" font-size="58">⏳</text>
+    <text x="40" y="160" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">올해는 꼭 다르게</text>
+    <text x="40" y="200" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">내년에 똑같은 고민을</text>
+    <text x="40" y="226" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">반복하고 싶지 않다면</text>
+  </g>
+</g>
+
+<g transform="translate(620, 780)">
+  <line x1="0" y1="0" x2="0" y2="60" stroke="#F5583E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M -14 55 L 0 75 L 14 55" stroke="#F5583E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+
+<g transform="translate(620, 1010)" text-anchor="middle">
+  <circle cx="0" cy="0" r="110" fill="#F5583E"/>
+  <g fill="#FFF" transform="translate(-18, -30)">
+    <circle cx="8" cy="50" r="14"/>
+    <rect x="17" y="-4" width="6" height="54" rx="3"/>
+    <path d="M 17 -4 Q 40 0 40 20 Q 28 8 17 14 Z"/>
+  </g>
+</g>
+
+<text x="620" y="1280" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="48" font-weight="900" letter-spacing="-2" text-anchor="middle">하이싱이 노래로 만들어드립니다</text>
+<text x="620" y="1340" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="500" text-anchor="middle">가족 목소리 30초  +  짧은 사연 한 편</text>
+<text x="620" y="1410" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="400" text-anchor="middle">세상에 단 하나뿐인 맞춤 노래가 완성됩니다</text>
+
+</svg>

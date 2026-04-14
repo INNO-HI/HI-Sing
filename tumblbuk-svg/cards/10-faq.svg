@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_10" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F8F8F8"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_10)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">FAQ</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="50" font-weight="900" letter-spacing="-2" text-anchor="middle">자주 묻는 질문</text>
+
+<g transform="translate(120, 360)">
+<g transform="translate(0,0)">
+  <rect x="0" y="0" width="1000" height="240" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="40" y="76" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">Q1.</text>
+  <text x="100" y="76" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">원본 음성은 어떻게 수집하나요?</text>
+  <text x="100" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">전화 녹음·영상 속 목소리·일상 대화 30초면 OK. 스마트폰 녹</text>
+  <text x="100" y="170" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">음도 가능합니다.</text>
+</g><g transform="translate(0,280)">
+  <rect x="0" y="0" width="1000" height="240" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="40" y="76" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">Q2.</text>
+  <text x="100" y="76" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">어버이날까지 받으려면 언제까지?</text>
+  <text x="100" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">4/24(금)까지 주문하시면 5/8 어버이날 이전 배송 보장합니다</text>
+  <text x="100" y="170" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">.</text>
+</g><g transform="translate(0,560)">
+  <rect x="0" y="0" width="1000" height="240" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="40" y="76" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">Q3.</text>
+  <text x="100" y="76" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">가사가 마음에 안 들면?</text>
+  <text x="100" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">1회 무료 리터치 가능. 주제·감정 톤·키워드 수정 요청을 받아 </text>
+  <text x="100" y="170" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">재작성해드립니다.</text>
+</g><g transform="translate(0,840)">
+  <rect x="0" y="0" width="1000" height="240" rx="24" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="40" y="76" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="900">Q4.</text>
+  <text x="100" y="76" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">개인정보는 안전한가요?</text>
+  <text x="100" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">업로드 음성은 제작 완료 후 30일 내 삭제됩니다. AI 학습에도</text>
+  <text x="100" y="170" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20"> 쓰지 않습니다.</text>
+</g></g>
+</svg>

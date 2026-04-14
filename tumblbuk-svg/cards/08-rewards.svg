@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_8" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8F8F8"/><stop offset="100%" stop-color="#FFF1ED"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_8)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">EARLY BIRD REWARDS</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="50" font-weight="900" letter-spacing="-2" text-anchor="middle">어버이날 한정, 특가 리워드</text>
+<text x="620" y="300" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="400" text-anchor="middle">텀블벅에서만 만나는 가격</text>
+
+<g transform="translate(60, 410)">
+  <rect x="0" y="0" width="340" height="1160" rx="32" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="170" y="80" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="3">BASIC</text>
+  <text x="170" y="150" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900">노래 제작</text>
+  <text x="170" y="230" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="22" text-decoration="line-through">29,000원</text>
+  <text x="170" y="300" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="52" font-weight="900">19,900원</text>
+  <line x1="40" y1="370" x2="300" y2="370" stroke="#EEE"/>
+  <g transform="translate(40, 450)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">맞춤 노래 1곡</text></g>
+  <g transform="translate(40, 510)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">MP3 고음질 파일</text></g>
+  <g transform="translate(40, 570)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">전체 가사 텍스트</text></g>
+  <g transform="translate(40, 630)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">카카오톡 선물 링크</text></g>
+</g>
+
+<g transform="translate(420, 370)">
+  <g transform="translate(170, 20)">
+    <rect x="-86" y="0" width="172" height="44" rx="22" fill="#F5583E"/>
+    <text x="0" y="30" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">🎁 가장 인기</text>
+  </g>
+  <rect x="0" y="50" width="340" height="1200" rx="32" fill="#FFF" stroke="#F5583E" stroke-width="4"/>
+  <text x="170" y="130" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="3">PREMIUM</text>
+  <text x="170" y="200" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900">풀 패키지</text>
+  <text x="170" y="280" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="22" text-decoration="line-through">49,000원</text>
+  <text x="170" y="350" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="60" font-weight="900">34,900원</text>
+  <line x1="40" y1="420" x2="300" y2="420" stroke="#FDBDB5"/>
+  <g transform="translate(40, 500)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#F5583E"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#FFF" stroke-width="2.8" fill="none" stroke-linecap="round"/></g><text x="36" y="2" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="19" font-weight="700">BASIC 모든 혜택</text></g>
+  <g transform="translate(40, 560)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#F5583E"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#FFF" stroke-width="2.8" fill="none" stroke-linecap="round"/></g><text x="36" y="2" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="19" font-weight="700">가사 카드 이미지</text></g>
+  <g transform="translate(40, 620)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#F5583E"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#FFF" stroke-width="2.8" fill="none" stroke-linecap="round"/></g><text x="36" y="2" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="19" font-weight="700">AI 앨범 커버</text></g>
+  <g transform="translate(40, 680)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#F5583E"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#FFF" stroke-width="2.8" fill="none" stroke-linecap="round"/></g><text x="36" y="2" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="19" font-weight="700">인쇄용 원본 파일</text></g>
+  <g transform="translate(40, 740)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#F5583E"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#FFF" stroke-width="2.8" fill="none" stroke-linecap="round"/></g><text x="36" y="2" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="19" font-weight="700">리터치 1회 무료</text></g>
+</g>
+
+<g transform="translate(780, 410)">
+  <rect x="0" y="0" width="340" height="1160" rx="32" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="170" y="80" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="3">LIMITED 30</text>
+  <text x="170" y="150" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900">VIP 스페셜</text>
+  <text x="170" y="230" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="22" text-decoration="line-through">79,000원</text>
+  <text x="170" y="300" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="52" font-weight="900">54,900원</text>
+  <line x1="40" y1="370" x2="300" y2="370" stroke="#EEE"/>
+  <g transform="translate(40, 450)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">PREMIUM 전 혜택</text></g>
+  <g transform="translate(40, 510)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">가사 액자 (배송)</text></g>
+  <g transform="translate(40, 570)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">우선 제작 5~7일</text></g>
+  <g transform="translate(40, 630)"><g transform="translate(12,-5)"><circle cx="0" cy="0" r="12" fill="#FDBDB5"/><path d="M -6 0 L -1 5 L 7 -5" stroke="#F5583E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="36" y="2" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20">리터치 2회 무료</text></g>
+</g>
+
+</svg>

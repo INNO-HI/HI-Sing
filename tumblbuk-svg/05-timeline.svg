@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <rect width="1200" height="600" fill="#FFF"/>
+
+  <!-- Header -->
+  <text x="600" y="80" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800" letter-spacing="4">TIMELINE</text>
+  <text x="600" y="128" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900" letter-spacing="-1.5">어버이날까지 남은 일정</text>
+
+  <!-- Timeline bar -->
+  <g transform="translate(100, 280)">
+    <!-- Line -->
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#FEDBD6" stroke-width="4" stroke-linecap="round"/>
+    <!-- Progress (filled up to 'NOW') -->
+    <line x1="0" y1="0" x2="250" y2="0" stroke="#F5583E" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Milestone 1: Launch -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="12" fill="#F5583E"/>
+      <circle cx="0" cy="0" r="20" fill="#F5583E" fill-opacity="0.2"/>
+      <text x="0" y="-40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">4/14</text>
+      <text x="0" y="-22" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="11" font-weight="500">월</text>
+      <text x="0" y="40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="700">펀딩 시작</text>
+      <text x="0" y="58" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="11">얼리버드 오픈</text>
+    </g>
+
+    <!-- Milestone 2: NOW / Early bird deadline -->
+    <g transform="translate(250, 0)">
+      <circle cx="0" cy="0" r="16" fill="#F5583E"/>
+      <circle cx="0" cy="0" r="24" fill="#F5583E" fill-opacity="0.2"/>
+      <circle cx="0" cy="0" r="6" fill="#FFF"/>
+      <text x="0" y="-48" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="900" letter-spacing="2">NOW</text>
+      <text x="0" y="-26" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">진행 중</text>
+      <text x="0" y="46" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">특가 19,900원</text>
+      <text x="0" y="64" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="11">100명 한정</text>
+    </g>
+
+    <!-- Milestone 3: Order deadline -->
+    <g transform="translate(500, 0)">
+      <circle cx="0" cy="0" r="12" fill="#FFF" stroke="#FDBDB5" stroke-width="3"/>
+      <text x="0" y="-40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">4/24</text>
+      <text x="0" y="-22" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="11" font-weight="500">금</text>
+      <text x="0" y="40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="700">주문 마감</text>
+      <text x="0" y="58" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="11">어버이날 배송 보장선</text>
+    </g>
+
+    <!-- Milestone 4: Production -->
+    <g transform="translate(750, 0)">
+      <circle cx="0" cy="0" r="12" fill="#FFF" stroke="#FDBDB5" stroke-width="3"/>
+      <text x="0" y="-40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">5/1~5/7</text>
+      <text x="0" y="40" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="700">제작·배송</text>
+      <text x="0" y="58" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="11">순차 완성·발송</text>
+    </g>
+
+    <!-- Milestone 5: Parents' Day -->
+    <g transform="translate(1000, 0)">
+      <!-- Special badge -->
+      <circle cx="0" cy="0" r="18" fill="#F5583E"/>
+      <circle cx="0" cy="0" r="28" fill="#F5583E" fill-opacity="0.15"/>
+      <!-- Heart icon inside -->
+      <path d="M 0 -6 C -4 -10, -10 -6, -10 0 C -10 6, 0 12, 0 12 C 0 12, 10 6, 10 0 C 10 -6, 4 -10, 0 -6 Z" fill="#FFF"/>
+      <text x="0" y="-48" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="900">5/8</text>
+      <text x="0" y="-26" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">어버이날</text>
+      <text x="0" y="46" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">노래 선물하는 날</text>
+    </g>
+  </g>
+
+  <!-- Urgency banner -->
+  <g transform="translate(600, 490)">
+    <rect x="-230" y="0" width="460" height="56" rx="28" fill="#F5583E"/>
+    <text x="0" y="22" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="600">지금 펀딩하면</text>
+    <text x="0" y="44" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="900">어버이날 아침, 노래가 도착합니다</text>
+  </g>
+</svg>

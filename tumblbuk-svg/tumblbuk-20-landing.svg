@@ -1,0 +1,619 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 11840" fill="none">
+<g transform="translate(0,0)"><rect width="1200" height="800" fill="#FFFFFF"/>
+<circle cx="900" cy="440" r="300" fill="#F5583E" fill-opacity="0.12"/>
+<circle cx="150" cy="700" r="100" fill="#FDBDB5" opacity="0.25"/>
+
+<!-- Logo top-right -->
+<g transform="translate(1050, 60)">
+  <g fill="#F5583E">
+    <rect x="0" y="2" width="2.5" height="6" rx="1.25"/>
+    <rect x="4" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="9.5" y="-4" width="3" height="18" rx="1.5"/>
+    <path d="M 20 -4 Q 21 4 25 5 Q 21 6 20 14 Q 19 6 15 5 Q 19 4 20 -4 Z"/>
+    <rect x="28" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="33.5" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="38" y="2" width="2.5" height="6" rx="1.25"/>
+  </g>
+  <text x="50" y="10" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">하이싱</text>
+</g>
+
+<!-- LEFT TEXT -->
+<g transform="translate(80, 110)">
+  <g>
+    <rect x="0" y="0" width="210" height="48" rx="24" fill="#F5583E"/>
+    <circle cx="22" cy="24" r="5" fill="#FFF"/>
+    <circle cx="22" cy="24" r="2.5" fill="#F5583E"/>
+    <text x="40" y="31" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="800">5월 8일 어버이날 특가</text>
+  </g>
+  <text x="0" y="98" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="500">말로 다 못한 마음을, 이제 노래로</text>
+  <text x="0" y="168" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="62" font-weight="900" letter-spacing="-2">올해만큼은</text>
+  <text x="0" y="240" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="62" font-weight="900" letter-spacing="-2"><tspan fill="#F5583E">건강하세요</tspan> 대신</text>
+  <text x="0" y="312" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="62" font-weight="900" letter-spacing="-2">노래 한 곡</text>
+  <text x="0" y="368" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="18">부모님의 목소리로 만드는, 세상에 단 하나뿐인 노래.</text>
+  <text x="0" y="394" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="18">이번 어버이날, 진심을 담아보세요.</text>
+
+  <!-- Price -->
+  <g transform="translate(0, 440)">
+    <text x="0" y="20" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="18" text-decoration="line-through">29,000원</text>
+    <g transform="translate(110, 0)">
+      <rect x="0" y="4" width="70" height="24" rx="12" fill="#F5583E"/>
+      <text x="35" y="21" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800">31% ↓</text>
+    </g>
+    <text x="0" y="78" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="52" font-weight="900">19,900원</text>
+    <text x="210" y="78" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="16">얼리버드 특가</text>
+  </g>
+
+  <!-- CTA -->
+  <g transform="translate(0, 560)">
+    <rect x="0" y="0" width="260" height="64" rx="32" fill="#F5583E"/>
+    <text x="110" y="40" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">지금 노래 선물하기</text>
+    <path d="M 218 32 L 228 32 M 223 27 L 228 32 L 223 37" stroke="#FFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  </g>
+</g>
+
+<!-- RIGHT: Carnation + radiating waveform -->
+<g transform="translate(720, 180)">
+  <circle cx="220" cy="220" r="260" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.15" stroke-dasharray="2 8"/>
+  <circle cx="220" cy="220" r="210" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="2 8"/>
+  <circle cx="220" cy="220" r="160" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="2 8"/>
+  <g transform="translate(220, 220)" fill="#F5583E">
+<g transform="rotate(0)"><rect x="-3" y="95" width="6" height="14" rx="3"/></g><g transform="rotate(20)"><rect x="-3" y="95" width="6" height="21" rx="3"/></g><g transform="rotate(40)"><rect x="-3" y="95" width="6" height="28" rx="3"/></g><g transform="rotate(60)"><rect x="-3" y="95" width="6" height="35" rx="3"/></g><g transform="rotate(80)"><rect x="-3" y="95" width="6" height="16" rx="3"/></g><g transform="rotate(100)"><rect x="-3" y="95" width="6" height="23" rx="3"/></g><g transform="rotate(120)"><rect x="-3" y="95" width="6" height="30" rx="3"/></g><g transform="rotate(140)"><rect x="-3" y="95" width="6" height="37" rx="3"/></g><g transform="rotate(160)"><rect x="-3" y="95" width="6" height="18" rx="3"/></g><g transform="rotate(180)"><rect x="-3" y="95" width="6" height="25" rx="3"/></g><g transform="rotate(200)"><rect x="-3" y="95" width="6" height="32" rx="3"/></g><g transform="rotate(220)"><rect x="-3" y="95" width="6" height="39" rx="3"/></g><g transform="rotate(240)"><rect x="-3" y="95" width="6" height="20" rx="3"/></g><g transform="rotate(260)"><rect x="-3" y="95" width="6" height="27" rx="3"/></g><g transform="rotate(280)"><rect x="-3" y="95" width="6" height="34" rx="3"/></g><g transform="rotate(300)"><rect x="-3" y="95" width="6" height="15" rx="3"/></g><g transform="rotate(320)"><rect x="-3" y="95" width="6" height="22" rx="3"/></g><g transform="rotate(340)"><rect x="-3" y="95" width="6" height="29" rx="3"/></g>
+  </g>
+  <g transform="translate(220,220) scale(1)">
+  <path d="M 0 40 Q -3 80 2 140" stroke="#2D7A3E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M 2 90 Q -30 80 -46 100 Q -32 110 -2 100 Z" fill="#3AA556"/>
+  <circle cx="0" cy="0" r="56" fill="#FDBDB5"/>
+  <g fill="#F5583E">
+    <circle cx="-42" cy="-32" r="18"/><circle cx="42" cy="-32" r="18"/>
+    <circle cx="-52" cy="0" r="18"/><circle cx="52" cy="0" r="18"/>
+    <circle cx="-42" cy="32" r="18"/><circle cx="42" cy="32" r="18"/>
+    <circle cx="0" cy="-44" r="18"/><circle cx="0" cy="44" r="18"/>
+  </g>
+  <circle cx="0" cy="0" r="40" fill="#F5583E"/>
+  <circle cx="0" cy="0" r="20" fill="#C9371E"/>
+  <g fill="#FFF" transform="translate(-7, -10)">
+    <circle cx="2" cy="16" r="5"/><rect x="5.5" y="-2" width="2" height="18" rx="1"/>
+    <path d="M 5.5 -2 Q 15 0 15 8 Q 10 3 5.5 6 Z"/>
+  </g>
+</g>
+</g>
+</g>
+<g transform="translate(0,800)"><rect width="1200" height="500" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">THE PROBLEM</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900" letter-spacing="-1.5" text-anchor="middle">매년 똑같은 고민이었죠</text>
+<g transform="translate(0, 200)">
+  <g transform="translate(180, 0)">
+    <rect x="0" y="0" width="260" height="220" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="130" y="60" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="48">😕</text>
+    <text x="130" y="110" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="17" font-weight="800">작년이랑 똑같네</text>
+    <text x="130" y="140" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">홍삼, 용돈, 건강식품</text>
+    <text x="130" y="160" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">매년 돌려쓰는 선물</text>
+  </g>
+  <g transform="translate(470, 0)">
+    <rect x="0" y="0" width="260" height="220" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="130" y="60" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="48">😔</text>
+    <text x="130" y="110" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="17" font-weight="800">말로는 쑥스러워</text>
+    <text x="130" y="140" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">&quot;사랑합니다&quot; 한마디가</text>
+    <text x="130" y="160" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">왜 그리 어려울까</text>
+  </g>
+  <g transform="translate(760, 0)">
+    <rect x="0" y="0" width="260" height="220" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="130" y="60" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="48">⏳</text>
+    <text x="130" y="110" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="17" font-weight="800">올해는 꼭 다르게</text>
+    <text x="130" y="140" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">내년에 같은 고민을</text>
+    <text x="130" y="160" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">반복하고 싶지 않다면</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,1300)"><rect width="1200" height="520" fill="#FFFFFF"/>
+<text x="600" y="90" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">THE SOLUTION</text>
+<text x="600" y="150" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="40" font-weight="900" letter-spacing="-1.5" text-anchor="middle">하이싱이 노래로 만들어드립니다</text>
+<text x="600" y="200" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="17" font-weight="500" text-anchor="middle">가족 목소리 30초와 짧은 사연 한 편이면,</text>
+<text x="600" y="225" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="17" font-weight="500" text-anchor="middle">세상에 단 하나뿐인 맞춤 노래가 완성됩니다.</text>
+<g transform="translate(600, 320)">
+  <circle cx="0" cy="0" r="80" fill="#F5583E" fill-opacity="0.1"/>
+  <circle cx="0" cy="0" r="55" fill="#F5583E"/>
+  <g fill="#FFF" transform="translate(-12, -18)">
+    <circle cx="4" cy="28" r="7"/><rect x="8.5" y="-2" width="3" height="30" rx="1.5"/>
+    <path d="M 8.5 -2 Q 22 0 22 12 Q 14 4 8.5 8 Z"/>
+  </g>
+</g>
+</g>
+<g transform="translate(0,1820)"><rect width="1200" height="600" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">WHY HI-SING</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900" letter-spacing="-1.5" text-anchor="middle">왜 하이싱일까요?</text>
+<g transform="translate(120, 210)">
+  <g>
+    <rect x="0" y="0" width="290" height="320" rx="20" fill="#FFF1ED"/>
+    <g transform="translate(145, 70)">
+      <circle cx="0" cy="0" r="36" fill="#F5583E"/>
+      <text x="0" y="8" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="24" fill="#FFF" font-weight="800">1</text>
+    </g>
+    <text x="145" y="170" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">세상에 단 하나뿐인</text>
+    <text x="145" y="210" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">가족 목소리를 AI가 분석해서</text>
+    <text x="145" y="230" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">오직 당신 가족을 위한 노래만</text>
+    <text x="145" y="250" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">만들어드립니다.</text>
+  </g>
+  <g transform="translate(330, 0)">
+    <rect x="0" y="0" width="290" height="320" rx="20" fill="#FFF" stroke="#F5583E" stroke-width="2"/>
+    <g transform="translate(145, 70)">
+      <circle cx="0" cy="0" r="36" fill="#F5583E"/>
+      <text x="0" y="8" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="24" fill="#FFF" font-weight="800">2</text>
+    </g>
+    <text x="145" y="170" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">감동이 스며드는</text>
+    <text x="145" y="210" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">후렴 한 마디에 울컥하고</text>
+    <text x="145" y="230" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">가사 한 줄에 멈춥니다.</text>
+    <text x="145" y="250" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">수령자 94%가 눈물을 흘렸어요.</text>
+  </g>
+  <g transform="translate(660, 0)">
+    <rect x="0" y="0" width="290" height="320" rx="20" fill="#FFF1ED"/>
+    <g transform="translate(145, 70)">
+      <circle cx="0" cy="0" r="36" fill="#F5583E"/>
+      <text x="0" y="8" text-anchor="middle" font-family="'Pretendard','A2G',sans-serif" font-size="24" fill="#FFF" font-weight="800">3</text>
+    </g>
+    <text x="145" y="170" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">평생 남는 선물</text>
+    <text x="145" y="210" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">MP3 + 가사 + 앨범 커버.</text>
+    <text x="145" y="230" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">부모님 휴대폰에 평생 저장되는</text>
+    <text x="145" y="250" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">가장 가까운 음악.</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,2420)"><rect width="1200" height="450" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">LISTEN FIRST</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">실제로 만들어진 노래, 지금 들어보세요</text>
+<g transform="translate(300, 200)">
+  <rect x="0" y="0" width="600" height="180" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="100" height="100" rx="12" fill="#FFF1ED"/>
+    <g transform="translate(50, 50)" fill="#F5583E">
+      <circle cx="0" cy="0" r="28" fill="#FFF"/>
+      <path d="M -8 -12 L 14 0 L -8 12 Z" fill="#F5583E"/>
+    </g>
+  </g>
+  <text x="160" y="55" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">식탁 위의 온기</text>
+  <text x="160" y="82" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">어머니 팔순 · 40대 아들</text>
+  <g transform="translate(160, 100)">
+<rect x="0" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="14" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="28" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="42" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="56" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="70" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="84" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="98" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="112" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="126" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="140" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="154" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="168" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="182" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="196" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="210" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="224" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="238" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="252" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="266" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="280" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="294" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="308" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="322" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="336" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="350" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/><rect x="364" y="12.0" width="6" height="8" rx="3" fill="#F5583E" opacity="0.7"/><rect x="378" y="6.5" width="6" height="19" rx="3" fill="#F5583E" opacity="0.7"/>
+  </g>
+  <text x="540" y="55" text-anchor="end" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="12">3:24</text>
+</g>
+</g>
+<g transform="translate(0,2870)"><rect width="1200" height="700" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">REAL STORY 01</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900" letter-spacing="-1.5" text-anchor="middle">어느 팔순 저녁의 이야기</text>
+<g transform="translate(120, 200)">
+  <rect x="0" y="0" width="960" height="400" rx="24" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="260" height="320" rx="16" fill="#FFF1ED"/>
+    <g transform="translate(130, 130)">
+      <circle cx="0" cy="0" r="60" fill="#FDBDB5"/>
+      <text x="0" y="15" text-anchor="middle" font-size="60">🎂</text>
+    </g>
+    <text x="130" y="250" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">어머니 80세</text>
+    <text x="130" y="275" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">40대 아들이 주문</text>
+  </g>
+  <g transform="translate(340, 50)">
+    <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">배경</text>
+    <text x="0" y="30" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">새벽 다섯 시, 어머니는 30년을 같은 시간에</text>
+    <text x="0" y="50" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">일어나 도시락을 싸셨습니다.</text>
+
+    <text x="0" y="95" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">가사 한 구절</text>
+    <text x="0" y="125" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">\u201C새벽 다섯 시, 작은 불빛 하나</text>
+    <text x="0" y="148" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">엄마의 손끝에서 하루가 시작됐지\u201D</text>
+
+    <text x="0" y="193" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">받은 날</text>
+    <text x="0" y="223" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">\u201C후렴이 나오자 어머니가 숟가락을</text>
+    <text x="0" y="243" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">놓으셨어요. 온 가족이 울었습니다.\u201D</text>
+
+    <g transform="translate(0, 275)">
+      <rect x="0" y="0" width="160" height="42" rx="21" fill="#F5583E"/>
+      <text x="80" y="27" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800">전체 듣기 ▶</text>
+    </g>
+  </g>
+</g>
+</g>
+<g transform="translate(0,3570)"><rect width="1200" height="420" fill="#2C2C2C"/>
+<g transform="translate(600, 180)" text-anchor="middle">
+  <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="120" font-weight="900" opacity="0.3">\u201C</text>
+  <text x="0" y="100" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1">아빠 눈물, 태어나서 처음 봤어요.</text>
+  <text x="0" y="150" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="16" opacity="0.7">— 30대 딸, 아버지 생신 선물</text>
+</g>
+</g>
+<g transform="translate(0,3990)"><rect width="1200" height="650" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">REAL STORY 02</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">10년 만에 처음 본 아버지의 눈물</text>
+<g transform="translate(120, 200)">
+  <rect x="0" y="0" width="960" height="360" rx="24" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="260" height="280" rx="16" fill="#FFF1ED"/>
+    <g transform="translate(130, 110)">
+      <circle cx="0" cy="0" r="60" fill="#FDBDB5"/>
+      <text x="0" y="15" text-anchor="middle" font-size="60">👨</text>
+    </g>
+    <text x="130" y="230" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">아버지 생신</text>
+    <text x="130" y="253" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">30대 딸 · 바쁘다는 핑계</text>
+  </g>
+  <g transform="translate(340, 50)">
+    <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">계기</text>
+    <text x="0" y="30" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">\u201C아빠가 너 내려오는 날이면</text>
+    <text x="0" y="50" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">일주일 전부터 달력에 동그라미를 그려.\u201D</text>
+
+    <text x="0" y="95" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">가사</text>
+    <text x="0" y="125" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">\u201C바쁘다는 말로 숨어있었어요</text>
+    <text x="0" y="148" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">제가 가장 닮고 싶은 사람은 당신이에요\u201D</text>
+
+    <text x="0" y="193" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">그 후</text>
+    <text x="0" y="223" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">아버지는 출퇴근 차 안에서</text>
+    <text x="0" y="243" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">이 노래를 반복 재생하십니다.</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,4640)"><rect width="1200" height="650" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">REAL STORY 03</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900" letter-spacing="-1.5" text-anchor="middle">40주년 결혼기념일, 두 분만의 노래</text>
+<g transform="translate(120, 200)">
+  <rect x="0" y="0" width="960" height="360" rx="24" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="260" height="280" rx="16" fill="#FFF1ED"/>
+    <g transform="translate(130, 110)">
+      <circle cx="0" cy="0" r="60" fill="#FDBDB5"/>
+      <text x="0" y="15" text-anchor="middle" font-size="60">💑</text>
+    </g>
+    <text x="130" y="230" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">40주년 결혼기념일</text>
+    <text x="130" y="253" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">40대 아들 · 수화기 너머의 핑계</text>
+  </g>
+  <g transform="translate(340, 50)">
+    <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">배경</text>
+    <text x="0" y="30" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">매주 일요일 여섯 시, 어머니의 전화</text>
+    <text x="0" y="50" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">\u201C잘 지내지?\u201D만 20년째.</text>
+
+    <text x="0" y="95" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">가사</text>
+    <text x="0" y="125" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">\u201C오늘 이 노래가 수화기 대신</text>
+    <text x="0" y="148" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-style="italic">두 분의 40년을 안아드릴게요\u201D</text>
+
+    <text x="0" y="193" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="800" letter-spacing="2">그 후</text>
+    <text x="0" y="223" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">매년 결혼기념일마다 두 분이 함께.</text>
+    <text x="0" y="243" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="14">이제 제가 먼저 전화를 겁니다.</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,5290)"><rect width="1200" height="550" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">BEFORE vs AFTER</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">평범한 목소리가, 노래가 되기까지</text>
+<g transform="translate(120, 220)">
+  <g>
+    <rect x="0" y="0" width="420" height="280" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="30" y="50" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="2">BEFORE</text>
+    <text x="30" y="80" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">가족 목소리 (30초)</text>
+    <g transform="translate(30, 110)">
+<rect x="0" y="25.0" width="5" height="20.0" rx="2.5" fill="#BDBDBD"/><rect x="11" y="15.41148922791594" width="5" height="39.2" rx="2.5" fill="#BDBDBD"/><rect x="22" y="8.170580303842069" width="5" height="53.7" rx="2.5" fill="#BDBDBD"/><rect x="33" y="5.050100267918911" width="5" height="59.9" rx="2.5" fill="#BDBDBD"/><rect x="44" y="6.814051463486365" width="5" height="56.4" rx="2.5" fill="#BDBDBD"/><rect x="55" y="13.030557117920871" width="5" height="43.9" rx="2.5" fill="#BDBDBD"/><rect x="66" y="22.177599838802657" width="5" height="25.6" rx="2.5" fill="#BDBDBD"/><rect x="77" y="17.984335446207602" width="5" height="34.0" rx="2.5" fill="#BDBDBD"/><rect x="88" y="9.863950093841432" width="5" height="50.3" rx="2.5" fill="#BDBDBD"/><rect x="99" y="5.44939764669806" width="5" height="59.1" rx="2.5" fill="#BDBDBD"/><rect x="110" y="5.8215145067372305" width="5" height="58.4" rx="2.5" fill="#BDBDBD"/><rect x="121" y="10.889193488592163" width="5" height="48.2" rx="2.5" fill="#BDBDBD"/><rect x="132" y="19.411690036021483" width="5" height="31.2" rx="2.5" fill="#BDBDBD"/><rect x="143" y="20.697600238243687" width="5" height="28.6" rx="2.5" fill="#BDBDBD"/><rect x="154" y="11.860268025624219" width="5" height="46.3" rx="2.5" fill="#BDBDBD"/><rect x="165" y="6.240000464505222" width="5" height="57.5" rx="2.5" fill="#BDBDBD"/><rect x="176" y="5.212835067532364" width="5" height="59.6" rx="2.5" fill="#BDBDBD"/><rect x="187" y="9.030257747530193" width="5" height="51.9" rx="2.5" fill="#BDBDBD"/><rect x="198" y="16.757630295164866" width="5" height="36.5" rx="2.5" fill="#BDBDBD"/><rect x="209" y="23.496977590763812" width="5" height="23.0" rx="2.5" fill="#BDBDBD"/><rect x="220" y="14.119577782212605" width="5" height="41.8" rx="2.5" fill="#BDBDBD"/><rect x="231" y="7.406084800566596" width="5" height="55.2" rx="2.5" fill="#BDBDBD"/><rect x="242" y="5.00019586898593" width="5" height="60.0" rx="2.5" fill="#BDBDBD"/><rect x="253" y="7.490956506231431" width="5" height="55.0" rx="2.5" fill="#BDBDBD"/><rect x="264" y="14.268541639991302" width="5" height="41.5" rx="2.5" fill="#BDBDBD"/><rect x="275" y="23.67356205297599" width="5" height="22.7" rx="2.5" fill="#BDBDBD"/><rect x="286" y="16.59665926346718" width="5" height="36.8" rx="2.5" fill="#BDBDBD"/><rect x="297" y="8.924311468967584" width="5" height="52.2" rx="2.5" fill="#BDBDBD"/><rect x="308" y="5.187852886102593" width="5" height="59.6" rx="2.5" fill="#BDBDBD"/><rect x="319" y="6.30209888950634" width="5" height="57.4" rx="2.5" fill="#BDBDBD"/><rect x="330" y="11.994243196857663" width="5" height="46.0" rx="2.5" fill="#BDBDBD"/><rect x="341" y="20.870650361244067" width="5" height="28.3" rx="2.5" fill="#BDBDBD"/>
+    </g>
+    <text x="30" y="220" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">전화 녹음, 영상 속 목소리,</text>
+    <text x="30" y="240" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">일상 대화 — 아무거나 OK</text>
+  </g>
+  <g transform="translate(470, 120)">
+    <path d="M 0 0 L 40 20 L 0 40 Z" fill="#F5583E"/>
+  </g>
+  <g transform="translate(540, 0)">
+    <rect x="0" y="0" width="420" height="280" rx="20" fill="#FFF1ED" stroke="#F5583E" stroke-width="2"/>
+    <text x="30" y="50" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="2">AFTER</text>
+    <text x="30" y="80" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">완성된 맞춤 노래</text>
+    <g transform="translate(30, 110)">
+<rect x="0" y="22.5" width="5" height="25.0" rx="2.5" fill="#F5583E"/><rect x="11" y="15.333023907760637" width="5" height="39.3" rx="2.5" fill="#F5583E"/><rect x="22" y="21.93567453823855" width="5" height="26.1" rx="2.5" fill="#F5583E"/><rect x="33" y="3.311026941973669" width="5" height="63.4" rx="2.5" fill="#F5583E"/><rect x="44" y="-7.013079517674896" width="5" height="84.0" rx="2.5" fill="#F5583E"/><rect x="55" y="3.204715884192307" width="5" height="63.6" rx="2.5" fill="#F5583E"/><rect x="66" y="20.234101737684433" width="5" height="29.5" rx="2.5" fill="#F5583E"/><rect x="77" y="7.661143755186764" width="5" height="54.7" rx="2.5" fill="#F5583E"/><rect x="88" y="12.518844639073507" width="5" height="45.0" rx="2.5" fill="#F5583E"/><rect x="99" y="22.34656320037792" width="5" height="25.3" rx="2.5" fill="#F5583E"/><rect x="110" y="20.96883085534997" width="5" height="28.1" rx="2.5" fill="#F5583E"/><rect x="121" y="6.668474896606067" width="5" height="56.7" rx="2.5" fill="#F5583E"/><rect x="132" y="-3.2469023550013603" width="5" height="76.5" rx="2.5" fill="#F5583E"/><rect x="143" y="5.891883925228221" width="5" height="58.2" rx="2.5" fill="#F5583E"/><rect x="154" y="16.516720234974603" width="5" height="37.0" rx="2.5" fill="#F5583E"/><rect x="165" y="0.7555418229024795" width="5" height="68.5" rx="2.5" fill="#F5583E"/><rect x="176" y="4.076497711184267" width="5" height="61.8" rx="2.5" fill="#F5583E"/><rect x="187" y="17.47934236440385" width="5" height="35.0" rx="2.5" fill="#F5583E"/><rect x="198" y="22.368943704855454" width="5" height="25.3" rx="2.5" fill="#F5583E"/><rect x="209" y="13.099188044211992" width="5" height="43.8" rx="2.5" fill="#F5583E"/><rect x="220" y="3.6249166587460913" width="5" height="62.8" rx="2.5" fill="#F5583E"/><rect x="231" y="10.397972860166426" width="5" height="49.2" rx="2.5" fill="#F5583E"/><rect x="242" y="13.139761540312769" width="5" height="43.7" rx="2.5" fill="#F5583E"/><rect x="253" y="-4.001782951101909" width="5" height="78.0" rx="2.5" fill="#F5583E"/><rect x="264" y="-1.579700482243254" width="5" height="73.2" rx="2.5" fill="#F5583E"/><rect x="275" y="14.85184082663325" width="5" height="40.3" rx="2.5" fill="#F5583E"/><rect x="286" y="18.952328298828263" width="5" height="32.1" rx="2.5" fill="#F5583E"/><rect x="297" y="21.800562262303036" width="5" height="26.4" rx="2.5" fill="#F5583E"/><rect x="308" y="12.411803850612106" width="5" height="45.2" rx="2.5" fill="#F5583E"/><rect x="319" y="15.453870369148799" width="5" height="39.1" rx="2.5" fill="#F5583E"/><rect x="330" y="11.305545773299553" width="5" height="47.4" rx="2.5" fill="#F5583E"/><rect x="341" y="-5.554602980570785" width="5" height="81.1" rx="2.5" fill="#F5583E"/>
+    </g>
+    <text x="30" y="220" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">AI가 가족 목소리 분석 + 사연 기반</text>
+    <text x="30" y="240" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">맞춤 가사·멜로디 생성</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,5840)"><rect width="1200" height="600" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">HOW IT WORKS</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">단 3단계, 2주면 완성됩니다</text>
+<path d="M 220 340 L 980 340" stroke="#FDBDB5" stroke-width="2.5" stroke-dasharray="4 8" fill="none"/>
+<g transform="translate(140, 200)">
+  <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+  <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">01</text>
+  <text x="130" y="90" text-anchor="middle" font-size="48">🎤</text>
+  <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">목소리 업로드</text>
+  <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">가족 목소리 30초 이상</text>
+  <text x="130" y="236" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">아무 녹음이어도 OK</text>
+  <text x="130" y="262" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">소요: 5분</text>
+</g>
+<g transform="translate(470, 200)">
+  <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+  <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">02</text>
+  <text x="130" y="90" text-anchor="middle" font-size="48">✍️</text>
+  <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">사연 작성</text>
+  <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">받는 분과의 추억</text>
+  <text x="130" y="236" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">전하고 싶은 마음을 자유롭게</text>
+  <text x="130" y="262" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">소요: 10분</text>
+</g>
+<g transform="translate(800, 200)">
+  <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+  <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">03</text>
+  <text x="130" y="90" text-anchor="middle" font-size="48">🎁</text>
+  <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">노래 + 앨범 수령</text>
+  <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">MP3 + 가사 카드</text>
+  <text x="130" y="236" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">앨범 커버 이미지 함께</text>
+  <text x="130" y="262" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">완성: 14일 내</text>
+</g>
+</g>
+<g transform="translate(0,6440)"><rect width="1200" height="550" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">TECHNOLOGY</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900" letter-spacing="-1.5" text-anchor="middle">AI가 만드는 진짜 음악, 자동 생성이 아닙니다</text>
+<g transform="translate(120, 200)">
+  <g>
+    <rect x="0" y="0" width="300" height="280" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="40" y="60" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900">01</text>
+    <text x="40" y="100" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">음성 클로닝</text>
+    <text x="40" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">30초 음성 → 고유 성문 추출</text>
+    <text x="40" y="160" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">Google Lyria 기반</text>
+    <text x="40" y="180" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">가족 목소리 특징을 학습</text>
+  </g>
+  <g transform="translate(330, 0)">
+    <rect x="0" y="0" width="300" height="280" rx="20" fill="#FFF1ED"/>
+    <text x="40" y="60" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900">02</text>
+    <text x="40" y="100" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">맞춤 작사·작곡</text>
+    <text x="40" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">사연 속 키워드 분석</text>
+    <text x="40" y="160" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">감정 흐름 설계</text>
+    <text x="40" y="180" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">오직 한 사람을 위한 가사</text>
+  </g>
+  <g transform="translate(660, 0)">
+    <rect x="0" y="0" width="300" height="280" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+    <text x="40" y="60" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900">03</text>
+    <text x="40" y="100" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="800">전문가 마스터링</text>
+    <text x="40" y="140" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">AI 생성 후 음향 엔지니어가</text>
+    <text x="40" y="160" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">마스터링 마무리</text>
+    <text x="40" y="180" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">실제 음원 퀄리티</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,6990)"><rect width="1200" height="650" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">WHAT'S INCLUDED</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900" letter-spacing="-1.5" text-anchor="middle">받으시는 것 — 한 곡, 그 이상</text>
+<g transform="translate(150, 210)">
+<g transform="translate(0,0)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">🎵</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">MP3 노래 파일</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">고음질 320kbps · 무제한 다운로드</text>
+</g><g transform="translate(310,0)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">📝</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">전체 가사 텍스트</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">편지처럼 인쇄해도 좋은 A4 레이아웃</text>
+</g><g transform="translate(620,0)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">🎨</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">AI 앨범 커버</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">가족 사진 기반 · 인쇄용 고해상도</text>
+</g><g transform="translate(0,180)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">💌</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">카카오톡 선물 링크</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">클릭 한 번으로 바로 선물 가능</text>
+</g><g transform="translate(310,180)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">🔒</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">평생 보관</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">클라우드 저장, 언제든 재다운로드</text>
+</g><g transform="translate(620,180)">
+  <rect x="0" y="0" width="290" height="150" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="36">♻️</text>
+  <text x="90" y="50" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">리터치 1회 무료</text>
+  <text x="90" y="74" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="12">가사·분위기 수정 요청 가능</text>
+</g></g></g>
+<g transform="translate(0,7640)"><rect width="1200" height="750" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">EARLY BIRD REWARDS</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">어버이날 한정, 특가 리워드</text>
+<text x="600" y="168" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="500" text-anchor="middle">텀블벅에서만 만날 수 있는 가격</text>
+
+<g transform="translate(140, 220)">
+  <rect x="0" y="0" width="290" height="420" rx="24" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="145" y="55" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="2">BASIC</text>
+  <text x="145" y="100" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">노래 제작</text>
+  <text x="145" y="145" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="14" text-decoration="line-through">29,000원</text>
+  <text x="145" y="190" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900">19,900원</text>
+  <line x1="30" y1="230" x2="260" y2="230" stroke="#EEE"/>
+  <g transform="translate(30, 260)">
+    <g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">맞춤 노래 1곡</text>
+  </g>
+  <g transform="translate(30, 290)">
+    <g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">MP3 + 가사 텍스트</text>
+  </g>
+  <g transform="translate(30, 320)">
+    <g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">카카오 선물 링크</text>
+  </g>
+</g>
+
+<g transform="translate(455, 200)">
+  <g transform="translate(145, 0)">
+    <rect x="-60" y="0" width="120" height="32" rx="16" fill="#F5583E"/>
+    <text x="0" y="21" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800">🎁 가장 인기</text>
+  </g>
+  <rect x="0" y="30" width="290" height="440" rx="24" fill="#FFF" stroke="#F5583E" stroke-width="3"/>
+  <text x="145" y="85" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="2">PREMIUM</text>
+  <text x="145" y="130" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">풀 패키지</text>
+  <text x="145" y="175" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="14" text-decoration="line-through">49,000원</text>
+  <text x="145" y="220" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="40" font-weight="900">34,900원</text>
+  <line x1="30" y1="260" x2="260" y2="260" stroke="#FDBDB5"/>
+  <g transform="translate(30, 290)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#F5583E"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="600">BASIC 모든 혜택</text></g>
+  <g transform="translate(30, 320)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#F5583E"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="600">가사 카드 이미지 (HD)</text></g>
+  <g transform="translate(30, 350)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#F5583E"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="600">AI 앨범 커버 이미지</text></g>
+  <g transform="translate(30, 380)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#F5583E"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="600">인쇄용 원본 파일</text></g>
+</g>
+
+<g transform="translate(770, 220)">
+  <rect x="0" y="0" width="290" height="420" rx="24" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="145" y="55" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="2">LIMITED 30</text>
+  <text x="145" y="100" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">VIP 스페셜</text>
+  <text x="145" y="145" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="14" text-decoration="line-through">79,000원</text>
+  <text x="145" y="190" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="36" font-weight="900">54,900원</text>
+  <line x1="30" y1="230" x2="260" y2="230" stroke="#EEE"/>
+  <g transform="translate(30, 260)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">PREMIUM 모든 혜택</text></g>
+  <g transform="translate(30, 290)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">가사 액자 (인쇄·배송)</text></g>
+  <g transform="translate(30, 320)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">우선 제작 (5~7일)</text></g>
+  <g transform="translate(30, 350)"><g transform="translate(6,-4)"><circle cx="0" cy="0" r="8" fill="#FDBDB5"/><path d="M -4 0 L -1 3 L 5 -3" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><text x="24" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">리터치 1회 무료</text></g>
+</g>
+</g>
+<g transform="translate(0,8390)"><rect width="1200" height="380" fill="#FFF1ED"/>
+<g transform="translate(600, 180)" text-anchor="middle">
+  <rect x="-220" y="-50" width="440" height="60" rx="30" fill="#FFF" stroke="#F5583E" stroke-width="2"/>
+  <text x="0" y="-12" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="800">⚡ 얼리버드 한정 100명</text>
+  <text x="0" y="70" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="42" font-weight="900">지금 펀딩하면</text>
+  <text x="0" y="130" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="42" font-weight="900">31% 할인 적용</text>
+  <text x="0" y="180" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">정가 29,000원 → 특가 19,900원</text>
+</g>
+</g>
+<g transform="translate(0,8770)"><rect width="1200" height="820" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">FAQ</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900" letter-spacing="-1.5" text-anchor="middle">자주 묻는 질문</text>
+<g transform="translate(200, 200)">
+<g transform="translate(0,0)">
+  <rect x="0" y="0" width="800" height="120" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="44" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">Q1.</text>
+  <text x="70" y="44" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">원본 음성은 어떻게 수집되나요?</text>
+  <text x="70" y="78" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">전화 녹음, 영상 속 목소리, 일상 대화 등 30초 이상의 녹음 파일이면 충분합니다. </text>
+  <text x="70" y="98" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">음질은 깔끔할수록 좋지만, 스마트폰으로 녹음한 일반 음성도 가능합니다.</text>
+</g><g transform="translate(0,140)">
+  <rect x="0" y="0" width="800" height="120" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="44" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">Q2.</text>
+  <text x="70" y="44" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">제작 기간은 얼마나 걸리나요?</text>
+  <text x="70" y="78" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">주문 후 영업일 기준 10~14일 소요됩니다. 어버이날(5/8) 이전 받으시려면 4/2</text>
+  <text x="70" y="98" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">4(금)까지 주문해주세요. VIP 리워드는 5~7일 우선 제작입니다.</text>
+</g><g transform="translate(0,280)">
+  <rect x="0" y="0" width="800" height="120" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="44" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">Q3.</text>
+  <text x="70" y="44" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">가사/분위기가 마음에 안 들면요?</text>
+  <text x="70" y="78" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">1회 무료 리터치가 가능합니다. 주제, 감정 톤, 특정 키워드 수정 요청을 받아 재작성</text>
+  <text x="70" y="98" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">해드립니다.</text>
+</g><g transform="translate(0,420)">
+  <rect x="0" y="0" width="800" height="120" rx="16" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <text x="30" y="44" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">Q4.</text>
+  <text x="70" y="44" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">프라이버시는 안전한가요?</text>
+  <text x="70" y="78" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">업로드된 원본 음성은 노래 제작 완료 후 30일 내 서버에서 완전 삭제됩니다. 외부에 </text>
+  <text x="70" y="98" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">공개되지 않으며, AI 학습 데이터로도 사용하지 않습니다.</text>
+</g></g></g>
+<g transform="translate(0,9590)"><rect width="1200" height="540" fill="#F8F8F8"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">ABOUT US</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900" letter-spacing="-1.5" text-anchor="middle">만드는 사람들, 이노하이(INNO-HI)</text>
+<g transform="translate(200, 200)">
+  <rect x="0" y="0" width="800" height="280" rx="20" fill="#FFF" stroke="#EEE" stroke-width="1.5"/>
+  <g transform="translate(60, 60)">
+    <circle cx="40" cy="40" r="40" fill="#FDBDB5"/>
+    <text x="40" y="50" text-anchor="middle" font-size="36">👨‍💼</text>
+    <text x="110" y="30" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800">김민수 · 한민우 공동대표</text>
+    <text x="110" y="55" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">AI 음성·음악 기술 10년차</text>
+    <text x="110" y="75" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13">복지 IT / 시니어 케어 전문 기업</text>
+  </g>
+  <g transform="translate(60, 170)">
+    <text x="0" y="0" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">\u201C부모님께 직접 마음 전하기 쑥스러워하는</text>
+    <text x="0" y="20" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">3040 자녀들을 위해 만들었습니다.</text>
+    <text x="0" y="45" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="13">기술은 도구일 뿐, 진짜 주인공은 가족의 목소리입니다.\u201D</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,10130)"><rect width="1200" height="500" fill="#FFFFFF"/>
+<text x="600" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4" text-anchor="middle">TIMELINE</text>
+<text x="600" y="130" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900" letter-spacing="-1.5" text-anchor="middle">어버이날까지 남은 일정</text>
+<g transform="translate(100, 280)">
+  <line x1="0" y1="0" x2="1000" y2="0" stroke="#FDBDB5" stroke-width="4" stroke-linecap="round"/>
+  <line x1="0" y1="0" x2="250" y2="0" stroke="#F5583E" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(0, 0)">
+    <circle cx="0" cy="0" r="12" fill="#F5583E"/>
+    <text x="0" y="-30" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">4/14</text>
+    <text x="0" y="36" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="700">펀딩 시작</text>
+  </g>
+  <g transform="translate(250, 0)">
+    <circle cx="0" cy="0" r="18" fill="#F5583E"/>
+    <circle cx="0" cy="0" r="6" fill="#FFF"/>
+    <text x="0" y="-35" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="900" letter-spacing="2">NOW</text>
+    <text x="0" y="44" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">특가 19,900원</text>
+  </g>
+  <g transform="translate(500, 0)">
+    <circle cx="0" cy="0" r="12" fill="#FFF" stroke="#FDBDB5" stroke-width="3"/>
+    <text x="0" y="-30" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">4/24</text>
+    <text x="0" y="36" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="700">주문 마감</text>
+  </g>
+  <g transform="translate(750, 0)">
+    <circle cx="0" cy="0" r="12" fill="#FFF" stroke="#FDBDB5" stroke-width="3"/>
+    <text x="0" y="-30" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">5/1~5/7</text>
+    <text x="0" y="36" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="700">제작·배송</text>
+  </g>
+  <g transform="translate(1000, 0)">
+    <circle cx="0" cy="0" r="18" fill="#F5583E"/>
+    <path d="M 0 -6 C -4 -10, -10 -6, -10 0 C -10 6, 0 12, 0 12 C 0 12, 10 6, 10 0 C 10 -6, 4 -10, 0 -6 Z" fill="#FFF"/>
+    <text x="0" y="-35" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="900">5/8</text>
+    <text x="0" y="44" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800">어버이날</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,10630)"><rect width="1200" height="450" fill="#2C2C2C"/>
+<g transform="translate(600, 100)" text-anchor="middle">
+  <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="800" letter-spacing="4">SOCIAL PROOF</text>
+  <text x="0" y="50" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="32" font-weight="900">실제 수령한 가족들의 반응</text>
+</g>
+<g transform="translate(0, 240)">
+  <g transform="translate(220, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="64" font-weight="900">94%</text>
+    <text x="0" y="36" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="700">눈물을 흘린 수령자</text>
+    <text x="0" y="58" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="12" opacity="0.6">첫 재생 시 반응</text>
+  </g>
+  <g transform="translate(600, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="64" font-weight="900">4.9</text>
+    <text x="0" y="36" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="700">평균 만족도 (5점)</text>
+    <text x="0" y="58" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="12" opacity="0.6">제작 후 설문</text>
+  </g>
+  <g transform="translate(980, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="64" font-weight="900">2주</text>
+    <text x="0" y="36" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="700">평균 제작 기간</text>
+    <text x="0" y="58" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="12" opacity="0.6">주문~완성</text>
+  </g>
+</g>
+</g>
+<g transform="translate(0,11080)"><rect width="1200" height="760" fill="#FFF1ED"/>
+<circle cx="150" cy="100" r="80" fill="#FDBDB5" opacity="0.3"/>
+<circle cx="1050" cy="400" r="100" fill="#FDBDB5" opacity="0.25"/>
+<g transform="translate(600, 120)" text-anchor="middle">
+  <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800" letter-spacing="4">2026 PARENTS' DAY</text>
+  <text x="0" y="70" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="52" font-weight="900" letter-spacing="-2">이번 어버이날엔</text>
+  <text x="0" y="130" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="52" font-weight="900" letter-spacing="-2">진심을 전해보세요</text>
+</g>
+
+<g transform="translate(600, 320)" text-anchor="middle">
+  <text x="0" y="0" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">얼리버드 특가</text>
+  <g transform="translate(-130, 10)">
+    <text x="0" y="70" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="20" text-decoration="line-through">29,000원</text>
+  </g>
+  <g transform="translate(130, 0)">
+    <text x="0" y="80" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="58" font-weight="900">19,900원</text>
+  </g>
+</g>
+
+<g transform="translate(600, 520)" text-anchor="middle">
+  <rect x="-180" y="0" width="360" height="80" rx="40" fill="#F5583E"/>
+  <text x="0" y="50" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">지금 펀딩 참여하기 →</text>
+</g>
+
+<text x="600" y="640" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="13">* 5월 8일 어버이날 배송 보장을 위해 4/24(금)까지 주문해주세요</text>
+
+<!-- Footer mini -->
+<g transform="translate(600, 700)" text-anchor="middle">
+  <g fill="#F5583E" transform="translate(-70, 0)">
+    <rect x="0" y="2" width="2.5" height="6" rx="1.25"/>
+    <rect x="4" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="9.5" y="-4" width="3" height="18" rx="1.5"/>
+    <path d="M 20 -4 Q 21 4 25 5 Q 21 6 20 14 Q 19 6 15 5 Q 19 4 20 -4 Z"/>
+    <rect x="28" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="33.5" y="-4" width="3" height="18" rx="1.5"/>
+    <rect x="38" y="2" width="2.5" height="6" rx="1.25"/>
+  </g>
+  <text x="0" y="10" text-anchor="middle" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="800">하이싱 · 목소리로 만드는 노래 선물</text>
+  <text x="0" y="36" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="11">주식회사 이노하이(INNO-HI) · contact@innohi.ai.kr</text>
+</g>
+</g>
+</svg>

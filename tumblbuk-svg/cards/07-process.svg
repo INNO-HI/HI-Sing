@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_7" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F8F8F8"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_7)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">HOW IT WORKS</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="50" font-weight="900" letter-spacing="-2" text-anchor="middle">단 3단계, 2주면 완성됩니다</text>
+<text x="620" y="300" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="400" text-anchor="middle">어려운 과정 없어요. 평범한 녹음 하나로 시작됩니다.</text>
+
+<path d="M 280 720 L 960 720" stroke="#FDBDB5" stroke-width="3" stroke-dasharray="5 10" fill="none"/>
+
+<g transform="translate(80, 440)">
+  <rect x="0" y="0" width="340" height="560" rx="32" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="170" cy="0" r="46" fill="#F5583E"/>
+  <text x="170" y="12" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">01</text>
+  <text x="170" y="170" text-anchor="middle" font-size="88">🎤</text>
+  <text x="170" y="340" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">목소리 업로드</text>
+  <text x="170" y="400" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">가족 목소리 30초 이상</text>
+  <text x="170" y="430" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">아무 녹음이어도 OK</text>
+  <text x="170" y="490" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">소요 5분</text>
+</g>
+<g transform="translate(450, 440)">
+  <rect x="0" y="0" width="340" height="560" rx="32" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="170" cy="0" r="46" fill="#F5583E"/>
+  <text x="170" y="12" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">02</text>
+  <text x="170" y="170" text-anchor="middle" font-size="88">✍️</text>
+  <text x="170" y="340" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">사연 작성</text>
+  <text x="170" y="400" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">받는 분과의 추억</text>
+  <text x="170" y="430" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">마음을 자유롭게</text>
+  <text x="170" y="490" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">소요 10분</text>
+</g>
+<g transform="translate(820, 440)">
+  <rect x="0" y="0" width="340" height="560" rx="32" fill="#FFF" stroke="#FDBDB5" stroke-width="2"/>
+  <circle cx="170" cy="0" r="46" fill="#F5583E"/>
+  <text x="170" y="12" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">03</text>
+  <text x="170" y="170" text-anchor="middle" font-size="88">🎁</text>
+  <text x="170" y="340" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="900">노래 + 앨범</text>
+  <text x="170" y="400" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">MP3 + 가사 카드</text>
+  <text x="170" y="430" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">앨범 커버 이미지</text>
+  <text x="170" y="490" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">완성 14일 내</text>
+</g>
+
+<text x="620" y="1500" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="18">어버이날 배송 보장: 4/24(금)까지 주문</text>
+
+</svg>

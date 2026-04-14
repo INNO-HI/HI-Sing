@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF9F6"/>
+      <stop offset="100%" stop-color="#FFE8E2"/>
+    </linearGradient>
+    <linearGradient id="carnation" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5583E"/>
+      <stop offset="100%" stop-color="#C9371E"/>
+    </linearGradient>
+    <radialGradient id="waveGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5583E" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F5583E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <!-- Background glow -->
+  <circle cx="600" cy="380" r="280" fill="url(#waveGlow)"/>
+
+  <!-- Date ribbon top-left -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="44" rx="22" fill="#F5583E"/>
+    <text x="90" y="28" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="15" font-weight="700" letter-spacing="1">5·8 어버이날</text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(80, 170)">
+    <text x="0" y="0" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="56" font-weight="800" letter-spacing="-1.5">
+      올해 어버이날엔
+    </text>
+    <text x="0" y="72" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="56" font-weight="800" letter-spacing="-1.5">
+      <tspan fill="#F5583E">노래</tspan> 한 곡 어떠세요?
+    </text>
+    <text x="0" y="128" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="400">
+      가족 목소리로 만드는, 세상에 단 하나뿐인 선물
+    </text>
+  </g>
+
+  <!-- CTA button -->
+  <g transform="translate(80, 360)" cursor="pointer">
+    <rect x="0" y="0" width="220" height="60" rx="30" fill="#F5583E"/>
+    <text x="110" y="38" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="700">노래 선물하기 →</text>
+  </g>
+
+  <!-- Price hint -->
+  <text x="80" y="450" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="14">29,000원부터 · 2주 안에 완성</text>
+
+  <!-- Right side: Carnation + Sound wave composition -->
+  <g transform="translate(720, 170)">
+
+    <!-- Sound wave circles (ripples) -->
+    <circle cx="200" cy="200" r="240" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.2" stroke-dasharray="3 6"/>
+    <circle cx="200" cy="200" r="190" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="3 6"/>
+    <circle cx="200" cy="200" r="140" stroke="#F5583E" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+
+    <!-- Waveform bars radiating from center (arc) -->
+    <g transform="translate(200, 200)">
+      <g fill="#F5583E">
+        <!-- 12 bars in circle -->
+        <g transform="rotate(-90)"><rect x="-2.5" y="90" width="5" height="18" rx="2.5"/></g>
+        <g transform="rotate(-60)"><rect x="-2.5" y="90" width="5" height="26" rx="2.5"/></g>
+        <g transform="rotate(-30)"><rect x="-2.5" y="90" width="5" height="14" rx="2.5"/></g>
+        <g transform="rotate(0)"><rect x="-2.5" y="90" width="5" height="22" rx="2.5"/></g>
+        <g transform="rotate(30)"><rect x="-2.5" y="90" width="5" height="30" rx="2.5"/></g>
+        <g transform="rotate(60)"><rect x="-2.5" y="90" width="5" height="16" rx="2.5"/></g>
+        <g transform="rotate(90)"><rect x="-2.5" y="90" width="5" height="24" rx="2.5"/></g>
+        <g transform="rotate(120)"><rect x="-2.5" y="90" width="5" height="18" rx="2.5"/></g>
+        <g transform="rotate(150)"><rect x="-2.5" y="90" width="5" height="28" rx="2.5"/></g>
+        <g transform="rotate(180)"><rect x="-2.5" y="90" width="5" height="14" rx="2.5"/></g>
+        <g transform="rotate(210)"><rect x="-2.5" y="90" width="5" height="22" rx="2.5"/></g>
+        <g transform="rotate(240)"><rect x="-2.5" y="90" width="5" height="32" rx="2.5"/></g>
+      </g>
+    </g>
+
+    <!-- Center: Carnation flower -->
+    <g transform="translate(200, 200)">
+      <!-- Stem + leaves -->
+      <path d="M 0,30 Q -2,60 0,100" stroke="#2D7A3E" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M 0,60 Q -20,55 -30,70 Q -20,75 0,70 Z" fill="#3AA556"/>
+      <path d="M 0,80 Q 22,72 34,88 Q 22,95 0,90 Z" fill="#2D7A3E"/>
+
+      <!-- Carnation petals (layered ruffled circles) -->
+      <g>
+        <circle cx="0" cy="0" r="42" fill="url(#carnation)"/>
+        <!-- Inner ruffles -->
+        <g fill="#E54428">
+          <ellipse cx="-18" cy="-18" rx="18" ry="22" transform="rotate(-20 -18 -18)"/>
+          <ellipse cx="18" cy="-18" rx="18" ry="22" transform="rotate(20 18 -18)"/>
+          <ellipse cx="-18" cy="18" rx="18" ry="22" transform="rotate(20 -18 18)"/>
+          <ellipse cx="18" cy="18" rx="18" ry="22" transform="rotate(-20 18 18)"/>
+          <ellipse cx="0" cy="-22" rx="14" ry="18"/>
+          <ellipse cx="0" cy="22" rx="14" ry="18"/>
+        </g>
+        <!-- Center highlight -->
+        <circle cx="0" cy="0" r="16" fill="#C9371E"/>
+        <circle cx="-4" cy="-4" r="8" fill="#F5583E" fill-opacity="0.6"/>
+        <!-- Musical note inside flower -->
+        <g fill="#FFF" transform="translate(-8, -10)">
+          <circle cx="3" cy="14" r="4.5"/>
+          <rect x="6.5" y="0" width="2" height="14" rx="1"/>
+          <path d="M 6.5 0 Q 14 2 14 8 Q 10 4 6.5 6 Z"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Small floating music notes -->
+    <g fill="#F5583E" opacity="0.85">
+      <g transform="translate(60, 80)">
+        <circle cx="0" cy="8" r="4"/>
+        <rect x="3" y="-6" width="1.5" height="14" rx="0.75"/>
+      </g>
+      <g transform="translate(340, 60) rotate(15)">
+        <circle cx="0" cy="8" r="5"/>
+        <rect x="4" y="-10" width="2" height="18" rx="1"/>
+      </g>
+      <g transform="translate(60, 320) rotate(-10)">
+        <circle cx="0" cy="8" r="4"/>
+        <rect x="3" y="-6" width="1.5" height="14" rx="0.75"/>
+      </g>
+      <g transform="translate(360, 330) rotate(20)" fill="#FDBDB5">
+        <circle cx="0" cy="8" r="5"/>
+        <rect x="4" y="-10" width="2" height="18" rx="1"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom trust line -->
+  <g transform="translate(80, 580)">
+    <circle cx="8" cy="8" r="8" fill="#FEDBD6"/>
+    <path d="M 4 8 L 7 11 L 12 5" stroke="#F5583E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="28" y="13" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="500">텀블벅 얼리버드 한정 · 1,000명 이상의 가족이 선택</text>
+  </g>
+
+  <!-- Logo top-right -->
+  <g transform="translate(1050, 50)" fill="#F5583E">
+    <text x="0" y="30" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800">하이싱</text>
+  </g>
+</svg>

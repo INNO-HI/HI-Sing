@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_11" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8F8F8"/><stop offset="100%" stop-color="#2C2C2C"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_11)"/>
+
+<g transform="translate(620, 220)" text-anchor="middle">
+  <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">SOCIAL PROOF</text>
+  <text x="0" y="90" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="48" font-weight="900" letter-spacing="-2" text-anchor="middle">숫자로 보는 하이싱</text>
+</g>
+
+<g transform="translate(620, 700)">
+  <g transform="translate(-400, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="120" font-weight="900">94%</text>
+    <text x="0" y="60" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="700">눈물을 흘린 수령자</text>
+    <text x="0" y="96" fill="#FFF" opacity="0.6" font-family="'Pretendard','A2G',sans-serif" font-size="18">첫 재생 시 반응</text>
+  </g>
+  <g transform="translate(0, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="120" font-weight="900">4.9</text>
+    <text x="0" y="60" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="700">평균 만족도 (5점)</text>
+    <text x="0" y="96" fill="#FFF" opacity="0.6" font-family="'Pretendard','A2G',sans-serif" font-size="18">제작 후 설문</text>
+  </g>
+  <g transform="translate(400, 0)" text-anchor="middle">
+    <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="120" font-weight="900">2주</text>
+    <text x="0" y="60" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="24" font-weight="700">평균 제작 기간</text>
+    <text x="0" y="96" fill="#FFF" opacity="0.6" font-family="'Pretendard','A2G',sans-serif" font-size="18">주문~완성</text>
+  </g>
+</g>
+
+<g transform="translate(620, 1360)" text-anchor="middle">
+  <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="3">“ 한번 들으면, 평생 들으신다고 합니다. ”</text>
+  <text x="0" y="40" fill="#FFF" opacity="0.6" font-family="'Pretendard','A2G',sans-serif" font-size="18">— 실제 수령자 가족 후기 평균</text>
+</g>
+
+</svg>

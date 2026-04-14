@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2C2C2C"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_6)"/>
+
+<g transform="translate(620, 300)" text-anchor="middle">
+  <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="200" font-weight="900" opacity="0.3">“</text>
+  <text x="0" y="160" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="56" font-weight="900" letter-spacing="-1.5">아빠 눈물,</text>
+  <text x="0" y="240" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="56" font-weight="900" letter-spacing="-1.5">태어나서 처음 봤어요.</text>
+  <text x="0" y="306" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" opacity="0.7">— 30대 딸, 아버지 생신 선물</text>
+</g>
+
+<g transform="translate(620, 800)" text-anchor="middle">
+  <text x="0" y="0" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="4">다른 사연들</text>
+</g>
+
+<g transform="translate(120, 880)">
+  <rect x="0" y="0" width="480" height="240" rx="24" fill="#FFF" fill-opacity="0.08" stroke="#FFF" stroke-opacity="0.18" stroke-width="1"/>
+  <text x="40" y="56" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800" letter-spacing="3">바쁘다는 핑계</text>
+  <text x="40" y="108" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="700" font-style="italic">“가장 닮고 싶은</text>
+  <text x="40" y="140" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="700" font-style="italic">사람은 당신이에요”</text>
+  <text x="40" y="192" fill="#FFF" opacity="0.55" font-family="'Pretendard','A2G',sans-serif" font-size="16">아버지 생신 · 30대 딸</text>
+</g>
+
+<g transform="translate(640, 880)">
+  <rect x="0" y="0" width="480" height="240" rx="24" fill="#FFF" fill-opacity="0.08" stroke="#FFF" stroke-opacity="0.18" stroke-width="1"/>
+  <text x="40" y="56" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="800" letter-spacing="3">수화기 너머의 핑계</text>
+  <text x="40" y="108" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="700" font-style="italic">“두 분의 40년을</text>
+  <text x="40" y="140" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="700" font-style="italic">안아드릴게요”</text>
+  <text x="40" y="192" fill="#FFF" opacity="0.55" font-family="'Pretendard','A2G',sans-serif" font-size="16">결혼기념일 · 40대 아들</text>
+</g>
+
+<!-- arrow hint to lighter -->
+<g transform="translate(620, 1400)" text-anchor="middle">
+  <text x="0" y="0" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="18" letter-spacing="3">어떻게 만들어지는지 ↓</text>
+</g>
+
+</svg>

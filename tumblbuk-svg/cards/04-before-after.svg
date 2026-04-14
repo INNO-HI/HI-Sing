@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8F8F8"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_4)"/>
+
+<text x="620" y="140" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="6" text-anchor="middle">LISTEN &amp; COMPARE</text>
+<text x="620" y="230" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="50" font-weight="900" letter-spacing="-2" text-anchor="middle">목소리가 노래가 되는 순간</text>
+
+<g transform="translate(100, 400)">
+  <rect x="0" y="0" width="500" height="460" rx="28" fill="#FFF" stroke="#EEE" stroke-width="2"/>
+  <text x="40" y="70" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="3">BEFORE</text>
+  <text x="40" y="120" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900">가족 목소리</text>
+  <text x="40" y="160" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">30초 녹음</text>
+  <g transform="translate(40, 220)">
+<rect x="0" y="34.0" width="7" height="24.0" rx="3.5" fill="#BDBDBD"/><rect x="12" y="21.53493599629072" width="7" height="48.9" rx="3.5" fill="#BDBDBD"/><rect x="24" y="12.121754394994696" width="7" height="67.8" rx="3.5" fill="#BDBDBD"/><rect x="36" y="8.065130348294588" width="7" height="75.9" rx="3.5" fill="#BDBDBD"/><rect x="48" y="10.358266902532279" width="7" height="71.3" rx="3.5" fill="#BDBDBD"/><rect x="60" y="18.439724253297133" width="7" height="55.1" rx="3.5" fill="#BDBDBD"/><rect x="72" y="30.330879790443454" width="7" height="31.3" rx="3.5" fill="#BDBDBD"/><rect x="84" y="24.879636080069886" width="7" height="42.2" rx="3.5" fill="#BDBDBD"/><rect x="96" y="14.323135121993865" width="7" height="63.4" rx="3.5" fill="#BDBDBD"/><rect x="108" y="8.584216940707478" width="7" height="74.8" rx="3.5" fill="#BDBDBD"/><rect x="120" y="9.067968858758405" width="7" height="73.9" rx="3.5" fill="#BDBDBD"/><rect x="132" y="15.655951535169809" width="7" height="60.7" rx="3.5" fill="#BDBDBD"/><rect x="144" y="26.735197046827928" width="7" height="38.5" rx="3.5" fill="#BDBDBD"/><rect x="156" y="28.406880309716797" width="7" height="35.2" rx="3.5" fill="#BDBDBD"/><rect x="168" y="16.918348433311486" width="7" height="58.2" rx="3.5" fill="#BDBDBD"/><rect x="180" y="9.612000603856785" width="7" height="72.8" rx="3.5" fill="#BDBDBD"/><rect x="192" y="8.276685587792073" width="7" height="75.4" rx="3.5" fill="#BDBDBD"/><rect x="204" y="13.239335071789256" width="7" height="65.5" rx="3.5" fill="#BDBDBD"/><rect x="216" y="23.28491938371433" width="7" height="45.4" rx="3.5" fill="#BDBDBD"/><rect x="228" y="32.04607086799296" width="7" height="27.9" rx="3.5" fill="#BDBDBD"/><rect x="240" y="19.855451116876388" width="7" height="52.3" rx="3.5" fill="#BDBDBD"/><rect x="252" y="11.127910240736576" width="7" height="69.7" rx="3.5" fill="#BDBDBD"/><rect x="264" y="8.000254629681706" width="7" height="76.0" rx="3.5" fill="#BDBDBD"/><rect x="276" y="11.238243458100854" width="7" height="69.5" rx="3.5" fill="#BDBDBD"/><rect x="288" y="20.049104131988692" width="7" height="51.9" rx="3.5" fill="#BDBDBD"/><rect x="300" y="32.275630668868786" width="7" height="27.4" rx="3.5" fill="#BDBDBD"/><rect x="312" y="23.075657042507338" width="7" height="45.8" rx="3.5" fill="#BDBDBD"/><rect x="324" y="13.101604909657858" width="7" height="65.8" rx="3.5" fill="#BDBDBD"/><rect x="336" y="8.244208751933371" width="7" height="75.5" rx="3.5" fill="#BDBDBD"/><rect x="348" y="9.692728556358247" width="7" height="72.6" rx="3.5" fill="#BDBDBD"/><rect x="360" y="17.092516155914964" width="7" height="57.8" rx="3.5" fill="#BDBDBD"/><rect x="372" y="28.63184546961729" width="7" height="34.7" rx="3.5" fill="#BDBDBD"/><rect x="384" y="26.5145137667083" width="7" height="39.0" rx="3.5" fill="#BDBDBD"/><rect x="396" y="15.4935810984028" width="7" height="61.0" rx="3.5" fill="#BDBDBD"/>
+  </g>
+  <text x="40" y="380" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">전화 녹음·영상·일상 대화</text>
+  <text x="40" y="410" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="18">스마트폰 녹음도 OK</text>
+</g>
+
+<g transform="translate(640, 400)">
+  <rect x="0" y="0" width="500" height="460" rx="28" fill="#FFF1ED" stroke="#F5583E" stroke-width="3"/>
+  <text x="40" y="70" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800" letter-spacing="3">AFTER</text>
+  <text x="40" y="120" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="34" font-weight="900">완성된 노래</text>
+  <text x="40" y="160" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="20">맞춤 작곡·작사</text>
+  <g transform="translate(40, 220)">
+<rect x="0" y="31.0" width="7" height="30.0" rx="3.5" fill="#F5583E"/><rect x="12" y="21.921830283163473" width="7" height="48.2" rx="3.5" fill="#F5583E"/><rect x="24" y="30.285187748435497" width="7" height="31.4" rx="3.5" fill="#F5583E"/><rect x="36" y="6.693967459833317" width="7" height="78.6" rx="3.5" fill="#F5583E"/><rect x="48" y="-6.38323405572153" width="7" height="104.8" rx="3.5" fill="#F5583E"/><rect x="60" y="6.559306786643589" width="7" height="78.9" rx="3.5" fill="#F5583E"/><rect x="72" y="28.12986220106695" width="7" height="35.7" rx="3.5" fill="#F5583E"/><rect x="84" y="12.204115423236566" width="7" height="67.6" rx="3.5" fill="#F5583E"/><rect x="96" y="18.357203209493107" width="7" height="55.3" rx="3.5" fill="#F5583E"/><rect x="108" y="30.8056467204787" width="7" height="30.4" rx="3.5" fill="#F5583E"/><rect x="120" y="29.0605190834433" width="7" height="33.9" rx="3.5" fill="#F5583E"/><rect x="132" y="10.946734869034351" width="7" height="70.1" rx="3.5" fill="#F5583E"/><rect x="144" y="-1.6127429830017235" width="7" height="95.2" rx="3.5" fill="#F5583E"/><rect x="156" y="9.963052971955747" width="7" height="72.1" rx="3.5" fill="#F5583E"/><rect x="168" y="23.421178964301163" width="7" height="45.2" rx="3.5" fill="#F5583E"/><rect x="180" y="3.457019642343141" width="7" height="85.1" rx="3.5" fill="#F5583E"/><rect x="192" y="7.663563767500072" width="7" height="76.7" rx="3.5" fill="#F5583E"/><rect x="204" y="24.640500328244876" width="7" height="42.7" rx="3.5" fill="#F5583E"/><rect x="216" y="30.833995359483573" width="7" height="30.3" rx="3.5" fill="#F5583E"/><rect x="228" y="19.09230485600186" width="7" height="53.8" rx="3.5" fill="#F5583E"/><rect x="240" y="7.0915611010783834" width="7" height="77.8" rx="3.5" fill="#F5583E"/><rect x="252" y="15.670765622877475" width="7" height="60.7" rx="3.5" fill="#F5583E"/><rect x="264" y="19.14369795106284" width="7" height="53.7" rx="3.5" fill="#F5583E"/><rect x="276" y="-2.5689250713957463" width="7" height="97.1" rx="3.5" fill="#F5583E"/><rect x="288" y="0.499046055825211" width="7" height="91.0" rx="3.5" fill="#F5583E"/><rect x="300" y="21.31233171373545" width="7" height="49.4" rx="3.5" fill="#F5583E"/><rect x="312" y="26.506282511849133" width="7" height="39.0" rx="3.5" fill="#F5583E"/><rect x="324" y="30.11404553225051" width="7" height="31.8" rx="3.5" fill="#F5583E"/><rect x="336" y="18.221618210775333" width="7" height="55.6" rx="3.5" fill="#F5583E"/><rect x="348" y="22.07490246758848" width="7" height="47.9" rx="3.5" fill="#F5583E"/><rect x="360" y="16.820357979512767" width="7" height="58.4" rx="3.5" fill="#F5583E"/><rect x="372" y="-4.53583044205633" width="7" height="101.1" rx="3.5" fill="#F5583E"/><rect x="384" y="-2.220213511898656" width="7" height="96.4" rx="3.5" fill="#F5583E"/><rect x="396" y="21.343292867721008" width="7" height="49.3" rx="3.5" fill="#F5583E"/>
+  </g>
+  <g transform="translate(40, 360)">
+    <rect x="0" y="0" width="80" height="36" rx="18" fill="#F5583E"/>
+    <path d="M 30 10 L 46 18 L 30 26 Z" fill="#FFF"/>
+    <text x="98" y="24" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="18" font-weight="700">식탁 위의 온기</text>
+  </g>
+  <text x="40" y="420" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16">3:24 · MP3 고음질</text>
+</g>
+
+<g transform="translate(620, 950)" text-anchor="middle">
+  <circle cx="0" cy="0" r="46" fill="#F5583E"/>
+  <path d="M -14 -10 L 10 0 L -14 10 Z" fill="#FFF"/>
+</g>
+
+<text x="620" y="1130" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="400" text-anchor="middle">AI가 가족 목소리의 특징을 학습하고</text>
+<text x="620" y="1170" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="400" text-anchor="middle">사연 속 감정을 바탕으로 가사와 멜로디를 만듭니다</text>
+
+<g transform="translate(620, 1340)">
+  <rect x="-220" y="0" width="440" height="88" rx="44" fill="#2C2C2C"/>
+  <text x="0" y="58" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="26" font-weight="800">샘플 전체 듣기 ▶</text>
+</g>
+
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1722" width="1240" height="1722">
+<defs><linearGradient id="bg_12" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2C2C2C"/><stop offset="100%" stop-color="#FFF1ED"/></linearGradient></defs>
+<rect width="1240" height="1722" fill="url(#bg_12)"/>
+
+<g transform="translate(620, 240)" text-anchor="middle">
+  <text x="0" y="0" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="800" letter-spacing="5">2026 PARENTS' DAY</text>
+</g>
+
+<g transform="translate(620, 420)" text-anchor="middle">
+  <text x="0" y="0" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="76" font-weight="900" letter-spacing="-2.5">이번 어버이날엔</text>
+  <text x="0" y="96" fill="#FDBDB5" font-family="'Pretendard','A2G',sans-serif" font-size="76" font-weight="900" letter-spacing="-2.5">진심을 전해보세요</text>
+</g>
+
+<g transform="translate(620, 820)" text-anchor="middle">
+  <text x="0" y="0" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="22">얼리버드 특가</text>
+  <text x="-170" y="98" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="30" text-decoration="line-through">29,000원</text>
+  <text x="130" y="98" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="82" font-weight="900">19,900원</text>
+</g>
+
+<g transform="translate(620, 1090)" text-anchor="middle">
+  <rect x="-260" y="0" width="520" height="110" rx="55" fill="#F5583E"/>
+  <text x="0" y="72" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="30" font-weight="800">지금 펀딩 참여하기 →</text>
+</g>
+
+<text x="620" y="1320" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="18">* 5월 8일 어버이날 배송 보장을 위해 4/24(금)까지 주문해주세요</text>
+
+<g transform="translate(620, 1480)" text-anchor="middle">
+  <g fill="#F5583E" transform="translate(-50, -4)">
+    <rect x="0" y="6" width="4" height="10" rx="2"/>
+    <rect x="7" y="-4" width="5" height="30" rx="2.5"/>
+    <rect x="16" y="-4" width="5" height="30" rx="2.5"/>
+    <path d="M 32 -4 Q 34 10 40 12 Q 34 14 32 28 Q 30 14 24 12 Q 30 10 32 -4 Z"/>
+    <rect x="44" y="-4" width="5" height="30" rx="2.5"/>
+    <rect x="53" y="-4" width="5" height="30" rx="2.5"/>
+    <rect x="62" y="6" width="4" height="10" rx="2"/>
+  </g>
+  <text x="50" y="14" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">하이싱</text>
+</g>
+<text x="620" y="1570" text-anchor="middle" fill="#444444" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="600">목소리로 만드는 노래 선물</text>
+<text x="620" y="1620" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="16">주식회사 이노하이(INNO-HI) · contact@innohi.ai.kr</text>
+
+</svg>

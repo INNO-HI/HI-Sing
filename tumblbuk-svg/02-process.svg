@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF5F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg2)"/>
+
+  <!-- Section label -->
+  <text x="600" y="90" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="14" font-weight="800" letter-spacing="4">HOW IT WORKS</text>
+  <text x="600" y="140" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="40" font-weight="900" letter-spacing="-1.5">단 3단계, 2주면 완성됩니다</text>
+  <text x="600" y="174" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="16" font-weight="400">어려운 과정 없이, 평범한 녹음 하나로 시작돼요</text>
+
+  <!-- Connecting dotted line -->
+  <path d="M 220 410 L 980 410" stroke="#FDBDB5" stroke-width="2.5" stroke-dasharray="4 8" fill="none"/>
+
+  <!-- === STEP 1 === -->
+  <g transform="translate(140, 270)">
+    <!-- Card -->
+    <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FEDBD6" stroke-width="2"/>
+    <!-- Number badge -->
+    <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+    <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">01</text>
+
+    <!-- Icon: Microphone -->
+    <g transform="translate(130, 90)">
+      <rect x="-22" y="-38" width="44" height="54" rx="22" fill="#FEDBD6"/>
+      <rect x="-16" y="-32" width="32" height="42" rx="16" fill="#F5583E"/>
+      <rect x="-3" y="16" width="6" height="14" rx="1" fill="#F5583E"/>
+      <rect x="-20" y="30" width="40" height="4" rx="2" fill="#F5583E"/>
+      <!-- Sound waves -->
+      <path d="M -38 -10 Q -44 0 -38 10" stroke="#FDBDB5" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 38 -10 Q 44 0 38 10" stroke="#FDBDB5" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Text -->
+    <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">목소리 업로드</text>
+    <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">가족 목소리 30초 이상</text>
+    <text x="130" y="234" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">전화 녹음·영상·대화 모두 OK</text>
+    <text x="130" y="264" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">소요: 5분</text>
+  </g>
+
+  <!-- === STEP 2 === -->
+  <g transform="translate(470, 270)">
+    <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FEDBD6" stroke-width="2"/>
+    <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+    <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">02</text>
+
+    <!-- Icon: Pen + Heart (story) -->
+    <g transform="translate(130, 90)">
+      <rect x="-32" y="-32" width="64" height="56" rx="6" fill="#FEDBD6"/>
+      <line x1="-22" y1="-18" x2="22" y2="-18" stroke="#F5583E" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-22" y1="-8" x2="22" y2="-8" stroke="#F5583E" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-22" y1="2" x2="10" y2="2" stroke="#F5583E" stroke-width="2" stroke-linecap="round"/>
+      <!-- Heart -->
+      <path d="M 22 18 C 22 14, 18 10, 14 12 C 10 10, 6 14, 6 18 C 6 24, 14 30, 14 30 C 14 30, 22 24, 22 18 Z" fill="#F5583E"/>
+    </g>
+
+    <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">사연 작성</text>
+    <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">받는 분과의 추억, 전하고</text>
+    <text x="130" y="234" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">싶은 마음을 자유롭게 글로</text>
+    <text x="130" y="264" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">소요: 10분</text>
+  </g>
+
+  <!-- === STEP 3 === -->
+  <g transform="translate(800, 270)">
+    <rect x="0" y="0" width="260" height="280" rx="24" fill="#FFF" stroke="#FEDBD6" stroke-width="2"/>
+    <circle cx="130" cy="0" r="32" fill="#F5583E"/>
+    <text x="130" y="8" text-anchor="middle" fill="#FFF" font-family="'Pretendard','A2G',sans-serif" font-size="22" font-weight="900">03</text>
+
+    <!-- Icon: Music/Gift -->
+    <g transform="translate(130, 90)">
+      <!-- Gift box -->
+      <rect x="-30" y="-18" width="60" height="40" rx="4" fill="#FEDBD6"/>
+      <rect x="-30" y="-22" width="60" height="10" rx="2" fill="#F5583E"/>
+      <rect x="-4" y="-22" width="8" height="44" fill="#C9371E"/>
+      <!-- Ribbon top bow -->
+      <path d="M -12 -28 Q -2 -36 0 -22 Q 2 -36 12 -28 Q 10 -22 0 -22 Q -10 -22 -12 -28 Z" fill="#F5583E"/>
+      <!-- Note popping out -->
+      <g transform="translate(8, -40)">
+        <circle cx="0" cy="8" r="4" fill="#C9371E"/>
+        <rect x="3" y="-4" width="2" height="12" rx="1" fill="#C9371E"/>
+        <path d="M 3 -4 Q 10 -2 10 4 Q 6 0 3 2 Z" fill="#C9371E"/>
+      </g>
+    </g>
+
+    <text x="130" y="180" text-anchor="middle" fill="#2C2C2C" font-family="'Pretendard','A2G',sans-serif" font-size="20" font-weight="800">노래 + 앨범 수령</text>
+    <text x="130" y="216" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">MP3 파일 + 가사 카드</text>
+    <text x="130" y="234" text-anchor="middle" fill="#6B7280" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">앨범 커버 이미지 함께</text>
+    <text x="130" y="264" text-anchor="middle" fill="#F5583E" font-family="'Pretendard','A2G',sans-serif" font-size="12" font-weight="700">완성: 14일 내</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="600" y="630" text-anchor="middle" fill="#AAAAAA" font-family="'Pretendard','A2G',sans-serif" font-size="13" font-weight="500">어버이날(5월 8일)까지 배송 받으시려면 4월 24일(금)까지 주문해주세요</text>
+</svg>
