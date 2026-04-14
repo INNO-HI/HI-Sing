@@ -1,65 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" fill="none">
-  <defs>
-    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FA8C7D"/>
-      <stop offset="100%" stop-color="#F5583E"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Heart envelope -->
+  <!-- Heart -->
   <g transform="translate(25, 25)">
-    <path d="M 75 142 C 35 108, 0 82, 0 48 C 0 22, 22 2, 45 7 C 58 10, 68 22, 75 34 C 82 22, 92 10, 105 7 C 128 2, 150 22, 150 48 C 150 82, 115 108, 75 142 Z" fill="url(#h)"/>
-    <path d="M 15 38 Q 20 18 38 14" stroke="#FFF" stroke-width="3" stroke-linecap="round" opacity="0.3" fill="none"/>
+    <path d="M 75 142 C 35 108, 0 82, 0 48 C 0 22, 22 2, 45 7 C 58 10, 68 22, 75 34 C 82 22, 92 10, 105 7 C 128 2, 150 22, 150 48 C 150 82, 115 108, 75 142 Z" fill="#F5583E"/>
 
-    <!-- Grandpa -->
-    <g transform="translate(40, 55)">
-      <path d="M -12 24 Q -14 44 -8 52 L 12 52 Q 18 44 13 24 Q 10 10 0 10 Q -9 10 -12 24 Z" fill="#FFF"/>
-      <circle cx="0" cy="0" r="11" fill="#FFF"/>
-      <circle cx="-3.5" cy="-1" r="2.5" stroke="#F5583E" stroke-width="1" fill="none"/>
-      <circle cx="3.5" cy="-1" r="2.5" stroke="#F5583E" stroke-width="1" fill="none"/>
-      <line x1="-1" y1="-1" x2="1" y2="-1" stroke="#F5583E" stroke-width="1"/>
-      <ellipse cx="0" cy="5" rx="3" ry="2.5" fill="#F5583E"/>
-      <path d="M -9 -8 Q 0 -14 9 -8 Q 7 -11 0 -10 Q -7 -11 -9 -8 Z" fill="#FEDBD6"/>
-      <path d="M 10 18 Q 20 12 26 20" stroke="#FFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- Family silhouettes — clean, no faces -->
+    <!-- Parent (left, tall) -->
+    <g transform="translate(40, 54)">
+      <circle cx="0" cy="0" r="10" fill="#FFF"/>
+      <path d="M -12 20 Q -14 42 -8 50 L 12 50 Q 18 42 13 20 Q 10 10 0 10 Q -9 10 -12 20 Z" fill="#FFF"/>
     </g>
-
-    <!-- Grandma -->
-    <g transform="translate(110, 55)">
-      <path d="M -12 24 Q -14 44 -10 52 L 10 52 Q 14 44 12 24 Q 10 10 0 10 Q -10 10 -12 24 Z" fill="#FFF"/>
-      <circle cx="0" cy="0" r="11" fill="#FFF"/>
-      <circle cx="0" cy="-11" r="5" fill="#FFF"/>
-      <path d="M -4 -1 Q -2 -3 0 -1" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M 0 -1 Q 2 -3 4 -1" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <ellipse cx="0" cy="5" rx="3" ry="2.5" fill="#F5583E"/>
-      <circle cx="-7" cy="3" r="1.5" fill="#F5583E" opacity="0.5"/>
-      <circle cx="7" cy="3" r="1.5" fill="#F5583E" opacity="0.5"/>
-      <path d="M -10 18 Q -20 12 -26 20" stroke="#FFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- Parent (right, tall) -->
+    <g transform="translate(110, 54)">
+      <circle cx="0" cy="0" r="10" fill="#FFF"/>
+      <path d="M -12 20 Q -14 42 -10 50 L 10 50 Q 14 42 12 20 Q 10 10 0 10 Q -10 10 -12 20 Z" fill="#FFF"/>
     </g>
-
-    <!-- Child -->
-    <g transform="translate(75, 78)">
-      <path d="M -8 16 Q -10 28 -6 34 L 6 34 Q 10 28 8 16 Q 6 8 0 7 Q -6 8 -8 16 Z" fill="#FFF"/>
-      <circle cx="0" cy="0" r="8.5" fill="#FFF"/>
-      <circle cx="-2.5" cy="-1" r="1" fill="#F5583E"/>
-      <circle cx="2.5" cy="-1" r="1" fill="#F5583E"/>
-      <path d="M -3 4 Q 0 7 3 4" stroke="#F5583E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M -3 -8 Q 0 -12 3 -9" stroke="#FDBDB5" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Child (center, shorter) -->
+    <g transform="translate(75, 76)">
+      <circle cx="0" cy="0" r="8" fill="#FFF"/>
+      <path d="M -9 16 Q -11 32 -6 38 L 6 38 Q 11 32 9 16 Q 7 8 0 7 Q -7 8 -9 16 Z" fill="#FFF"/>
     </g>
-  </g>
-
-  <!-- Music notes -->
-  <g transform="translate(35, 15)" fill="#F5583E">
-    <circle cx="0" cy="12" r="5"/>
-    <rect x="4" y="-10" width="2" height="22" rx="1"/>
-    <path d="M 4 -10 Q 16 -8 16 -2 Q 10 -6 4 -5 Z"/>
-  </g>
-  <g transform="translate(165, 5) rotate(12)" fill="#FA8C7D">
-    <circle cx="0" cy="10" r="4"/>
-    <rect x="3" y="-6" width="1.6" height="16" rx="0.8"/>
-    <path d="M 3 -6 Q 11 -4 11 1 Q 7 -2 3 -1 Z"/>
-  </g>
-  <g transform="translate(185, 110) rotate(-10)" fill="#F5583E">
-    <circle cx="0" cy="10" r="3.5"/>
-    <rect x="3" y="-5" width="1.5" height="15" rx="0.75"/>
   </g>
 </svg>
