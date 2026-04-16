@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Check } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
+import { PromoBanner } from '@/components/PromoBanner'
 import { trackCTAClick } from '@/lib/analytics'
 import type { TabId } from '@/types'
 
@@ -385,6 +386,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           </FadeIn>
         </div>
       </section>
+
+      {/* ═══ 1.5 텀블벅 프로모 배너 ═══════════════════ */}
+      <PromoBanner />
 
       {/* ═══ 2. 공감 (말풍선) ══════════════════════════ */}
       <section className="py-24 sm:py-32 bg-ink text-white">
