@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF1ED"/>
+      <stop offset="0.6" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF1ED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg1)"/>
+  <circle cx="920" cy="200" r="260" fill="#F5583E" fill-opacity="0.1"/>
+  <circle cx="120" cy="1200" r="220" fill="#F5583E" fill-opacity="0.07"/>
+
+  <!-- Urgency strip -->
+  <rect x="0" y="0" width="1080" height="76" fill="#F5583E"/>
+  <text x="540" y="50" font-family="Pretendard, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">🔥  어버이날 D-22 · 얼리버드 100명 한정 · 31% OFF</text>
+
+  <!-- Brand microtext -->
+  <text x="540" y="145" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E" text-anchor="middle" letter-spacing="6">TUMBLBUG · HI-SING PROJECT</text>
+
+  <!-- Hook top line (guilt trip) -->
+  <text x="540" y="235" font-family="Pretendard, sans-serif" font-size="36" font-weight="700" fill="#6B7280" text-anchor="middle">작년 어버이날, 뭘 드렸는지</text>
+  <text x="540" y="285" font-family="Pretendard, sans-serif" font-size="44" font-weight="900" fill="#2C2C2C" text-anchor="middle">&#8230;벌써 기억 안 나시죠?</text>
+
+  <line x1="470" y1="345" x2="610" y2="345" stroke="#F5583E" stroke-width="5"/>
+
+  <!-- MAIN HOOK -->
+  <text x="540" y="470" font-family="Pretendard, sans-serif" font-size="68" font-weight="900" fill="#2C2C2C" text-anchor="middle">올해는 평생 기억에 남는</text>
+  <text x="540" y="600" font-family="Pretendard, sans-serif" font-size="130" font-weight="900" fill="#F5583E" text-anchor="middle">&#8216;그 노래&#8217;</text>
+  <text x="540" y="690" font-family="Pretendard, sans-serif" font-size="48" font-weight="900" fill="#2C2C2C" text-anchor="middle">한 곡을 드려보세요.</text>
+
+  <!-- Sub promise -->
+  <text x="540" y="790" font-family="Pretendard, sans-serif" font-size="28" font-weight="600" fill="#4B5563" text-anchor="middle">부모님 목소리로 AI가 만드는,</text>
+  <text x="540" y="832" font-family="Pretendard, sans-serif" font-size="28" font-weight="800" fill="#2C2C2C" text-anchor="middle">세상 단 하나뿐인 음악 선물</text>
+
+  <!-- Price strip -->
+  <rect x="100" y="900" width="880" height="160" rx="24" fill="#FFFFFF" stroke="#F5583E" stroke-width="3"/>
+  <text x="270" y="960" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#9CA3AF" text-anchor="middle" text-decoration="line-through">정가 29,000원</text>
+  <text x="660" y="975" font-family="Pretendard, sans-serif" font-size="58" font-weight="900" fill="#F5583E" text-anchor="middle">19,900원~</text>
+  <text x="540" y="1025" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#4B5563" text-anchor="middle">텀블벅 얼리버드 · 100명 한정 · 4/24 마감</text>
+
+  <!-- CTA arrow -->
+  <rect x="320" y="1110" width="440" height="100" rx="50" fill="#F5583E"/>
+  <text x="540" y="1172" font-family="Pretendard, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" text-anchor="middle">🎁 스와이프해서 보기  →</text>
+
+  <text x="540" y="1260" font-family="Pretendard, sans-serif" font-size="18" font-weight="600" fill="#6B7280" text-anchor="middle">&#9660;  실제 사연 · 94% 눈물 반응 · 2주면 완성</text>
+  <text x="540" y="1310" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#F5583E" text-anchor="middle">01 / 15</text>
+</svg>

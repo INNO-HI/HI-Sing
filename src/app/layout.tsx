@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: { icon: '/favicon.svg' },
+  verification: {
+    other: {
+      'naver-site-verification': 'ff53d26d415c382bd91a3dab03c482df6bd4e5b9',
+    },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">URGENCY · 지금이 마지막</text>
+
+  <text x="540" y="210" font-family="Pretendard, sans-serif" font-size="54" font-weight="900" fill="#2C2C2C" text-anchor="middle">4/24 지나면</text>
+  <text x="540" y="290" font-family="Pretendard, sans-serif" font-size="54" font-weight="900" fill="#F5583E" text-anchor="middle">내년까지 1년을 기다리세요.</text>
+
+  <!-- Countdown card -->
+  <rect x="60" y="340" width="960" height="210" rx="24" fill="#2C2C2C"/>
+  <text x="540" y="390" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">어버이날까지 남은 시간</text>
+  <text x="540" y="490" font-family="Pretendard, sans-serif" font-size="96" font-weight="900" fill="#FFFFFF" text-anchor="middle">D &#8211; 22</text>
+  <text x="540" y="530" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E" text-anchor="middle">※ 주문 마감까지는 D-8</text>
+
+  <!-- Timeline -->
+  <line x1="140" y1="660" x2="940" y2="660" stroke="#E5E7EB" stroke-width="4"/>
+  <line x1="140" y1="660" x2="320" y2="660" stroke="#F5583E" stroke-width="6"/>
+
+  <circle cx="180" cy="660" r="22" fill="#F5583E"/>
+  <circle cx="180" cy="660" r="10" fill="#FFFFFF"/>
+  <text x="180" y="610" font-family="Pretendard, sans-serif" font-size="20" font-weight="900" fill="#F5583E" text-anchor="middle">NOW</text>
+  <text x="180" y="705" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#2C2C2C" text-anchor="middle">4/16</text>
+  <text x="180" y="735" font-family="Pretendard, sans-serif" font-size="16" font-weight="600" fill="#6B7280" text-anchor="middle">펀딩 중</text>
+
+  <circle cx="450" cy="660" r="24" fill="#F5583E"/>
+  <text x="450" y="610" font-family="Pretendard, sans-serif" font-size="20" font-weight="900" fill="#F5583E" text-anchor="middle">⚠ 마감</text>
+  <text x="450" y="705" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#2C2C2C" text-anchor="middle">4/24</text>
+  <text x="450" y="735" font-family="Pretendard, sans-serif" font-size="16" font-weight="600" fill="#DC2626" text-anchor="middle">주문 마감</text>
+
+  <circle cx="720" cy="660" r="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="4"/>
+  <text x="720" y="610" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#9CA3AF" text-anchor="middle">제작</text>
+  <text x="720" y="705" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#2C2C2C" text-anchor="middle">5/1~7</text>
+  <text x="720" y="735" font-family="Pretendard, sans-serif" font-size="16" font-weight="600" fill="#6B7280" text-anchor="middle">제작·배송</text>
+
+  <circle cx="900" cy="660" r="24" fill="#F5583E"/>
+  <text x="900" y="610" font-family="Pretendard, sans-serif" font-size="20" font-weight="900" fill="#F5583E" text-anchor="middle">🎁</text>
+  <text x="900" y="705" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#2C2C2C" text-anchor="middle">5/8</text>
+  <text x="900" y="735" font-family="Pretendard, sans-serif" font-size="16" font-weight="600" fill="#F5583E" text-anchor="middle">어버이날</text>
+
+  <!-- Scarcity -->
+  <rect x="60" y="810" width="960" height="200" rx="24" fill="#FEF2F2" stroke="#F5583E" stroke-width="2"/>
+  <text x="100" y="870" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#C9371E">⚠️  왜 지금 펀딩해야 하나요?</text>
+  <text x="100" y="915" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">① 평균 제작 2주 — 4/24 이후 주문은 5/8 배송 불가</text>
+  <text x="100" y="950" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">② 얼리버드 100명 한정 — 남은 수량 상단 확인</text>
+  <text x="100" y="985" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">③ 펀딩 종료 후 정가 29,000 / 59,000원 복귀</text>
+
+  <!-- Final urgency -->
+  <rect x="60" y="1050" width="960" height="170" rx="24" fill="#F5583E"/>
+  <text x="540" y="1105" font-family="Pretendard, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">🔥  오늘 펀딩 → 어버이날 아침 배송</text>
+  <text x="540" y="1150" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" fill-opacity="0.95" text-anchor="middle">부모님 손에 노래와 플래카드가 도착합니다</text>
+  <text x="540" y="1195" font-family="Pretendard, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">19,900원~ · 100명 한정</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">13 / 15</text>
+</svg>

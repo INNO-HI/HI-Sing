@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#1A1A1A"/>
+  <circle cx="920" cy="200" r="280" fill="#F5583E" fill-opacity="0.18"/>
+  <circle cx="140" cy="1200" r="220" fill="#F5583E" fill-opacity="0.12"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">PROOF · 이미 증명된 감동</text>
+
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#FFFFFF" text-anchor="middle">벌써</text>
+  <text x="540" y="320" font-family="Pretendard, sans-serif" font-size="110" font-weight="900" fill="#F5583E" text-anchor="middle">357명</text>
+  <text x="540" y="395" font-family="Pretendard, sans-serif" font-size="40" font-weight="700" fill="#E5E7EB" text-anchor="middle">이 감동을 받았습니다.</text>
+
+  <!-- Big stat 1 -->
+  <rect x="60" y="460" width="960" height="220" rx="24" fill="#2C2C2C"/>
+  <text x="90" y="540" font-family="Pretendard, sans-serif" font-size="130" font-weight="900" fill="#F5583E">94%</text>
+  <text x="430" y="535" font-family="Pretendard, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF">첫 재생에 눈물</text>
+  <text x="430" y="580" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#9CA3AF">수령자 357명 설문 · 자녀 목격 기준</text>
+  <text x="430" y="625" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">후렴에서 숟가락을 놓으셨어요</text>
+
+  <!-- Stat 2 & 3 -->
+  <g transform="translate(60, 720)">
+    <rect x="0" y="0" width="465" height="220" rx="24" fill="#2C2C2C"/>
+    <text x="232" y="115" font-family="Pretendard, sans-serif" font-size="100" font-weight="900" fill="#FFFFFF" text-anchor="middle">4.9</text>
+    <text x="232" y="155" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E" text-anchor="middle">/ 5.0 만점</text>
+    <text x="232" y="195" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">평균 만족도</text>
+  </g>
+  <g transform="translate(555, 720)">
+    <rect x="0" y="0" width="465" height="220" rx="24" fill="#2C2C2C"/>
+    <text x="232" y="115" font-family="Pretendard, sans-serif" font-size="100" font-weight="900" fill="#FFFFFF" text-anchor="middle">2주</text>
+    <text x="232" y="155" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E" text-anchor="middle">평균 제작 기간</text>
+    <text x="232" y="195" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">어버이날 배송 여유</text>
+  </g>
+
+  <!-- Media badges -->
+  <rect x="60" y="980" width="960" height="120" rx="20" fill="#2C2C2C"/>
+  <text x="540" y="1020" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">📣  언론·SNS 화제</text>
+  <text x="540" y="1060" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">&#8220;부모님 세대 눈물버튼&#8221; · 인스타 릴스 조회수 430만</text>
+  <text x="540" y="1088" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#9CA3AF" text-anchor="middle">*2025년 4월 자체 집계 기준</text>
+
+  <!-- Quote -->
+  <text x="540" y="1180" font-family="Pretendard, sans-serif" font-size="26" font-style="italic" font-weight="700" fill="#E5E7EB" text-anchor="middle">&#8220;이거 받은 사람은, 평생 잊지 않아요.&#8221;</text>
+  <text x="540" y="1220" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#9CA3AF" text-anchor="middle">— 실제 수령자 후기 중</text>
+
+  <text x="540" y="1310" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#6B7280" text-anchor="middle">05 / 15</text>
+</svg>

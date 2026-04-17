@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2700" width="1080" height="2700">
+<rect width="1080" height="2700" fill="#FFFFFF"/>
+
+<text x="540" y="200" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="30" font-weight="800" letter-spacing="16" text-anchor="middle">H O W   I T   W O R K S</text>
+<text x="540" y="340" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="90" font-weight="900" letter-spacing="-3" text-anchor="middle">단 3단계로</text>
+<text x="540" y="450" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="90" font-weight="900" letter-spacing="-3" text-anchor="middle">완성됩니다</text>
+<text x="540" y="560" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500" text-anchor="middle">어려운 과정 없어요. 평범한 녹음 하나로 시작됩니다.</text>
+
+<!-- STEP 1 -->
+<g transform="translate(540, 760)">
+  <rect x="-440" y="0" width="880" height="480" rx="36" fill="#FFF1ED"/>
+  <g transform="translate(-340, 240)">
+    <circle cx="0" cy="0" r="90" fill="#F5583E"/>
+    <text x="0" y="36" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="72" font-weight="900">01</text>
+  </g>
+  <text x="-200" y="160" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800" letter-spacing="4">STEP 1</text>
+  <text x="-200" y="230" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="64" font-weight="900">목소리 업로드</text>
+  <text x="-200" y="305" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">가족 목소리 30초 이상</text>
+  <text x="-200" y="350" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">전화 녹음·영상·일상대화 모두 OK</text>
+  <g transform="translate(300, 380)">
+    <rect x="-100" y="0" width="200" height="50" rx="25" fill="#F5583E" fill-opacity="0.15"/>
+    <text x="0" y="34" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="800">⏱ 5분</text>
+  </g>
+</g>
+
+<!-- STEP 2 -->
+<g transform="translate(540, 1280)">
+  <rect x="-440" y="0" width="880" height="480" rx="36" fill="#FFF" stroke="#F5583E" stroke-width="3"/>
+  <g transform="translate(-340, 240)">
+    <circle cx="0" cy="0" r="90" fill="#F5583E"/>
+    <text x="0" y="36" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="72" font-weight="900">02</text>
+  </g>
+  <text x="-200" y="160" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800" letter-spacing="4">STEP 2</text>
+  <text x="-200" y="230" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="64" font-weight="900">사연 작성</text>
+  <text x="-200" y="305" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">받는 분과의 추억·전하고</text>
+  <text x="-200" y="350" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">싶은 마음을 자유롭게</text>
+  <g transform="translate(300, 380)">
+    <rect x="-100" y="0" width="200" height="50" rx="25" fill="#F5583E" fill-opacity="0.15"/>
+    <text x="0" y="34" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="800">⏱ 10분</text>
+  </g>
+</g>
+
+<!-- STEP 3 -->
+<g transform="translate(540, 1800)">
+  <rect x="-440" y="0" width="880" height="480" rx="36" fill="#FFF1ED"/>
+  <g transform="translate(-340, 240)">
+    <circle cx="0" cy="0" r="90" fill="#F5583E"/>
+    <text x="0" y="36" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="72" font-weight="900">03</text>
+  </g>
+  <text x="-200" y="160" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800" letter-spacing="4">STEP 3</text>
+  <text x="-200" y="230" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="64" font-weight="900">노래 + 앨범 수령</text>
+  <text x="-200" y="305" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">MP3 + 가사 카드</text>
+  <text x="-200" y="350" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">앨범 커버 이미지 함께</text>
+  <g transform="translate(300, 380)">
+    <rect x="-100" y="0" width="200" height="50" rx="25" fill="#F5583E" fill-opacity="0.15"/>
+    <text x="0" y="34" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="800">⏱ 14일</text>
+  </g>
+</g>
+
+<!-- Deadline warning -->
+<g transform="translate(540, 2460)">
+  <rect x="-400" y="0" width="800" height="120" rx="60" fill="#1A1A1A"/>
+  <text x="0" y="75" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="800">⏰ 4월 24일(금)까지 주문하세요</text>
+</g>
+
+</svg>

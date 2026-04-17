@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg15" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF1ED"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg15)"/>
+  <circle cx="900" cy="180" r="260" fill="#F5583E" fill-opacity="0.15"/>
+  <circle cx="180" cy="1200" r="220" fill="#F5583E" fill-opacity="0.1"/>
+
+  <!-- Urgency top bar -->
+  <rect x="0" y="0" width="1080" height="70" fill="#F5583E"/>
+  <text x="540" y="46" font-family="Pretendard, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">⏰  D-22 · 4/24 주문 마감 · 얼리버드 곧 마감</text>
+
+  <text x="540" y="150" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="6">FINAL CALL · 마지막 결정</text>
+
+  <!-- Headline -->
+  <text x="540" y="240" font-family="Pretendard, sans-serif" font-size="56" font-weight="900" fill="#2C2C2C" text-anchor="middle">올해 어버이날,</text>
+  <text x="540" y="330" font-family="Pretendard, sans-serif" font-size="70" font-weight="900" fill="#F5583E" text-anchor="middle">후회 없는 선택 하세요.</text>
+
+  <!-- 2-tier selection -->
+  <g transform="translate(60, 400)">
+    <rect x="0" y="0" width="465" height="230" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <text x="232" y="50" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#9CA3AF" text-anchor="middle" letter-spacing="3">🎵  BASIC</text>
+    <text x="232" y="130" font-family="Pretendard, sans-serif" font-size="56" font-weight="900" fill="#2C2C2C" text-anchor="middle">19,900원</text>
+    <text x="232" y="170" font-family="Pretendard, sans-serif" font-size="18" font-weight="600" fill="#9CA3AF" text-anchor="middle" text-decoration="line-through">정가 29,000원</text>
+    <text x="232" y="208" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#4B5563" text-anchor="middle">노래만 · 디지털 선물</text>
+  </g>
+  <g transform="translate(555, 400)">
+    <rect x="0" y="0" width="465" height="230" rx="20" fill="#2C2C2C"/>
+    <rect x="260" y="-18" width="220" height="38" rx="19" fill="#F5583E"/>
+    <text x="370" y="8" font-family="Pretendard, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">🔥 94% 선택</text>
+    <text x="232" y="50" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="3">🎁  PREMIUM</text>
+    <text x="232" y="130" font-family="Pretendard, sans-serif" font-size="56" font-weight="900" fill="#FFFFFF" text-anchor="middle">39,900원</text>
+    <text x="232" y="170" font-family="Pretendard, sans-serif" font-size="18" font-weight="600" fill="#9CA3AF" text-anchor="middle" text-decoration="line-through">정가 59,000원</text>
+    <text x="232" y="208" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#E5E7EB" text-anchor="middle">노래 + 가사 플래카드</text>
+  </g>
+
+  <!-- CTA button -->
+  <rect x="60" y="680" width="960" height="170" rx="85" fill="#F5583E"/>
+  <text x="540" y="780" font-family="Pretendard, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" text-anchor="middle">🎁  지금 펀딩 참여하기  →</text>
+
+  <!-- Benefits recap -->
+  <g transform="translate(60, 890)">
+    <text x="0" y="30" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">✓  평균 제작 2주 · 어버이날 아침 배송 보장</text>
+    <text x="0" y="72" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">✓  1회 무료 리터치 · 100% 만족 보장</text>
+    <text x="0" y="114" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#2C2C2C">✓  30일 내 서버 완전 삭제 · 개인정보 안전</text>
+    <text x="0" y="156" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">✓  펀딩 종료 후 정가 복귀 — 지금이 가장 쌉니다</text>
+  </g>
+
+  <!-- Deadline warning -->
+  <rect x="60" y="1110" width="960" height="100" rx="20" fill="#2C2C2C"/>
+  <text x="540" y="1150" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#F5583E" text-anchor="middle">⚠  4/24(금) 23:59 이후엔 어버이날 배송 불가</text>
+  <text x="540" y="1185" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#E5E7EB" text-anchor="middle">내년 어버이날까지 1년을 더 기다리실 건가요?</text>
+
+  <!-- Footer -->
+  <text x="540" y="1260" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#2C2C2C" text-anchor="middle">하이싱 · 목소리로 만드는 노래 선물</text>
+  <text x="540" y="1290" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#6B7280" text-anchor="middle">주식회사 이노하이(INNO-HI) · contact@innohi.ai.kr · 사업자 229-88-XXXXX</text>
+
+  <text x="540" y="1330" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E" text-anchor="middle">15 / 15</text>
+</svg>

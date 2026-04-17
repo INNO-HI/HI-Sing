@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">HOW IT WORKS · 쉬워요</text>
+
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#2C2C2C" text-anchor="middle">복잡한 거</text>
+  <text x="540" y="300" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#F5583E" text-anchor="middle">하나도 없어요.</text>
+
+  <text x="540" y="370" font-family="Pretendard, sans-serif" font-size="24" font-weight="600" fill="#6B7280" text-anchor="middle">15분 주문 → 14일 대기 → 평생 감동</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(60, 440)">
+    <rect x="0" y="0" width="960" height="200" rx="24" fill="#FAFAFA"/>
+    <circle cx="100" cy="100" r="58" fill="#F5583E"/>
+    <text x="100" y="122" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="200" y="70" font-family="Pretendard, sans-serif" font-size="32" font-weight="900" fill="#2C2C2C">목소리 30초 업로드</text>
+    <text x="200" y="110" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#4B5563">전화 녹음 · 영상 · 음성 메모 — 뭐든 OK</text>
+    <text x="200" y="145" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#4B5563">스마트폰 품질도 충분 · 특별한 장비 불필요</text>
+    <rect x="200" y="160" width="120" height="30" rx="15" fill="#FFF1ED"/>
+    <text x="260" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#F5583E" text-anchor="middle">⏱ 5분</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(60, 670)">
+    <rect x="0" y="0" width="960" height="200" rx="24" fill="#FAFAFA"/>
+    <circle cx="100" cy="100" r="58" fill="#F5583E"/>
+    <text x="100" y="122" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="200" y="70" font-family="Pretendard, sans-serif" font-size="32" font-weight="900" fill="#2C2C2C">사연 · 분위기 선택</text>
+    <text x="200" y="110" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#4B5563">&#8220;언제 가장 고마웠어요?&#8221; 같은 템플릿 5개</text>
+    <text x="200" y="145" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#4B5563">발라드 · 트로트 · 포크 중 원하는 장르 선택</text>
+    <rect x="200" y="160" width="120" height="30" rx="15" fill="#FFF1ED"/>
+    <text x="260" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#F5583E" text-anchor="middle">⏱ 10분</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(60, 900)">
+    <rect x="0" y="0" width="960" height="200" rx="24" fill="#2C2C2C"/>
+    <circle cx="100" cy="100" r="58" fill="#F5583E"/>
+    <text x="100" y="122" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="200" y="70" font-family="Pretendard, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF">노래 + 플래카드 수령</text>
+    <text x="200" y="110" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#D1D5DB">MP3 · 가사 · AI 앨범 커버 · 대형 플래카드</text>
+    <text x="200" y="145" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#D1D5DB">카톡 선물하기 링크로 바로 전달 가능</text>
+    <rect x="200" y="160" width="120" height="30" rx="15" fill="#F5583E"/>
+    <text x="260" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">🎁 14일</text>
+  </g>
+
+  <!-- Deadline urgency -->
+  <rect x="60" y="1150" width="960" height="100" rx="50" fill="#FFF1ED" stroke="#F5583E" stroke-width="3"/>
+  <text x="540" y="1195" font-family="Pretendard, sans-serif" font-size="26" font-weight="900" fill="#F5583E" text-anchor="middle">⏰ 어버이날 배송 보장 · 4/24(금) 23:59 마감</text>
+  <text x="540" y="1230" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#4B5563" text-anchor="middle">한 번만 검증하면 되는 간단한 프로세스</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">08 / 15</text>
+</svg>

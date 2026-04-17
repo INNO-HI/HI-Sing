@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FAFAFA"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">PROBLEM · 솔직히 말해서</text>
+
+  <!-- Headline -->
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="68" font-weight="900" fill="#2C2C2C" text-anchor="middle">어버이날마다</text>
+  <text x="540" y="310" font-family="Pretendard, sans-serif" font-size="68" font-weight="900" fill="#F5583E" text-anchor="middle">같은 고민 아니세요?</text>
+
+  <!-- Card 1 -->
+  <rect x="60" y="400" width="960" height="200" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="120" y="495" font-family="Pretendard, sans-serif" font-size="72" text-anchor="start">😕</text>
+  <text x="230" y="470" font-family="Pretendard, sans-serif" font-size="36" font-weight="900" fill="#2C2C2C">&#8220;작년이랑 또 똑같네&#8221;</text>
+  <text x="230" y="515" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#6B7280">홍삼·용돈·현금 봉투 — 매년 돌려쓰는 선물</text>
+  <text x="230" y="555" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">드리고 나면, 뭔가 허전하죠.</text>
+
+  <!-- Card 2 -->
+  <rect x="60" y="625" width="960" height="200" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="120" y="720" font-family="Pretendard, sans-serif" font-size="72" text-anchor="start">😔</text>
+  <text x="230" y="695" font-family="Pretendard, sans-serif" font-size="36" font-weight="900" fill="#2C2C2C">&#8220;사랑한다, 말이 안 나와&#8221;</text>
+  <text x="230" y="740" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#6B7280">카톡 이모티콘으로는 부족한 마음</text>
+  <text x="230" y="780" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">그런데, 왜 목에 걸릴까요.</text>
+
+  <!-- Card 3 -->
+  <rect x="60" y="850" width="960" height="200" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="120" y="945" font-family="Pretendard, sans-serif" font-size="72" text-anchor="start">⏳</text>
+  <text x="230" y="920" font-family="Pretendard, sans-serif" font-size="36" font-weight="900" fill="#2C2C2C">&#8220;올해도 그냥 넘어갈까&#8221;</text>
+  <text x="230" y="965" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#6B7280">&#8220;내년엔 꼭 제대로 해드려야지&#8221;라는 다짐</text>
+  <text x="230" y="1005" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">그런데 내년은, 진짜 올까요?</text>
+
+  <!-- Transition hook -->
+  <rect x="60" y="1110" width="960" height="120" rx="24" fill="#2C2C2C"/>
+  <text x="540" y="1165" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">이 3가지, 평생 반복될지도 몰라요.</text>
+  <text x="540" y="1205" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#F5583E" text-anchor="middle">올해는 정말 다르게 해보세요. →</text>
+
+  <text x="540" y="1310" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">02 / 15</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2700" width="1080" height="2700">
+<rect width="1080" height="2700" fill="#FFFFFF"/>
+
+<text x="540" y="200" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="30" font-weight="800" letter-spacing="16" text-anchor="middle">R E A L   S T O R Y</text>
+<text x="540" y="340" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="88" font-weight="900" letter-spacing="-3" text-anchor="middle">어느 팔순 저녁의</text>
+<text x="540" y="450" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="88" font-weight="900" letter-spacing="-3" text-anchor="middle">이야기</text>
+
+<!-- Photo placeholder with emoji -->
+<g transform="translate(540, 800)">
+  <rect x="-440" y="0" width="880" height="380" rx="32" fill="#FFF1ED"/>
+  <text x="0" y="220" text-anchor="middle" font-size="220">🎂</text>
+  <text x="0" y="320" text-anchor="middle" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="500">어머니 팔순 · 40대 아들이 주문</text>
+</g>
+
+<!-- Background -->
+<g transform="translate(540, 1320)">
+  <text x="-420" y="0" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800" letter-spacing="4">배경</text>
+  <text x="-420" y="70" fill="#2C2C2C" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="600">새벽 다섯 시, 어머니는 30년을</text>
+  <text x="-420" y="125" fill="#2C2C2C" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="600">같은 시간에 일어나 도시락을</text>
+  <text x="-420" y="180" fill="#2C2C2C" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="600">싸셨습니다.</text>
+</g>
+
+<!-- Lyrics box -->
+<g transform="translate(540, 1620)">
+  <rect x="-440" y="0" width="880" height="280" rx="28" fill="#1A1A1A"/>
+  <text x="-380" y="70" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="800" letter-spacing="4">LYRICS 가사 한 구절</text>
+  <text x="0" y="160" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="42" font-weight="600" font-style="italic">"새벽 다섯 시, 작은 불빛 하나</text>
+  <text x="0" y="220" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="42" font-weight="600" font-style="italic">엄마의 손끝에서 하루가 시작됐지"</text>
+</g>
+
+<!-- Reaction quote - biggest emphasis -->
+<g transform="translate(540, 2000)">
+  <text x="-420" y="0" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800" letter-spacing="4">받은 날의 반응</text>
+  <text x="-420" y="85" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="46" font-weight="900">"후렴이 나오자 어머니가</text>
+  <text x="-420" y="145" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="46" font-weight="900">숟가락을 놓으셨어요.</text>
+  <text x="-420" y="205" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="46" font-weight="900">온 가족이 다 울었습니다."</text>
+</g>
+
+<g transform="translate(200,2440)">
+  <rect x="0" y="0" width="680" height="120" rx="60" fill="#F5583E"/>
+  <text x="340" y="74" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="42" font-weight="800">▶  노래 전체 듣기</text>
+</g>
+
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FAFAFA"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">CREATOR STORY · 우리가 이걸 만든 이유</text>
+
+  <text x="540" y="230" font-family="Pretendard, sans-serif" font-size="56" font-weight="900" fill="#2C2C2C" text-anchor="middle">우리도 &#8216;자녀&#8217;입니다.</text>
+
+  <!-- Team block -->
+  <rect x="60" y="300" width="960" height="300" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="100" y="370" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#2C2C2C">🧑‍💻  주식회사 이노하이 (INNO-HI)</text>
+  <text x="100" y="420" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#4B5563">• AI 음성·생성형 음악 기술 연구팀</text>
+  <text x="100" y="460" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#4B5563">• Google Lyria API 공식 파트너</text>
+  <text x="100" y="500" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#4B5563">• 보건복지부 AI 돌봄 실증사업 선정 (2024)</text>
+  <text x="100" y="540" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#4B5563">• 지금까지 357곡 · 평균 만족도 4.9/5</text>
+  <text x="100" y="580" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E">contact@innohi.ai.kr</text>
+
+  <!-- Story -->
+  <rect x="60" y="650" width="960" height="460" rx="24" fill="#FFF1ED"/>
+  <text x="100" y="710" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E">📖  시작의 순간</text>
+  <text x="100" y="770" font-family="Pretendard, sans-serif" font-size="26" font-weight="600" fill="#2C2C2C">2024년 설 명절, 팀원 한 명이 처음으로</text>
+  <text x="100" y="810" font-family="Pretendard, sans-serif" font-size="26" font-weight="600" fill="#2C2C2C">어머니께 &#8216;본인 목소리 노래&#8217;를 드렸습니다.</text>
+
+  <text x="100" y="880" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#2C2C2C">&#8220;후렴이 나오자, 엄마가 숟가락을</text>
+  <text x="100" y="920" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#F5583E">놓고 오래 앉아 계셨어요.&#8221;</text>
+
+  <text x="100" y="990" font-family="Pretendard, sans-serif" font-size="24" font-weight="600" fill="#4B5563">&#8220;30년 동안 말 못 했던 게 다 녹아나오더라고요.&#8221;</text>
+
+  <text x="100" y="1055" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#2C2C2C">&#8594;  그래서 대중에게도 열어 드립니다.</text>
+  <text x="100" y="1090" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#F5583E">올해 어버이날, 모두 자녀의 첫 노래를 드릴 수 있도록.</text>
+
+  <!-- Trust badge -->
+  <rect x="60" y="1150" width="960" height="110" rx="20" fill="#FFFFFF" stroke="#2C2C2C" stroke-width="2"/>
+  <text x="540" y="1195" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#2C2C2C" text-anchor="middle">🛡  텀블벅 5년 연속 성공 창작자 · 펀딩 100% 이행률</text>
+  <text x="540" y="1230" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#6B7280" text-anchor="middle">제작 지연 시 전액 환불 · 사업자번호 공개</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">07 / 15</text>
+</svg>

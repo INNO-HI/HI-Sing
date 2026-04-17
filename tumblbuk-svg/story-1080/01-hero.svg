@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2700" width="1080" height="2700">
+<rect width="1080" height="2700" fill="#FFFFFF"/>
+
+<!-- Background decoration -->
+<circle cx="540" cy="1400" r="500" fill="#F5583E" fill-opacity="0.06"/>
+<circle cx="540" cy="1400" r="380" fill="#F5583E" fill-opacity="0.08"/>
+
+<!-- Logo top -->
+<g transform="translate(540, 180)">
+  <g transform="translate(0,0) scale(0.7)"><path d="M 0 30 C -35 -5, -70 -30, -70 -64 C -70 -90, -48 -108, -25 -103 C -12 -100, -2 -88, 0 -75 C 2 -88, 12 -100, 25 -103 C 48 -108, 70 -90, 70 -64 C 70 -30, 35 -5, 0 30 Z" fill="#F5583E"/></g>
+  <text x="0" y="100" text-anchor="middle" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="44" font-weight="900">하이싱</text>
+</g>
+
+<!-- Date Badge -->
+<g transform="translate(540, 400)">
+  <rect x="-260" y="-44" width="520" height="88" rx="44" fill="#F5583E"/>
+  <circle cx="-190" cy="0" r="10" fill="#FFF"/>
+  <text x="20" y="16" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="800">5월 8일 어버이날 특가</text>
+</g>
+
+<!-- Sub -->
+<text x="540" y="560" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="38" font-weight="500" text-anchor="middle">말로 다 못한 마음을, 이제 노래로</text>
+
+<!-- Main headline - HUGE -->
+<text x="540" y="760" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="120" font-weight="900" letter-spacing="-3" text-anchor="middle">올해만큼은</text>
+<g transform="translate(540, 900)"><text x="0" text-anchor="middle" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="120" font-weight="900" letter-spacing="-4"><tspan fill="#F5583E">건강하세요</tspan> 대신</text></g>
+<text x="540" y="1040" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="120" font-weight="900" letter-spacing="-3" text-anchor="middle">노래 한 곡</text>
+
+<!-- Family in heart visual -->
+<g transform="translate(540, 1450)"><g transform="translate(0,0) scale(2.6)">
+  <path d="M 0 70 C -45 30, -90 0, -90 -40 C -90 -70, -64 -92, -35 -85 C -17 -81, -5 -65, 0 -48 C 5 -65, 17 -81, 35 -85 C 64 -92, 90 -70, 90 -40 C 90 0, 45 30, 0 70 Z" fill="#F5583E"/>
+  <g transform="translate(-40, -36)"><circle cx="0" cy="0" r="10" fill="#FFF"/><path d="M -11 20 Q -13 38 -8 46 L 8 46 Q 13 38 11 20 Q 9 10 0 10 Q -9 10 -11 20 Z" fill="#FFF"/></g>
+  <g transform="translate(40, -36)"><circle cx="0" cy="0" r="10" fill="#FFF"/><path d="M -11 20 Q -13 38 -10 46 L 10 46 Q 13 38 11 20 Q 9 10 0 10 Q -10 10 -11 20 Z" fill="#FFF"/></g>
+  <g transform="translate(0, -12)"><circle cx="0" cy="0" r="8" fill="#FFF"/><path d="M -9 14 Q -11 28 -6 34 L 6 34 Q 11 28 9 14 Q 7 6 0 6 Q -7 6 -9 14 Z" fill="#FFF"/></g>
+</g></g>
+
+<!-- Music notes around -->
+<g transform="translate(280,1280) rotate(0) scale(1.375)" fill="#F5583E"><circle cx="0" cy="14" r="7"/><rect x="5" y="-8" width="3" height="22" rx="1.5"/><path d="M 5 -8 Q 19 -6 19 4 Q 12 -2 5 0 Z"/></g>
+<g transform="translate(810,1300) rotate(15) scale(1.5)" fill="#FDBDB5"><circle cx="0" cy="14" r="7"/><rect x="5" y="-8" width="3" height="22" rx="1.5"/><path d="M 5 -8 Q 19 -6 19 4 Q 12 -2 5 0 Z"/></g>
+<g transform="translate(250,1620) rotate(-10) scale(1.25)" fill="#F5583E"><circle cx="0" cy="14" r="7"/><rect x="5" y="-8" width="3" height="22" rx="1.5"/><path d="M 5 -8 Q 19 -6 19 4 Q 12 -2 5 0 Z"/></g>
+<g transform="translate(830,1580) rotate(20) scale(1.375)" fill="#FDBDB5"><circle cx="0" cy="14" r="7"/><rect x="5" y="-8" width="3" height="22" rx="1.5"/><path d="M 5 -8 Q 19 -6 19 4 Q 12 -2 5 0 Z"/></g>
+
+<!-- Price section -->
+<g transform="translate(540, 1860)">
+  <rect x="-380" y="0" width="760" height="280" rx="32" fill="#FFF1ED"/>
+  <text x="-300" y="65" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">정가</text>
+  <text x="-300" y="120" fill="#9CA3AF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="44" text-decoration="line-through">29,000원</text>
+
+  <g transform="translate(200, 50)">
+    <rect x="-80" y="0" width="160" height="56" rx="28" fill="#F5583E"/>
+    <text x="0" y="38" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="800">31% ↓</text>
+  </g>
+
+  <text x="-300" y="200" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="28" font-weight="500">얼리버드 특가</text>
+  <text x="300" y="220" text-anchor="end" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="100" font-weight="900">19,900원</text>
+</g>
+
+<!-- CTA Button -->
+<g transform="translate(180,2250)">
+  <rect x="0" y="0" width="720" height="130" rx="65" fill="#F5583E"/>
+  <text x="360" y="81" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="48" font-weight="800">🎁 지금 노래 선물하기</text>
+</g>
+
+<!-- Bottom mini info -->
+<text x="540" y="2480" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="500" text-anchor="middle">✓ 2주 안 완성  ✓ 가사·앨범 포함  ✓ 100% 환불 보장</text>
+<text x="540" y="2560" fill="#9CA3AF" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="22" font-weight="400" text-anchor="middle">* 4/24까지 주문 시 5월 8일 어버이날 배송 보장</text>
+
+</svg>

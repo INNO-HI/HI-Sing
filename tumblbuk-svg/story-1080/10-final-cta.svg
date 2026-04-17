@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2700" width="1080" height="2700">
+<rect width="1080" height="2700" fill="#FFF1ED"/>
+
+<!-- Decorative -->
+<circle cx="100" cy="200" r="140" fill="#FDBDB5" opacity="0.3"/>
+<circle cx="980" cy="2400" r="180" fill="#FDBDB5" opacity="0.25"/>
+<circle cx="950" cy="250" r="70" fill="#FEDBD6" opacity="0.4"/>
+
+<g transform="translate(540, 300)">
+  <text x="0" y="0" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="30" font-weight="800" letter-spacing="8" text-anchor="middle">2026  P A R E N T ' S   D A Y</text>
+</g>
+
+<g transform="translate(540, 540)">
+  <text x="0" y="0" text-anchor="middle" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="110" font-weight="900" letter-spacing="-4">이번 어버이날엔</text>
+  <text x="0" y="140" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="110" font-weight="900" letter-spacing="-4">진심을 전해보세요</text>
+</g>
+
+<!-- Family heart large -->
+<g transform="translate(540, 1100)">
+  <g transform="translate(0,0) scale(3.4)">
+  <path d="M 0 70 C -45 30, -90 0, -90 -40 C -90 -70, -64 -92, -35 -85 C -17 -81, -5 -65, 0 -48 C 5 -65, 17 -81, 35 -85 C 64 -92, 90 -70, 90 -40 C 90 0, 45 30, 0 70 Z" fill="#F5583E"/>
+  <g transform="translate(-40, -36)"><circle cx="0" cy="0" r="10" fill="#FFF"/><path d="M -11 20 Q -13 38 -8 46 L 8 46 Q 13 38 11 20 Q 9 10 0 10 Q -9 10 -11 20 Z" fill="#FFF"/></g>
+  <g transform="translate(40, -36)"><circle cx="0" cy="0" r="10" fill="#FFF"/><path d="M -11 20 Q -13 38 -10 46 L 10 46 Q 13 38 11 20 Q 9 10 0 10 Q -10 10 -11 20 Z" fill="#FFF"/></g>
+  <g transform="translate(0, -12)"><circle cx="0" cy="0" r="8" fill="#FFF"/><path d="M -9 14 Q -11 28 -6 34 L 6 34 Q 11 28 9 14 Q 7 6 0 6 Q -7 6 -9 14 Z" fill="#FFF"/></g>
+</g>
+</g>
+
+<!-- Price highlight -->
+<g transform="translate(540, 1680)">
+  <rect x="-440" y="0" width="880" height="320" rx="32" fill="#FFFFFF" stroke="#F5583E" stroke-width="4"/>
+  <text x="0" y="80" text-anchor="middle" fill="#525963" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="500">얼리버드 특가</text>
+  <text x="-250" y="200" text-anchor="middle" fill="#9CA3AF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="44" text-decoration="line-through">29,000원</text>
+  <g transform="translate(-60, 150)">
+    <path d="M 0 0 L 50 30 L 0 60 Z" fill="#F5583E" opacity="0.4"/>
+  </g>
+  <text x="160" y="210" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="100" font-weight="900">19,900원</text>
+  <text x="0" y="280" text-anchor="middle" fill="#F5583E" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="26" font-weight="700">얼리버드 100명 한정 · 31% 할인</text>
+</g>
+
+<!-- HUGE CTA -->
+<g transform="translate(110,2120)">
+  <rect x="0" y="0" width="860" height="160" rx="80" fill="#F5583E"/>
+  <text x="430" y="98" text-anchor="middle" fill="#FFF" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="54" font-weight="800">🎁 지금 펀딩 참여하기  →</text>
+</g>
+
+<!-- Deadline reminder -->
+<g transform="translate(540, 2380)">
+  <rect x="-380" y="0" width="760" height="100" rx="50" fill="#1A1A1A" fill-opacity="0.08"/>
+  <text x="0" y="62" text-anchor="middle" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="32" font-weight="800">⏰ 4/24까지 주문해야 어버이날 배송 보장</text>
+</g>
+
+<!-- Footer -->
+<g transform="translate(540, 2550)">
+  <g transform="translate(0,0) scale(0.4)"><path d="M 0 30 C -35 -5, -70 -30, -70 -64 C -70 -90, -48 -108, -25 -103 C -12 -100, -2 -88, 0 -75 C 2 -88, 12 -100, 25 -103 C 48 -108, 70 -90, 70 -64 C 70 -30, 35 -5, 0 30 Z" fill="#F5583E"/></g>
+  <text x="0" y="90" text-anchor="middle" fill="#1A1A1A" font-family="'AppleSDGothicNeoB00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="34" font-weight="900">하이싱 · 목소리로 만드는 노래 선물</text>
+  <text x="0" y="140" text-anchor="middle" fill="#9CA3AF" font-family="'AppleSDGothicNeoR00','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR',sans-serif" font-size="22" font-weight="500">주식회사 이노하이(INNO-HI)  ·  contact@innohi.ai.kr</text>
+</g>
+
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">TRANSFORMATION</text>
+
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#2C2C2C" text-anchor="middle">전화 녹음 30초가</text>
+  <text x="540" y="310" font-family="Pretendard, sans-serif" font-size="60" font-weight="900" fill="#F5583E" text-anchor="middle">3분 완성곡으로.</text>
+
+  <!-- BEFORE -->
+  <g transform="translate(60, 400)">
+    <rect x="0" y="0" width="960" height="280" rx="24" fill="#FAFAFA"/>
+    <rect x="30" y="25" width="90" height="34" rx="17" fill="#9CA3AF"/>
+    <text x="75" y="48" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">BEFORE</text>
+    <text x="30" y="110" font-family="Pretendard, sans-serif" font-size="32" font-weight="900" fill="#2C2C2C">📞  평범한 음성 녹음 30초</text>
+    <text x="30" y="155" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#6B7280">• 전화 녹음 · 영상 속 목소리 · 일상 대화 OK</text>
+    <text x="30" y="190" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#6B7280">• 스마트폰 녹음 품질도 충분</text>
+    <text x="30" y="225" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#6B7280">• 받고 싶은 분위기 &#38; 사연 간단히 입력</text>
+    <text x="30" y="260" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#F5583E">⏱  업로드 5분이면 끝</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(540, 720)">
+    <circle cx="0" cy="35" r="34" fill="#F5583E"/>
+    <path d="M-16 28 L0 50 L16 28 M0 15 L0 50" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="540" y="815" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#9CA3AF" text-anchor="middle">Lyria AI · 14일 제작</text>
+
+  <!-- AFTER -->
+  <g transform="translate(60, 860)">
+    <rect x="0" y="0" width="960" height="350" rx="24" fill="#F5583E"/>
+    <rect x="30" y="25" width="90" height="34" rx="17" fill="#FFFFFF"/>
+    <text x="75" y="48" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#F5583E" text-anchor="middle">AFTER</text>
+    <text x="30" y="115" font-family="Pretendard, sans-serif" font-size="38" font-weight="900" fill="#FFFFFF">🎵  3분 · 프로 스튜디오급 완성곡</text>
+    <text x="30" y="165" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.95">✓ 가족 목소리·톤 반영한 맞춤 작사·작곡</text>
+    <text x="30" y="200" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.95">✓ 마스터링된 고음질 MP3 (320kbps)</text>
+    <text x="30" y="235" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.95">✓ HD 가사 카드 + AI 앨범 커버</text>
+    <text x="30" y="270" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" fill-opacity="0.95">✓ 대형 가사 플래카드 (PREMIUM)</text>
+    <text x="30" y="320" font-family="Pretendard, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF">🎁  카톡 선물하기로 간편 전달</text>
+  </g>
+
+  <!-- Bottom hook -->
+  <text x="540" y="1280" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#2C2C2C" text-anchor="middle">듣기 전엔 상상이 안 되고, 듣고 나면 잊히지 않습니다.</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">06 / 15</text>
+</svg>

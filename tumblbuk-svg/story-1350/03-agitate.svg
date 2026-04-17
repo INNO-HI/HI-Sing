@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">AGITATE · 냉정하게 말하자면</text>
+
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="58" font-weight="900" fill="#2C2C2C" text-anchor="middle">홍삼 · 꽃 · 용돈으로는</text>
+  <text x="540" y="300" font-family="Pretendard, sans-serif" font-size="58" font-weight="900" fill="#F5583E" text-anchor="middle">&#8216;진짜 마음&#8217;이 안 전해져요.</text>
+
+  <!-- 4 gift icons comparison -->
+  <g transform="translate(60, 400)">
+    <rect x="0" y="0" width="225" height="260" rx="20" fill="#FAFAFA"/>
+    <text x="113" y="100" font-family="Pretendard, sans-serif" font-size="68" text-anchor="middle">🌷</text>
+    <text x="113" y="150" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#2C2C2C" text-anchor="middle">카네이션</text>
+    <text x="113" y="185" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#6B7280" text-anchor="middle">25,000원</text>
+    <text x="113" y="225" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#DC2626" text-anchor="middle">1주면 시듭니다</text>
+  </g>
+  <g transform="translate(305, 400)">
+    <rect x="0" y="0" width="225" height="260" rx="20" fill="#FAFAFA"/>
+    <text x="113" y="100" font-family="Pretendard, sans-serif" font-size="68" text-anchor="middle">🍱</text>
+    <text x="113" y="150" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#2C2C2C" text-anchor="middle">외식 한 끼</text>
+    <text x="113" y="185" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#6B7280" text-anchor="middle">80,000원</text>
+    <text x="113" y="225" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#DC2626" text-anchor="middle">3시간이면 끝</text>
+  </g>
+  <g transform="translate(550, 400)">
+    <rect x="0" y="0" width="225" height="260" rx="20" fill="#FAFAFA"/>
+    <text x="113" y="100" font-family="Pretendard, sans-serif" font-size="68" text-anchor="middle">💰</text>
+    <text x="113" y="150" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#2C2C2C" text-anchor="middle">용돈 봉투</text>
+    <text x="113" y="185" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#6B7280" text-anchor="middle">100,000원+</text>
+    <text x="113" y="225" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#DC2626" text-anchor="middle">한 달이면 0원</text>
+  </g>
+  <g transform="translate(795, 400)">
+    <rect x="0" y="0" width="225" height="260" rx="20" fill="#FAFAFA"/>
+    <text x="113" y="100" font-family="Pretendard, sans-serif" font-size="68" text-anchor="middle">🎁</text>
+    <text x="113" y="150" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#2C2C2C" text-anchor="middle">건강식품</text>
+    <text x="113" y="185" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#6B7280" text-anchor="middle">50,000원</text>
+    <text x="113" y="225" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#DC2626" text-anchor="middle">드실 때뿐</text>
+  </g>
+
+  <!-- Common problem -->
+  <text x="540" y="760" font-family="Pretendard, sans-serif" font-size="36" font-weight="900" fill="#2C2C2C" text-anchor="middle">공통점 = 곧 사라진다는 것.</text>
+
+  <!-- Pain line -->
+  <line x1="140" y1="820" x2="940" y2="820" stroke="#E5E7EB" stroke-width="2"/>
+
+  <!-- Pain stat -->
+  <rect x="60" y="870" width="960" height="230" rx="24" fill="#1A1A1A"/>
+  <text x="540" y="935" font-family="Pretendard, sans-serif" font-size="24" font-weight="700" fill="#9CA3AF" text-anchor="middle">한국 자녀 47%가 이렇게 답했습니다</text>
+  <text x="540" y="1010" font-family="Pretendard, sans-serif" font-size="36" font-style="italic" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#8220;어버이날 선물, 하고 나서도</text>
+  <text x="540" y="1065" font-family="Pretendard, sans-serif" font-size="36" font-style="italic" font-weight="900" fill="#F5583E" text-anchor="middle">마음이 허전했어요.&#8221;</text>
+
+  <!-- Transition -->
+  <text x="540" y="1190" font-family="Pretendard, sans-serif" font-size="30" font-weight="800" fill="#2C2C2C" text-anchor="middle">그래서, 안 사라지는 선물을 만들었습니다. →</text>
+
+  <text x="540" y="1310" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">03 / 15</text>
+</svg>

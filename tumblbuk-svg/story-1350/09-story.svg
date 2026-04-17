@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF1ED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg9)"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">REAL STORY · 실제 사연 #01</text>
+
+  <!-- Huge quote mark -->
+  <text x="540" y="300" font-family="Pretendard, sans-serif" font-size="220" font-weight="900" fill="#F5583E" fill-opacity="0.15" text-anchor="middle">&#8220;</text>
+
+  <!-- Title -->
+  <text x="540" y="440" font-family="Pretendard, sans-serif" font-size="52" font-weight="900" fill="#2C2C2C" text-anchor="middle">어머니의 30년을</text>
+  <text x="540" y="520" font-family="Pretendard, sans-serif" font-size="68" font-weight="900" fill="#F5583E" text-anchor="middle">3분에 담았습니다.</text>
+
+  <text x="540" y="580" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#6B7280" text-anchor="middle">팔순 어머니께 드린 노래 · 서울 강 OO님 (42)</text>
+
+  <!-- Story block -->
+  <rect x="60" y="640" width="960" height="380" rx="24" fill="#FFFFFF"/>
+  <text x="100" y="695" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E">📍 하이싱을 선택한 이유</text>
+  <text x="100" y="745" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#2C2C2C">어머니는 30년을 매일 새벽 5시에 일어나</text>
+  <text x="100" y="775" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#2C2C2C">저희 셋 도시락을 싸셨어요. 팔순 선물을 고민하다,</text>
+  <text x="100" y="805" font-family="Pretendard, sans-serif" font-size="22" font-weight="500" fill="#2C2C2C">핸드폰 속 30년 전 흑백 사진 한 장이 눈에 들어왔죠.</text>
+
+  <text x="100" y="875" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E">🎵 완성된 노래의 후렴</text>
+  <text x="100" y="930" font-family="Pretendard, sans-serif" font-size="32" font-style="italic" font-weight="800" fill="#2C2C2C">&#8220;새벽 다섯 시, 작은 불빛 하나</text>
+  <text x="100" y="975" font-family="Pretendard, sans-serif" font-size="32" font-style="italic" font-weight="800" fill="#2C2C2C">엄마의 손끝에서 하루가 시작됐지&#8221;</text>
+
+  <!-- Reaction card -->
+  <rect x="60" y="1050" width="960" height="170" rx="24" fill="#2C2C2C"/>
+  <text x="100" y="1100" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E">💗 받은 그 날</text>
+  <text x="100" y="1150" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF">&#8220;후렴이 나오자 어머니가 숟가락을 놓으셨어요.</text>
+  <text x="100" y="1190" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#F5583E">온 가족이 다 울었습니다.&#8221;</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">09 / 15</text>
+</svg>

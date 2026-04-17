@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FAFAFA"/>
+
+  <text x="540" y="110" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">RISK ZERO · 걱정되시죠?</text>
+
+  <text x="540" y="220" font-family="Pretendard, sans-serif" font-size="54" font-weight="900" fill="#2C2C2C" text-anchor="middle">&#8216;이거 믿어도 되나?&#8217;</text>
+  <text x="540" y="300" font-family="Pretendard, sans-serif" font-size="54" font-weight="900" fill="#F5583E" text-anchor="middle">걱정 3가지, 다 잡았습니다.</text>
+
+  <!-- Q1 -->
+  <g transform="translate(60, 380)">
+    <rect x="0" y="0" width="960" height="200" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <circle cx="60" cy="60" r="28" fill="#F5583E"/>
+    <text x="60" y="72" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">?</text>
+    <text x="110" y="52" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E">Q1. 마음에 안 들면 어떡해요?</text>
+    <text x="110" y="82" font-family="Pretendard, sans-serif" font-size="26" font-weight="900" fill="#2C2C2C">1회 무료 리터치. 마음에 들 때까지.</text>
+    <text x="40" y="135" font-family="Pretendard, sans-serif" font-size="20" font-weight="600" fill="#4B5563">주제·감정 톤·특정 가사·분위기 수정 요청 OK.</text>
+    <text x="40" y="168" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#2C2C2C">PREMIUM 플래카드도 오타·색상 이슈 시 재인쇄.</text>
+  </g>
+
+  <!-- Q2 -->
+  <g transform="translate(60, 610)">
+    <rect x="0" y="0" width="960" height="200" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <circle cx="60" cy="60" r="28" fill="#F5583E"/>
+    <text x="60" y="72" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">?</text>
+    <text x="110" y="52" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E">Q2. 부모님 녹음 품질이 별로인데?</text>
+    <text x="110" y="82" font-family="Pretendard, sans-serif" font-size="26" font-weight="900" fill="#2C2C2C">전화 녹음도 괜찮아요.</text>
+    <text x="40" y="135" font-family="Pretendard, sans-serif" font-size="20" font-weight="600" fill="#4B5563">AI가 노이즈·잡음을 자동 제거 후 음색만 추출.</text>
+    <text x="40" y="168" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#2C2C2C">받고 싶은 장르/분위기는 자녀가 선택합니다.</text>
+  </g>
+
+  <!-- Q3 -->
+  <g transform="translate(60, 840)">
+    <rect x="0" y="0" width="960" height="200" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <circle cx="60" cy="60" r="28" fill="#F5583E"/>
+    <text x="60" y="72" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">?</text>
+    <text x="110" y="52" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E">Q3. 부모님 목소리, 개인정보 괜찮아요?</text>
+    <text x="110" y="82" font-family="Pretendard, sans-serif" font-size="26" font-weight="900" fill="#2C2C2C">30일 내 서버 완전 삭제.</text>
+    <text x="40" y="135" font-family="Pretendard, sans-serif" font-size="20" font-weight="600" fill="#4B5563">AI 학습·외부 공개 절대 없음. ISO 27001 인증 서버.</text>
+    <text x="40" y="168" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#2C2C2C">제작 완료 후 30일 자동 파기 · 로그까지 제거.</text>
+  </g>
+
+  <!-- Guarantee badge -->
+  <rect x="60" y="1075" width="960" height="180" rx="24" fill="#2C2C2C"/>
+  <text x="540" y="1125" font-family="Pretendard, sans-serif" font-size="28" font-weight="900" fill="#F5583E" text-anchor="middle">💎  리스크 ZERO · 100% 만족 보장</text>
+  <text x="540" y="1175" font-family="Pretendard, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">제작 불가 시 전액 환불 · 배송 지연 시 보상 · 리터치 보장</text>
+  <text x="540" y="1220" font-family="Pretendard, sans-serif" font-size="18" font-weight="600" fill="#9CA3AF" text-anchor="middle">텀블벅 &#8216;신뢰 창작자&#8217; 5년 연속 선정 · 펀딩 이행률 100%</text>
+
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">14 / 15</text>
+</svg>

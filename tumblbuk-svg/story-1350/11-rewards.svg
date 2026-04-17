@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#FAFAFA"/>
+
+  <text x="540" y="95" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle" letter-spacing="8">REWARDS · 2가지만 고르세요</text>
+  <text x="540" y="170" font-family="Pretendard, sans-serif" font-size="52" font-weight="900" fill="#2C2C2C" text-anchor="middle">텀블벅 얼리버드 특가</text>
+  <text x="540" y="216" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#6B7280" text-anchor="middle">펀딩 종료 후 정가 복귀 · 지금만 가능</text>
+
+  <!-- Tier 1: BASIC -->
+  <g transform="translate(60, 265)">
+    <rect x="0" y="0" width="960" height="410" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <text x="40" y="50" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#9CA3AF" letter-spacing="4">BASIC · 디지털 선물</text>
+    <text x="40" y="108" font-family="Pretendard, sans-serif" font-size="40" font-weight="900" fill="#2C2C2C">🎵  본인 목소리 노래 한 곡</text>
+
+    <text x="40" y="180" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#9CA3AF" text-decoration="line-through">정가 29,000원</text>
+    <text x="40" y="252" font-family="Pretendard, sans-serif" font-size="72" font-weight="900" fill="#F5583E">19,900원</text>
+    <rect x="430" y="205" width="170" height="46" rx="23" fill="#FEDBD6"/>
+    <text x="515" y="236" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#C9371E" text-anchor="middle">31% 할인</text>
+
+    <text x="40" y="310" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#2C2C2C">✓  가족 목소리 맞춤 노래 1곡 (3~4분)</text>
+    <text x="40" y="342" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#2C2C2C">✓  MP3 고음질 (320kbps) · 전체 가사 텍스트</text>
+    <text x="40" y="374" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#2C2C2C">✓  카카오톡 선물하기 링크</text>
+  </g>
+
+  <!-- Tier 2: PREMIUM -->
+  <g transform="translate(60, 705)">
+    <rect x="0" y="0" width="960" height="500" rx="24" fill="#2C2C2C"/>
+    <rect x="660" y="-22" width="300" height="48" rx="24" fill="#F5583E"/>
+    <text x="810" y="10" font-family="Pretendard, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">🔥 94% 선택 · 강추</text>
+    <text x="40" y="55" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#F5583E" letter-spacing="4">PREMIUM · 인쇄물 포함</text>
+    <text x="40" y="115" font-family="Pretendard, sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">🎁  노래 + 가사 플래카드</text>
+    <text x="40" y="155" font-family="Pretendard, sans-serif" font-size="20" font-weight="600" fill="#9CA3AF">거실에 걸면 평생 남는 &#8216;가족의 현수막&#8217;</text>
+
+    <text x="40" y="225" font-family="Pretendard, sans-serif" font-size="22" font-weight="600" fill="#9CA3AF" text-decoration="line-through">정가 59,000원</text>
+    <text x="40" y="300" font-family="Pretendard, sans-serif" font-size="78" font-weight="900" fill="#F5583E">39,900원</text>
+    <rect x="470" y="250" width="170" height="46" rx="23" fill="#F5583E"/>
+    <text x="555" y="281" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">32% 할인</text>
+
+    <text x="40" y="365" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#E5E7EB">✓  BASIC 전체 혜택 포함</text>
+    <text x="40" y="400" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">✓  대형 가사 플래카드 (600×900mm · 방수)</text>
+    <text x="40" y="435" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#E5E7EB">✓  HD 가사 카드 · AI 앨범 커버</text>
+    <text x="40" y="470" font-family="Pretendard, sans-serif" font-size="21" font-weight="700" fill="#E5E7EB">✓  인쇄·포장·배송 모두 포함 (CJ대한통운)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="540" y="1260" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#F5583E" text-anchor="middle">⏰ 각 티어 얼리버드 100명 한정 · 마감 후 정가</text>
+  <text x="540" y="1320" font-family="Pretendard, sans-serif" font-size="20" font-weight="700" fill="#9CA3AF" text-anchor="middle">11 / 15</text>
+</svg>
