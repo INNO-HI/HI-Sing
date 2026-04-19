@@ -196,7 +196,7 @@ export default function TumblbukPreview() {
 
           {/* 사례 1 + 사진 */}
           <div className="mb-10">
-            <img src="/images/album-1.png" alt="" className="w-full rounded-xl mb-5" />
+            <img src="/images/album-1.png" alt="팔순 어머니께 드린 가족 맞춤 노래 '식탁 위의 온기' 앨범 이미지" className="w-full rounded-xl mb-5" />
             <p className="text-ink text-sm leading-[1.9] mb-4">
               새벽 다섯 시, 어머니는 30년을 같은 시간에 일어나 도시락을 싸셨습니다.
               반찬 투정을 부리던 날도, 도시락이 창피하다며 떼쓰던 날도
@@ -217,7 +217,7 @@ export default function TumblbukPreview() {
 
           {/* 사례 2 + 사진 */}
           <div className="mb-10">
-            <img src="/images/album-7.png" alt="" className="w-full rounded-xl mb-5" />
+            <img src="/images/album-7.png" alt="아버지께 드린 가족 맞춤 노래 앨범 이미지" className="w-full rounded-xl mb-5" />
             <p className="text-ink text-sm leading-[1.9] mb-4">
               서울에서 10년. 전화를 걸면 &ldquo;괜찮다, 오지 마라&rdquo; 하시던 아버지.
               어머니가 말씀해주셨습니다.
