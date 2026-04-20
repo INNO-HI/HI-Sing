@@ -5,13 +5,13 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#FFF1ED',
-          100: '#FEDBD6',
-          200: '#FDBDB5',
-          300: '#FA8C7D',
-          400: '#F5583E',
-          500: '#E54428',
-          600: '#C9371E',
+          50: '#FFF2EF',
+          100: '#FFDFD7',
+          200: '#FFC5B8',
+          300: '#FF9E8A',
+          400: '#FF6E59',
+          500: '#E85340',
+          600: '#C93D2C',
         },
         neutral: {
           50: '#F8F8F8',

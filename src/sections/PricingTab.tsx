@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift, Headphones, Share2, Image as ImageIcon, FileCheck } from 'lucide-react'
+import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift, Headphones, Share2, Image as ImageIcon, FileCheck, Ban, RefreshCw } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { trackViewItem, trackPaymentAttempt, trackBeginCheckout, trackFileUpload, trackViewItemList, trackOutboundClick, trackFormProgress } from '@/lib/analytics'
 
@@ -121,6 +121,30 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                 <div className="mt-6 flex items-end gap-2">
                   <span className="text-4xl font-black">{reward.price}</span>
                   <span className="text-white/60 text-base mb-1">원</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* 신뢰 띠 — 4개 키 포인트 */}
+            <FadeIn delay={0.02}>
+              <div className="bg-white rounded-2xl border border-neutral-200 p-5 sm:p-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
+                  {[
+                    { Icon: Ban, title: 'AI 학습 비사용 기본', desc: '동의 시 10% 할인' },
+                    { Icon: Shield, title: '음성 30일 후 자동 삭제', desc: '제3자 공유 없음' },
+                    { Icon: Clock, title: '영업일 3~5일 완성', desc: '어버이날 전 배송 가능' },
+                    { Icon: RefreshCw, title: '1회 무료 수정 포함', desc: '마음에 들 때까지' },
+                  ].map(({ Icon, title, desc }) => (
+                    <div key={title} className="flex items-start gap-2.5">
+                      <div className="w-9 h-9 rounded-lg bg-primary-50 flex-shrink-0 flex items-center justify-center">
+                        <Icon className="w-4 h-4 text-primary-400" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-[12px] sm:text-sm font-semibold text-ink leading-tight">{title}</p>
+                        <p className="text-[11px] sm:text-xs text-ink-faint mt-0.5 leading-tight">{desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </FadeIn>

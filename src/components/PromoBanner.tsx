@@ -1,10 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { X } from 'lucide-react'
 import { trackCTAClick } from '@/lib/analytics'
 
-const TUMBLBUG_URL = 'https://tumblbug.com/hi-sing' // TODO: 실제 펀딩 URL
-const DEADLINE = new Date('2026-04-24T23:59:59+09:00') // 주문 마감 (어버이날 배송 보장선)
+const TUMBLBUG_URL = 'https://tumblbug.com/hi-sing'
+const DEADLINE = new Date('2026-04-24T23:59:59+09:00')
+const STORAGE_KEY = 'hising-promo-modal-dismissed-at'
+const COOLDOWN_MS = 24 * 60 * 60 * 1000
+const OPEN_DELAY_MS = 1500
 
 function calcRemaining(): { days: number; hours: number; mins: number } {
   const diff = DEADLINE.getTime() - Date.now()
@@ -17,70 +21,150 @@ function calcRemaining(): { days: number; hours: number; mins: number } {
 }
 
 export function PromoBanner() {
+  const [open, setOpen] = useState(false)
   const [t, setT] = useState(calcRemaining())
 
+  // 쿨다운 체크 후 지연 오픈
   useEffect(() => {
-    const id = setInterval(() => setT(calcRemaining()), 60_000)
-    return () => clearInterval(id)
+    try {
+      const dismissedAt = Number(localStorage.getItem(STORAGE_KEY) || 0)
+      if (Date.now() - dismissedAt < COOLDOWN_MS) return
+    } catch {
+      // localStorage 접근 실패 시 그대로 오픈 진행
+    }
+    const id = setTimeout(() => setOpen(true), OPEN_DELAY_MS)
+    return () => clearTimeout(id)
   }, [])
 
+  // 카운트다운 갱신
+  useEffect(() => {
+    if (!open) return
+    const id = setInterval(() => setT(calcRemaining()), 60_000)
+    return () => clearInterval(id)
+  }, [open])
+
+  // ESC 닫기 + body 스크롤 락
+  useEffect(() => {
+    if (!open) return
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close()
+    }
+    window.addEventListener('keydown', onEsc)
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onEsc)
+      document.body.style.overflow = prevOverflow
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open])
+
+  const close = () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, String(Date.now()))
+    } catch {
+      // 저장 실패는 무시
+    }
+    setOpen(false)
+  }
+
   const handleClick = () => {
-    trackCTAClick('promo_banner', '텀블벅 바로가기')
+    trackCTAClick('promo_modal', '텀블벅 바로가기')
+    close()
     window.open(TUMBLBUG_URL, '_blank')
   }
 
+  if (!open) return null
+
   return (
-    <section className="relative py-10 sm:py-14 bg-gradient-to-r from-primary-50 via-primary-100/60 to-primary-50 overflow-hidden">
-      <div className="absolute -top-10 -left-10 w-60 h-60 rounded-full bg-primary-200/40 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-10 -right-10 w-60 h-60 rounded-full bg-primary-200/40 blur-3xl pointer-events-none" />
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/55 backdrop-blur-sm animate-[fadeIn_180ms_ease-out]"
+      onClick={close}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="promo-modal-title"
+    >
+      <div
+        className="relative w-full max-w-[520px] bg-white rounded-xl shadow-2xl overflow-hidden animate-[scaleIn_220ms_ease-out]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* 닫기 버튼 */}
+        <button
+          onClick={close}
+          aria-label="닫기"
+          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-neutral-100 flex items-center justify-center z-10 transition-colors"
+        >
+          <X className="w-5 h-5 text-ink-muted" />
+        </button>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-400 text-white text-xs font-bold mb-3">
-              <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse" />
-              LIVE · 텀블벅 펀딩 진행 중
-            </div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink-light leading-tight">
-              5월 8일 어버이날 <span className="text-primary-500">특가 31% 할인</span>
-            </h3>
-            <p className="text-sm sm:text-base text-ink-muted mt-2">
-              정가 29,000원 → <span className="font-bold text-primary-500">19,900원</span> (얼리버드 100명 한정)
-            </p>
+        {/* 배경 장식 */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-primary-100/50 to-primary-50 pointer-events-none" />
+        <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-primary-200/40 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 -right-16 w-56 h-56 rounded-full bg-primary-200/40 blur-3xl pointer-events-none" />
+
+        <div className="relative p-7 sm:p-9 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-400 text-white text-[11px] font-bold mb-4">
+            <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse" />
+            LIVE · 텀블벅 펀딩 진행 중
           </div>
 
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-2 text-ink-light">
-              <span className="text-xs font-medium text-ink-muted">주문 마감까지</span>
-              <div className="flex items-center gap-1">
-                <span className="inline-flex items-center justify-center min-w-[44px] h-11 px-2 rounded-lg bg-white border border-primary-200 font-bold text-lg text-primary-500 shadow-sm">
-                  {t.days}
-                </span>
-                <span className="text-xs text-ink-muted">일</span>
-                <span className="inline-flex items-center justify-center min-w-[44px] h-11 px-2 rounded-lg bg-white border border-primary-200 font-bold text-lg text-primary-500 shadow-sm">
-                  {t.hours}
-                </span>
-                <span className="text-xs text-ink-muted">시간</span>
-                <span className="inline-flex items-center justify-center min-w-[44px] h-11 px-2 rounded-lg bg-white border border-primary-200 font-bold text-lg text-primary-500 shadow-sm">
-                  {t.mins}
-                </span>
-                <span className="text-xs text-ink-muted">분</span>
-              </div>
+          <h2 id="promo-modal-title" className="text-xl sm:text-2xl font-bold text-ink-light leading-tight">
+            5월 8일 어버이날 <span className="text-primary-500">특가 31% 할인</span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-ink-muted mt-2">
+            정가 29,000원 → <span className="font-bold text-primary-500 text-lg">19,900원</span>
+            <span className="block text-xs text-ink-faint mt-1">(얼리버드 100명 한정)</span>
+          </p>
+
+          {/* 카운트다운 */}
+          <div className="mt-5">
+            <p className="text-xs font-medium text-ink-muted mb-2">주문 마감까지</p>
+            <div className="flex items-center justify-center gap-1.5">
+              {[
+                { v: t.days, u: '일' },
+                { v: t.hours, u: '시간' },
+                { v: t.mins, u: '분' },
+              ].map((x, i) => (
+                <div key={i} className="flex items-center gap-1">
+                  <span className="inline-flex items-center justify-center min-w-[42px] h-11 px-2 rounded-lg bg-white border border-primary-200 font-bold text-lg text-primary-500 shadow-sm">
+                    {x.v}
+                  </span>
+                  <span className="text-xs text-ink-muted">{x.u}</span>
+                </div>
+              ))}
             </div>
-            <p className="text-[11px] text-ink-faint">* 4/24 이후 주문 시 어버이날 배송 불가</p>
           </div>
 
-          <button
-            onClick={handleClick}
-            className="flex-shrink-0 flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white bg-primary-400 hover:bg-primary-500 hover:scale-[1.03] active:scale-[0.98] rounded-full shadow-lg shadow-primary-300/50 transition-all"
-          >
-            🎁 텀블벅 바로가기
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </button>
+          <p className="text-[11px] text-ink-faint mt-3">* 4/24 이후 주문 시 어버이날 배송 불가</p>
+
+          <div className="mt-6 flex flex-col gap-1.5">
+            <button
+              onClick={handleClick}
+              className="w-full flex items-center justify-center gap-2 py-3.5 text-sm sm:text-base font-bold text-white bg-primary-400 hover:bg-primary-500 rounded-xl shadow-lg shadow-primary-300/50 transition-all"
+            >
+              🎁 텀블벅에서 지금 주문하기
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+            <button onClick={close} className="text-xs text-ink-muted hover:text-ink py-2">
+              오늘은 그만 보기
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+          from { opacity: 0; transform: scale(0.92); }
+          to { opacity: 1; transform: scale(1); }
+        }
+      `}</style>
+    </div>
   )
 }

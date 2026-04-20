@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Check, Shield, Clock, RefreshCw, Ban } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { PromoBanner } from '@/components/PromoBanner'
 import { trackCTAClick } from '@/lib/analytics'
@@ -151,9 +151,9 @@ function PhoneMockup() {
   const [idx, setIdx] = useState(0)
   const [transition, setTransition] = useState(true)
   const [paused, setPaused] = useState(false)
-  const TOTAL_SETS = 10
+  const TOTAL_SETS = 3
   const totalCards = albums.length * TOTAL_SETS
-  const resetPoint = albums.length * (TOTAL_SETS - 2)
+  const resetPoint = albums.length
 
   useEffect(() => {
     if (paused) return
@@ -201,9 +201,10 @@ function PhoneMockup() {
                   transform: `translateX(${-idx * (cardSize + cardGap)}px)`,
                 }}
               >
-                {[...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums, ...albums].map((a, i) => (
+                {Array.from({ length: TOTAL_SETS }).flatMap(() => albums).map((a, i) => (
                   <div
                     key={i}
+                    aria-hidden={i !== idx}
                     className={`flex-shrink-0 w-[250px] h-[250px] rounded-2xl overflow-hidden relative shadow-lg transition-all duration-700 ${
                       i === idx ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-40 hover:opacity-70 hover:scale-[0.9]'
                     } cursor-pointer`}
@@ -390,31 +391,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         </div>
       </section>
 
-      {/* ═══ 1.2 신뢰 띠 — 4개 키 포인트 ═══════════════ */}
-      <section className="bg-white border-y border-neutral-100">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 py-5 sm:py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
-            {[
-              { Icon: Ban, title: 'AI 학습 비사용 기본', desc: '동의 시 10% 할인' },
-              { Icon: Shield, title: '음성 30일 후 자동 삭제', desc: '제3자 공유 없음' },
-              { Icon: Clock, title: '영업일 3~5일 완성', desc: '어버이날 전 배송 가능' },
-              { Icon: RefreshCw, title: '1회 무료 수정 포함', desc: '마음에 들 때까지' },
-            ].map(({ Icon, title, desc }) => (
-              <div key={title} className="flex items-start gap-2.5">
-                <div className="w-9 h-9 rounded-lg bg-primary-50 flex-shrink-0 flex items-center justify-center">
-                  <Icon className="w-4 h-4 text-primary-400" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-[12px] sm:text-sm font-semibold text-ink leading-tight">{title}</p>
-                  <p className="text-[11px] sm:text-xs text-ink-faint mt-0.5 leading-tight">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ 1.5 텀블벅 프로모 배너 ═══════════════════ */}
+      {/* ═══ 1.5 텀블벅 프로모 모달 (페이지 로드 후 자동 오픈) ═══════════════════ */}
       <PromoBanner />
 
       {/* ═══ 2. 공감 (말풍선) ══════════════════════════ */}
@@ -445,7 +422,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                     {/* 말풍선 꼬리 */}
                     <div className={`absolute -bottom-2 ${b.align === 'left' ? 'left-6' : 'right-6'}`}>
                       <svg width="16" height="10" viewBox="0 0 16 10" className={b.align === 'right' ? 'scale-x-[-1]' : ''}>
-                        <path d="M0 0 L8 10 L16 0 Z" fill={b.align === 'right' ? '#F5583E' : '#ffffff'} />
+                        <path d="M0 0 L8 10 L16 0 Z" fill={b.align === 'right' ? '#FF6E59' : '#ffffff'} />
                       </svg>
                     </div>
                   </div>
