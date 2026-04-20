@@ -645,8 +645,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                   <div className="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary-100 shadow-md">
                     <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-ink-light mb-4">{item.title}</h3>
-                  <p className="text-ink-muted text-sm leading-relaxed whitespace-pre-line">{item.desc}</p>
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-ink-light mb-4 whitespace-nowrap">{item.title}</h3>
+                  <p className="text-ink-muted text-sm leading-relaxed whitespace-pre-line break-keep">{item.desc}</p>
                 </div>
               </FadeIn>
             ))}

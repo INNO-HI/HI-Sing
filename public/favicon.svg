@@ -1,22 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
-  <!-- 편지봉투 + 음표 v4: 작은 사이즈에서 음표 압도적으로 식별 -->
-
-  <!-- 봉투 본체 (solid, 하단 45%) -->
-  <rect x="30" y="112" width="140" height="78" rx="9"/>
-
-  <!-- 플랩 V 표시 (흰색 V 선 — 여백 독립적, 봉투 안에서만 대비) -->
-  <path d="M36 114 L100 158 L164 114" fill="none" stroke="#FFF2EF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- 큰 음표 — 전체 상단 50% 차지 -->
-  <!-- 음표 머리 (큰 타원, -20도 기울임) -->
-  <ellipse cx="68" cy="96" rx="30" ry="24" transform="rotate(-20 68 96)"/>
-
-  <!-- stem (굵게) -->
-  <path d="M91 20 L96 90 L107 90 L102 20 Z"/>
-
-  <!-- 깃발 (둥글고 큼직하게, 2단으로 리듬감) -->
-  <path d="M97 18
-           Q148 26, 158 60
-           Q135 48, 125 70
-           Q135 38, 97 34 Z"/>
+  <!-- 컨셉 08: 편지 봉투 + 음표 — 편지 대신 노래 -->
+  <!-- envelope body -->
+  <rect x="30" y="80" width="140" height="95" rx="6"/>
+  <!-- envelope flap (open, folded down) -->
+  <path d="M30 80 L100 130 L170 80 Z" fill="#FFF2EF"/>
+  <path d="M30 80 L100 130 L170 80" fill="none" stroke="#FF6E59" stroke-width="5" stroke-linejoin="round"/>
+  <!-- music note flying out top -->
+  <circle cx="100" cy="48" r="11"/>
+  <rect x="109" y="10" width="5" height="42"/>
+  <path d="M114 10 L138 3 L138 16 L114 23 Z"/>
 </svg>
