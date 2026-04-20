@@ -1,23 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" fill="none">
-  <!-- Heart -->
-  <g transform="translate(25, 25)">
-    <path d="M 75 142 C 35 108, 0 82, 0 48 C 0 22, 22 2, 45 7 C 58 10, 68 22, 75 34 C 82 22, 92 10, 105 7 C 128 2, 150 22, 150 48 C 150 82, 115 108, 75 142 Z" fill="#FF6E59"/>
-
-    <!-- Family silhouettes — clean, no faces -->
-    <!-- Parent (left, tall) -->
-    <g transform="translate(40, 54)">
-      <circle cx="0" cy="0" r="10" fill="#FFF"/>
-      <path d="M -12 20 Q -14 42 -8 50 L 12 50 Q 18 42 13 20 Q 10 10 0 10 Q -9 10 -12 20 Z" fill="#FFF"/>
-    </g>
-    <!-- Parent (right, tall) -->
-    <g transform="translate(110, 54)">
-      <circle cx="0" cy="0" r="10" fill="#FFF"/>
-      <path d="M -12 20 Q -14 42 -10 50 L 10 50 Q 14 42 12 20 Q 10 10 0 10 Q -10 10 -12 20 Z" fill="#FFF"/>
-    </g>
-    <!-- Child (center, shorter) -->
-    <g transform="translate(75, 76)">
-      <circle cx="0" cy="0" r="8" fill="#FFF"/>
-      <path d="M -9 16 Q -11 32 -6 38 L 6 38 Q 11 32 9 16 Q 7 8 0 7 Q -7 8 -9 16 Z" fill="#FFF"/>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 08: 편지 봉투 + 음표 — 편지 대신 노래 -->
+  <!-- envelope body -->
+  <rect x="30" y="80" width="140" height="95" rx="6"/>
+  <!-- envelope flap (open, folded down) -->
+  <path d="M30 80 L100 130 L170 80 Z" fill="#FFF2EF"/>
+  <path d="M30 80 L100 130 L170 80" fill="none" stroke="#FF6E59" stroke-width="5" stroke-linejoin="round"/>
+  <!-- music note flying out top -->
+  <circle cx="100" cy="48" r="11"/>
+  <rect x="109" y="10" width="5" height="42"/>
+  <path d="M114 10 L138 3 L138 16 L114 23 Z"/>
 </svg>
