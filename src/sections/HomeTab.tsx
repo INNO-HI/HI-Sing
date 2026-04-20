@@ -524,7 +524,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                   작성해주신 이야기와<br />
                   가족의 목소리를 바탕으로<br />
                   맞춤 노래 한 곡을 만들어드립니다.<br /><br />
-                  <strong className="text-primary-400">mp3 음원 + 카카오톡 공유 링크로 3~5일 안에 도착합니다.</strong>
+                  <strong className="text-primary-400">mp3 음원으로 3~5일 안에 도착합니다.</strong>
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
