@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Check, Clock, RefreshCw, Mic, Truck } from 'lucide-react'
+import { Check, Clock, RefreshCw, Mic, Truck, Shield, Ban, Lock, Eye } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { PromoBanner } from '@/components/PromoBanner'
 import { trackCTAClick } from '@/lib/analytics'
@@ -371,6 +371,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <h1 className="text-[22px] sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight break-keep">
                 노래로 전하는<br className="sm:hidden" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
+              <p className="mt-3 sm:mt-4 text-[13px] sm:text-base text-ink-muted break-keep">
+                가족의 <strong className="text-ink-light">실제 목소리</strong>와 <strong className="text-ink-light">직접 쓴 사연</strong>으로 만드는<br className="sm:hidden" /> 세상에 하나뿐인 오리지널 노래 선물
+              </p>
 
               <div className="mt-6 sm:mt-8">
                 <button
@@ -461,6 +464,67 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         </div>
       </section>
 
+
+      {/* ═══ 2.5 음성 데이터 처리 정책 — 신뢰 카드 ═══════════════ */}
+      <section className="py-20 sm:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <div className="text-center mb-10 sm:mb-12">
+              <span className="inline-block text-[11px] font-semibold text-primary-500 bg-primary-50 border border-primary-100 rounded-full px-3 py-1 mb-3">음성 데이터 처리 정책</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight">
+                가족 목소리를 맡기는 일,<br className="sm:hidden" /> 그 무게를 압니다
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-ink-muted">
+                하이싱의 4가지 공식 처리 원칙
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                Icon: Ban,
+                title: 'AI 학습에 사용하지 않음',
+                desc: '업로드된 음성은 해당 주문의 노래 제작 목적으로만 사용됩니다.',
+                note: '학습 동의 시 10% 할인 — 선택',
+              },
+              {
+                Icon: Shield,
+                title: '30일 후 자동 삭제',
+                desc: '완성곡 전달 후 30일이 지나면 원본 음성·사연이 자동 파기됩니다.',
+                note: '요청 시 즉시 삭제 가능',
+              },
+              {
+                Icon: Lock,
+                title: '제3자 제공 없음',
+                desc: '외주 제작사·광고 파트너·마케팅 대행 어디에도 음성이 공유되지 않습니다.',
+                note: '국내 자체 로컬 서버 암호화 저장',
+              },
+              {
+                Icon: Eye,
+                title: '제작 목적 외 사용 금지',
+                desc: '가족 목소리를 다른 사업, 샘플 공개, SNS 노출에 사용하지 않습니다.',
+                note: '개인정보처리방침에 공식 명시',
+              },
+            ].map(({ Icon, title, desc, note }) => (
+              <FadeIn key={title} delay={0.05}>
+                <div className="bg-white rounded-2xl border border-neutral-200 p-5 sm:p-6 h-full">
+                  <div className="w-11 h-11 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-primary-400" />
+                  </div>
+                  <h3 className="text-[15px] font-bold text-ink-light leading-tight mb-2">{title}</h3>
+                  <p className="text-[13px] text-ink-muted leading-relaxed mb-3">{desc}</p>
+                  <p className="text-[11px] text-primary-500 font-medium bg-primary-50 rounded-md px-2 py-1 inline-block">{note}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.2}>
+            <p className="mt-8 text-center text-xs text-ink-faint">
+              자세한 조항은 <a href="/privacy" className="underline hover:text-primary-500">개인정보처리방침 제2조</a>에 공식 기재되어 있습니다.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* ═══ 3. 가장 쉽고 빠른 방법 ═══════════════════ */}
       <section className="py-24 sm:py-32 bg-white">
@@ -587,6 +651,57 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         </div>
       </section>
 
+
+      {/* ═══ 6.5 실제 받은 분들의 반응 ═══════════════════ */}
+      <section className="py-20 sm:py-24 bg-neutral-50">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <div className="text-center mb-10 sm:mb-12">
+              <span className="inline-block text-[11px] font-semibold text-primary-500 bg-white border border-primary-100 rounded-full px-3 py-1 mb-3">실제 전달 후 반응</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight">
+                상품권이 아닌,<br className="sm:hidden" /> 평생 기억될 선물
+              </h2>
+            </div>
+          </FadeIn>
+          <div className="grid sm:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                quote: '부모님이 처음 듣고 두 분 다 우셨어요. 팔순 잔치에서 틀어드렸는데 후렴 첫 소절에 어머니가 숟가락을 놓으셨어요.',
+                from: '40대 아들',
+                situation: '어머니 팔순 선물',
+              },
+              {
+                quote: '상품권 드리던 예년보다 훨씬 기억에 남았다고 하셔요. 어머니는 매일 아침 설거지하실 때 이 노래를 틀어두신대요.',
+                from: '30대 딸',
+                situation: '어버이날 선물',
+              },
+              {
+                quote: '아버지 눈물, 태어나서 처음 봤어요. 지금도 차에서 매일 반복 재생하시고 동료분들께 자랑하신다고 해요.',
+                from: '30대 딸',
+                situation: '아버지 생신',
+              },
+            ].map((r, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 h-full flex flex-col">
+                  <svg className="w-6 h-6 text-primary-300 mb-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                  </svg>
+                  <p className="text-[15px] text-ink-light leading-relaxed flex-1">&ldquo;{r.quote}&rdquo;</p>
+                  <div className="mt-5 pt-4 border-t border-neutral-100">
+                    <p className="text-sm font-semibold text-ink">{r.from}</p>
+                    <p className="text-xs text-ink-muted mt-0.5">{r.situation}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <p className="mt-8 text-center text-xs text-ink-faint">
+              실제 주문 고객의 전달 후 반응 (이름·세부 내용은 고객 동의 하 편집)
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* ═══ 5. 특별함 ═════════════════════════════════ */}
       <section className="py-24 sm:py-32 bg-white">

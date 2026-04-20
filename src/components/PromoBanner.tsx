@@ -117,6 +117,21 @@ export function PromoBanner() {
             <span className="block text-xs text-ink-faint mt-1">(얼리버드 100명 한정)</span>
           </p>
 
+          {/* 포함 사항 — 가격 수용성 강화 */}
+          <div className="mt-5 bg-white/70 rounded-xl border border-primary-100 p-4 text-left">
+            <p className="text-[11px] font-bold text-primary-500 mb-2 text-center">이 가격에 포함된 것</p>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[12px] text-ink-light">
+              {['작사 (사연 기반)', '작곡 (오리지널)', '보컬 합성·믹싱', 'mp3 음원 + 카카오톡 전달', '1회 무료 수정', '3~5일 완성'].map((x) => (
+                <div key={x} className="flex items-center gap-1.5">
+                  <svg className="w-3 h-3 text-primary-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{x}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* 카운트다운 */}
           <div className="mt-5">
             <p className="text-xs font-medium text-ink-muted mb-2">주문 마감까지</p>
