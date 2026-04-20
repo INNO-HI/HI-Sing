@@ -86,7 +86,7 @@ export default function TumblbukPreview() {
               <p className="text-ink-faint text-[10px] mt-0.5">완성</p>
             </div>
             <div className="bg-white/70 rounded-lg py-3">
-              <p className="text-primary-500 font-semibold text-sm">30초</p>
+              <p className="text-primary-500 font-semibold text-sm">60초</p>
               <p className="text-ink-faint text-[10px] mt-0.5">음성이면 OK</p>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function TumblbukPreview() {
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-400 text-white flex items-center justify-center text-sm font-semibold">1</span>
                 <div>
                   <p className="text-ink font-medium mb-1">목소리 파일 보내기</p>
-                  <p className="text-ink-muted text-sm leading-relaxed">전화 녹음, 영상 속 목소리, 일상 대화. 30초면 됩니다.</p>
+                  <p className="text-ink-muted text-sm leading-relaxed">전화 녹음, 영상 속 목소리, 일상 대화. 60초면 됩니다.</p>
                 </div>
               </div>
             </div>

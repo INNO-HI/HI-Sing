@@ -287,7 +287,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     <h3 className="text-lg font-bold text-ink mb-5">자주 묻는 질문</h3>
                     <div className="space-y-4">
                       {[
-                        { q: '음성 파일은 어떤 걸 보내야 하나요?', a: 'mp3, m4a, wav 등 대부분의 음성 파일을 지원합니다. 전화 녹음, 영상 속 목소리, 일상 대화 등 30초 이상이면 충분합니다.' },
+                        { q: '음성 파일은 어떤 걸 보내야 하나요?', a: 'mp3, m4a, wav 등 대부분의 음성 파일을 지원합니다. 전화 녹음, 영상 속 목소리, 일상 대화 등 60초 이상이면 충분합니다.' },
                         { q: '여러 사람 목소리가 섞여 있어도 되나요?', a: '네. 여러 목소리가 섞여 있어도 원하는 분의 목소리만 골라서 사용합니다.' },
                         { q: '마음에 안 들면 수정할 수 있나요?', a: '모든 리워드에 1회 무료 수정이 포함되어 있습니다. 가사, 멜로디, 분위기 등 수정 요청이 가능합니다.' },
                         { q: '선물 날짜에 맞출 수 있나요?', a: `${reward.tier} 리워드 기준 ${reward.delivery} 이내 완성됩니다. 급한 경우 사전에 말씀해주시면 최대한 맞춰드립니다.` },
@@ -308,7 +308,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     <h3 className="text-sm font-bold text-ink mb-3">주의사항</h3>
                     <ul className="space-y-1.5 text-xs text-ink-muted leading-relaxed">
                       <li>· 음성 파일 품질에 따라 결과물 품질이 달라질 수 있습니다</li>
-                      <li>· 30초 미만의 음성은 보컬 합성이 어려울 수 있습니다</li>
+                      <li>· 60초 미만의 음성은 보컬 합성이 어려울 수 있습니다</li>
                       <li>· 완성곡은 사적 이용 범위로 제공됩니다 (상업적 이용 시 별도 동의 필요)</li>
                       <li>· 제작 시작 후에는 환불 정책에 따라 부분 환불이 진행됩니다</li>
                       <li>· 음성 데이터는 제작 완료 후 30일이 지나면 자동 삭제됩니다</li>
@@ -760,7 +760,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
             <FadeIn delay={0.15}>
               <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
                 <h3 className="text-base font-bold text-ink mb-2">음성 파일 업로드 <span className="text-primary-400">*</span></h3>
-                <p className="text-xs text-ink-faint mb-5">전화 녹음, 영상 속 목소리, 일상 대화 등 30초 이상이면 됩니다</p>
+                <p className="text-xs text-ink-faint mb-5">전화 녹음, 영상 속 목소리, 일상 대화 등 60초 이상이면 됩니다</p>
                 <input ref={fileRef} type="file" accept="audio/*" className="hidden" onChange={e => { const f = e.target.files?.[0] || null; setFile(f); if (f) trackFileUpload(f.name, f.size) }} />
                 {file ? (
                   <div className="flex items-center justify-between bg-primary-50 border border-primary-100 rounded-xl px-5 py-4">
@@ -894,7 +894,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
                     ))}
                   </ul>
                   <p className="text-ink-muted text-[13px] leading-relaxed mb-5">{r.desc}</p>
-                  <button onClick={() => onSelect(i)} className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors bg-neutral-100 text-ink hover:bg-neutral-200">
+                  <button onClick={() => onSelect(i)} className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors bg-primary-400 text-white hover:bg-primary-500">
                     자세히 보기<ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

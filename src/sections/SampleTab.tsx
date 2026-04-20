@@ -211,12 +211,13 @@ function FeaturedSampleStory({ s, isPlaying, onToggle }: { s: Sample; isPlaying:
                 </div>
               </div>
               <div className="md:col-span-3 p-7 sm:p-10 flex flex-col justify-center">
-                <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">대표 사연</p>
-                <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight mb-5">
-                  한 곡으로 바뀐 어느 팔순 저녁
+                <p className="text-primary-400 font-semibold text-xs tracking-[0.2em] uppercase mb-3">실화 · 어머니 팔순</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight mb-4">
+                  새벽 다섯 시,<br />엄마의 손끝에서<br />
+                  <span className="text-primary-500">하루가 시작됐습니다.</span>
                 </h2>
-                <p className="text-ink-light text-sm sm:text-base leading-relaxed mb-6">
-                  {s.background}
+                <p className="text-ink-light text-[15px] sm:text-base leading-relaxed mb-5">
+                  30년간 같은 시간에 일어나 도시락을 싸주신 어머니. 반찬 투정 부리던 날도, 도시락이 창피하다 떼쓰던 날도 — 그 불빛은 꺼지지 않았습니다.
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {s.tags.map(t => (
@@ -233,53 +234,55 @@ function FeaturedSampleStory({ s, isPlaying, onToggle }: { s: Sample; isPlaying:
         {/* 3블록 — 이 노래가 전하는 것 / 어떻게 만들어지는지 / 받았을 때의 반응 */}
         <FadeIn delay={0.1}>
           <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
-            {/* Block 1: 이 노래가 전하는 것 */}
-            <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 flex flex-col">
-              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                <Volume2 className="w-5 h-5 text-primary-400" />
-              </div>
-              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">이 노래가 전하는 것</p>
-              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">&ldquo;엄마의 30년을 노래로&rdquo;</h4>
-              <p className="text-[13px] text-ink-muted leading-relaxed whitespace-pre-line italic mb-4 flex-1">
-                {s.lyricsExcerpt}
-              </p>
-              <button
-                onClick={onToggle}
-                className="flex items-center gap-2 text-sm font-semibold text-primary-500 hover:text-primary-600 transition-colors"
-              >
-                {isPlaying ? <Pause className="w-4 h-4" fill="currentColor" /> : <Play className="w-4 h-4" fill="currentColor" />}
-                {isPlaying ? '재생 중' : '노래 듣기'} · {s.duration}
-              </button>
-            </div>
-
-            {/* Block 2: 어떻게 만들어지는지 */}
+            {/* Block 1: 왜 이 노래였을까 */}
             <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 flex flex-col">
               <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
                 <Info className="w-5 h-5 text-primary-400" />
               </div>
-              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">어떻게 만들어졌는지</p>
-              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">결심에서 완성까지</h4>
+              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">왜 이 노래였을까</p>
+              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">사진 한 장에서 시작됐습니다</h4>
               <p className="text-[13px] text-ink-muted leading-relaxed flex-1">
-                {s.trigger}
+                어머니 핸드폰 속, 30년 전 흑백 사진 한 장. 그 사진을 찍어드린 건 평생 사진첩에 들어간 적 없는 <span className="text-ink font-semibold">&lsquo;어머니 자신&rsquo;</span>이었다는 걸 그제야 알았습니다.
               </p>
               <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center gap-2 text-xs text-ink-faint">
                 <Shield className="w-3.5 h-3.5" />
-                <span>가족 목소리 30초 + 사연 한 편이면 시작됩니다</span>
+                <span>가족 목소리 60초 + 사연 한 편이면 시작됩니다</span>
               </div>
             </div>
 
-            {/* Block 3: 받았을 때의 반응 */}
+            {/* Block 2: 완성된 노래의 한 소절 */}
+            <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
+                <Volume2 className="w-5 h-5 text-primary-400" />
+              </div>
+              <p className="text-primary-400 font-semibold text-xs tracking-wider uppercase mb-2">완성된 노래 · 후렴 발췌</p>
+              <p className="text-[15px] text-ink-light leading-[1.7] italic font-medium mb-4 flex-1">
+                &ldquo;새벽 다섯 시, 작은 불빛 하나<br />
+                엄마의 손끝에서 하루가 시작됐지<br />
+                그땐 몰랐죠, 그 따뜻함이<br />
+                평생 내 인생의 도시락이 될 줄은&rdquo;
+              </p>
+              <button
+                onClick={onToggle}
+                className="flex items-center justify-center gap-2 py-3 rounded-xl bg-primary-400 text-white text-sm font-bold hover:bg-primary-500 transition-colors"
+              >
+                {isPlaying ? <Pause className="w-4 h-4" fill="currentColor" /> : <Play className="w-4 h-4" fill="currentColor" />}
+                {isPlaying ? '재생 중' : '전체 듣기'} · {s.duration}
+              </button>
+            </div>
+
+            {/* Block 3: 그날의 장면 */}
             <div className="bg-primary-50 rounded-2xl border border-primary-100 p-6 sm:p-7 flex flex-col">
               <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
               </div>
-              <p className="text-primary-500 font-semibold text-xs tracking-wider uppercase mb-2">받았을 때의 반응</p>
-              <div className="text-primary-300 text-3xl font-serif leading-none mb-2 select-none">&ldquo;</div>
-              <p className="text-ink text-[14px] sm:text-[15px] leading-relaxed font-medium flex-1">
-                {s.reaction.replace(/^"|"$/g, '')}
+              <p className="text-primary-500 font-semibold text-xs tracking-wider uppercase mb-2">그날의 장면</p>
+              <h4 className="text-lg font-bold text-ink-light mb-3 leading-snug">후렴 첫 소절에,<br />어머니가 숟가락을 놓으셨습니다.</h4>
+              <p className="text-[13px] text-ink leading-relaxed mb-3">
+                온 가족이 다 울었고, 제가 가장 많이 울었던 것 같아요.
               </p>
-              <p className="text-xs text-ink-muted mt-4 pt-4 border-t border-primary-100">
-                {s.afterStory}
+              <p className="text-[13px] text-ink-muted leading-relaxed italic border-l-2 border-primary-300 pl-3 mt-auto">
+                지금도 매일 아침 설거지하실 때 이 노래를 틀어두신다고 합니다. 동네 이웃분들한테 자랑하느라 바쁘시다고요.
               </p>
             </div>
           </div>
@@ -349,7 +352,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
       </section>
 
       {/* Before / After */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn delay={0.15}>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -444,50 +447,6 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
         isPlaying={playingIdx === 0}
         onToggle={() => handleToggle(0)}
       />
-
-      {/* 다른 사례 — 미니 리스트 */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
-        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-14">
-          <FadeIn>
-            <div className="text-center mb-8">
-              <p className="text-primary-400 font-semibold text-sm mb-2">More Stories</p>
-              <h3 className="text-xl sm:text-2xl font-bold text-ink-light">다른 사연도 들어보세요</h3>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {samples.slice(1).map((s, i) => {
-                const realIdx = i + 1
-                const playing = playingIdx === realIdx
-                return (
-                  <button
-                    key={s.title}
-                    onClick={() => handleToggle(realIdx)}
-                    className="group bg-white rounded-2xl border border-neutral-200 p-4 sm:p-5 flex items-center gap-4 hover:border-primary-200 hover:shadow-md transition-all text-left"
-                  >
-                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0">
-                      <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ filter: 'sepia(0.2) saturate(0.9) brightness(1.02)' }} />
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <div className={`w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center transition-transform ${playing ? 'scale-110' : 'group-hover:scale-110'}`}>
-                          {playing
-                            ? <Pause className="w-4 h-4 text-primary-400" fill="currentColor" />
-                            : <Play className="w-4 h-4 text-primary-400 ml-0.5" fill="currentColor" />
-                          }
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-ink-faint mb-1">{s.to} · {s.from}</p>
-                      <p className="font-bold text-ink-light text-base truncate">{s.title}</p>
-                      <p className="text-xs text-ink-muted mt-1">{playing ? '재생 중…' : `${s.duration}`}</p>
-                    </div>
-                  </button>
-                )
-              })}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
 
       {/* CTA */}
       {onNavigate && (

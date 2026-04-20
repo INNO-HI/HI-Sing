@@ -363,13 +363,13 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-between">
           <FadeIn>
-            <div className="text-center mt-16 sm:mt-28">
-              <p className="text-ink-muted text-base sm:text-lg mb-5">마음을 직접 전하기 쑥스럽다면, 하이싱으로 먼저 전해보세요.</p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight">
-                <span className="text-primary-400">노래</span>로 전하는 우리 가족 이야기
+            <div className="text-center mt-10 sm:mt-20">
+              <p className="text-sm sm:text-lg text-ink-muted mb-4 sm:mb-5 break-keep">마음을 직접 전하기 쑥스럽다면,<br className="sm:hidden" /> 하이싱으로 먼저 전해보세요.</p>
+              <h1 className="text-[22px] sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight break-keep">
+                노래로 전하는<br className="sm:hidden" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
 
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <button
                   onClick={handleHeroCTA}
                   className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
@@ -380,8 +380,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 하단: 핸드폰 목업 — 바로 밑에 붙음 */}
-          <FadeIn delay={0.15} className="flex justify-center">
+          {/* 하단: 핸드폰 목업 — 명시적 간격 */}
+          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8">
             <PhoneMockup />
           </FadeIn>
         </div>
@@ -462,7 +462,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                   가족의 목소리가 담긴 파일을 업로드하세요.<br />
                   일상 대화, 전화 녹음, 영상 속 목소리<br />
                   뭐든 괜찮습니다.<br /><br />
-                  <strong className="text-primary-400">30초 이상이면 충분합니다.</strong>
+                  <strong className="text-primary-400">60초 이상이면 충분합니다.</strong>
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
@@ -578,7 +578,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
-              { img: `/images/special-voice.png`, title: '30초 음성이면 충분', desc: '전화 녹음, 영상 속 목소리,\n일상 대화 뭐든 괜찮습니다.\n30초 이상이면 충분해요.' },
+              { img: `/images/special-voice.png`, title: '60초 음성이면 충분', desc: '전화 녹음, 영상 속 목소리,\n일상 대화 뭐든 괜찮습니다.\n60초 이상이면 충분해요.' },
               { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를\n보컬로 얹어드립니다.' },
               { img: `/images/special-compose.png`, title: '프리미엄 작사/작곡', desc: '단순 변환이 아닙니다.\n마음에 어울리는 가사를 쓰고,\n그에 맞는 멜로디를 작곡합니다.' },
               { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면 완성된\n노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
