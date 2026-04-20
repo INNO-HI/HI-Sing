@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 01: 음파 하트 — 하트 안에서 waveform 퍼짐 -->
+  <path d="M100 170 C50 130, 15 100, 15 62 C15 35, 38 18, 62 22 C80 25, 92 38, 100 54 C108 38, 120 25, 138 22 C162 18, 185 35, 185 62 C185 100, 150 130, 100 170 Z" opacity="0.15"/>
+  <path d="M100 170 C50 130, 15 100, 15 62 C15 35, 38 18, 62 22 C80 25, 92 38, 100 54 C108 38, 120 25, 138 22 C162 18, 185 35, 185 62 C185 100, 150 130, 100 170 Z" fill="none" stroke="#FF6E59" stroke-width="8"/>
+  <!-- waveform bars inside -->
+  <rect x="53" y="76" width="6" height="24" rx="3"/>
+  <rect x="68" y="66" width="6" height="44" rx="3"/>
+  <rect x="83" y="56" width="6" height="64" rx="3"/>
+  <rect x="98" y="46" width="6" height="84" rx="3"/>
+  <rect x="113" y="56" width="6" height="64" rx="3"/>
+  <rect x="128" y="66" width="6" height="44" rx="3"/>
+  <rect x="143" y="76" width="6" height="24" rx="3"/>
+</svg>

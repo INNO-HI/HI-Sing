@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 10: 글자 H + 음파 바 — HI-Sing 이니셜 모노그램 -->
+  <!-- H 왼쪽 기둥 (음파 바 톤으로 세로 리듬) -->
+  <rect x="35" y="55" width="18" height="90" rx="9"/>
+  <!-- H 오른쪽 기둥 -->
+  <rect x="147" y="55" width="18" height="90" rx="9"/>
+  <!-- H 가로 바 — waveform 4개 막대로 구성 -->
+  <rect x="60" y="88" width="10" height="24" rx="5"/>
+  <rect x="78" y="78" width="10" height="44" rx="5"/>
+  <rect x="96" y="72" width="10" height="56" rx="5"/>
+  <rect x="114" y="80" width="10" height="40" rx="5"/>
+  <rect x="132" y="92" width="10" height="16" rx="5"/>
+</svg>

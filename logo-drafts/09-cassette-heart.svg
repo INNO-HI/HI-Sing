@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 09: 레트로 카세트 + 하트 — 아날로그 감성 -->
+  <!-- tape body -->
+  <rect x="20" y="50" width="160" height="100" rx="12"/>
+  <!-- label area -->
+  <rect x="32" y="62" width="136" height="40" rx="4" fill="#FFF2EF"/>
+  <!-- heart on label -->
+  <path d="M100 95 C88 85, 82 78, 82 70 C82 64, 88 60, 94 60 C97 60, 100 62, 100 64 C100 62, 103 60, 106 60 C112 60, 118 64, 118 70 C118 78, 112 85, 100 95 Z"/>
+  <!-- tape reels -->
+  <circle cx="60" cy="125" r="14" fill="#FFF2EF"/>
+  <circle cx="60" cy="125" r="5"/>
+  <circle cx="140" cy="125" r="14" fill="#FFF2EF"/>
+  <circle cx="140" cy="125" r="5"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 05: 리본 + 음표 — 리본 매듭 위에 음표 -->
+  <!-- ribbon loops -->
+  <ellipse cx="65" cy="120" rx="35" ry="22" transform="rotate(-20 65 120)"/>
+  <ellipse cx="135" cy="120" rx="35" ry="22" transform="rotate(20 135 120)"/>
+  <!-- ribbon ends -->
+  <path d="M80 145 L55 180 L72 178 L85 155 Z"/>
+  <path d="M120 145 L145 180 L128 178 L115 155 Z"/>
+  <!-- knot -->
+  <rect x="88" y="110" width="24" height="28" rx="6"/>
+  <!-- music note on top -->
+  <circle cx="100" cy="72" r="13"/>
+  <rect x="110" y="28" width="6" height="48"/>
+  <path d="M116 28 L144 20 L144 34 L116 42 Z"/>
+</svg>

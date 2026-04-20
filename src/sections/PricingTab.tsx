@@ -10,7 +10,10 @@ const NICEPAY_CLIENT_KEY = process.env.NEXT_PUBLIC_NICEPAY_CLIENT_KEY || ''
 const rewards = [
   {
     icon: Tag, tier: '얼리버드', price: '29,000', priceNum: 29000,
-    badge: '한정 100명', badgeColor: 'bg-primary-400 text-white', highlight: true,
+    emoTitle: '가볍게 마음 전하기',
+    emoSub: '짧지만 진심을 담는 첫 선물',
+    ctaLabel: '가볍게 시작하기',
+    badge: '한정 100명', badgeColor: 'bg-neutral-800 text-white', highlight: false,
     features: [
       { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '고음질 mp3 음원' },
@@ -30,7 +33,10 @@ const rewards = [
   },
   {
     icon: Music, tier: '기본', price: '49,000', priceNum: 49000,
-    badge: '가장 많이 선택', badgeColor: 'bg-neutral-800 text-white', highlight: false,
+    emoTitle: '제대로 감동 주기',
+    emoSub: '부모님을 울릴 수 있는 선물',
+    ctaLabel: '이 감정으로 만들기',
+    badge: '⭐ 가장 많이 선택', badgeColor: 'bg-primary-400 text-white', highlight: true,
     features: [
       { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '무손실 음원 (mp3 + wav)' },
@@ -50,7 +56,10 @@ const rewards = [
   },
   {
     icon: Star, tier: '프리미엄', price: '79,000', priceNum: 79000,
-    badge: '프리미엄', badgeColor: 'bg-primary-500 text-white', highlight: false,
+    emoTitle: '평생 기억될 선물',
+    emoSub: '단 한 번의 순간을 위한 완성형',
+    ctaLabel: '특별하게 준비하기',
+    badge: '프리미엄', badgeColor: 'bg-neutral-800 text-white', highlight: false,
     features: [
       { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '무손실 음원 (mp3 + wav)' },
@@ -116,7 +125,8 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                   <reward.icon className="w-6 h-6 text-white/70" />
                   {reward.badge && <span className="text-xs font-bold bg-white/20 rounded-full px-3 py-0.5">{reward.badge}</span>}
                 </div>
-                <h1 className="text-3xl sm:text-4xl font-black mb-2">{reward.tier}</h1>
+                <h1 className="text-3xl sm:text-4xl font-black mb-1">{reward.emoTitle}</h1>
+                <p className="text-white/80 text-sm mb-3">{reward.emoSub} · 리워드 <strong className="text-white">{reward.tier}</strong></p>
                 <p className="text-white/70 text-[15px] leading-relaxed max-w-md whitespace-pre-line">{reward.desc}</p>
                 <div className="mt-6 flex items-end gap-2">
                   <span className="text-4xl font-black">{reward.price}</span>
@@ -927,57 +937,110 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
             <div className="text-center mb-10 sm:mb-14">
               <p className="text-primary-400 font-semibold text-sm mb-3">Pricing</p>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-light">
-                마음의 크기에 맞는<br />리워드를 골라주세요
+                어떤 마음을 전하시겠습니까?
               </h1>
-              <p className="text-ink-muted text-sm mt-4">전문가 의뢰 50~100만원이 부담스럽다면, 하이싱은 <strong className="text-primary-400">29,000원부터</strong> 시작할 수 있습니다</p>
+              <p className="text-ink-muted text-sm sm:text-base mt-4 break-keep">
+                같은 노래라도, 전하고 싶은 감정에 따라 달라집니다
+              </p>
             </div>
           </FadeIn>
 
-          {/* 신뢰 배지 */}
-          <FadeIn delay={0.05}>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
-              {['1회 무료 수정', '제작 전 100% 환불', '5~7일 완성', '나이스페이 안전결제'].map(t => (
-                <div key={t} className="flex items-center gap-1.5 text-xs text-ink-muted">
-                  <Check className="w-3.5 h-3.5 text-primary-400" />
-                  <span>{t}</span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-5 max-w-6xl mx-auto items-stretch">
             {rewards.map((r, i) => (
               <FadeIn key={r.tier} delay={i * 0.08}>
-                <div className={`relative rounded-2xl border border-neutral-200 bg-white p-6 sm:p-7 h-full flex flex-col transition-all duration-300 hover:-translate-y-1 ${r.highlight ? 'shadow-lg shadow-primary-100/50' : 'shadow-sm hover:shadow-md hover:border-primary-200'}`}>
-                  {r.badge && <span className={`absolute -top-3 left-6 px-3 py-1 text-xs font-bold rounded-full ${r.badgeColor}`}>{r.badge}</span>}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center"><r.icon className="w-5 h-5 text-primary-400" /></div>
-                    <span className="text-base font-bold text-ink-light">{r.tier}</span>
+                <div
+                  className={`relative rounded-2xl h-full flex flex-col transition-all duration-300 hover:-translate-y-1 ${
+                    r.highlight
+                      ? 'border-2 border-primary-400 bg-white p-6 sm:p-8 shadow-2xl shadow-primary-200/50 lg:scale-[1.04] z-10'
+                      : 'border border-neutral-200 bg-white p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-primary-200'
+                  }`}
+                >
+                  {r.badge && (
+                    <span className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-[11px] font-bold rounded-full whitespace-nowrap ${r.badgeColor}`}>
+                      {r.badge}
+                    </span>
+                  )}
+
+                  {/* 감정형 타이틀 + 서브 */}
+                  <div className="text-center mb-5 pt-2">
+                    <h3 className={`font-bold leading-snug break-keep ${r.highlight ? 'text-xl sm:text-2xl text-ink' : 'text-lg sm:text-xl text-ink-light'}`}>
+                      {r.emoTitle}
+                    </h3>
+                    <p className="text-[13px] text-ink-muted mt-2 leading-relaxed break-keep">{r.emoSub}</p>
+                    <p className="text-[11px] text-ink-faint mt-1.5">리워드 · {r.tier}</p>
                   </div>
-                  <div className="mb-4">
-                    <span className="text-3xl font-bold text-ink-light">{r.price}</span>
+
+                  {/* 가격 */}
+                  <div className="text-center mb-5 pb-5 border-b border-neutral-100">
+                    <span className={`font-black ${r.highlight ? 'text-4xl text-primary-500' : 'text-3xl text-ink-light'}`}>{r.price}</span>
                     <span className="text-ink-muted text-sm ml-1">원</span>
                   </div>
-                  <hr className="border-neutral-200 mb-4" />
-                  <ul className="space-y-2.5 mb-5 flex-1">
+
+                  {/* 포함 사항 */}
+                  <ul className="space-y-2.5 mb-6 flex-1">
                     {r.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-ink-light">
-                        <Check className="w-4 h-4 text-primary-400 mt-0.5 flex-shrink-0" /><span>{f.text}</span>
+                        <Check className="w-4 h-4 text-primary-400 mt-0.5 flex-shrink-0" strokeWidth={3} />
+                        <span>{f.text}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="text-ink-muted text-[13px] leading-relaxed mb-5">{r.desc}</p>
-                  <button onClick={() => onSelect(i)} className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors bg-primary-400 text-white hover:bg-primary-500">
-                    자세히 보기<ArrowRight className="w-4 h-4" />
+
+                  {/* CTA */}
+                  <button
+                    onClick={() => onSelect(i)}
+                    className={`flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-colors ${
+                      r.highlight
+                        ? 'bg-primary-400 text-white hover:bg-primary-500 shadow-md shadow-primary-200/50'
+                        : 'bg-white text-ink border border-neutral-300 hover:border-primary-400 hover:text-primary-500'
+                    }`}
+                  >
+                    {r.ctaLabel}
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </FadeIn>
             ))}
           </div>
 
-          {/* 하단 안내 */}
+          {/* 비교 문장 */}
+          <FadeIn delay={0.25}>
+            <p className="text-center text-xs sm:text-sm text-ink-muted mt-10 break-keep">
+              <span className="font-medium text-ink-light">가볍게 전하기</span>
+              <span className="mx-2 text-ink-faint">vs</span>
+              <span className="font-bold text-primary-500">제대로 감동</span>
+              <span className="mx-2 text-ink-faint">vs</span>
+              <span className="font-medium text-ink-light">평생 기억</span>
+            </p>
+          </FadeIn>
+
+          {/* 신뢰 4줄 체크리스트 */}
           <FadeIn delay={0.3}>
-            <p className="text-center text-xs text-ink-faint mt-10">모든 리워드에 1회 무료 수정이 포함되어 있습니다 · 제작 시작 전 100% 환불 가능</p>
+            <div className="max-w-2xl mx-auto mt-10 bg-white rounded-2xl border border-neutral-200 p-5 sm:p-6">
+              <p className="text-center text-[11px] font-bold text-primary-500 tracking-[0.2em] uppercase mb-4">모든 리워드 공통</p>
+              <ul className="grid sm:grid-cols-2 gap-x-5 gap-y-2.5">
+                {[
+                  '실제 가족 목소리 기반 제작',
+                  'AI 학습 데이터로 사용하지 않음',
+                  '제작 후 30일 내 완전 삭제',
+                  '결과 불만 시 1회 무료 수정',
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-2 text-sm text-ink-light">
+                    <span className="w-4 h-4 rounded-full bg-primary-400 flex-shrink-0 flex items-center justify-center">
+                      <Check className="w-2.5 h-2.5 text-white" strokeWidth={3.5} />
+                    </span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+
+          {/* 긴급성 */}
+          <FadeIn delay={0.35}>
+            <p className="text-center text-xs text-primary-500 font-medium mt-7">
+              어버이날 전 전달 마감 임박 · 오늘 주문 시에만 제작 일정 보장
+            </p>
           </FadeIn>
         </div>
       </section>

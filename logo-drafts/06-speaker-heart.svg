@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 06: 스피커 + 하트 파동 — 사운드가 하트로 퍼짐 -->
+  <!-- speaker body -->
+  <path d="M40 75 L70 75 L100 45 L100 155 L70 125 L40 125 Z"/>
+  <!-- heart-shaped sound waves -->
+  <path d="M125 100 C115 90, 112 82, 115 75 C118 68, 126 68, 130 74 C134 68, 142 68, 145 75 C148 82, 145 90, 135 100 Z" fill="none" stroke="#FF6E59" stroke-width="6" stroke-linecap="round"/>
+  <path d="M145 100 C130 85, 125 75, 130 62 C135 50, 150 50, 158 60 C166 50, 180 50, 185 62 C190 75, 185 85, 170 100 Z" fill="none" stroke="#FF6E59" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+</svg>

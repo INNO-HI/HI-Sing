@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 07: 가족 3실루엣이 음표 구성 — 두 기둥+콩나물이 가족 모양 -->
+  <!-- parent left (tall) -->
+  <circle cx="62" cy="55" r="14"/>
+  <rect x="52" y="72" width="20" height="68" rx="10"/>
+  <!-- parent right (tall) -->
+  <circle cx="138" cy="55" r="14"/>
+  <rect x="128" y="72" width="20" height="68" rx="10"/>
+  <!-- child (short, centered) -->
+  <circle cx="100" cy="85" r="11"/>
+  <rect x="91" y="100" width="18" height="55" rx="9"/>
+  <!-- music note head below connecting family -->
+  <ellipse cx="100" cy="165" rx="20" ry="15" transform="rotate(-10 100 165)"/>
+</svg>

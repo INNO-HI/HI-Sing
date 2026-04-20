@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 04: 선물상자 + 음표 — 열리는 선물에서 노래가 날아오름 -->
+  <!-- gift box body -->
+  <rect x="35" y="100" width="130" height="65" rx="6"/>
+  <!-- box lid (slightly tilted) -->
+  <rect x="30" y="80" width="140" height="22" rx="4"/>
+  <!-- vertical ribbon line -->
+  <rect x="95" y="80" width="10" height="85" fill="#FFF2EF"/>
+  <!-- ribbon bow -->
+  <path d="M100 80 Q80 55 75 65 Q70 75 85 80 Z"/>
+  <path d="M100 80 Q120 55 125 65 Q130 75 115 80 Z"/>
+  <circle cx="100" cy="72" r="6"/>
+  <!-- music note rising from box -->
+  <circle cx="100" cy="45" r="9"/>
+  <rect x="107" y="18" width="5" height="28"/>
+  <path d="M112 18 L135 12 L135 24 L112 30 Z"/>
+</svg>
