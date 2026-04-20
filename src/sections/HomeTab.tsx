@@ -367,12 +367,12 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-between">
           <FadeIn>
             <div className="text-center mt-10 sm:mt-20">
-              <p className="text-sm sm:text-lg text-ink-muted mb-4 sm:mb-5 break-keep">마음을 직접 전하기 쑥스럽다면,<br className="sm:hidden" /> 하이싱으로 먼저 전해보세요.</p>
+              <p className="text-sm sm:text-lg text-ink-muted mb-4 sm:mb-5 break-keep">평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.</p>
               <h1 className="text-[22px] sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight break-keep">
                 노래로 전하는<br className="sm:hidden" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
               <p className="mt-3 sm:mt-4 text-[13px] sm:text-base text-ink-muted break-keep">
-                가족의 <strong className="text-ink-light">실제 목소리</strong>와 <strong className="text-ink-light">직접 쓴 사연</strong>으로 만드는<br className="sm:hidden" /> 세상에 하나뿐인 오리지널 노래 선물
+                가족의 <strong className="text-ink-light">실제 목소리</strong>와 <strong className="text-ink-light">직접 쓴 사연</strong>을 바탕으로<br className="sm:hidden" /> 새로 만드는 맞춤 노래입니다.
               </p>
 
               <div className="mt-6 sm:mt-8">
@@ -403,7 +403,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-primary-300 text-sm font-medium mb-6">혹시, 이런 고민하신 적 있으신가요?</p>
               <h2 className="text-2xl sm:text-3xl font-bold" style={{ lineHeight: 1.5 }}>
-                마음은 가득한데,<br />전하기가 참 어렵습니다
+                표현은 하고 싶은데,<br />막상 하려면 어렵습니다
               </h2>
             </div>
           </FadeIn>
@@ -523,7 +523,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 <p className="text-ink-muted text-base leading-relaxed">
                   작성해주신 이야기와<br />
                   가족의 목소리를 바탕으로<br />
-                  세상에 하나뿐인 노래를 만듭니다.<br /><br />
+                  맞춤 노래 한 곡을 만들어드립니다.<br /><br />
                   <strong className="text-primary-400">mp3 음원 + 카카오톡 공유 링크로 3~5일 안에 도착합니다.</strong>
                 </p>
               </div>
@@ -580,7 +580,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             <div className="text-center mb-10 sm:mb-12">
               <span className="inline-block text-[11px] font-semibold text-primary-500 bg-white border border-primary-100 rounded-full px-3 py-1 mb-3">실제 전달 후 반응</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-ink-light leading-tight">
-                상품권이 아닌,<br className="sm:hidden" /> 평생 기억될 선물
+                한 번 듣고 끝나는 선물보다,<br className="sm:hidden" /> 오래 남는 방식으로 전하고 싶을 때
               </h2>
             </div>
           </FadeIn>
@@ -629,16 +629,16 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14">
           <FadeIn>
             <div className="text-center mb-14">
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">하이싱의 특별함</h2>
-              <p className="text-ink-muted text-base mt-3">누구나 쉽게 마음을<br className="sm:hidden" /> 노래로 전할 수 있는 이유</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink-light">이런 방식으로 만듭니다</h2>
+              <p className="text-ink-muted text-base mt-3">다른 AI 노래 생성 서비스와<br className="sm:hidden" /> 어떻게 다른지</p>
             </div>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
               { img: `/images/special-voice.png`, title: '한 사람 목소리면 충분', desc: '가족 중 한 분 목소리가 담긴\n1분 이상 음성이면 됩니다.\n배경음·잡음 일부 허용.' },
               { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를\n보컬로 얹어드립니다.' },
-              { img: `/images/special-compose.png`, title: '사람이 쓰는 감정 가사', desc: 'AI로 찍어내지 않습니다.\n사연을 읽고 가사를 쓰고,\n어울리는 멜로디를 작곡합니다.' },
-              { img: `/images/special-fast.png`, title: '오리지널 곡 · 커버 아님', desc: '기존 곡의 가사만 바꾸지 않습니다.\n세상에 하나뿐인 멜로디와 가사로\n처음부터 만들어드려요.' },
+              { img: `/images/special-compose.png`, title: '사연을 읽고 가사를 씁니다', desc: 'AI로 찍어내지 않습니다.\n사연을 읽고 사람이 가사를 쓰고,\n어울리는 멜로디를 작곡합니다.' },
+              { img: `/images/special-fast.png`, title: '오리지널 곡 · 커버 아님', desc: '기존 곡의 가사만 바꾸지 않습니다.\n새 멜로디와 가사로\n처음부터 만들어드려요.' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-6 sm:p-8 h-full hover:-translate-y-1 transition-all duration-300 text-center">
@@ -666,9 +666,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <FadeIn>
             <div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink-light mb-6" style={{ lineHeight: 1.5 }}>
-                이번 부모님 생신에는 &ldquo;건강하세요&rdquo; 대신,
+                이번 생신에는 평소에 못 하던 말을,
                 <br className="hidden sm:inline" />
-                <span className="sm:hidden"> </span>노래 한 곡 어떠세요?
+                <span className="sm:hidden"> </span>다른 방식으로 전해보세요.
               </h2>
               <button onClick={handleBottomCTA} className="px-8 py-4 text-base font-semibold text-white bg-primary-400 rounded-lg hover:bg-primary-500 transition-colors cursor-pointer">
                 {CTA_LABEL}
