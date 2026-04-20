@@ -14,7 +14,7 @@ export default function PrivacyPage() {
               <p className="text-sm leading-relaxed text-ink-muted">
                 주식회사 이노하이(이하 &quot;회사&quot;)는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보의 처리와 보호에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
               </p>
-              <p className="text-sm leading-relaxed text-ink-muted mt-3">본 방침은 2026년 4월 3일부터 시행됩니다.</p>
+              <p className="text-sm leading-relaxed text-ink-muted mt-3">본 방침은 2026년 4월 20일부터 시행됩니다. (이전 버전: 2026년 4월 3일 시행)</p>
             </section>
 
             <section>
@@ -137,8 +137,33 @@ export default function PrivacyPage() {
                       <td className="border border-neutral-200 p-2">위치정보(GPS)</td>
                       <td className="border border-neutral-200 p-2">수집 후 즉시 처리, 최대 24시간 보관</td>
                     </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">하이싱(HI-Sing) AI 노래 선물 서비스 제공 (주문자·수령인 정보)</td>
+                      <td className="border border-neutral-200 p-2">주문자 이름·연락처·이메일, 수령인 이름·관계·기념일, 전하고 싶은 사연</td>
+                      <td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">하이싱 맞춤 노래 제작을 위한 가족 목소리 활용 (필수 동의)</td>
+                      <td className="border border-neutral-200 p-2">업로드 음성 파일, 보컬 합성용 가공 데이터</td>
+                      <td className="border border-neutral-200 p-2">완성곡 전달 후 30일 · 학습 목적 재사용 없음</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-neutral-200 p-2">하이싱 AI 보이스 품질 개선을 위한 학습 (선택 동의 · 동의 시 10% 할인)</td>
+                      <td className="border border-neutral-200 p-2">업로드 음성 파일, 작성 사연, 생성된 완성곡의 일부</td>
+                      <td className="border border-neutral-200 p-2">학습 완료 후 파기 또는 동의 철회 요청 시 즉시 파기</td>
+                    </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <div className="bg-primary-50/40 border border-primary-100 rounded-lg p-4 mb-5">
+                <p className="font-semibold text-ink-light text-sm mb-2">하이싱(HI-Sing) 서비스 음성 데이터 처리 특별 안내</p>
+                <ul className="list-disc pl-5 text-[13px] text-ink-muted leading-relaxed space-y-1">
+                  <li><strong>기본(AI 학습 비동의):</strong> 업로드하신 음성은 오직 해당 주문의 노래 제작 목적으로만 사용되며, 완성곡 전달 후 <strong>30일 경과 시 자동 파기</strong>됩니다. AI 모델 학습에 재사용되지 않고, 제3자에게 공유·판매되지 않습니다.</li>
+                  <li><strong>선택 동의(AI 품질 개선, 10% 할인):</strong> 주문 시 별도 체크박스를 통해 동의하신 경우에 한하여, 업로드 음성·사연·완성곡의 일부를 하이싱 AI 보이스 품질 향상 목적으로만 사용합니다. 외부 판매·제3자 학습 제공·얼굴 생성 등 타 용도로는 일절 사용하지 않습니다.</li>
+                  <li><strong>동의 철회:</strong> 선택 동의는 언제든 <a href="mailto:board@innohi.ai.kr" className="text-primary-500 underline">board@innohi.ai.kr</a>로 요청하시면 해당 데이터를 학습 세트에서 제거하고 즉시 파기합니다. 철회하셔도 이미 지급된 할인은 회수되지 않습니다.</li>
+                  <li><strong>즉시 삭제 요청:</strong> 완성곡 전달 후 30일 전이라도 원하시면 고객센터 메일로 즉시 파기를 요청하실 수 있습니다.</li>
+                </ul>
               </div>
 
               <p className="font-semibold text-ink-light text-sm mb-2">3. 민감정보의 처리</p>
@@ -186,6 +211,9 @@ export default function PrivacyPage() {
                     <tr><td className="border border-neutral-200 p-2">건강·의료 정보</td><td className="border border-neutral-200 p-2">서비스 해지(탈퇴) 시까지</td><td className="border border-neutral-200 p-2">건강 상태 모니터링</td></tr>
                     <tr><td className="border border-neutral-200 p-2">위치정보</td><td className="border border-neutral-200 p-2">수집 후 즉시 처리, 최대 24시간 보관</td><td className="border border-neutral-200 p-2">긴급 상황 대응</td></tr>
                     <tr><td className="border border-neutral-200 p-2">서비스 이용 기록·로그</td><td className="border border-neutral-200 p-2">3년</td><td className="border border-neutral-200 p-2">서비스 개선 및 분쟁 대응</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">하이싱 주문 정보 (주문자·수령인·사연)</td><td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td><td className="border border-neutral-200 p-2">주문 확인 및 수정 대응</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">하이싱 업로드 음성 파일 (AI 학습 비동의 기본)</td><td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td><td className="border border-neutral-200 p-2">노래 제작 완료 후 자동 파기</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">하이싱 AI 학습 동의 데이터 (선택)</td><td className="border border-neutral-200 p-2">학습 완료 후 파기 · 동의 철회 시 즉시 파기</td><td className="border border-neutral-200 p-2">AI 보이스 품질 개선 목적 한정</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -441,8 +469,25 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg font-bold text-ink-light mb-3">제15조 (개인정보 처리방침의 변경)</h2>
               <p className="text-sm text-ink-muted leading-relaxed mb-3">
-                이 개인정보 처리방침은 2026년 4월 3일부터 적용됩니다.
+                이 개인정보 처리방침은 2026년 4월 20일부터 적용됩니다.
               </p>
+              <p className="font-semibold text-ink-light text-sm mb-2">변경 내용 (2026년 4월 20일 시행)</p>
+              <div className="overflow-x-auto -mx-2 mb-4">
+                <table className="w-full text-[12px] border-collapse">
+                  <thead className="bg-neutral-50 text-ink-light">
+                    <tr>
+                      <th className="border border-neutral-200 p-2 text-left">변경 항목</th>
+                      <th className="border border-neutral-200 p-2 text-left">변경 전</th>
+                      <th className="border border-neutral-200 p-2 text-left">변경 후</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-ink-muted">
+                    <tr><td className="border border-neutral-200 p-2">제2조 2항 (동의를 받아 처리하는 항목)</td><td className="border border-neutral-200 p-2">하이싱 서비스 관련 항목 미기재</td><td className="border border-neutral-200 p-2">하이싱 주문 정보, 업로드 음성, AI 학습 동의(선택·10% 할인) 3개 항목 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제2조 특별 안내 (신설)</td><td className="border border-neutral-200 p-2">—</td><td className="border border-neutral-200 p-2">하이싱 음성 데이터의 기본/선택 동의 처리 방식, 철회 및 즉시 삭제 요청 방법 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제3조 1항 (보유 기간)</td><td className="border border-neutral-200 p-2">하이싱 항목 누락</td><td className="border border-neutral-200 p-2">주문 정보/업로드 음성(30일)·AI 학습 동의 데이터(학습 후 파기) 명시</td></tr>
+                  </tbody>
+                </table>
+              </div>
               <p className="font-semibold text-ink-light text-sm mb-2">변경 내용 (2026년 4월 3일 시행)</p>
               <div className="overflow-x-auto -mx-2 mb-4">
                 <table className="w-full text-[12px] border-collapse">
@@ -461,6 +506,7 @@ export default function PrivacyPage() {
                 </table>
               </div>
               <p className="font-semibold text-ink-light text-sm mb-1">이전 개인정보 처리방침</p>
+              <p className="text-sm text-ink-muted leading-relaxed">2026년 4월 3일 ~ 2026년 4월 19일</p>
               <p className="text-sm text-ink-muted leading-relaxed">2026년 3월 4일 ~ 2026년 4월 2일</p>
             </section>
           </div>
