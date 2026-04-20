@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Check } from 'lucide-react'
+import { Check, Clock, RefreshCw, Mic, Truck } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { PromoBanner } from '@/components/PromoBanner'
 import { trackCTAClick } from '@/lib/analytics'
@@ -136,9 +136,11 @@ function HeroWaveform() {
 }
 
 /* ── 핸드폰 목업 + 앨범 슬라이드 인터랙션 ──────── */
+// 어버이날 캠페인 기간: 부모님 2장(album-1/2)을 맨 앞에 유지
+// 이미지와 이름 매칭은 기존 album-N.png 그대로, sub 텍스트에만 어버이날 태그 추가
 const albums = [
-  { title: '어머니 팔순잔치', sub: '팔순 잔치 · 3:24', img: '/images/album-1.png', time: '1:08', to: '식탁 위의 온기', story: '' },
-  { title: '부모님 결혼기념일', sub: '결혼기념일 · 4:02', img: '/images/album-2.png', time: '2:15', to: '우리의 계절', story: '' },
+  { title: '어머니 팔순잔치', sub: '어버이날 · 팔순 · 3:24', img: '/images/album-1.png', time: '1:08', to: '식탁 위의 온기', story: '' },
+  { title: '부모님 결혼기념일', sub: '어버이날 · 기념일 · 4:02', img: '/images/album-2.png', time: '2:15', to: '우리의 계절', story: '' },
   { title: '아기 첫 생일', sub: '돌잔치 · 3:15', img: '/images/album-3.png', time: '1:40', to: '첫 번째 노래', story: '' },
   { title: '우리 아기에게', sub: '자장가 · 3:48', img: '/images/album-4.png', time: '0:52', to: '엄마의 자장가', story: '' },
   { title: '고등학교 졸업', sub: '졸업식 · 3:36', img: '/images/album-5.png', time: '1:52', to: '졸업 축가', story: '' },
@@ -377,9 +379,24 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 >
                   {CTA_LABEL}
                 </button>
-                <p className="mt-3 text-[11px] sm:text-xs text-ink-faint">
-                  오늘 주문 시 어버이날 전 전달 가능 · 1회 무료 수정 · 3~5일 완성
-                </p>
+
+                {/* CTA 보강 배지 — 지금 눌러야 하는 이유 4가지 */}
+                <div className="mt-5 flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-xl mx-auto">
+                  {[
+                    { Icon: Truck, text: '어버이날 전 전달' },
+                    { Icon: Clock, text: '영업일 3~5일' },
+                    { Icon: RefreshCw, text: '1회 무료 수정' },
+                    { Icon: Mic, text: '60초 음성이면 시작' },
+                  ].map(({ Icon, text }) => (
+                    <div
+                      key={text}
+                      className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-white border border-primary-100 shadow-sm"
+                    >
+                      <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary-400" />
+                      <span className="text-[11px] sm:text-xs font-medium text-ink-light whitespace-nowrap">{text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </FadeIn>
