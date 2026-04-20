@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 08 v2: 편지봉투 + 음표 3개 비행 궤적 (원근감) -->
+
+  <!-- 봉투 본체 -->
+  <rect x="30" y="95" width="140" height="80" rx="8"/>
+
+  <!-- 접힌 플랩 (위로 열린 모양) — 흰색 삼각 -->
+  <path d="M30 95 L100 55 L170 95 Z" fill="#FFF2EF"/>
+  <path d="M30 95 L100 55 L170 95" fill="none" stroke="#FF6E59" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- 봉투 내부 접선 (측면 삼각 2개) — 배경과 구분 -->
+  <path d="M30 95 L78 135 L30 175" fill="none" stroke="#FFF2EF" stroke-width="2" opacity="0.7"/>
+  <path d="M170 95 L122 135 L170 175" fill="none" stroke="#FFF2EF" stroke-width="2" opacity="0.7"/>
+
+  <!-- 플랩 중앙 하트 씰(봉인) -->
+  <path d="M100 90
+           C94 85, 90 81, 90 76
+           C90 72, 93 70, 96 70
+           C98 70, 100 72, 100 73
+           C100 72, 102 70, 104 70
+           C107 70, 110 72, 110 76
+           C110 81, 106 85, 100 90 Z"/>
+
+  <!-- 날아오르는 음표 3개 (작→중→큰, 왼쪽 위로 궤적) -->
+
+  <!-- 작은 음표 (가장 멀리 · 우하) -->
+  <g opacity="0.45">
+    <circle cx="145" cy="48" r="5"/>
+    <rect x="149" y="28" width="2.5" height="22"/>
+    <path d="M151.5 28 L162 25 L162 31 L151.5 34 Z"/>
+  </g>
+
+  <!-- 중간 음표 (중앙 상단) -->
+  <g opacity="0.72">
+    <circle cx="118" cy="28" r="7"/>
+    <rect x="124" y="2" width="3.5" height="28"/>
+    <path d="M127.5 2 L143 -2 L143 6 L127.5 10 Z"/>
+  </g>
+
+  <!-- 큰 음표 (가까이 · 좌상) -->
+  <circle cx="60" cy="42" r="11"/>
+  <rect x="69" y="8" width="5" height="36"/>
+  <path d="M74 8 L96 2 L96 14 L74 20 Z"/>
+</svg>

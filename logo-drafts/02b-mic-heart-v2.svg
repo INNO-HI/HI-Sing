@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#FF6E59">
+  <!-- 컨셉 02 v2: 마이크 헤드 = 하트 (통합형) -->
+  <!-- 하트 모양 마이크 헤드 — 위가 볼록한 마이크 실루엣을 하트로 치환 -->
+  <path d="M100 120
+           C68 100, 45 80, 45 52
+           C45 35, 58 22, 73 22
+           C85 22, 94 29, 100 40
+           C106 29, 115 22, 127 22
+           C142 22, 155 35, 155 52
+           C155 80, 132 100, 100 120 Z"/>
+
+  <!-- 헤드 안쪽 그릴 선(메쉬 암시) — 흰 곡선 3줄 -->
+  <path d="M73 48 Q100 58 127 48" fill="none" stroke="#FFF2EF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M70 62 Q100 72 130 62" fill="none" stroke="#FFF2EF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M78 76 Q100 84 122 76" fill="none" stroke="#FFF2EF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- 하트 하단에서 핸들로 연결되는 짧은 목 -->
+  <rect x="94" y="118" width="12" height="14" rx="2"/>
+
+  <!-- U 자형 스탠드 암 -->
+  <path d="M60 130 Q60 158 100 158 Q140 158 140 130"
+        fill="none" stroke="#FF6E59" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- 스탠드 기둥 -->
+  <rect x="96" y="158" width="8" height="16" rx="2"/>
+
+  <!-- 받침대 -->
+  <rect x="66" y="172" width="68" height="9" rx="4.5"/>
+</svg>
