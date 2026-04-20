@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 // ─── 허용된 리워드 금액만 화이트리스트로 검증 ───
-const ALLOWED_AMOUNTS = [29000, 49000, 79000] // 얼리버드, 기본, 프리미엄
+// 정가: 얼리버드 29,000 / 기본 49,000 / 프리미엄 79,000
+// AI 학습 동의 시 10% 할인: 26,100 / 44,100 / 71,100
+const ALLOWED_AMOUNTS = [29000, 49000, 79000, 26100, 44100, 71100]
 
 // ─── 중복 승인 방지 (인메모리, 프로덕션은 Redis/DB 권장) ───
 const processedTids = new Map<string, number>()

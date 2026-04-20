@@ -157,7 +157,7 @@ export default function TumblbukPreview() {
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-400 text-white flex items-center justify-center text-sm font-semibold">1</span>
                 <div>
                   <p className="text-ink font-medium mb-1">목소리 파일 보내기</p>
-                  <p className="text-ink-muted text-sm leading-relaxed">전화 녹음, 영상 속 목소리, 일상 대화. 60초면 됩니다.</p>
+                  <p className="text-ink-muted text-sm leading-relaxed">전화 녹음, 영상 속 목소리, 일상 대화. 한 분 목소리 기준 60초면 됩니다 (1분 이상 권장).</p>
                 </div>
               </div>
             </div>

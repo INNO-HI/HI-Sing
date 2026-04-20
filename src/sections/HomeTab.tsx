@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Check } from 'lucide-react'
+import { Check, Shield, Clock, RefreshCw, Ban } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { PromoBanner } from '@/components/PromoBanner'
 import { trackCTAClick } from '@/lib/analytics'
@@ -376,6 +376,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                 >
                   {CTA_LABEL}
                 </button>
+                <p className="mt-3 text-[11px] sm:text-xs text-ink-faint">
+                  오늘 주문 시 어버이날 전 전달 가능 · 1회 무료 수정 · 3~5일 완성
+                </p>
               </div>
             </div>
           </FadeIn>
@@ -384,6 +387,30 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8">
             <PhoneMockup />
           </FadeIn>
+        </div>
+      </section>
+
+      {/* ═══ 1.2 신뢰 띠 — 4개 키 포인트 ═══════════════ */}
+      <section className="bg-white border-y border-neutral-100">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 py-5 sm:py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+            {[
+              { Icon: Ban, title: 'AI 학습 비사용 기본', desc: '동의 시 10% 할인' },
+              { Icon: Shield, title: '음성 30일 후 자동 삭제', desc: '제3자 공유 없음' },
+              { Icon: Clock, title: '영업일 3~5일 완성', desc: '어버이날 전 배송 가능' },
+              { Icon: RefreshCw, title: '1회 무료 수정 포함', desc: '마음에 들 때까지' },
+            ].map(({ Icon, title, desc }) => (
+              <div key={title} className="flex items-start gap-2.5">
+                <div className="w-9 h-9 rounded-lg bg-primary-50 flex-shrink-0 flex items-center justify-center">
+                  <Icon className="w-4 h-4 text-primary-400" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[12px] sm:text-sm font-semibold text-ink leading-tight">{title}</p>
+                  <p className="text-[11px] sm:text-xs text-ink-faint mt-0.5 leading-tight">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -462,7 +489,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                   가족의 목소리가 담긴 파일을 업로드하세요.<br />
                   일상 대화, 전화 녹음, 영상 속 목소리<br />
                   뭐든 괜찮습니다.<br /><br />
-                  <strong className="text-primary-400">60초 이상이면 충분합니다.</strong>
+                  <strong className="text-primary-400">한 분 목소리 기준 최소 60초 · 1분 이상 권장</strong>
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
@@ -518,7 +545,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
                   작성해주신 이야기와<br />
                   가족의 목소리를 바탕으로<br />
                   세상에 하나뿐인 노래를 만듭니다.<br /><br />
-                  <strong className="text-primary-400">이야기에 맞는 가사와 멜로디가 만들어집니다.</strong>
+                  <strong className="text-primary-400">mp3 음원 + 카카오톡 공유 링크로 3~5일 안에 도착합니다.</strong>
                 </p>
               </div>
               <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-lg shadow-neutral-200/30">
@@ -578,10 +605,10 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
-              { img: `/images/special-voice.png`, title: '60초 음성이면 충분', desc: '전화 녹음, 영상 속 목소리,\n일상 대화 뭐든 괜찮습니다.\n60초 이상이면 충분해요.' },
+              { img: `/images/special-voice.png`, title: '한 사람 목소리면 충분', desc: '가족 중 한 분 목소리가 담긴\n1분 이상 음성이면 됩니다.\n배경음·잡음 일부 허용.' },
               { img: `/images/special-nomusic.png`, title: '작곡/작사 몰라도 OK', desc: '전하고 싶은 마음만 적어주세요.\n멜로디와 가사를 만들고, 가족 목소리를\n보컬로 얹어드립니다.' },
-              { img: `/images/special-compose.png`, title: '프리미엄 작사/작곡', desc: '단순 변환이 아닙니다.\n마음에 어울리는 가사를 쓰고,\n그에 맞는 멜로디를 작곡합니다.' },
-              { img: `/images/special-fast.png`, title: '3~5일이면 완성', desc: '영업일 기준 3~5일이면 완성된\n노래를 받아보실 수 있습니다.\n1회 무료 수정 포함.' },
+              { img: `/images/special-compose.png`, title: '사람이 쓰는 감정 가사', desc: 'AI로 찍어내지 않습니다.\n사연을 읽고 가사를 쓰고,\n어울리는 멜로디를 작곡합니다.' },
+              { img: `/images/special-fast.png`, title: '오리지널 곡 · 커버 아님', desc: '기존 곡의 가사만 바꾸지 않습니다.\n세상에 하나뿐인 멜로디와 가사로\n처음부터 만들어드려요.' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-6 sm:p-8 h-full hover:-translate-y-1 transition-all duration-300 text-center">
@@ -616,6 +643,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <button onClick={handleBottomCTA} className="px-8 py-4 text-base font-semibold text-white bg-primary-400 rounded-lg hover:bg-primary-500 transition-colors cursor-pointer">
                 {CTA_LABEL}
               </button>
+              <p className="mt-3 text-xs text-ink-muted">
+                오늘 주문 시 어버이날 전 전달 가능 · 1회 무료 수정 · 3~5일 완성
+              </p>
             </div>
           </FadeIn>
         </div>

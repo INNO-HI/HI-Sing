@@ -354,6 +354,14 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
       {/* Before / After */}
       <section className="py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-14">
+          <FadeIn>
+            <div className="text-center mb-8 sm:mb-10">
+              <span className="inline-block text-[11px] font-semibold text-primary-500 bg-primary-50 border border-primary-100 rounded-full px-3 py-1 mb-3">원본 → 완성곡 비교</span>
+              <h3 className="text-xl sm:text-2xl font-bold text-ink-light">보내주신 목소리가 어떻게 노래가 되는지</h3>
+              <p className="text-ink-muted text-sm mt-2">왼쪽은 업로드된 원본 음성, 오른쪽은 가족 목소리를 보컬로 얹은 완성곡입니다.</p>
+              <p className="text-[11px] text-ink-faint mt-2">※ 원본 음성 공개는 고객 동의 후 텀블벅 업데이트에서 순차 공개 예정</p>
+            </div>
+          </FadeIn>
           <FadeIn delay={0.15}>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {/* Before — 원본 음성 재생 */}
@@ -364,7 +372,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                   </div>
                   <div>
                     <p className="font-semibold text-ink-light text-sm">Before</p>
-                    <p className="text-xs text-ink-muted">원본 음성 · 실제 샘플</p>
+                    <p className="text-xs text-ink-muted">원본 음성 · 공개 준비 중</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-[2px] h-12 w-full opacity-60">
@@ -376,21 +384,15 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                     />
                   ))}
                 </div>
-                <button
-                  onClick={() => handleToggle(-1)}
-                  className="mt-4 flex items-center gap-3 bg-neutral-50 rounded-xl px-4 py-3 hover:bg-neutral-100 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-full bg-ink-light flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                    {playingIdx === -1
-                      ? <Pause className="w-4 h-4 text-white" fill="currentColor" />
-                      : <Play className="w-4 h-4 text-white ml-0.5" fill="currentColor" />
-                    }
+                <div className="mt-4 flex items-center gap-3 bg-neutral-50 rounded-xl px-4 py-3">
+                  <div className="w-10 h-10 rounded-full bg-neutral-300 flex items-center justify-center flex-shrink-0">
+                    <Play className="w-4 h-4 text-white ml-0.5" fill="currentColor" />
                   </div>
                   <div className="flex-1 text-left min-w-0">
                     <p className="text-sm font-bold text-ink-light truncate">어머니 목소리</p>
-                    <p className="text-[11px] text-ink-muted">{playingIdx === -1 ? '재생 중…' : '원본 녹음 · 0:30'}</p>
+                    <p className="text-[11px] text-ink-muted">공개 준비 중 · 고객 동의 후 순차 공개</p>
                   </div>
-                </button>
+                </div>
               </div>
 
               {/* After — 실제 재생 가능 */}
@@ -401,7 +403,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                   </div>
                   <div>
                     <p className="font-semibold text-ink-light text-sm">After</p>
-                    <p className="text-xs text-ink-muted">완성된 노래 · 실제 샘플</p>
+                    <p className="text-xs text-ink-muted">완성곡 · 실제 전달본</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-[2px] h-12 w-full">
@@ -433,7 +435,7 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
                 </button>
                 <p className="text-[11px] text-ink-faint mt-2 flex items-center gap-1">
                   <Info className="w-3 h-3" />
-                  실제 고객에게 전달된 완성곡입니다
+                  실제 전달된 완성곡 · 원본 음성은 공개 준비 중
                 </p>
               </div>
             </div>

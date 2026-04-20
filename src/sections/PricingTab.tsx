@@ -287,8 +287,8 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     <h3 className="text-lg font-bold text-ink mb-5">자주 묻는 질문</h3>
                     <div className="space-y-4">
                       {[
-                        { q: '음성 파일은 어떤 걸 보내야 하나요?', a: 'mp3, m4a, wav 등 대부분의 음성 파일을 지원합니다. 전화 녹음, 영상 속 목소리, 일상 대화 등 60초 이상이면 충분합니다.' },
-                        { q: '여러 사람 목소리가 섞여 있어도 되나요?', a: '네. 여러 목소리가 섞여 있어도 원하는 분의 목소리만 골라서 사용합니다.' },
+                        { q: '음성 파일은 어떤 걸 보내야 하나요?', a: 'mp3, m4a, wav 등 대부분의 음성 파일을 지원합니다. 전화 녹음, 영상 속 목소리, 일상 대화 등 최소 60초부터 접수되며, 1분 이상이면 더 자연스러운 결과물이 나옵니다. 배경음·잡음 일부는 허용됩니다.' },
+                        { q: '여러 사람 목소리가 섞여 있어도 되나요?', a: '네. 단, 한 분 목소리가 주된 음성일 때 가장 잘 나옵니다. 주된 화자가 누구인지 주문 시 적어주세요.' },
                         { q: '마음에 안 들면 수정할 수 있나요?', a: '모든 리워드에 1회 무료 수정이 포함되어 있습니다. 가사, 멜로디, 분위기 등 수정 요청이 가능합니다.' },
                         { q: '선물 날짜에 맞출 수 있나요?', a: `${reward.tier} 리워드 기준 ${reward.delivery} 이내 완성됩니다. 급한 경우 사전에 말씀해주시면 최대한 맞춰드립니다.` },
                         { q: '어떤 장르의 노래가 가능한가요?', a: '발라드, 트로트, 팝, 어쿠스틱, R&B, 동요/자장가 등 대부분의 장르가 가능합니다. 주문 시 원하시는 장르를 선택해주세요.' },
@@ -451,6 +451,7 @@ type OrderFormState = {
   genreCustom: string
   mood: string
   extra: string
+  aiTraining: boolean
 }
 
 const EMPTY_FORM: OrderFormState = {
@@ -460,6 +461,7 @@ const EMPTY_FORM: OrderFormState = {
   memory: '', unsaid: '', episode: '', story: '',
   genre: '', genreCustom: '', mood: '',
   extra: '',
+  aiTraining: false,
 }
 
 const FORM_STORAGE_KEY = 'hising-order-form-v1'
@@ -533,13 +535,14 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
       return
     }
     const orderId = `HISING_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
+    const finalAmount = form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    trackPaymentAttempt(reward.tier, reward.priceNum)
+    trackPaymentAttempt(reward.tier, finalAmount)
     const AUTHNICE = (window as any).AUTHNICE
     if (!AUTHNICE) { alert('결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해주세요.'); return }
     AUTHNICE.requestPay({
-      clientId: NICEPAY_CLIENT_KEY, method: 'card', orderId, amount: reward.priceNum,
-      goodsName: `하이싱 ${reward.tier}`,
+      clientId: NICEPAY_CLIENT_KEY, method: 'card', orderId, amount: finalAmount,
+      goodsName: `하이싱 ${reward.tier}${form.aiTraining ? ' (AI 학습 동의)' : ''}`,
       returnUrl: `${window.location.origin}/api/payment/approve`,
       fnError: (r: { errorMsg: string }) => alert(`결제 오류: ${r.errorMsg}`),
     })
@@ -760,7 +763,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
             <FadeIn delay={0.15}>
               <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
                 <h3 className="text-base font-bold text-ink mb-2">음성 파일 업로드 <span className="text-primary-400">*</span></h3>
-                <p className="text-xs text-ink-faint mb-5">전화 녹음, 영상 속 목소리, 일상 대화 등 60초 이상이면 됩니다</p>
+                <p className="text-xs text-ink-faint mb-5">전화 녹음·영상 속 목소리·일상 대화 모두 OK · 한 분 목소리 위주 · 최소 60초 (1분 이상 권장)</p>
                 <input ref={fileRef} type="file" accept="audio/*" className="hidden" onChange={e => { const f = e.target.files?.[0] || null; setFile(f); if (f) trackFileUpload(f.name, f.size) }} />
                 {file ? (
                   <div className="flex items-center justify-between bg-primary-50 border border-primary-100 rounded-xl px-5 py-4">
@@ -781,6 +784,43 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                   </button>
                 )}
               </div>
+            </FadeIn>
+
+            {/* AI 학습 동의 — 10% 할인 */}
+            <FadeIn delay={0.2}>
+              <button
+                type="button"
+                onClick={() => update('aiTraining', !form.aiTraining)}
+                className={`w-full text-left rounded-2xl border-2 p-6 sm:p-7 transition-all ${
+                  form.aiTraining
+                    ? 'border-primary-400 bg-primary-50/50'
+                    : 'border-neutral-200 bg-white hover:border-primary-200'
+                }`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center border-2 transition-all ${
+                    form.aiTraining
+                      ? 'bg-primary-400 border-primary-400'
+                      : 'bg-white border-neutral-300'
+                  }`}>
+                    {form.aiTraining && <Check className="w-4 h-4 text-white" strokeWidth={3} />}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap mb-1.5">
+                      <h3 className="text-base font-bold text-ink">AI 품질 개선에 동의하고 10% 할인</h3>
+                      <span className="text-[11px] font-bold text-white bg-primary-400 rounded-full px-2 py-0.5">SAVE 10%</span>
+                    </div>
+                    <p className="text-[13px] text-ink-muted leading-relaxed">
+                      업로드하신 음성·가사·완성곡 일부를 하이싱의 AI 보이스 품질 향상 목적으로만 사용합니다.
+                      <span className="block mt-1 text-ink-faint text-xs">제3자 판매·외부 공유 없음 · 언제든 메일로 철회 가능 · 동의하지 않아도 서비스 이용에는 제약 없음</span>
+                    </p>
+                    <div className="mt-3 flex items-baseline gap-2 text-sm">
+                      <span className="text-ink-muted">예상 절감</span>
+                      <span className="font-bold text-primary-500">-{Math.round(reward.priceNum * 0.1).toLocaleString()}원</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
             </FadeIn>
 
           </div>
@@ -815,6 +855,12 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                       <span className="text-ink-muted">상품 금액</span>
                       <span className="text-ink font-medium">{reward.price}원</span>
                     </div>
+                    {form.aiTraining && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-primary-500 font-medium">AI 학습 동의 할인 (-10%)</span>
+                        <span className="text-primary-500 font-semibold">-{Math.round(reward.priceNum * 0.1).toLocaleString()}원</span>
+                      </div>
+                    )}
                     <div className="flex justify-between text-sm">
                       <span className="text-ink-muted">예상 제작 기간</span>
                       <span className="text-ink font-medium">{reward.delivery}</span>
@@ -823,7 +869,10 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
 
                   <div className="flex justify-between items-end pt-5 border-t border-neutral-200 mb-6">
                     <span className="text-sm font-medium text-ink">결제 금액</span>
-                    <span className="text-2xl font-black text-ink">{reward.price}<span className="text-sm font-normal text-ink-muted ml-0.5">원</span></span>
+                    <span className="text-2xl font-black text-ink">
+                      {(form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum).toLocaleString()}
+                      <span className="text-sm font-normal text-ink-muted ml-0.5">원</span>
+                    </span>
                   </div>
 
                   <button onClick={handleSubmit} className="w-full py-4 bg-primary-400 text-white font-semibold text-base rounded-xl hover:bg-primary-500 transition-colors">
