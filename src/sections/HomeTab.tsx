@@ -351,34 +351,37 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
 
   return (
     <>
-      {/* ═══ 1. Hero ═══════════════════════════════════ */}
-      <section className="relative h-screen flex flex-col bg-gradient-to-b from-white via-neutral-50 to-primary-50/40 pt-20 pb-0 overflow-hidden">
+      {/* ═══ 1. Hero — 반응형: sm~lg 세로 / xl+ 2컬럼 ═══════════════ */}
+      <section className="relative min-h-screen xl:h-screen flex flex-col bg-gradient-to-b from-white via-neutral-50 to-primary-50/40 pt-20 pb-0 overflow-hidden">
         {/* 배경 장식 — 하단 primary glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[900px] h-[700px] rounded-full bg-primary-100/50 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[900px] xl:w-[1200px] h-[700px] xl:h-[900px] rounded-full bg-primary-100/50 blur-3xl pointer-events-none" />
 
-        {/* 히어로 전체 좌우 비네트 */}
+        {/* 히어로 전체 좌우 비네트 — xl 이상에선 약화 */}
         <div
-          className="absolute inset-0 pointer-events-none z-30"
+          className="absolute inset-0 pointer-events-none z-30 xl:hidden"
           style={{
             background: 'linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.85) 90%, #ffffff 100%)',
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-14 flex flex-col flex-1 min-h-0 justify-between">
-          <FadeIn>
-            <div className="text-center mt-10 sm:mt-20">
-              <p className="text-sm sm:text-lg text-ink-muted mb-4 sm:mb-5 break-keep">평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.</p>
-              <h1 className="text-[22px] sm:text-4xl lg:text-5xl font-bold text-ink-light tracking-tight leading-tight break-keep">
-                노래로 전하는<br className="sm:hidden" /> <span className="text-primary-400">우리 가족</span> 이야기
+        <div className="relative z-10 w-full max-w-6xl xl:max-w-[1360px] 2xl:max-w-[1520px] mx-auto px-5 sm:px-8 lg:px-14 flex flex-col xl:flex-row xl:items-center xl:gap-16 2xl:gap-24 flex-1 min-h-0 xl:justify-between">
+          {/* 텍스트/CTA 블록 */}
+          <FadeIn className="xl:flex-1 xl:max-w-[640px] 2xl:max-w-[720px]">
+            <div className="text-center xl:text-left mt-10 sm:mt-20 xl:mt-0">
+              <p className="text-sm sm:text-lg xl:text-xl text-ink-muted mb-4 sm:mb-5 break-keep">
+                평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.
+              </p>
+              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.15] break-keep">
+                노래로 전하는<br className="sm:hidden xl:inline" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
-              <p className="mt-3 sm:mt-4 text-[13px] sm:text-base text-ink-muted break-keep">
+              <p className="mt-3 sm:mt-4 xl:mt-6 text-[13px] sm:text-base xl:text-lg text-ink-muted break-keep xl:max-w-[560px]">
                 가족의 <strong className="text-ink-light">실제 목소리</strong>와 <strong className="text-ink-light">직접 쓴 사연</strong>을 바탕으로<br className="sm:hidden" /> 새로 만드는 맞춤 노래입니다.
               </p>
 
-              <div className="mt-6 sm:mt-8">
+              <div className="mt-6 sm:mt-8 xl:mt-10">
                 <button
                   onClick={handleHeroCTA}
-                  className="px-8 py-3.5 text-[15px] font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors cursor-pointer"
+                  className="px-8 xl:px-10 py-3.5 xl:py-4 text-[15px] xl:text-base font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 shadow-lg shadow-primary-200/50 transition-all cursor-pointer"
                 >
                   {CTA_LABEL}
                 </button>
@@ -386,9 +389,11 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 하단: 핸드폰 목업 — 명시적 간격 */}
-          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8">
-            <PhoneMockup />
+          {/* 목업 블록 — xl 이상은 오른쪽 컬럼 */}
+          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-end">
+            <div className="xl:scale-110 2xl:scale-125 xl:origin-center">
+              <PhoneMockup />
+            </div>
           </FadeIn>
         </div>
       </section>
