@@ -37,7 +37,10 @@ export function Footer() {
               사업자등록번호: 758-86-03814 <span className="text-neutral-600">|</span> 통신판매업 신고번호: 제2026-서울중구-643호
             </p>
             <p>
-              소재지: 서울특별시 중구 퇴계로36길 2, B257 <span className="text-neutral-600">|</span> 이메일: contact@innohi.ai.kr
+              소재지: 서울특별시 중구 퇴계로36길 2, B257
+            </p>
+            <p>
+              대표 전화: 010-8225-4024 <span className="text-neutral-600">|</span> 이메일: contact@innohi.ai.kr
             </p>
           </div>
           <p className="text-[11px] sm:text-xs text-neutral-600">
