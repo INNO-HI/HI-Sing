@@ -28,14 +28,19 @@ export function Footer() {
         </div>
 
         {/* 사업자 정보 + 카피라이트 */}
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between pt-4 border-t border-white/5">
-          <p className="text-[11px] sm:text-xs text-neutral-500 leading-relaxed">
-            주식회사 이노하이(INNO-HI) | 대표자 김민수, 한민우
-            <br className="sm:hidden" />
-            <span className="hidden sm:inline"> | </span>
-            서울특별시 중구 퇴계로36길 2, B257
-          </p>
-          <p className="text-[11px] sm:text-xs text-neutral-600 flex-shrink-0">
+        <div className="flex flex-col gap-3 pt-4 border-t border-white/5">
+          <div className="space-y-1 text-[11px] sm:text-xs text-neutral-500 leading-relaxed">
+            <p>
+              상호: 주식회사 이노하이(INNO-HI) <span className="text-neutral-600">|</span> 대표자: 김민수, 한민우
+            </p>
+            <p>
+              사업자등록번호: 758-86-03814 <span className="text-neutral-600">|</span> 통신판매업 신고번호: 제2026-서울중구-643호
+            </p>
+            <p>
+              소재지: 서울특별시 중구 퇴계로36길 2, B257 <span className="text-neutral-600">|</span> 이메일: contact@innohi.ai.kr
+            </p>
+          </div>
+          <p className="text-[11px] sm:text-xs text-neutral-600">
             &copy; {new Date().getFullYear()} 하이싱(HI-Sing) by INNO-HI. All rights reserved.
           </p>
         </div>

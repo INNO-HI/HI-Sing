@@ -901,7 +901,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-end pt-5 border-t border-neutral-200 mb-6">
+                  <div className="flex justify-between items-end pt-5 border-t border-neutral-200 mb-5">
                     <span className="text-sm font-medium text-ink">결제 금액</span>
                     <span className="text-2xl font-black text-ink">
                       {(form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum).toLocaleString()}
@@ -909,11 +909,30 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     </span>
                   </div>
 
+                  {/* 결제수단 — 신용카드 (나이스페이 승인심사 요구사항) */}
+                  <div className="mb-5">
+                    <p className="text-xs font-semibold text-ink-muted mb-2">결제수단</p>
+                    <div className="flex items-center gap-3 p-3.5 rounded-xl border-2 border-primary-400 bg-primary-50/40">
+                      <span className="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-white" strokeWidth={3.5} />
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-ink">신용카드</p>
+                        <p className="text-[11px] text-ink-muted mt-0.5">국내 전 카드사 · 나이스페이먼츠 결제</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-[10px] text-ink-faint font-semibold">
+                        <span className="px-1.5 py-0.5 bg-white rounded border border-neutral-200">VISA</span>
+                        <span className="px-1.5 py-0.5 bg-white rounded border border-neutral-200">MC</span>
+                        <span className="px-1.5 py-0.5 bg-white rounded border border-neutral-200">국내</span>
+                      </div>
+                    </div>
+                  </div>
+
                   <button onClick={handleSubmit} className="w-full py-4 bg-primary-400 text-white font-semibold text-base rounded-xl hover:bg-primary-500 transition-colors">
-                    결제하기
+                    신용카드로 결제하기
                   </button>
 
-                  <p className="text-[11px] text-ink-faint text-center mt-3">나이스페이를 통해 안전하게 결제됩니다</p>
+                  <p className="text-[11px] text-ink-faint text-center mt-3">나이스페이먼츠㈜를 통해 안전하게 결제됩니다</p>
                 </div>
               </div>
             </div>

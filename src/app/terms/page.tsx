@@ -402,10 +402,12 @@ export default function TermsPage() {
 
             {/* 사업자 정보 */}
             <section className="pt-6 border-t border-neutral-200">
-              <div className="bg-neutral-50 rounded-xl p-5 text-sm text-ink-muted">
+              <div className="bg-neutral-50 rounded-xl p-5 text-sm text-ink-muted space-y-1">
                 <p className="font-bold text-ink-light mb-2">사업자 정보</p>
                 <p>상호: 주식회사 이노하이(INNO-HI)</p>
                 <p>대표자: 김민수, 한민우</p>
+                <p>사업자등록번호: 758-86-03814</p>
+                <p>통신판매업 신고번호: 제2026-서울중구-643호</p>
                 <p>소재지: 서울특별시 중구 퇴계로36길 2, B257</p>
                 <p>이메일: contact@innohi.ai.kr</p>
                 <p>개인정보 보호책임자: 김민수 / 개인정보 보호 담당자: 한민우</p>
