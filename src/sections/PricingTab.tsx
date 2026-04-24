@@ -564,10 +564,6 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
       alert('연락처를 올바르게 입력해주세요. (예: 010-0000-0000)')
       return
     }
-    if (!file) {
-      alert('음성 파일을 업로드해주세요.')
-      return
-    }
     const orderId = `HISING_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
     const finalAmount = form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -796,8 +792,8 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
             {/* 음성 파일 */}
             <FadeIn delay={0.15}>
               <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
-                <h3 className="text-base font-bold text-ink mb-2">음성 파일 업로드 <span className="text-primary-400">*</span></h3>
-                <p className="text-xs text-ink-faint mb-5">전화 녹음·영상 속 목소리·일상 대화 모두 OK · 한 분 목소리 위주 · 최소 60초 (1분 이상 권장)</p>
+                <h3 className="text-base font-bold text-ink mb-2">음성 파일 업로드 <span className="text-xs text-ink-faint font-medium">(선택)</span></h3>
+                <p className="text-xs text-ink-faint mb-5">전화 녹음·영상 속 목소리·일상 대화 모두 OK · 한 분 목소리 위주 · 최소 60초 (1분 이상 권장)<br />결제 후 이메일·카카오톡으로 전달하셔도 됩니다.</p>
                 <input ref={fileRef} type="file" accept="audio/*" className="hidden" onChange={e => { const f = e.target.files?.[0] || null; setFile(f); if (f) trackFileUpload(f.name, f.size) }} />
                 {file ? (
                   <div className="flex items-center justify-between bg-primary-50 border border-primary-100 rounded-xl px-5 py-4">
