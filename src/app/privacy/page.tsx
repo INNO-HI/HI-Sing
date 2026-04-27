@@ -143,14 +143,9 @@ export default function PrivacyPage() {
                       <td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td>
                     </tr>
                     <tr>
-                      <td className="border border-neutral-200 p-2">하이싱 맞춤 노래 제작을 위한 가족 목소리 활용 (필수 동의)</td>
+                      <td className="border border-neutral-200 p-2">하이싱 맞춤 노래 제작을 위한 음성 활용 (필수 동의)</td>
                       <td className="border border-neutral-200 p-2">업로드 음성 파일, 보컬 합성용 가공 데이터</td>
-                      <td className="border border-neutral-200 p-2">완성곡 전달 후 30일 · 학습 목적 재사용 없음</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-neutral-200 p-2">하이싱 AI 보이스 품질 개선을 위한 학습 (선택 동의 · 동의 시 10% 할인)</td>
-                      <td className="border border-neutral-200 p-2">업로드 음성 파일, 작성 사연, 생성된 완성곡의 일부</td>
-                      <td className="border border-neutral-200 p-2">학습 완료 후 파기 또는 동의 철회 요청 시 즉시 파기</td>
+                      <td className="border border-neutral-200 p-2">완성곡 전달 후 30일 자동 파기 · 외부 공유·재사용 없음</td>
                     </tr>
                   </tbody>
                 </table>
@@ -159,10 +154,10 @@ export default function PrivacyPage() {
               <div className="bg-primary-50/40 border border-primary-100 rounded-lg p-4 mb-5">
                 <p className="font-semibold text-ink-light text-sm mb-2">하이싱(HI-Sing) 서비스 음성 데이터 처리 특별 안내</p>
                 <ul className="list-disc pl-5 text-[13px] text-ink-muted leading-relaxed space-y-1">
-                  <li><strong>기본(AI 학습 비동의):</strong> 업로드하신 음성은 오직 해당 주문의 노래 제작 목적으로만 사용되며, 완성곡 전달 후 <strong>30일 경과 시 자동 파기</strong>됩니다. AI 모델 학습에 재사용되지 않고, 제3자에게 공유·판매되지 않습니다.</li>
-                  <li><strong>선택 동의(AI 품질 개선, 10% 할인):</strong> 주문 시 별도 체크박스를 통해 동의하신 경우에 한하여, 업로드 음성·사연·완성곡의 일부를 하이싱 AI 보이스 품질 향상 목적으로만 사용합니다. 외부 판매·제3자 학습 제공·얼굴 생성 등 타 용도로는 일절 사용하지 않습니다.</li>
-                  <li><strong>동의 철회:</strong> 선택 동의는 언제든 <a href="mailto:board@innohi.ai.kr" className="text-primary-500 underline">board@innohi.ai.kr</a>로 요청하시면 해당 데이터를 학습 세트에서 제거하고 즉시 파기합니다. 철회하셔도 이미 지급된 할인은 회수되지 않습니다.</li>
-                  <li><strong>즉시 삭제 요청:</strong> 완성곡 전달 후 30일 전이라도 원하시면 고객센터 메일로 즉시 파기를 요청하실 수 있습니다.</li>
+                  <li><strong>처리 목적 한정:</strong> 업로드하신 음성은 오직 해당 주문 1곡의 맞춤 노래 제작 목적으로만 사용됩니다. AI 모델 학습·외부 판매·제3자 제공·다른 콘텐츠 생성 등 어떠한 다른 용도로도 사용되지 않습니다.</li>
+                  <li><strong>30일 자동 파기:</strong> 완성곡 전달 후 <strong>30일이 경과하면 서버에서 자동으로 영구 파기</strong>되며, 이후 복구할 수 없습니다.</li>
+                  <li><strong>음성 사용 권한 동의 필수:</strong> 주문 시 본인 또는 동의받은 가족·지인의 음성임을 확인하는 동의 절차를 거쳐야 합니다. 타인의 음성 무단 사용·딥페이크·허위정보 콘텐츠 제작 목적의 의뢰는 일절 거부됩니다.</li>
+                  <li><strong>즉시 삭제 요청:</strong> 30일 전이라도 원하시면 <a href="mailto:contact@innohi.ai.kr" className="text-primary-500 underline">contact@innohi.ai.kr</a>로 요청하시면 즉시 파기해드립니다.</li>
                 </ul>
               </div>
 
@@ -212,8 +207,7 @@ export default function PrivacyPage() {
                     <tr><td className="border border-neutral-200 p-2">위치정보</td><td className="border border-neutral-200 p-2">수집 후 즉시 처리, 최대 24시간 보관</td><td className="border border-neutral-200 p-2">긴급 상황 대응</td></tr>
                     <tr><td className="border border-neutral-200 p-2">서비스 이용 기록·로그</td><td className="border border-neutral-200 p-2">3년</td><td className="border border-neutral-200 p-2">서비스 개선 및 분쟁 대응</td></tr>
                     <tr><td className="border border-neutral-200 p-2">하이싱 주문 정보 (주문자·수령인·사연)</td><td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td><td className="border border-neutral-200 p-2">주문 확인 및 수정 대응</td></tr>
-                    <tr><td className="border border-neutral-200 p-2">하이싱 업로드 음성 파일 (AI 학습 비동의 기본)</td><td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td><td className="border border-neutral-200 p-2">노래 제작 완료 후 자동 파기</td></tr>
-                    <tr><td className="border border-neutral-200 p-2">하이싱 AI 학습 동의 데이터 (선택)</td><td className="border border-neutral-200 p-2">학습 완료 후 파기 · 동의 철회 시 즉시 파기</td><td className="border border-neutral-200 p-2">AI 보이스 품질 개선 목적 한정</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">하이싱 업로드 음성 파일</td><td className="border border-neutral-200 p-2">완성곡 전달 후 30일</td><td className="border border-neutral-200 p-2">주문 1회 제작 후 자동 파기 · 외부 공유 없음</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -482,9 +476,9 @@ export default function PrivacyPage() {
                     </tr>
                   </thead>
                   <tbody className="text-ink-muted">
-                    <tr><td className="border border-neutral-200 p-2">제2조 2항 (동의를 받아 처리하는 항목)</td><td className="border border-neutral-200 p-2">하이싱 서비스 관련 항목 미기재</td><td className="border border-neutral-200 p-2">하이싱 주문 정보, 업로드 음성, AI 학습 동의(선택·10% 할인) 3개 항목 명시</td></tr>
-                    <tr><td className="border border-neutral-200 p-2">제2조 특별 안내 (신설)</td><td className="border border-neutral-200 p-2">—</td><td className="border border-neutral-200 p-2">하이싱 음성 데이터의 기본/선택 동의 처리 방식, 철회 및 즉시 삭제 요청 방법 명시</td></tr>
-                    <tr><td className="border border-neutral-200 p-2">제3조 1항 (보유 기간)</td><td className="border border-neutral-200 p-2">하이싱 항목 누락</td><td className="border border-neutral-200 p-2">주문 정보/업로드 음성(30일)·AI 학습 동의 데이터(학습 후 파기) 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제2조 2항 (동의를 받아 처리하는 항목)</td><td className="border border-neutral-200 p-2">하이싱 서비스 관련 항목 미기재</td><td className="border border-neutral-200 p-2">하이싱 주문 정보, 업로드 음성(주문 1회 제작 한정) 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제2조 특별 안내 (신설)</td><td className="border border-neutral-200 p-2">—</td><td className="border border-neutral-200 p-2">음성 데이터 처리 목적 한정·30일 자동 파기·음성 사용 권한 동의 의무 명시</td></tr>
+                    <tr><td className="border border-neutral-200 p-2">제3조 1항 (보유 기간)</td><td className="border border-neutral-200 p-2">하이싱 항목 누락</td><td className="border border-neutral-200 p-2">주문 정보·업로드 음성 모두 완성곡 전달 후 30일 자동 파기 명시</td></tr>
                   </tbody>
                 </table>
               </div>

@@ -1,25 +1,102 @@
 'use client'
 
-import { useEffect } from 'react'
-import { Check, Home } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Check, Home, AlertCircle, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { trackPurchase, trackOutboundClick, trackPageView } from '@/lib/analytics'
 
+type Status = 'pending' | 'success' | 'error'
+
 export default function PaymentSuccess() {
+  const [status, setStatus] = useState<Status>('pending')
+  const [errorMessage, setErrorMessage] = useState<string>('')
+
   useEffect(() => {
     trackPageView('payment_success')
     const params = new URLSearchParams(window.location.search)
-    const tier = params.get('tier') || ''
-    const price = Number(params.get('price') || '0')
+    const paymentKey = params.get('paymentKey') || ''
     const orderId = params.get('orderId') || ''
-    if (orderId) trackPurchase(tier, price, orderId)
-    // 주문 성공 시 임시 저장된 폼 값 삭제
-    try {
-      localStorage.removeItem('hising-order-form-v1')
-    } catch {
-      // 접근 불가 환경에서는 무시
+    const amount = Number(params.get('amount') || '0')
+    const tier = params.get('tier') || ''
+
+    if (!paymentKey || !orderId || !amount) {
+      setStatus('error')
+      setErrorMessage('결제 정보가 올바르지 않습니다.')
+      return
     }
+
+    fetch('/api/payment/approve', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ paymentKey, orderId, amount }),
+    })
+      .then(async r => {
+        const data = await r.json()
+        if (r.ok && data.success) {
+          setStatus('success')
+          trackPurchase(tier, amount, orderId)
+          try {
+            localStorage.removeItem('hising-order-form-v1')
+          } catch {
+            // 접근 불가 환경에서는 무시
+          }
+        } else {
+          setStatus('error')
+          setErrorMessage(data.error || '결제 승인에 실패했습니다.')
+        }
+      })
+      .catch(() => {
+        setStatus('error')
+        setErrorMessage('서버와의 연결에 실패했습니다. 잠시 후 다시 시도해주세요.')
+      })
   }, [])
+
+  if (status === 'pending') {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center px-5">
+        <div className="text-center">
+          <Loader2 className="w-10 h-10 text-primary-400 animate-spin mx-auto mb-4" />
+          <p className="text-sm text-ink-muted">결제를 확인하고 있습니다...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (status === 'error') {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center px-5">
+        <div className="max-w-md w-full text-center">
+          <div className="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
+            <AlertCircle className="w-10 h-10 text-red-500" />
+          </div>
+          <h1 className="text-2xl font-bold text-ink-light mb-2">결제 승인에 실패했습니다</h1>
+          <p className="text-ink-muted text-sm leading-relaxed mb-8">
+            {errorMessage}<br />
+            결제가 정상적으로 처리되지 않았습니다.<br />
+            카카오톡 채널로 문의주시면 즉시 도와드리겠습니다.
+          </p>
+          <div className="flex flex-col gap-3">
+            <a
+              href="http://pf.kakao.com/_vxbvdX"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackOutboundClick('http://pf.kakao.com/_vxbvdX', 'payment_error_kakao')}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-primary-400 rounded-full hover:bg-primary-500 transition-colors"
+            >
+              카카오톡 문의하기
+            </a>
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-primary-400 border border-primary-200 rounded-full hover:bg-primary-50 transition-colors"
+            >
+              <Home className="w-4 h-4" />
+              홈으로 돌아가기
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-neutral-50 flex items-center justify-center px-5">

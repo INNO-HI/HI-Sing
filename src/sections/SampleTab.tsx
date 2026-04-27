@@ -286,8 +286,8 @@ export function SampleTab({ onNavigate }: SampleTabProps) {
               <p className="text-center text-[11px] font-bold text-primary-500 tracking-[0.2em] uppercase mb-4">안심하고 맡기세요</p>
               <ul className="space-y-3">
                 {[
-                  '실제 가족 목소리 기반 제작 (AI 자동 생성곡 아님)',
-                  'AI 학습 데이터로 사용하지 않음',
+                  '가족 목소리 기반 맞춤 노래 제작',
+                  '주문 1회 제작에만 사용 · 외부 미공유',
                   '제작 후 30일 내 원본 음성 자동 삭제',
                   '결과가 마음에 안 들 경우 1회 무료 수정',
                 ].map((t) => (

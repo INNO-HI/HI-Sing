@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift, Headphones, Share2, Image as ImageIcon, FileCheck, Ban, RefreshCw } from 'lucide-react'
+import { Tag, Music, Star, ArrowRight, ArrowLeft, Check, Upload, X, Clock, Shield, Gift, Headphones, Share2, Image as ImageIcon, FileCheck, RefreshCw } from 'lucide-react'
 import { FadeIn } from '@/components/FadeIn'
 import { trackViewItem, trackPaymentAttempt, trackBeginCheckout, trackFileUpload, trackViewItemList, trackOutboundClick, trackFormProgress } from '@/lib/analytics'
 
-const NICEPAY_CLIENT_KEY = process.env.NEXT_PUBLIC_NICEPAY_CLIENT_KEY || ''
+const TOSS_CLIENT_KEY = process.env.NEXT_PUBLIC_TOSS_CLIENT_KEY || ''
 
 const rewards = [
   {
@@ -140,8 +140,8 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
               <div className="bg-white rounded-2xl border border-neutral-200 p-5 sm:p-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
                   {[
-                    { Icon: Ban, title: 'AI 학습 비사용 기본', desc: '동의 시 10% 할인' },
-                    { Icon: Shield, title: '음성 30일 후 자동 삭제', desc: '제3자 공유 없음' },
+                    { Icon: Shield, title: '주문 1회 제작에만 사용', desc: '외부 공유·재사용 없음' },
+                    { Icon: FileCheck, title: '제작 후 30일 자동 삭제', desc: '서버에서 영구 파기' },
                     { Icon: Clock, title: '영업일 3~5일 완성', desc: '어버이날 전 배송 가능' },
                     { Icon: RefreshCw, title: '1회 무료 수정 포함', desc: '마음에 들 때까지' },
                   ].map(({ Icon, title, desc }) => (
@@ -387,7 +387,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     주문하기
                     <ArrowRight className="w-5 h-5" />
                   </button>
-                  <p className="text-[11px] text-ink-faint text-center mt-3">나이스페이를 통해 안전하게 결제됩니다</p>
+                  <p className="text-[11px] text-ink-faint text-center mt-3">토스페이먼츠를 통해 안전하게 결제됩니다</p>
                 </div>
 
                 {/* 환불 정책 */}
@@ -485,7 +485,8 @@ type OrderFormState = {
   genreCustom: string
   mood: string
   extra: string
-  aiTraining: boolean
+  voiceConsent: boolean
+  usagePolicy: boolean
 }
 
 const EMPTY_FORM: OrderFormState = {
@@ -495,7 +496,8 @@ const EMPTY_FORM: OrderFormState = {
   memory: '', unsaid: '', episode: '', story: '',
   genre: '', genreCustom: '', mood: '',
   extra: '',
-  aiTraining: false,
+  voiceConsent: false,
+  usagePolicy: false,
 }
 
 const FORM_STORAGE_KEY = 'hising-order-form-v1'
@@ -541,7 +543,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
     if (scriptLoaded.current) return
     scriptLoaded.current = true
     const script = document.createElement('script')
-    script.src = 'https://pay.nicepay.co.kr/v1/js/'
+    script.src = 'https://js.tosspayments.com/v1/payment'
     script.async = true
     document.head.appendChild(script)
   }, [])
@@ -564,18 +566,40 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
       alert('연락처를 올바르게 입력해주세요. (예: 010-0000-0000)')
       return
     }
+    if (!form.voiceConsent) {
+      alert('음성 사용 권한 확인에 동의해주세요. (본인 또는 동의받은 가족·지인의 음성)')
+      return
+    }
+    if (!form.usagePolicy) {
+      alert('완성곡 사용 범위 안내에 동의해주세요. (개인 비상업 가족·지인 선물 용도 한정)')
+      return
+    }
     const orderId = `HISING_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
-    const finalAmount = form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const finalAmount = reward.priceNum
     trackPaymentAttempt(reward.tier, finalAmount)
-    const AUTHNICE = (window as any).AUTHNICE
-    if (!AUTHNICE) { alert('결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해주세요.'); return }
-    AUTHNICE.requestPay({
-      clientId: NICEPAY_CLIENT_KEY, method: 'card', orderId, amount: finalAmount,
-      goodsName: `하이싱 ${reward.tier}${form.aiTraining ? ' (AI 학습 동의)' : ''}`,
-      returnUrl: `${window.location.origin}/api/payment/approve`,
-      fnError: (r: { errorMsg: string }) => alert(`결제 오류: ${r.errorMsg}`),
-    })
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const TossPayments = (window as any).TossPayments
+    if (!TossPayments) { alert('결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해주세요.'); return }
+    if (!TOSS_CLIENT_KEY) { alert('결제 설정이 완료되지 않았습니다. 관리자에게 문의해주세요.'); return }
+    const customerEmail = form.emailId
+      ? `${form.emailId}@${form.emailDomain === 'custom' ? form.emailCustom : form.emailDomain}`
+      : undefined
+    const tossPayments = TossPayments(TOSS_CLIENT_KEY)
+    tossPayments
+      .requestPayment('카드', {
+        amount: finalAmount,
+        orderId,
+        orderName: `하이싱 ${reward.tier} 맞춤 노래 제작`,
+        customerName: form.name,
+        customerMobilePhone: form.phone.replace(/-/g, ''),
+        ...(customerEmail ? { customerEmail } : {}),
+        successUrl: `${window.location.origin}/payment/success?tier=${encodeURIComponent(reward.tier)}&price=${finalAmount}`,
+        failUrl: `${window.location.origin}/payment/fail`,
+      })
+      .catch((err: { code?: string; message?: string }) => {
+        if (err?.code === 'USER_CANCEL') return
+        alert(`결제 오류: ${err?.message || '알 수 없는 오류'}`)
+      })
   }
 
   const update = <K extends keyof OrderFormState>(key: K, value: OrderFormState[K]) =>
@@ -816,41 +840,64 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
               </div>
             </FadeIn>
 
-            {/* AI 학습 동의 — 10% 할인 */}
+            {/* 음원 권리 + 사용 범위 동의 (필수) */}
             <FadeIn delay={0.2}>
-              <button
-                type="button"
-                onClick={() => update('aiTraining', !form.aiTraining)}
-                className={`w-full text-left rounded-2xl border-2 p-6 sm:p-7 transition-all ${
-                  form.aiTraining
-                    ? 'border-primary-400 bg-primary-50/50'
-                    : 'border-neutral-200 bg-white hover:border-primary-200'
-                }`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className={`w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center border-2 transition-all ${
-                    form.aiTraining
-                      ? 'bg-primary-400 border-primary-400'
-                      : 'bg-white border-neutral-300'
-                  }`}>
-                    {form.aiTraining && <Check className="w-4 h-4 text-white" strokeWidth={3} />}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 flex-wrap mb-1.5">
-                      <h3 className="text-base font-bold text-ink">AI 품질 개선에 동의하고 10% 할인</h3>
-                      <span className="text-[11px] font-bold text-white bg-primary-400 rounded-full px-2 py-0.5">SAVE 10%</span>
+              <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-7 space-y-4">
+                <h3 className="text-base font-bold text-ink mb-1">필수 확인 사항</h3>
+                <p className="text-xs text-ink-muted mb-4">아래 두 항목에 모두 동의하셔야 결제가 진행됩니다.</p>
+
+                <button
+                  type="button"
+                  onClick={() => update('voiceConsent', !form.voiceConsent)}
+                  className={`w-full text-left rounded-xl border-2 p-4 sm:p-5 transition-all ${
+                    form.voiceConsent
+                      ? 'border-primary-400 bg-primary-50/40'
+                      : 'border-neutral-200 bg-white hover:border-primary-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                      form.voiceConsent ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                    }`}>
+                      {form.voiceConsent && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
                     </div>
-                    <p className="text-[13px] text-ink-muted leading-relaxed">
-                      업로드하신 음성·가사·완성곡 일부를 하이싱의 AI 보이스 품질 향상 목적으로만 사용합니다.
-                      <span className="block mt-1 text-ink-faint text-xs">제3자 판매·외부 공유 없음 · 언제든 메일로 철회 가능 · 동의하지 않아도 서비스 이용에는 제약 없음</span>
-                    </p>
-                    <div className="mt-3 flex items-baseline gap-2 text-sm">
-                      <span className="text-ink-muted">예상 절감</span>
-                      <span className="font-bold text-primary-500">-{Math.round(reward.priceNum * 0.1).toLocaleString()}원</span>
+                    <div className="flex-1">
+                      <p className="text-[13px] sm:text-sm font-semibold text-ink leading-snug">
+                        업로드하는 음성은 본인 또는 동의받은 가족·지인의 음성이며, 타인의 음성을 무단으로 사용하지 않았습니다.
+                      </p>
+                      <p className="text-[11px] sm:text-xs text-ink-faint mt-1.5 leading-relaxed">
+                        타인의 음성을 무단 사용하거나 사칭·허위정보·딥페이크 콘텐츠 제작 목적으로 의뢰한 경우 즉시 제작 중단 및 환불 거부됩니다.
+                      </p>
                     </div>
                   </div>
-                </div>
-              </button>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => update('usagePolicy', !form.usagePolicy)}
+                  className={`w-full text-left rounded-xl border-2 p-4 sm:p-5 transition-all ${
+                    form.usagePolicy
+                      ? 'border-primary-400 bg-primary-50/40'
+                      : 'border-neutral-200 bg-white hover:border-primary-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                      form.usagePolicy ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                    }`}>
+                      {form.usagePolicy && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[13px] sm:text-sm font-semibold text-ink leading-snug">
+                        완성곡은 개인 비상업 가족·지인 선물 용도로만 사용하며, SNS 무단 게시·상업적 이용·재판매를 하지 않겠습니다.
+                      </p>
+                      <p className="text-[11px] sm:text-xs text-ink-faint mt-1.5 leading-relaxed">
+                        업로드한 음성은 주문하신 노래 제작 1회에만 사용되며, 완성곡 전달 후 30일이 지나면 서버에서 자동 삭제됩니다.
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </FadeIn>
 
           </div>
@@ -885,12 +932,6 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                       <span className="text-ink-muted">상품 금액</span>
                       <span className="text-ink font-medium">{reward.price}원</span>
                     </div>
-                    {form.aiTraining && (
-                      <div className="flex justify-between text-sm">
-                        <span className="text-primary-500 font-medium">AI 학습 동의 할인 (-10%)</span>
-                        <span className="text-primary-500 font-semibold">-{Math.round(reward.priceNum * 0.1).toLocaleString()}원</span>
-                      </div>
-                    )}
                     <div className="flex justify-between text-sm">
                       <span className="text-ink-muted">예상 제작 기간</span>
                       <span className="text-ink font-medium">{reward.delivery}</span>
@@ -900,12 +941,12 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                   <div className="flex justify-between items-end pt-5 border-t border-neutral-200 mb-5">
                     <span className="text-sm font-medium text-ink">결제 금액</span>
                     <span className="text-2xl font-black text-ink">
-                      {(form.aiTraining ? Math.round(reward.priceNum * 0.9) : reward.priceNum).toLocaleString()}
+                      {reward.priceNum.toLocaleString()}
                       <span className="text-sm font-normal text-ink-muted ml-0.5">원</span>
                     </span>
                   </div>
 
-                  {/* 결제수단 — 신용카드 (나이스페이 승인심사 요구사항) */}
+                  {/* 결제수단 — 신용카드 (토스페이먼츠) */}
                   <div className="mb-5">
                     <p className="text-xs font-semibold text-ink-muted mb-2">결제수단</p>
                     <div className="flex items-center gap-3 p-3.5 rounded-xl border-2 border-primary-400 bg-primary-50/40">
@@ -914,7 +955,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                       </span>
                       <div className="flex-1">
                         <p className="text-sm font-bold text-ink">신용카드</p>
-                        <p className="text-[11px] text-ink-muted mt-0.5">국내 전 카드사 · 나이스페이먼츠 결제</p>
+                        <p className="text-[11px] text-ink-muted mt-0.5">국내 전 카드사 · 토스페이먼츠 결제</p>
                       </div>
                       <div className="flex items-center gap-1 text-[10px] text-ink-faint font-semibold">
                         <span className="px-1.5 py-0.5 bg-white rounded border border-neutral-200">VISA</span>
@@ -928,7 +969,7 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     신용카드로 결제하기
                   </button>
 
-                  <p className="text-[11px] text-ink-faint text-center mt-3">나이스페이먼츠㈜를 통해 안전하게 결제됩니다</p>
+                  <p className="text-[11px] text-ink-faint text-center mt-3">토스페이먼츠㈜를 통해 안전하게 결제됩니다</p>
                 </div>
               </div>
             </div>
@@ -1035,9 +1076,9 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
               <p className="text-center text-[11px] font-bold text-primary-500 tracking-[0.2em] uppercase mb-4">모든 리워드 공통</p>
               <ul className="grid sm:grid-cols-2 gap-x-5 gap-y-2.5">
                 {[
-                  '실제 가족 목소리 기반 제작',
-                  'AI 학습 데이터로 사용하지 않음',
-                  '제작 후 30일 내 완전 삭제',
+                  '가족 목소리 기반 맞춤 노래 제작',
+                  '주문 1회에만 사용 · 외부 미공유',
+                  '제작 후 30일 자동 삭제',
                   '결과 불만 시 1회 무료 수정',
                 ].map((t) => (
                   <li key={t} className="flex items-center gap-2 text-sm text-ink-light">

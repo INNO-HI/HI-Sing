@@ -345,7 +345,7 @@ export default function TumblbukPreview() {
           <p className="text-ink text-lg font-medium text-center mb-8">걱정되시는 부분</p>
           <div className="space-y-3">
             {[
-              { q: '음성 파일은 안전한가요?', a: '제작 목적으로만 사용하고, 완료 후 30일 뒤 삭제합니다. AI 학습에 쓰지 않습니다.' },
+              { q: '음성 파일은 안전한가요?', a: '주문 1곡 제작 목적으로만 사용하고, 완료 후 30일 뒤 자동 삭제됩니다. 외부 공유·재사용 없습니다.' },
               { q: '마음에 안 들면?', a: '리워드별 무료 수정 횟수 내에서 수정해드립니다.' },
               { q: '환불은?', a: '제작 시작 전 전액 환불. 작사·작곡 중 50% 환불.' },
             ].map(item => (

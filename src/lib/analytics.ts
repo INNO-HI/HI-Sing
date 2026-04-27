@@ -85,7 +85,7 @@ export function trackPaymentAttempt(tier: string, price: number) {
   gtag('event', 'add_payment_info', {
     currency: 'KRW',
     value: price,
-    payment_type: 'nicepay_card',
+    payment_type: 'toss_card',
     items: [{
       item_id: tier.toLowerCase().replace(/\s/g, '_'),
       item_name: `HI-Sing ${tier}`,

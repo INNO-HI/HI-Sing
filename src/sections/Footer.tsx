@@ -39,7 +39,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-6">
             <p>
-              소재지: 서울특별시 중구 퇴계로36길 2, B257 <span className="text-neutral-600">|</span> 대표 전화: 010-8225-4024 <span className="text-neutral-600">|</span> 이메일: contact@innohi.ai.kr
+              소재지: 서울특별시 중구 퇴계로36길 2, B257 <span className="text-neutral-600">|</span> 대표 전화: 010-8225-4024 (평일 10:00–18:00, 주말·공휴일 제외) <span className="text-neutral-600">|</span> 이메일: contact@innohi.ai.kr
             </p>
             <p className="sm:text-right text-neutral-600 flex-shrink-0">
               &copy; {new Date().getFullYear()} 하이싱(HI-Sing) by INNO-HI. All rights reserved.

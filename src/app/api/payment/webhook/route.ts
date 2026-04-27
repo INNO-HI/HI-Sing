@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import crypto from 'crypto'
 
 // ─── Rate Limiting ───
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
@@ -25,57 +24,56 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
   }
 
-  // ─── Raw body 확보 (서명 검증용) ───
-  const rawBody = await req.text()
-
-  // ─── 서명 검증 ───
-  const signature = req.headers.get('x-nicepay-signature') || req.headers.get('x-signature')
-  const secretKey = process.env.NICEPAY_SECRET_KEY
-
-  if (!secretKey) {
-    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
-  }
-
-  if (signature) {
-    const expected = crypto
-      .createHmac('sha256', secretKey)
-      .update(rawBody)
-      .digest('hex')
-
-    // timingSafeEqual로 타이밍 공격 방지
-    try {
-      const sigBuf = Buffer.from(signature, 'hex')
-      const expBuf = Buffer.from(expected, 'hex')
-      if (sigBuf.length !== expBuf.length || !crypto.timingSafeEqual(sigBuf, expBuf)) {
-        console.warn('[Webhook] Invalid signature from IP:', ip)
-        return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
-      }
-    } catch {
-      return NextResponse.json({ error: 'Invalid signature format' }, { status: 401 })
-    }
-  } else if (process.env.NODE_ENV === 'production') {
-    // 프로덕션에서 서명 없으면 거부
-    console.warn('[Webhook] Missing signature from IP:', ip)
-    return NextResponse.json({ error: 'Signature required' }, { status: 401 })
-  }
-
-  // ─── Body 파싱 ───
   let body: Record<string, unknown>
   try {
-    body = JSON.parse(rawBody)
+    body = await req.json()
   } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
   }
 
-  // 로그 (민감정보 제외)
-  console.log('[NicePay Webhook]', {
-    resultCode: body.resultCode,
-    tid: body.tid,
-    orderId: body.orderId,
-    status: body.status,
-  })
+  const eventType = typeof body.eventType === 'string' ? body.eventType : undefined
+  const data = (body.data ?? {}) as Record<string, unknown>
+  const paymentKey = typeof data.paymentKey === 'string' ? data.paymentKey : undefined
 
-  // TODO: DB에 결제 상태 업데이트
+  // ─── paymentKey 재조회로 위변조 검증 ───
+  // 토스페이먼츠는 별도 서명 헤더를 제공하지 않으므로,
+  // 이벤트 수신 후 paymentKey로 토스 API를 다시 조회하여 실제 결제 상태를 확인한다.
+  const secretKey = process.env.TOSS_SECRET_KEY
+  if (!secretKey) {
+    console.error('[Toss Webhook] Server configuration error')
+    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
+  }
+
+  if (paymentKey) {
+    try {
+      const authHeader = 'Basic ' + Buffer.from(secretKey + ':').toString('base64')
+      const verifyRes = await fetch(`https://api.tosspayments.com/v1/payments/${paymentKey}`, {
+        method: 'GET',
+        headers: { 'Authorization': authHeader },
+      })
+      const verified = await verifyRes.json()
+
+      if (!verifyRes.ok) {
+        console.warn('[Toss Webhook] Verification failed for paymentKey:', paymentKey)
+        return NextResponse.json({ error: 'Verification failed' }, { status: 400 })
+      }
+
+      console.log('[Toss Webhook]', {
+        eventType,
+        paymentKey,
+        orderId: verified.orderId,
+        status: verified.status,
+        totalAmount: verified.totalAmount,
+      })
+
+      // TODO: DB에 결제 상태 업데이트 (verified.status에 따라)
+    } catch (err) {
+      console.error('[Toss Webhook] Verification error:', err)
+      return NextResponse.json({ error: 'Verification error' }, { status: 500 })
+    }
+  } else {
+    console.log('[Toss Webhook] event without paymentKey:', { eventType })
+  }
 
   return NextResponse.json({ received: true })
 }
