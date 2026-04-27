@@ -49,7 +49,10 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
   verification: {
     other: {
-      'naver-site-verification': 'c47db65c74b788613ed0c852ccb4d4d106d50338',
+      'naver-site-verification': [
+        'c47db65c74b788613ed0c852ccb4d4d106d50338',
+        'ff53d26d415c382bd91a3dab03c482df6bd4e5b9',
+      ],
     },
   },
   category: 'music',
