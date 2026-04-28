@@ -365,8 +365,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         />
 
         <div className="relative z-10 w-full max-w-5xl xl:max-w-6xl 2xl:max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-14 flex flex-col xl:flex-row xl:items-center xl:gap-12 2xl:gap-16 flex-1 min-h-0 xl:justify-between">
-          {/* 텍스트/CTA 블록 */}
-          <FadeIn className="xl:flex-1 xl:max-w-[640px] 2xl:max-w-[720px]">
+          {/* 텍스트/CTA 블록 — z-20으로 폰목업의 absolute 요소들 위로 끌어올림 */}
+          <FadeIn className="relative z-20 xl:flex-1 xl:max-w-[640px] 2xl:max-w-[720px]">
             <div className="text-center xl:text-left mt-10 sm:mt-20 xl:mt-0">
               <p className="text-sm sm:text-lg xl:text-xl text-ink-muted mb-4 sm:mb-5 break-keep">
                 평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.
@@ -389,8 +389,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 목업 블록 — xl 이상은 오른쪽 컬럼 (가운데 정렬로 좌우 균형 유지) */}
-          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-center">
+          {/* 목업 블록 — xl 이상은 오른쪽 컬럼. z-0으로 텍스트 뒤에 두고, 좌우로 튀는 슬라이드 카드는 컨테이너에서 잘라냄 */}
+          <FadeIn delay={0.15} className="relative z-0 flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-center overflow-hidden xl:overflow-visible">
             <div className="xl:scale-95 2xl:scale-105">
               <PhoneMockup />
             </div>
