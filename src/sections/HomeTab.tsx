@@ -371,7 +371,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <p className="text-sm sm:text-lg xl:text-xl text-ink-muted mb-4 sm:mb-5 break-keep">
                 평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.
               </p>
-              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.6] break-keep">
+              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[2] break-keep">
                 노래로 전하는<br className="sm:hidden xl:inline" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
               <p className="mt-3 sm:mt-4 xl:mt-6 text-[13px] sm:text-base xl:text-lg text-ink-muted break-keep xl:max-w-[560px]">
@@ -389,8 +389,8 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 목업 블록 — xl 이상은 오른쪽 컬럼. z-0으로 텍스트 뒤에 두고, 좌우로 튀는 슬라이드 카드는 컨테이너에서 잘라냄 */}
-          <FadeIn delay={0.15} className="relative z-0 flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-center overflow-hidden xl:overflow-visible">
+          {/* 목업 블록 — overflow-hidden으로 좌우 슬라이드가 컬럼 밖으로 새어 텍스트 뒤로 지나가지 않게 잘라냄 */}
+          <FadeIn delay={0.15} className="relative z-0 flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-center overflow-hidden">
             <div className="xl:scale-95 2xl:scale-105">
               <PhoneMockup />
             </div>
