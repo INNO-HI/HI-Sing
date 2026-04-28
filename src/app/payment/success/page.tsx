@@ -152,6 +152,14 @@ export default function PaymentSuccess() {
           </p>
         </div>
 
+        {/* 영수증 안내 */}
+        <div className="bg-white rounded-xl border border-neutral-200 p-4 text-left mb-3">
+          <p className="text-xs font-semibold text-ink mb-1.5">영수증·증빙</p>
+          <p className="text-[11px] text-ink-muted leading-relaxed">
+            현금영수증은 신용카드 결제 건에 한해 토스페이먼츠를 통해 자동 발행됩니다. 별도 발행 또는 사업자용 세금계산서가 필요하신 경우 결제 후 <a href="mailto:contact@innohi.ai.kr" className="text-primary-400 underline">contact@innohi.ai.kr</a>로 사업자등록증 사본과 함께 요청해주세요.
+          </p>
+        </div>
+
         {/* AI 생성물 고지 (AI 기본법 제31조 / 개인정보보호법) */}
         <div className="bg-amber-50/70 rounded-xl border border-amber-200/60 p-4 text-left mb-8">
           <p className="text-[11px] text-amber-900/80 leading-relaxed">

@@ -350,6 +350,50 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                     </ul>
                   </div>
                 </FadeIn>
+
+                {/* 전자상거래법 표준 구매 안내 — PG 심사 가이드 */}
+                <FadeIn delay={0.08}>
+                  <div className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8">
+                    <h3 className="text-sm font-bold text-ink mb-4">구매 안내 (전자상거래법 표시사항)</h3>
+                    <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-xs">
+                      <div>
+                        <p className="text-ink-muted mb-1">상품 종류</p>
+                        <p className="text-ink-light font-medium">디지털 콘텐츠(맞춤 노래 음원) · 주문제작</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">제공 방식</p>
+                        <p className="text-ink-light font-medium">카카오톡 공유 링크(mp3 · wav · 가사 카드 JPG)</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">제작 기간</p>
+                        <p className="text-ink-light font-medium">결제일로부터 영업일 {reward.delivery}</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">결제 수단</p>
+                        <p className="text-ink-light font-medium">신용카드(국내 전 카드사) · 토스페이먼츠</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">청약 철회</p>
+                        <p className="text-ink-light font-medium">제작 시작 전 100% / 작사·작곡 중 50% / 보컬 합성 이후 불가</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">고객센터</p>
+                        <p className="text-ink-light font-medium">010-8225-4024 · 평일 10:00–18:00</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">사업자</p>
+                        <p className="text-ink-light font-medium">㈜이노하이 · 758-86-03814</p>
+                      </div>
+                      <div>
+                        <p className="text-ink-muted mb-1">통신판매업 신고</p>
+                        <p className="text-ink-light font-medium">제2026-서울중구-643호</p>
+                      </div>
+                    </div>
+                    <p className="text-[11px] text-ink-faint mt-4 leading-relaxed">
+                      본 상품은 「전자상거래법」 제24조 제2항에 따른 디지털 콘텐츠로 에스크로 면제 대상입니다. 가격은 부가가치세를 포함한 최종 가격입니다.
+                    </p>
+                  </div>
+                </FadeIn>
               </div>
             )}
           </div>
@@ -492,6 +536,7 @@ type OrderFormState = {
   aiDisclosure: boolean
   sensitiveData: boolean
   ageConfirm: boolean
+  termsAgree: boolean
 }
 
 const EMPTY_FORM: OrderFormState = {
@@ -506,6 +551,7 @@ const EMPTY_FORM: OrderFormState = {
   aiDisclosure: false,
   sensitiveData: false,
   ageConfirm: false,
+  termsAgree: false,
 }
 
 const FORM_STORAGE_KEY = 'hising-order-form-v1'
@@ -592,6 +638,10 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
     }
     if (!form.ageConfirm) {
       alert('만 19세 이상 또는 법정대리인 동의 여부를 확인해주세요.')
+      return
+    }
+    if (!form.termsAgree) {
+      alert('이용약관 및 개인정보처리방침 동의가 필요합니다.')
       return
     }
     const orderId = `HISING_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
@@ -1083,11 +1133,69 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     </div>
                   </div>
 
+                  {/* 약관·개인정보 동의 (필수) */}
+                  <button
+                    type="button"
+                    onClick={() => update('termsAgree', !form.termsAgree)}
+                    className={`w-full text-left rounded-xl border-2 p-3.5 transition-all mb-4 ${
+                      form.termsAgree
+                        ? 'border-primary-400 bg-primary-50/40'
+                        : 'border-neutral-200 bg-white hover:border-primary-200'
+                    }`}
+                  >
+                    <div className="flex items-start gap-2.5">
+                      <div className={`w-4 h-4 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                        form.termsAgree ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                      }`}>
+                        {form.termsAgree && <Check className="w-3 h-3 text-white" strokeWidth={3.5} />}
+                      </div>
+                      <p className="text-[12px] text-ink leading-snug">
+                        <strong className="font-semibold">[필수]</strong>{' '}
+                        <a href="/terms" target="_blank" className="text-primary-500 underline" onClick={e => e.stopPropagation()}>이용약관</a>·
+                        <a href="/privacy" target="_blank" className="text-primary-500 underline" onClick={e => e.stopPropagation()}>개인정보처리방침</a>{' '}
+                        및 결제 진행에 동의합니다.
+                      </p>
+                    </div>
+                  </button>
+
                   <button onClick={handleSubmit} className="w-full py-4 bg-primary-400 text-white font-semibold text-base rounded-xl hover:bg-primary-500 transition-colors">
                     신용카드로 결제하기
                   </button>
 
                   <p className="text-[11px] text-ink-faint text-center mt-3">토스페이먼츠㈜를 통해 안전하게 결제됩니다</p>
+                </div>
+
+                {/* 사업자정보 + 고객센터 + 사후서비스 안내 (PG 심사 가이드) */}
+                <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-5 text-xs text-ink-muted leading-relaxed space-y-3">
+                  <div>
+                    <p className="font-bold text-ink mb-1.5 text-[13px]">판매자 정보</p>
+                    <p>상호: 주식회사 이노하이(INNO-HI)</p>
+                    <p>대표자: 김민수, 한민우</p>
+                    <p>사업자등록번호: 758-86-03814</p>
+                    <p>통신판매업 신고: 제2026-서울중구-643호</p>
+                    <p>소재지: 서울특별시 중구 퇴계로36길 2, B257</p>
+                  </div>
+                  <div className="pt-3 border-t border-neutral-200">
+                    <p className="font-bold text-ink mb-1.5 text-[13px]">고객센터</p>
+                    <p>전화: 010-8225-4024</p>
+                    <p>운영시간: 평일 10:00–18:00 (주말·공휴일 제외)</p>
+                    <p>이메일: contact@innohi.ai.kr</p>
+                  </div>
+                  <div className="pt-3 border-t border-neutral-200">
+                    <p className="font-bold text-ink mb-1.5 text-[13px]">현금영수증·세금계산서</p>
+                    <p>현금영수증은 신용카드 결제 건에 한해 토스페이먼츠를 통해 자동 발행됩니다. 세금계산서가 필요하신 경우 결제 후 contact@innohi.ai.kr로 사업자등록증을 보내주시면 발행해드립니다.</p>
+                  </div>
+                  <div className="pt-3 border-t border-neutral-200">
+                    <p className="font-bold text-ink mb-1.5 text-[13px]">교환·환불 안내</p>
+                    <p>· 제작 시작 전: 100% 환불</p>
+                    <p>· 작사·작곡 진행 중: 50% 환불</p>
+                    <p>· 보컬 합성 이후: 환불 불가, 1회 무료 수정 제공</p>
+                    <p className="mt-1.5">자세한 내용은 <a href="/terms" target="_blank" className="text-primary-500 underline">이용약관 제13조</a> 참고.</p>
+                  </div>
+                  <div className="pt-3 border-t border-neutral-200">
+                    <p className="font-bold text-ink mb-1.5 text-[13px]">에스크로 안내</p>
+                    <p>본 상품은 「전자상거래법」 제24조 제2항에 따른 디지털 콘텐츠로 에스크로(결제대금예치제) 적용 대상이 아닙니다. 결제대금예치업 등록번호: 02-006-00073(토스페이먼츠).</p>
+                  </div>
                 </div>
               </div>
             </div>
