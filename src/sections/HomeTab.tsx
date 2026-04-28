@@ -371,7 +371,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
               <p className="text-sm sm:text-lg xl:text-xl text-ink-muted mb-4 sm:mb-5 break-keep">
                 평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.
               </p>
-              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.35] break-keep">
+              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.6] break-keep">
                 노래로 전하는<br className="sm:hidden xl:inline" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
               <p className="mt-3 sm:mt-4 xl:mt-6 text-[13px] sm:text-base xl:text-lg text-ink-muted break-keep xl:max-w-[560px]">
