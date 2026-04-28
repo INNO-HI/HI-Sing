@@ -364,14 +364,14 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl xl:max-w-[1360px] 2xl:max-w-[1520px] mx-auto px-5 sm:px-8 lg:px-14 flex flex-col xl:flex-row xl:items-center xl:gap-16 2xl:gap-24 flex-1 min-h-0 xl:justify-between">
+        <div className="relative z-10 w-full max-w-5xl xl:max-w-6xl 2xl:max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-14 flex flex-col xl:flex-row xl:items-center xl:gap-12 2xl:gap-16 flex-1 min-h-0 xl:justify-between">
           {/* 텍스트/CTA 블록 */}
           <FadeIn className="xl:flex-1 xl:max-w-[640px] 2xl:max-w-[720px]">
             <div className="text-center xl:text-left mt-10 sm:mt-20 xl:mt-0">
               <p className="text-sm sm:text-lg xl:text-xl text-ink-muted mb-4 sm:mb-5 break-keep">
                 평소에 못 하던 말을,<br className="sm:hidden" /> 노래로 대신 전할 수 있게 만들었습니다.
               </p>
-              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.15] break-keep">
+              <h1 className="text-[22px] sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[68px] font-bold text-ink-light tracking-tight leading-[1.35] break-keep">
                 노래로 전하는<br className="sm:hidden xl:inline" /> <span className="text-primary-400">우리 가족</span> 이야기
               </h1>
               <p className="mt-3 sm:mt-4 xl:mt-6 text-[13px] sm:text-base xl:text-lg text-ink-muted break-keep xl:max-w-[560px]">
@@ -389,9 +389,9 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             </div>
           </FadeIn>
 
-          {/* 목업 블록 — xl 이상은 오른쪽 컬럼 */}
-          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-end">
-            <div className="xl:scale-110 2xl:scale-125 xl:origin-center">
+          {/* 목업 블록 — xl 이상은 오른쪽 컬럼 (가운데 정렬로 좌우 균형 유지) */}
+          <FadeIn delay={0.15} className="flex justify-center mt-10 sm:mt-12 lg:mt-8 xl:mt-0 xl:flex-1 xl:flex xl:justify-center">
+            <div className="xl:scale-95 2xl:scale-105">
               <PhoneMockup />
             </div>
           </FadeIn>

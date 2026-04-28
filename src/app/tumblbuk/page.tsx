@@ -282,7 +282,7 @@ export default function TumblbukPreview() {
       <section className="px-5 sm:px-8 py-10">
         <div className="max-w-[480px] mx-auto text-center">
           <CTAButton size="lg" />
-          <p className="text-ink-faint text-xs mt-3">한정 100명 · 마음에 안 들면 무료 수정</p>
+          <p className="text-ink-faint text-xs mt-3">선착순 이벤트 · 마음에 안 들면 무료 수정</p>
         </div>
       </section>
 
@@ -313,7 +313,7 @@ export default function TumblbukPreview() {
           <p className="text-ink-muted text-sm text-center mb-10">마음에 드는 리워드를 골라주세요</p>
           <div className="space-y-4">
             <div className="relative bg-white rounded-2xl p-6 border-2 border-primary-400 overflow-hidden">
-              <span className="absolute top-0 right-0 bg-primary-400 text-white text-xs font-medium px-3 py-1 rounded-bl-xl">한정 100명</span>
+              <span className="absolute top-0 right-0 bg-primary-400 text-white text-xs font-medium px-3 py-1 rounded-bl-xl">선착순 이벤트</span>
               <p className="text-ink text-xl font-semibold mb-0.5">29,000<span className="text-sm font-normal">원</span></p>
               <p className="text-ink font-medium text-sm mb-3">얼리버드</p>
               <ul className="text-ink-muted text-sm space-y-1">
@@ -373,7 +373,7 @@ export default function TumblbukPreview() {
           <p className="text-ink-muted text-lg font-medium leading-relaxed mb-3">이번 부모님 생신에는</p>
           <p className="text-ink text-2xl font-semibold mb-6">노래 한 곡 어떠세요?</p>
           <CTAButton size="lg" />
-          <p className="text-primary-400 text-xs mt-4">얼리버드 한정 100명 · 29,000원부터</p>
+          <p className="text-primary-400 text-xs mt-4">얼리버드 선착순 이벤트 · 29,000원부터(부가세 포함)</p>
         </div>
       </section>
 
@@ -382,7 +382,7 @@ export default function TumblbukPreview() {
         <div className="max-w-[480px] mx-auto flex items-center justify-between gap-3">
           <div className="flex-1 min-w-0">
             <p className="text-xs text-ink-faint">얼리버드</p>
-            <p className="text-base font-semibold text-ink leading-tight">29,000원<span className="text-xs text-ink-faint font-normal ml-1">· 한정 100명</span></p>
+            <p className="text-base font-semibold text-ink leading-tight">29,000원<span className="text-xs text-ink-faint font-normal ml-1">· 선착순 이벤트</span></p>
           </div>
           <a
             href="/?tab=pricing"

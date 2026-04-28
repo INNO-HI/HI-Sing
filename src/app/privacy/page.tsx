@@ -154,10 +154,13 @@ export default function PrivacyPage() {
               <div className="bg-primary-50/40 border border-primary-100 rounded-lg p-4 mb-5">
                 <p className="font-semibold text-ink-light text-sm mb-2">하이싱(HI-Sing) 서비스 음성 데이터 처리 특별 안내</p>
                 <ul className="list-disc pl-5 text-[13px] text-ink-muted leading-relaxed space-y-1">
+                  <li><strong>준생체정보로서의 처리 및 별도 동의:</strong> 음성 데이터는 「개인정보 보호법」 제23조 및 개인정보보호위원회 「AI 환경에서 안전한 개인정보 처리 가이드라인」(2024)에 따라 준생체정보로 분류될 수 있습니다. 이에 회사는 결제 단계에서 일반 개인정보 동의와 별도로 음성 데이터 처리에 관한 명시적 동의를 받습니다.</li>
                   <li><strong>처리 목적 한정:</strong> 업로드하신 음성은 오직 해당 주문 1곡의 맞춤 노래 제작 목적으로만 사용됩니다. AI 모델 학습·외부 판매·제3자 제공·다른 콘텐츠 생성 등 어떠한 다른 용도로도 사용되지 않습니다.</li>
                   <li><strong>30일 자동 파기:</strong> 완성곡 전달 후 <strong>30일이 경과하면 서버에서 자동으로 영구 파기</strong>되며, 이후 복구할 수 없습니다.</li>
                   <li><strong>음성 사용 권한 동의 필수:</strong> 주문 시 본인 또는 동의받은 가족·지인의 음성임을 확인하는 동의 절차를 거쳐야 합니다. 타인의 음성 무단 사용·딥페이크·허위정보 콘텐츠 제작 목적의 의뢰는 일절 거부됩니다.</li>
-                  <li><strong>즉시 삭제 요청:</strong> 30일 전이라도 원하시면 <a href="mailto:contact@innohi.ai.kr" className="text-primary-500 underline">contact@innohi.ai.kr</a>로 요청하시면 즉시 파기해드립니다.</li>
+                  <li><strong>전송·저장 보안:</strong> 음성 파일은 HTTPS/TLS로 암호화되어 전송·저장되며, 일반 회원 데이터와 분리된 영역에 보관됩니다.</li>
+                  <li><strong>동의 로그 보관:</strong> 결제 단계에서 받은 동의(음성 사용 권한·사용 범위·준생체정보 처리·AI 생성물 고지·만 19세 이상 확인) 이력은 분쟁 발생 시 이용자 보호 및 회사 면책을 위한 입증 자료로 보관됩니다(IP·시각·동의 항목 포함).</li>
+                  <li><strong>즉시 삭제 요청:</strong> 30일 전이라도 원하시면 <a href="mailto:contact@innohi.ai.kr" className="text-primary-500 underline">contact@innohi.ai.kr</a>로 요청하시면 즉시 파기해드립니다. 단, 동의 로그는 회사의 정당한 이익(분쟁 대응·법적 의무 이행)을 위해 별도로 최소 3년간 보관될 수 있습니다.</li>
                 </ul>
               </div>
 

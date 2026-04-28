@@ -135,7 +135,7 @@ export default function PaymentSuccess() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl border border-neutral-200 p-5 text-left mb-8">
+        <div className="bg-white rounded-2xl border border-neutral-200 p-5 text-left mb-4">
           <p className="text-xs text-ink-muted leading-relaxed">
             진행 상황은 입력하신 연락처로 안내드립니다.<br />
             수정 요청이나 문의사항은{' '}
@@ -149,6 +149,13 @@ export default function PaymentSuccess() {
               카카오톡 채널
             </a>
             로 연락주세요.
+          </p>
+        </div>
+
+        {/* AI 생성물 고지 (AI 기본법 제31조 / 개인정보보호법) */}
+        <div className="bg-amber-50/70 rounded-xl border border-amber-200/60 p-4 text-left mb-8">
+          <p className="text-[11px] text-amber-900/80 leading-relaxed">
+            <strong className="font-semibold">AI 생성물 고지</strong> · 완성곡은 생성형 AI 기술로 보컬이 합성된 결과물입니다. 「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」 제31조에 따라 안내드립니다. 업로드하신 음성은 본 주문 1곡 제작에만 사용되며, 완성곡 전달 후 30일이 지나면 서버에서 자동으로 영구 파기됩니다.
           </p>
         </div>
 

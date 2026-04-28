@@ -13,7 +13,7 @@ const rewards = [
     emoTitle: '가볍게 마음 전하기',
     emoSub: '짧지만 진심을 담는 첫 선물',
     ctaLabel: '가볍게 시작하기',
-    badge: '한정 100명', badgeColor: 'bg-neutral-800 text-white', highlight: false,
+    badge: '선착순 이벤트', badgeColor: 'bg-neutral-800 text-white', highlight: false,
     features: [
       { icon: Music, text: '맞춤 노래 1곡' },
       { icon: Headphones, text: '고음질 mp3 음원' },
@@ -131,6 +131,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                 <div className="mt-6 flex items-end gap-2">
                   <span className="text-4xl font-black">{reward.price}</span>
                   <span className="text-white/60 text-base mb-1">원</span>
+                  <span className="text-white/50 text-xs mb-1.5 ml-1">(부가세 포함)</span>
                 </div>
               </div>
             </FadeIn>
@@ -364,6 +365,7 @@ function RewardDetail({ reward, onBack, onNext }: { reward: typeof rewards[0]; o
                   </div>
                   <div className="text-4xl font-black text-ink mb-1">
                     {reward.price}<span className="text-base font-normal text-ink-muted ml-1">원</span>
+                    <span className="text-[11px] font-normal text-ink-faint ml-2">(부가세 포함)</span>
                   </div>
                   <div className="h-px bg-neutral-200 my-5" />
                   <div className="space-y-3.5 mb-6">
@@ -487,6 +489,9 @@ type OrderFormState = {
   extra: string
   voiceConsent: boolean
   usagePolicy: boolean
+  aiDisclosure: boolean
+  sensitiveData: boolean
+  ageConfirm: boolean
 }
 
 const EMPTY_FORM: OrderFormState = {
@@ -498,6 +503,9 @@ const EMPTY_FORM: OrderFormState = {
   extra: '',
   voiceConsent: false,
   usagePolicy: false,
+  aiDisclosure: false,
+  sensitiveData: false,
+  ageConfirm: false,
 }
 
 const FORM_STORAGE_KEY = 'hising-order-form-v1'
@@ -574,9 +582,41 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
       alert('완성곡 사용 범위 안내에 동의해주세요. (개인 비상업 가족·지인 선물 용도 한정)')
       return
     }
+    if (!form.sensitiveData) {
+      alert('음성 데이터(준생체정보) 처리에 별도 동의해주세요.')
+      return
+    }
+    if (!form.aiDisclosure) {
+      alert('AI 생성물 고지 사항에 동의해주세요.')
+      return
+    }
+    if (!form.ageConfirm) {
+      alert('만 19세 이상 또는 법정대리인 동의 여부를 확인해주세요.')
+      return
+    }
     const orderId = `HISING_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
     const finalAmount = reward.priceNum
     trackPaymentAttempt(reward.tier, finalAmount)
+    // ─── 동의 로그 서버 전송 (음성권 분쟁 시 입증 자료, fire-and-forget) ───
+    fetch('/api/consent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId,
+        tier: reward.tier,
+        consents: {
+          voiceConsent: form.voiceConsent,
+          usagePolicy: form.usagePolicy,
+          sensitiveData: form.sensitiveData,
+          aiDisclosure: form.aiDisclosure,
+          ageConfirm: form.ageConfirm,
+        },
+        consentedAt: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+      }),
+    }).catch(() => {
+      // 로그 전송 실패해도 결제는 진행 (베스트에포트)
+    })
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const TossPayments = (window as any).TossPayments
     if (!TossPayments) { alert('결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해주세요.'); return }
@@ -897,6 +937,84 @@ function OrderForm({ reward, onBack }: { reward: typeof rewards[0]; onBack: () =
                     </div>
                   </div>
                 </button>
+
+                <button
+                  type="button"
+                  onClick={() => update('sensitiveData', !form.sensitiveData)}
+                  className={`w-full text-left rounded-xl border-2 p-4 sm:p-5 transition-all ${
+                    form.sensitiveData
+                      ? 'border-primary-400 bg-primary-50/40'
+                      : 'border-neutral-200 bg-white hover:border-primary-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                      form.sensitiveData ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                    }`}>
+                      {form.sensitiveData && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[13px] sm:text-sm font-semibold text-ink leading-snug">
+                        음성 데이터 처리에 동의합니다. <span className="text-ink-muted font-normal">(개인정보보호법 제23조 별도 동의)</span>
+                      </p>
+                      <p className="text-[11px] sm:text-xs text-ink-faint mt-1.5 leading-relaxed">
+                        음성 데이터는 「AI 환경 개인정보 처리 가이드라인」상 준생체정보로 분류될 수 있어 별도 동의를 받습니다. HTTPS 암호화 전송·저장, 주문 1곡 제작에만 사용, 30일 자동 파기. 자세한 내용은 <a href="/privacy" target="_blank" className="text-primary-400 underline" onClick={e => e.stopPropagation()}>개인정보처리방침</a>.
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => update('aiDisclosure', !form.aiDisclosure)}
+                  className={`w-full text-left rounded-xl border-2 p-4 sm:p-5 transition-all ${
+                    form.aiDisclosure
+                      ? 'border-primary-400 bg-primary-50/40'
+                      : 'border-neutral-200 bg-white hover:border-primary-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                      form.aiDisclosure ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                    }`}>
+                      {form.aiDisclosure && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[13px] sm:text-sm font-semibold text-ink leading-snug">
+                        완성곡은 생성형 AI 기술로 보컬이 합성된 결과물임을 안내받았습니다.
+                      </p>
+                      <p className="text-[11px] sm:text-xs text-ink-faint mt-1.5 leading-relaxed">
+                        「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」 제31조에 따라 고지합니다. AI 보컬 합성의 특성상 동일 음성에서도 결과가 달라질 수 있으며, 100% 재현을 보장하지 않습니다(약관 제15조).
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => update('ageConfirm', !form.ageConfirm)}
+                  className={`w-full text-left rounded-xl border-2 p-4 sm:p-5 transition-all ${
+                    form.ageConfirm
+                      ? 'border-primary-400 bg-primary-50/40'
+                      : 'border-neutral-200 bg-white hover:border-primary-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center border-2 transition-all mt-0.5 ${
+                      form.ageConfirm ? 'bg-primary-400 border-primary-400' : 'bg-white border-neutral-300'
+                    }`}>
+                      {form.ageConfirm && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[13px] sm:text-sm font-semibold text-ink leading-snug">
+                        만 19세 이상이며, 미성년자인 경우 법정대리인의 동의를 받았습니다.
+                      </p>
+                      <p className="text-[11px] sm:text-xs text-ink-faint mt-1.5 leading-relaxed">
+                        「전자상거래법」상 미성년자가 법정대리인 동의 없이 결제한 경우 본인 또는 법정대리인은 결제 취소를 요청할 수 있습니다(약관 제7조).
+                      </p>
+                    </div>
+                  </div>
+                </button>
               </div>
             </FadeIn>
 
@@ -1030,6 +1148,7 @@ function RewardList({ onSelect }: { onSelect: (i: number) => void }) {
                   <div className="text-center mb-5 pb-5 border-b border-neutral-100">
                     <span className={`font-black ${r.highlight ? 'text-4xl text-primary-500' : 'text-3xl text-ink-light'}`}>{r.price}</span>
                     <span className="text-ink-muted text-sm ml-1">원</span>
+                    <p className="text-[10px] text-ink-faint mt-1">부가세 포함</p>
                   </div>
 
                   {/* 포함 사항 */}
